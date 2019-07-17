@@ -1,0 +1,313 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Marketplace Sellers Badges\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 07:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.1; wp-5.1.1"
+
+#: includes/admin/class-mp-save-badges.php:85
+msgid " Please fill all the field correctly"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:71
+msgid "Action failed"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:69
+msgid "Action Successful"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:70
+msgid "ADD BADGE"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:157
+msgid "Add Badge"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:106
+msgid "Add New"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:91
+msgid "Add New Badge"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:183
+msgid "Apply"
+msgstr ""
+
+#: includes/admin/class-get-seller.php:92
+msgid "Approve"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:94
+msgid "Assign Badge"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:204
+#: includes/admin/class-mp-assign-badge.php:88
+#: includes/templates/admin/add-Badges.php:126
+msgid "Badge"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:143
+msgid "badge"
+msgstr ""
+
+#: includes/templates/front/view-seller-badges.php:45
+#: includes/templates/admin/add-Badges.php:88
+#: includes/templates/admin/class-mp-bage-list.php:132
+msgid "Badge Description"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:152
+msgid "Badge is already Assigned to"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:105
+msgid "Badge List"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:89
+msgid "Badge Manager"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:78
+#: includes/templates/admin/class-mp-bage-list.php:131
+msgid "Badge Name"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:145
+msgid "Badge of"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:136
+msgid "Badge successfully added"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:105
+msgid "Badge successfully Updated"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:158
+msgid "Badge to"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:160
+msgid "badge to"
+msgstr ""
+
+#: includes/templates/front/view-seller-badges.php:44
+#: includes/templates/admin/class-manage-seller-badge.php:81
+#: includes/templates/admin/class-mp-bage-list.php:130
+msgid "Badge(s)"
+msgstr ""
+
+#: includes/templates/front/view-seller-badges.php:43
+msgid "Badge(s) Assigned"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:209
+msgid "Badge(s) Sucessfully"
+msgstr ""
+
+#: includes/front/class-mp-seller-profile.php:37
+msgid "Badges"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:220
+msgid "Badges Per Page"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:146
+#: includes/templates/admin/class-mp-bage-list.php:313
+msgid "Delete"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:209
+msgid "Deleted"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:213
+msgid "Deleted Badge Sucessfully"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:120
+#: includes/templates/admin/class-mp-bage-list.php:148
+msgid "Disable"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:143
+msgid "do not have"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:83
+msgid "Email"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:115
+#: includes/templates/admin/class-mp-bage-list.php:147
+msgid "Enable"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:107
+msgid "error"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:158
+msgid "failed to assigned"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://webkul.com"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:129
+msgid "Id"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:67
+msgid "Invalid Badge Name"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:78
+msgid "Invalid Rank"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:93
+msgid "Manage Seller Badge"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:87
+msgid "Marketplace Seller Badge"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:87
+msgid "Marketplace Seller Badge "
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Marketplace Seller Badge Plugin will provide functionality to add and assign "
+"Badges to MarketPlace Seller"
+msgstr ""
+
+#. Name of the plugin
+msgid "Marketplace Sellers Badges"
+msgstr ""
+
+#: includes/admin/class-get-seller.php:84
+#: includes/templates/admin/class-manage-seller-badge.php:139
+#: includes/templates/admin/class-manage-seller-badge.php:140
+msgid "No Badge Assign"
+msgstr ""
+
+#: includes/templates/front/view-seller-badges.php:22
+#: includes/templates/front/view-seller-badges.php:35
+msgid "No badge Assigned"
+msgstr ""
+
+#: includes/templates/admin/class-mp-bage-list.php:199
+msgid "no item selected"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:51
+#: includes/templates/admin/class-manage-seller-badge.php:199
+msgid "Nope! Security check failed!"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:97
+#: includes/templates/admin/class-mp-bage-list.php:133
+msgid "Rank"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:95
+msgid "Remove Badge"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:112
+#: includes/class-mp-badges-handler.php:139
+msgid "search"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:171
+msgid "Select Badge"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:128
+msgid "Select the badge you want to assign"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:93
+#: includes/class-mp-badges-handler.php:134
+msgid "Seller Badge Manager"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:195
+msgid "Seller badge(s)"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:72
+msgid "Seller Badges"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:80
+msgid "Seller Id"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:82
+msgid "Seller Name"
+msgstr ""
+
+#: includes/class-mp-badges-handler.php:234
+msgid "Seller Per Page"
+msgstr ""
+
+#: includes/templates/admin/class-manage-seller-badge.php:84
+#: includes/templates/admin/add-Badges.php:107
+#: includes/templates/admin/class-mp-bage-list.php:134
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:88
+msgid "status changed"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:160
+msgid "successfully assigned"
+msgstr ""
+
+#: includes/admin/class-mp-assign-badge.php:145
+msgid "Sucessfully removed"
+msgstr ""
+
+#: includes/admin/class-mp-save-badges.php:134
+msgid "Unable to add Badge"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:66
+msgid "UPDATE BADGE"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:153
+msgid "Update Badge"
+msgstr ""
+
+#: includes/templates/admin/add-Badges.php:137
+msgid "Upload Badge"
+msgstr ""
+
+#. Author of the plugin
+msgid "Webkul"
+msgstr ""

@@ -1,0 +1,14 @@
+2019-06-04T07:57:53+00:00 DEBUG api.subscribe :: Subscribing test@webkul.com :: Array
+(
+    [email_type] => html
+    [email_address] => test@webkul.com
+    [status] => pending
+    [merge_fields] => Array
+        (
+            [FNAME] => test
+            [LNAME] => webkul
+        )
+
+)
+
+2019-06-04T07:57:53+00:00 NOTICE member.sync :: test@webkul.com is Pending Double OptIn

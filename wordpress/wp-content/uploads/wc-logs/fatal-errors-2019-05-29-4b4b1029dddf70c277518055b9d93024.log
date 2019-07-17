@@ -1,0 +1,308 @@
+2019-05-29T04:47:53+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:48:39+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:48:44+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:48:54+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:49:04+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:49:19+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T04:55:09+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:01:05+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:01:33+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:07:17+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:07:17+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:07:18+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:09:23+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:14:29+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:14:50+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:16:00+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:16:14+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:16:17+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T05:19:20+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:11:12+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:16:46+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:16:57+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:17:06+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:17:12+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:52:19+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:54:21+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:55:07+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-29T17:55:34+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+

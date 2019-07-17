@@ -1,0 +1,1781 @@
+2019-05-28T02:29:13+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:29:21+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:53:57+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:54:46+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:55:38+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:55:40+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:55:41+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:55:46+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:00+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:12+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:19+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:27+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:56:31+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:57:22+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:58:12+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/template-homepage.php(38): get_f in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:58:17+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:58:37+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:58:43+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:59:03+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:59:14+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:59:24+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:59:40+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T02:59:58+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:00:16+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:00:24+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:00:38+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:00:51+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:01:44+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:01:55+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:02:03+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:02:14+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:02:21+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:02:48+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:03:02+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T03:03:04+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:03:09+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:03:28+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T03:28:04+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T04:17:16+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:17:51+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:19:15+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:20:16+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:21:57+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:23:57+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:25:23+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T04:25:25+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:25:57+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:26:16+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T04:26:18+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:26:33+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T04:26:37+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:26:40+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:26:44+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:02+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:04+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:08+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:11+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:14+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:17+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:18+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:21+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:30+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:39+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:27:55+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:28:51+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:28:55+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:29:45+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:31:59+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:34:07+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:36:07+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:38:08+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:40:07+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:41:29+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:41:49+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/template-homepage.php(38): get_f in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:41:53+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:42:02+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:42:05+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T04:42:07+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:44:08+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:46:08+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:47:58+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:50:10+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T04:52:11+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:00:00+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:00:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:00:19+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:00:55+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:01:00+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:01:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:01:14+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:01:26+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:01:44+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:02:25+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:02:57+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:05:30+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:06:26+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:07:29+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:08:03+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:08:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/plugins/elementor/modules/page-templates/templates/canvas.php(46): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template-loader.php(78): include('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-blog-header.php(19): require_once('/home/elevjgek/...')
+#7 /home/elevjgek/public_html/index.php(17): require('/home/elevjgek/...')
+#8 {main}
+  thrown in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:12:08+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:12:08+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:12:10+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:13:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:14:10+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:15:49+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/template-homepage.php(38): get_f in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:15:53+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:16:05+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:16:08+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:16:08+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:16:09+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:16:09+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T05:16:11+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:16:15+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:16:48+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:16:53+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:17:50+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:20:18+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:21:16+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:21:47+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:24:19+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:26:20+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:28:19+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:30:19+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:32:21+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:33:51+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:36:23+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:37:53+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:40:22+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:42:25+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:43:55+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:45:08+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:45:43+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:45:54+00:00 CRITICAL Uncaught Error: Class 'WC_Stripe_Connect' not found in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php:105
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): add_stripe_connect_script_elevnn('')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/elevjgek/public_html/wp-includes/general-template.php(2761): do_action('wp_footer')
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/footer.php(37): wp_footer()
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /home/elevjgek/public_html/wp-content/themes/storefront/404.php(83): get_footer()
+#9 /ho in /home/elevjgek/public_html/wp-content/plugins/theme-customisations-master/custom/functions.php on line 105
+
+2019-05-28T05:52:30+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T06:22:56+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T06:25:24+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T06:27:14+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T06:27:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
+2019-05-28T06:37:31+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/elevjgek/public_html/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /home/elevjgek/public_html/wp-includes/template.php(722): require_once('/home/elevjgek/...')
+#6 /home/elevjgek/public_html/wp-includes/template.php(671): load_template('/home/elevjgek/...', true)
+#7 /home/elevjgek/public_html/wp-includes/general-template.php(41): locate_templa in /home/elevjgek/public_html/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+

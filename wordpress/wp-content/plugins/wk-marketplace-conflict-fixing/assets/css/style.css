@@ -1,0 +1,31 @@
+.woocommerce-MyAccount-navigation{
+	width: 22% !important;
+	display: inline-block;
+	margin-right: 5%;
+  }
+  .woocommerce-account .woocommerce-MyAccount-navigation ul li{
+	list-style: none !important;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	position: relative;
+	line-height: 55px;
+  }
+  .woocommerce-MyAccount-content{
+	width: 72% !important;
+	vertical-align: top;
+	float: none !important;
+	display: inline-block;
+  }
+  
+  @media only screen and (max-width: 768px)  {
+  
+	.woocommerce-MyAccount-navigation{
+	  width: 100%;
+	  }
+  
+	.woocommerce-MyAccount-content{
+	  width: 100%;
+	  display: inline-block;
+	}
+  
+  }
+  

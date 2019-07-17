@@ -1,0 +1,22 @@
+2019-06-04T07:57:55+00:00 CRITICAL Uncaught Error: Class 'Emogrifier' not found in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php:927
+Stack trace:
+#0 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): Marketplace->seller_created('new_seller', Array)
+#1 /home/elevjgek/public_html/wp-includes/plugin.php(208): WP_Hook->apply_filters('new_seller', Array)
+#2 /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/includes/front/handlers/class-mp-register-handler.php(138): apply_filters('new_seller_regi...', 'new_seller', Array)
+#3 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(288): MP_Register_Handler->process_registration(48, Array)
+#4 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#6 /home/elevjgek/public_html/wp-content/plugins/woocommerce/includes/wc-user-functions.php(105): do_action('woocommerce_cre...', 48, Array, false)
+#7 /home/ in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php on line 927
+
+2019-06-04T13:53:04+00:00 CRITICAL Uncaught Error: Class 'Emogrifier' not found in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php:871
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php(619): Marketplace->style_inline('<!DOCTYPE html>...', 'preview_marketp...')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): Marketplace->preview_emails('preview_marketp...')
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(208): WP_Hook->apply_filters('preview_marketp...', Array)
+#3 /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/includes/admin/index.php(169): apply_filters('woocommerce_mai...', 'preview_marketp...')
+#4 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): mp_email_templates('')
+#5 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#7 /home/elevjgek/public_html/wp-admin/a in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php on line 871
+

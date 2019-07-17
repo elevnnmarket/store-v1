@@ -1,0 +1,12 @@
+[02-Jun-2019 16:57:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/footer.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/footer.php on line 22
+[03-Jun-2019 00:31:52 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/404.php on line 13
+[06-Jun-2019 08:14:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/elevjgek/public_html/wp-content/themes/twentyseventeen/404.php on line 13

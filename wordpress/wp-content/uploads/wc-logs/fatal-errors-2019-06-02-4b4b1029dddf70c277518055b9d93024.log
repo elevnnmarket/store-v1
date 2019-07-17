@@ -1,0 +1,11 @@
+2019-06-02T02:48:25+00:00 CRITICAL Uncaught Error: Class 'Emogrifier' not found in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php:873
+Stack trace:
+#0 /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php(1033): Marketplace->style_inline('<!DOCTYPE html>...', 'woocommerce_sel...')
+#1 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): Marketplace->approve_seller('seller_approval', '36')
+#2 /home/elevjgek/public_html/wp-includes/plugin.php(208): WP_Hook->apply_filters('seller_approval', Array)
+#3 /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/includes/class-mp-ajax-functions.php(425): apply_filters('woocommerce_app...', 'seller_approval', '36')
+#4 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(286): wk_admin_seller_approve('')
+#5 /home/elevjgek/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 /home/elevjgek/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#7 /home/elevjgek/p in /home/elevjgek/public_html/wp-content/plugins/wk-woocommerce-marketplace/functions.php on line 873
+

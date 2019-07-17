@@ -1,0 +1,13 @@
+
+.wk_badge_button_enable{
+  padding: 5px 10px 5px 10px;
+  border-radius: 2px;
+  background: #c6e1c6;
+  color: #5b841b;
+}
+.wk_badge_button_disable{
+  padding: 5px 10px 5px 10px;
+  border-radius: 2px;
+  color: #555;
+  background: #D3D3D3;
+}

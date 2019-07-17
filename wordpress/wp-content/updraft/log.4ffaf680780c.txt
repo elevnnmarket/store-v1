@@ -1,0 +1,1606 @@
+0000.000 (0) Opened log file at time: Thu, 30 May 2019 03:00:14 +0000 on https://elevnn.com/
+0000.002 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.14 WP: 5.2.1 PHP: 7.0.33 (cgi-fcgi, Linux business18.web-hosting.com 2.6.32-954.3.5.lve1.4.64.el6.x86_64 #1 SMP Wed May 15 12:53:53 EDT 2019 x86_64) MySQL: 10.1.38-MariaDB-cll-lve WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 83.4M | 2M) multisite: Y openssl: OpenSSL 1.0.2k-fips  26 Jan 2017 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.059 (0) Free space on disk containing Updraft's temporary directory: 789223.8 MB
+0000.062 (0) Deleting old log file: log.742c73f60245.txt
+0000.064 (0) Deleting old log file: log.0596159f3d02.txt
+0000.065 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.069 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.071 (0) Set semaphore last lock (fd) time to 2019-05-30 03:00:14
+0000.071 (0) Semaphore lock (fd) complete
+0000.078 (0) Backup run: resumption=0, nonce=4ffaf680780c, file_nonce=4ffaf680780c begun at=1559185214 (0s ago), job type=backup
+0000.079 (0) Scheduling a resumption (1) after 300 seconds (1559185514) in case this run gets aborted
+0000.091 (0) Checking if we have a zip executable available
+0000.092 (0) Testing: /usr/bin/zip
+0000.103 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.104 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.105 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.106 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.107 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.120 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.121 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.129 (0) Working binary zip found: /usr/bin/zip
+0000.131 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.132 (0) Creation of backups of directories: beginning
+0000.138 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.981 (0) Total entities for the zip file: 2079 directories, 12509 files (0 skipped as non-modified), 220.7 MB
+0000.985 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.989 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.992 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.996 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.999 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.000 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (17.9 MB, 12509 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.814 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: size is now: 7.60 MB
+0001.818 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 600 files added (on-disk size: 7775.3 KB)
+0001.824 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 700 files added (on-disk size: 7775.3 KB)
+0001.827 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 800 files added (on-disk size: 7775.3 KB)
+0001.830 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 900 files added (on-disk size: 7775.3 KB)
+0001.834 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1000 files added (on-disk size: 7775.3 KB)
+0001.835 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (16.1 MB, 12509 files batched, 501 (1002) added so far); re-opening (prior size: 7775.3 KB)
+0002.680 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: size is now: 12.30 MB
+0002.688 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1100 files added (on-disk size: 12546.1 KB)
+0002.693 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1200 files added (on-disk size: 12546.1 KB)
+0002.697 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1300 files added (on-disk size: 12546.1 KB)
+0002.706 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1400 files added (on-disk size: 12546.1 KB)
+0002.710 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1500 files added (on-disk size: 12546.1 KB)
+0002.714 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 12509 files batched, 501 (1503) added so far); re-opening (prior size: 12546.1 KB)
+0002.893 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1600 files added (on-disk size: 13535.6 KB)
+0002.898 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1700 files added (on-disk size: 13535.6 KB)
+0002.901 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1800 files added (on-disk size: 13535.6 KB)
+0002.904 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 1900 files added (on-disk size: 13535.6 KB)
+0002.908 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2000 files added (on-disk size: 13535.6 KB)
+0002.909 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.7 MB, 12509 files batched, 501 (2004) added so far); re-opening (prior size: 13535.6 KB)
+0003.461 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2100 files added (on-disk size: 15073.8 KB)
+0003.465 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2200 files added (on-disk size: 15073.8 KB)
+0003.469 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2300 files added (on-disk size: 15073.8 KB)
+0003.472 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2400 files added (on-disk size: 15073.8 KB)
+0003.475 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25.1 MB, 12509 files batched, 470 (2474) added so far); re-opening (prior size: 15073.8 KB)
+0004.748 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: size is now: 20.60 MB
+0004.751 (0) A useful amount of data was added after this amount of zip processing: 2.2 s (normalised: 2.2 s, rate: 11688.7 KB/s)
+0004.753 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.1977291107178, normalised_time=2.1901569178796, max_time=4.751876115799, data points known=1, old_max_bytes=26214400, new_max_bytes=71815128)
+0004.756 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2500 files added (on-disk size: 21060.3 KB)
+0004.759 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2600 files added (on-disk size: 21060.3 KB)
+0004.763 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2700 files added (on-disk size: 21060.3 KB)
+0004.768 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2800 files added (on-disk size: 21060.3 KB)
+0004.773 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 2900 files added (on-disk size: 21060.3 KB)
+0004.776 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.9 MB, 12509 files batched, 501 (2975) added so far); re-opening (prior size: 21060.3 KB)
+0005.996 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: size is now: 24.90 MB
+0006.002 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3000 files added (on-disk size: 25498 KB)
+0006.006 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3100 files added (on-disk size: 25498 KB)
+0006.009 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3200 files added (on-disk size: 25498 KB)
+0006.013 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3300 files added (on-disk size: 25498 KB)
+0006.017 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3400 files added (on-disk size: 25498 KB)
+0006.020 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.3 MB, 12509 files batched, 501 (3476) added so far); re-opening (prior size: 25498 KB)
+0006.781 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3500 files added (on-disk size: 27088.1 KB)
+0006.786 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3600 files added (on-disk size: 27088.1 KB)
+0006.790 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3700 files added (on-disk size: 27088.1 KB)
+0006.793 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3800 files added (on-disk size: 27088.1 KB)
+0006.797 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 3900 files added (on-disk size: 27088.1 KB)
+0006.799 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.9 MB, 12509 files batched, 501 (3977) added so far); re-opening (prior size: 27088.1 KB)
+0007.340 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4000 files added (on-disk size: 28989.5 KB)
+0007.345 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4100 files added (on-disk size: 28989.5 KB)
+0007.348 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4200 files added (on-disk size: 28989.5 KB)
+0007.352 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4300 files added (on-disk size: 28989.5 KB)
+0007.355 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4400 files added (on-disk size: 28989.5 KB)
+0007.358 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.2 MB, 12509 files batched, 501 (4478) added so far); re-opening (prior size: 28989.5 KB)
+0008.258 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: size is now: 34.00 MB
+0008.263 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4500 files added (on-disk size: 34844.9 KB)
+0008.266 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4600 files added (on-disk size: 34844.9 KB)
+0008.270 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4700 files added (on-disk size: 34844.9 KB)
+0008.274 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4800 files added (on-disk size: 34844.9 KB)
+0008.277 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 4900 files added (on-disk size: 34844.9 KB)
+0008.280 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.4 MB, 12509 files batched, 501 (4979) added so far); re-opening (prior size: 34844.9 KB)
+0009.760 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5000 files added (on-disk size: 38791.4 KB)
+0009.782 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5100 files added (on-disk size: 38791.4 KB)
+0009.787 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5200 files added (on-disk size: 38791.4 KB)
+0009.803 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5300 files added (on-disk size: 38791.4 KB)
+0009.824 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5400 files added (on-disk size: 38791.4 KB)
+0009.834 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.1 MB, 12509 files batched, 501 (5480) added so far); re-opening (prior size: 38791.4 KB)
+0011.018 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5500 files added (on-disk size: 39929 KB)
+0011.023 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5600 files added (on-disk size: 39929 KB)
+0011.027 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5700 files added (on-disk size: 39929 KB)
+0011.030 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5800 files added (on-disk size: 39929 KB)
+0011.034 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 5900 files added (on-disk size: 39929 KB)
+0011.037 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11 MB, 12509 files batched, 501 (5981) added so far); re-opening (prior size: 39929 KB)
+0012.125 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6000 files added (on-disk size: 43162.2 KB)
+0012.131 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6100 files added (on-disk size: 43162.2 KB)
+0012.136 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6200 files added (on-disk size: 43162.2 KB)
+0012.140 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6300 files added (on-disk size: 43162.2 KB)
+0012.144 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6400 files added (on-disk size: 43162.2 KB)
+0012.148 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 MB, 12509 files batched, 501 (6482) added so far); re-opening (prior size: 43162.2 KB)
+0012.745 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6500 files added (on-disk size: 44056.4 KB)
+0012.749 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6600 files added (on-disk size: 44056.4 KB)
+0012.754 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6700 files added (on-disk size: 44056.4 KB)
+0012.757 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6800 files added (on-disk size: 44056.4 KB)
+0012.763 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 6900 files added (on-disk size: 44056.4 KB)
+0012.767 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4 MB, 12509 files batched, 501 (6983) added so far); re-opening (prior size: 44056.4 KB)
+0013.427 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7000 files added (on-disk size: 45332.2 KB)
+0013.431 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7100 files added (on-disk size: 45332.2 KB)
+0013.435 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7200 files added (on-disk size: 45332.2 KB)
+0013.438 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7300 files added (on-disk size: 45332.2 KB)
+0013.443 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7400 files added (on-disk size: 45332.2 KB)
+0013.447 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.9 MB, 12509 files batched, 501 (7484) added so far); re-opening (prior size: 45332.2 KB)
+0014.320 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7500 files added (on-disk size: 47228.5 KB)
+0014.324 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7600 files added (on-disk size: 47228.5 KB)
+0014.327 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7700 files added (on-disk size: 47228.5 KB)
+0014.331 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7800 files added (on-disk size: 47228.5 KB)
+0014.334 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 7900 files added (on-disk size: 47228.5 KB)
+0014.337 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.4 MB, 12509 files batched, 501 (7985) added so far); re-opening (prior size: 47228.5 KB)
+0015.423 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8000 files added (on-disk size: 50154.5 KB)
+0015.430 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8100 files added (on-disk size: 50154.5 KB)
+0015.434 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8200 files added (on-disk size: 50154.5 KB)
+0015.437 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8300 files added (on-disk size: 50154.5 KB)
+0015.441 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8400 files added (on-disk size: 50154.5 KB)
+0015.447 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.5 MB, 12509 files batched, 501 (8486) added so far); re-opening (prior size: 50154.5 KB)
+0016.129 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8500 files added (on-disk size: 51441 KB)
+0016.134 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8600 files added (on-disk size: 51441 KB)
+0016.139 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8700 files added (on-disk size: 51441 KB)
+0016.144 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8800 files added (on-disk size: 51441 KB)
+0016.148 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 8900 files added (on-disk size: 51441 KB)
+0016.153 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.9 MB, 12509 files batched, 501 (8987) added so far); re-opening (prior size: 51441 KB)
+0017.033 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9000 files added (on-disk size: 54141.1 KB)
+0017.037 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9100 files added (on-disk size: 54141.1 KB)
+0017.041 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9200 files added (on-disk size: 54141.1 KB)
+0017.048 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9300 files added (on-disk size: 54141.1 KB)
+0017.052 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9400 files added (on-disk size: 54141.1 KB)
+0017.055 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.4 MB, 12509 files batched, 501 (9488) added so far); re-opening (prior size: 54141.1 KB)
+0017.987 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9500 files added (on-disk size: 57597.4 KB)
+0017.991 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9600 files added (on-disk size: 57597.4 KB)
+0017.995 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9700 files added (on-disk size: 57597.4 KB)
+0017.999 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9800 files added (on-disk size: 57597.4 KB)
+0018.004 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 9900 files added (on-disk size: 57597.4 KB)
+0018.008 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 12509 files batched, 501 (9989) added so far); re-opening (prior size: 57597.4 KB)
+0019.660 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10000 files added (on-disk size: 58331.3 KB)
+0019.666 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10100 files added (on-disk size: 58331.3 KB)
+0019.670 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10200 files added (on-disk size: 58331.3 KB)
+0019.674 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10300 files added (on-disk size: 58331.3 KB)
+0019.680 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10400 files added (on-disk size: 58331.3 KB)
+0019.684 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (26.8 MB, 12509 files batched, 501 (10490) added so far); re-opening (prior size: 58331.3 KB)
+0022.140 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10500 files added (on-disk size: 63622.6 KB)
+0022.145 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10600 files added (on-disk size: 63622.6 KB)
+0022.151 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10700 files added (on-disk size: 63622.6 KB)
+0022.154 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10800 files added (on-disk size: 63622.6 KB)
+0022.157 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 10900 files added (on-disk size: 63622.6 KB)
+0022.161 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.1 MB, 12509 files batched, 501 (10991) added so far); re-opening (prior size: 63622.6 KB)
+0023.898 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11000 files added (on-disk size: 65284.9 KB)
+0023.902 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11100 files added (on-disk size: 65284.9 KB)
+0023.905 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11200 files added (on-disk size: 65284.9 KB)
+0023.910 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11300 files added (on-disk size: 65284.9 KB)
+0023.913 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11400 files added (on-disk size: 65284.9 KB)
+0023.916 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.9 MB, 12509 files batched, 501 (11492) added so far); re-opening (prior size: 65284.9 KB)
+0025.718 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11500 files added (on-disk size: 66937 KB)
+0025.723 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11600 files added (on-disk size: 66937 KB)
+0025.727 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11700 files added (on-disk size: 66937 KB)
+0025.731 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11800 files added (on-disk size: 66937 KB)
+0025.735 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 11900 files added (on-disk size: 66937 KB)
+0025.739 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8 MB, 12509 files batched, 501 (11993) added so far); re-opening (prior size: 66937 KB)
+0027.934 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12000 files added (on-disk size: 70066.2 KB)
+0027.939 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12100 files added (on-disk size: 70066.2 KB)
+0027.943 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12200 files added (on-disk size: 70066.2 KB)
+0027.946 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12300 files added (on-disk size: 70066.2 KB)
+0027.950 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12400 files added (on-disk size: 70066.2 KB)
+0027.954 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.5 MB, 12509 files batched, 501 (12494) added so far); re-opening (prior size: 70066.2 KB)
+0029.769 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip.tmp: 12500 files added (on-disk size: 72949.6 KB)
+0032.018 (0) Created plugins zip (0) - 72990.7 KB in 31.8 s (2294.4 KB/s) (sha1: e8a38de05f96909f30b5f5194213908f32fd3f02, sha256: b060b54bc7002e40955f6ea052476fec1aaa703de4e9b6c768d64485a6ba9c64)
+0032.021 (0) Beginning creation of dump of themes (split every: 400 MB)
+0032.085 (0) Total entities for the zip file: 84 directories, 373 files (0 skipped as non-modified), 8 MB
+0032.091 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0032.095 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0032.099 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0032.596 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip.tmp: size is now: 5.30 MB
+0032.664 (0) Created themes zip (0) - 5399.4 KB in 0.6 s (9100.8 KB/s) (sha1: a4b40b8c26f3705f8e4aab47dc5f903471247174, sha256: 1ea0f3ddd64493ab4ea3cdb63cfb28f93befa8ae94cf3e372673a4f5ea7e0dd4)
+0032.667 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0032.668 (0) Looking for candidates to backup in: /home/elevjgek/public_html/wp-content/uploads
+0032.670 (0) finding files: wc-logs: adding to list (1)
+0032.671 (0) finding files: wcfm: adding to list (2)
+0032.672 (0) finding files: sites: adding to list (3)
+0032.673 (0) finding files: woocommerce-placeholder-1024x1024.png: adding to list (4)
+0032.674 (0) finding files: 2019: adding to list (5)
+0032.675 (0) finding files: woocommerce-placeholder-150x150.png: adding to list (6)
+0032.676 (0) finding files: taxjar-wc_tax_rates-04-19-2019-1555693375.csv: adding to list (7)
+0032.677 (0) finding files: woocommerce_uploads: adding to list (8)
+0032.678 (0) finding files: woocommerce-placeholder-768x768.png: adding to list (9)
+0032.679 (0) finding files: ultimatemember: adding to list (10)
+0032.680 (0) finding files: GeoLite2-Country.mmdb: adding to list (11)
+0032.681 (0) finding files: wp-staging: adding to list (12)
+0032.682 (0) finding files: woocommerce-placeholder-300x300.png: adding to list (13)
+0032.684 (0) finding files: woocommerce-placeholder.png: adding to list (14)
+0032.686 (0) finding files: elementor: adding to list (15)
+0032.686 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0032.800 (0) Total entities for the zip file: 31 directories, 1296 files (0 skipped as non-modified), 91.6 MB
+0032.805 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0032.809 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0032.813 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0032.816 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 400 files added (on-disk size: 0 KB)
+0032.820 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 500 files added (on-disk size: 0 KB)
+0032.821 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (34.9 MB, 1296 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0033.474 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: size is now: 34.80 MB
+0033.483 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 600 files added (on-disk size: 35635.5 KB)
+0033.488 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 700 files added (on-disk size: 35635.5 KB)
+0033.493 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 800 files added (on-disk size: 35635.5 KB)
+0033.497 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 900 files added (on-disk size: 35635.5 KB)
+0033.501 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 1000 files added (on-disk size: 35635.5 KB)
+0033.502 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (31.3 MB, 1296 files batched, 501 (1002) added so far); re-opening (prior size: 35635.5 KB)
+0035.310 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: size is now: 66.10 MB
+0035.317 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 1100 files added (on-disk size: 67725.8 KB)
+0035.321 (0) Zip: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: 1200 files added (on-disk size: 67725.8 KB)
+0038.261 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip.tmp: size is now: 89.70 MB
+0039.220 (0) Created uploads zip (0) - 91890 KB in 6.5 s (14214.5 KB/s) (sha1: 664a233a1fed8c737996eec087d2677503b63790, sha256: e3c41452560df02b3fb14c2d3e90b74942f6efd1a15cd2b91658a0adfe037ddd)
+0039.222 (0) Beginning backup of other directories found in the content directory (index: 0)
+0039.223 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0039.224 (0) Looking for candidates to backup in: /home/elevjgek/public_html/wp-content
+0039.224 (0) finding files: mu-plugins: adding to list (1)
+0039.225 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+0039.225 (0) finding files: wflogs: adding to list (2)
+0039.226 (0) finding files: codeguard_backups: skipping: excluded by options (glob)
+0039.226 (0) finding files: cache: skipping: excluded by options
+0039.227 (0) finding files: index.php: adding to list (3)
+0039.228 (0) finding files: plugins: skipping: this is the plugins directory
+0039.228 (0) finding files: uploads: skipping: this is the uploads directory
+0039.229 (0) finding files: languages: adding to list (4)
+0039.229 (0) finding files: upgrade: skipping: excluded by options
+0039.230 (0) finding files: debug.log: skipping: excluded by options
+0039.230 (0) finding files: updraft: skipping: this is the updraft directory
+0039.231 (0) finding files: themes: skipping: this is the themes directory
+0039.232 (0) finding files: w3tc-config: adding to list (5)
+0039.280 (0) Total entities for the zip file: 5 directories, 15 files (0 skipped as non-modified), 5.7 MB
+0039.715 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip.tmp: size is now: 2.50 MB
+0039.746 (0) Created others zip (0) - 2538.8 KB in 0.5 s (5423.6 KB/s) (sha1: 429cb8a619405c0cbc40de258abc9ffdf4e27e42, sha256: 8deb49703c4e8bfdd39145990c5f1e2c508b3767ababd75ec87492cbd9c636d3)
+0039.750 (0) Saving backup status to database (elements: 8)
+0039.753 (0) Beginning creation of database dump (WordPress DB)
+0039.755 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0039.778 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `elevnn_store_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = ut (truncated - 1239 bytes total)
+0039.780 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0039.822 (0) Table elevnn_store_options: Total expected rows (approximate): 1158
+0039.895 (0) Table elevnn_store_options: Total rows added: 1152 in 0.07 seconds
+0039.897 (0) Table elevnn_store_options: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_options.table.gz - 280 KB)
+0039.902 (0) Table elevnn_store_site: Total expected rows (approximate): 1
+0039.905 (0) Table elevnn_store_site: Total rows added: 1 in 0.00 seconds
+0039.906 (0) Table elevnn_store_site: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_site.table.gz - 0.4 KB)
+0039.909 (0) Table elevnn_store_blogs: Total expected rows (approximate): 2
+0039.913 (0) Table elevnn_store_blogs: Total rows added: 2 in 0.00 seconds
+0039.914 (0) Table elevnn_store_blogs: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blogs.table.gz - 0.5 KB)
+0039.922 (0) Table elevnn_store_users: Total expected rows (approximate): 2
+0039.925 (0) Table elevnn_store_users: Total rows added: 2 in 0.00 seconds
+0039.925 (0) Table elevnn_store_users: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_users.table.gz - 0.7 KB)
+0039.929 (0) Table elevnn_store_usermeta: Total expected rows (approximate): 162
+0039.935 (0) Table elevnn_store_usermeta: Total rows added: 162 in 0.00 seconds
+0039.936 (0) Table elevnn_store_usermeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_usermeta.table.gz - 9.2 KB)
+0039.940 (0) Table elevnn_store_blog_versions: Total expected rows (approximate): 0
+0039.942 (0) Table elevnn_store_blog_versions: Total rows added: 0 in 0.00 seconds
+0039.943 (0) Table elevnn_store_blog_versions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blog_versions.table.gz - 0.3 KB)
+0039.947 (0) Table elevnn_store_blogmeta: Total expected rows (approximate): 0
+0039.949 (0) Table elevnn_store_blogmeta: Total rows added: 0 in 0.00 seconds
+0039.950 (0) Table elevnn_store_blogmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blogmeta.table.gz - 0.4 KB)
+0039.953 (0) Table elevnn_store_commentmeta: Total expected rows (approximate): 0
+0039.955 (0) Table elevnn_store_commentmeta: Total rows added: 0 in 0.00 seconds
+0039.957 (0) Table elevnn_store_commentmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_commentmeta.table.gz - 0.4 KB)
+0039.961 (0) Table elevnn_store_comments: Total expected rows (approximate): 176
+0039.966 (0) Table elevnn_store_comments: Total rows added: 176 in 0.00 seconds
+0039.967 (0) Table elevnn_store_comments: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_comments.table.gz - 2.6 KB)
+0039.971 (0) Table elevnn_store_links: Total expected rows (approximate): 0
+0039.974 (0) Table elevnn_store_links: Total rows added: 0 in 0.00 seconds
+0039.975 (0) Table elevnn_store_links: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_links.table.gz - 0.4 KB)
+0039.979 (0) Table elevnn_store_postmeta: Total expected rows (approximate): 3347
+0040.061 (0) Table elevnn_store_postmeta: Total rows added: 3347 in 0.08 seconds
+0040.062 (0) Table elevnn_store_postmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_postmeta.table.gz - 256.3 KB)
+0040.066 (0) Table elevnn_store_posts: Total expected rows (approximate): 604
+0040.128 (0) Table elevnn_store_posts: Total rows added: 604 in 0.06 seconds
+0040.130 (0) Table elevnn_store_posts: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_posts.table.gz - 227.5 KB)
+0040.136 (0) Table elevnn_store_registration_log: Total expected rows (approximate): 7
+0040.139 (0) Table elevnn_store_registration_log: Total rows added: 7 in 0.00 seconds
+0040.140 (0) Table elevnn_store_registration_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_registration_log.table.gz - 0.5 KB)
+0040.144 (0) Table elevnn_store_signups: Total expected rows (approximate): 0
+0040.146 (0) Table elevnn_store_signups: Total rows added: 0 in 0.00 seconds
+0040.147 (0) Table elevnn_store_signups: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_signups.table.gz - 0.5 KB)
+0040.150 (0) Table elevnn_store_sitemeta: Total expected rows (approximate): 77
+0040.158 (0) Table elevnn_store_sitemeta: Total rows added: 76 in 0.01 seconds
+0040.159 (0) Table elevnn_store_sitemeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_sitemeta.table.gz - 18.1 KB)
+0040.164 (0) Table elevnn_store_term_relationships: Total expected rows (approximate): 206
+0040.168 (0) Table elevnn_store_term_relationships: Total rows added: 206 in 0.00 seconds
+0040.169 (0) Table elevnn_store_term_relationships: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_term_relationships.table.gz - 1 KB)
+0040.175 (0) Table elevnn_store_term_taxonomy: Total expected rows (approximate): 81
+0040.177 (0) Table elevnn_store_term_taxonomy: Total rows added: 81 in 0.00 seconds
+0040.178 (0) Table elevnn_store_term_taxonomy: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_term_taxonomy.table.gz - 1.2 KB)
+0040.185 (0) Table elevnn_store_termmeta: Total expected rows (approximate): 58
+0040.188 (0) Table elevnn_store_termmeta: Total rows added: 58 in 0.00 seconds
+0040.189 (0) Table elevnn_store_termmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_termmeta.table.gz - 1.1 KB)
+0040.195 (0) Table elevnn_store_terms: Total expected rows (approximate): 81
+0040.200 (0) Table elevnn_store_terms: Total rows added: 81 in 0.00 seconds
+0040.201 (0) Table elevnn_store_terms: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_terms.table.gz - 1.4 KB)
+0040.205 (0) Table elevnn_store_wc_product_meta_lookup: Total expected rows (approximate): 27
+0040.207 (0) Table elevnn_store_wc_product_meta_lookup: Total rows added: 27 in 0.00 seconds
+0040.208 (0) Table elevnn_store_wc_product_meta_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_product_meta_lookup.table.gz - 0.8 KB)
+0040.213 (0) Table elevnn_store_woocommerce_order_itemmeta: Total expected rows (approximate): 19
+0040.216 (0) Table elevnn_store_woocommerce_order_itemmeta: Total rows added: 19 in 0.00 seconds
+0040.217 (0) Table elevnn_store_woocommerce_order_itemmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_order_itemmeta.table.gz - 0.7 KB)
+0040.222 (0) Table elevnn_store_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0040.224 (0) Table elevnn_store_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0040.224 (0) Table elevnn_store_woocommerce_payment_tokenmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0040.229 (0) Table elevnn_store_yoast_seo_links: Total expected rows (approximate): 167
+0040.233 (0) Table elevnn_store_yoast_seo_links: Total rows added: 167 in 0.00 seconds
+0040.234 (0) Table elevnn_store_yoast_seo_links: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_yoast_seo_links.table.gz - 1.8 KB)
+0040.239 (0) Table elevnn_store_yoast_seo_meta: Total expected rows (approximate): 237
+0040.242 (0) Table elevnn_store_yoast_seo_meta: Total rows added: 237 in 0.00 seconds
+0040.243 (0) Table elevnn_store_yoast_seo_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_yoast_seo_meta.table.gz - 1 KB)
+0040.248 (0) Table elevnn_store_8_commentmeta: Total expected rows (approximate): 0
+0040.250 (0) Table elevnn_store_8_commentmeta: Total rows added: 0 in 0.00 seconds
+0040.251 (0) Table elevnn_store_8_commentmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_commentmeta.table.gz - 0.4 KB)
+0040.256 (0) Table elevnn_store_8_comments: Total expected rows (approximate): 1
+0040.259 (0) Table elevnn_store_8_comments: Total rows added: 1 in 0.00 seconds
+0040.259 (0) Table elevnn_store_8_comments: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_comments.table.gz - 0.7 KB)
+0040.264 (0) Table elevnn_store_8_duplicator_packages: Total expected rows (approximate): 0
+0040.266 (0) Table elevnn_store_8_duplicator_packages: Total rows added: 0 in 0.00 seconds
+0040.267 (0) Table elevnn_store_8_duplicator_packages: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_duplicator_packages.table.gz - 0.4 KB)
+0040.272 (0) Table elevnn_store_8_emailTemplate: Total expected rows (approximate): 0
+0040.273 (0) Table elevnn_store_8_emailTemplate: Total rows added: 0 in 0.00 seconds
+0040.274 (0) Table elevnn_store_8_emailTemplate: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_emailTemplate.table.gz - 0.4 KB)
+0040.281 (0) Table elevnn_store_8_failed_jobs: Total expected rows (approximate): 0
+0040.283 (0) Table elevnn_store_8_failed_jobs: Total rows added: 0 in 0.00 seconds
+0040.284 (0) Table elevnn_store_8_failed_jobs: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_failed_jobs.table.gz - 0.3 KB)
+0040.290 (0) Table elevnn_store_8_links: Total expected rows (approximate): 0
+0040.293 (0) Table elevnn_store_8_links: Total rows added: 0 in 0.00 seconds
+0040.294 (0) Table elevnn_store_8_links: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_links.table.gz - 0.5 KB)
+0040.304 (0) Table elevnn_store_8_mailchimp_carts: Total expected rows (approximate): 0
+0040.306 (0) Table elevnn_store_8_mailchimp_carts: Total rows added: 0 in 0.00 seconds
+0040.307 (0) Table elevnn_store_8_mailchimp_carts: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mailchimp_carts.table.gz - 0.3 KB)
+0040.315 (0) Table elevnn_store_8_mp_notifications: Total expected rows (approximate): 0
+0040.319 (0) Table elevnn_store_8_mp_notifications: Total rows added: 0 in 0.00 seconds
+0040.319 (0) Table elevnn_store_8_mp_notifications: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mp_notifications.table.gz - 0.4 KB)
+0040.326 (0) Table elevnn_store_8_mpcommision: Total expected rows (approximate): 0
+0040.328 (0) Table elevnn_store_8_mpcommision: Total rows added: 0 in 0.00 seconds
+0040.329 (0) Table elevnn_store_8_mpcommision: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpcommision.table.gz - 0.4 KB)
+0040.334 (0) Table elevnn_store_8_mpfeedback: Total expected rows (approximate): 0
+0040.335 (0) Table elevnn_store_8_mpfeedback: Total rows added: 0 in 0.00 seconds
+0040.336 (0) Table elevnn_store_8_mpfeedback: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpfeedback.table.gz - 0.4 KB)
+0040.340 (0) Table elevnn_store_8_mporders: Total expected rows (approximate): 0
+0040.341 (0) Table elevnn_store_8_mporders: Total rows added: 0 in 0.00 seconds
+0040.342 (0) Table elevnn_store_8_mporders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mporders.table.gz - 0.4 KB)
+0040.347 (0) Table elevnn_store_8_mporders_meta: Total expected rows (approximate): 0
+0040.349 (0) Table elevnn_store_8_mporders_meta: Total rows added: 0 in 0.00 seconds
+0040.350 (0) Table elevnn_store_8_mporders_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mporders_meta.table.gz - 0.3 KB)
+0040.354 (0) Table elevnn_store_8_mpseller_asktoadmin: Total expected rows (approximate): 0
+0040.356 (0) Table elevnn_store_8_mpseller_asktoadmin: Total rows added: 0 in 0.00 seconds
+0040.356 (0) Table elevnn_store_8_mpseller_asktoadmin: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_asktoadmin.table.gz - 0.4 KB)
+0040.361 (0) Table elevnn_store_8_mpseller_asktoadmin_meta: Total expected rows (approximate): 0
+0040.363 (0) Table elevnn_store_8_mpseller_asktoadmin_meta: Total rows added: 0 in 0.00 seconds
+0040.364 (0) Table elevnn_store_8_mpseller_asktoadmin_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_asktoadmin_meta.table.gz - 0.3 KB)
+0040.369 (0) Table elevnn_store_8_mpseller_meta: Total expected rows (approximate): 0
+0040.371 (0) Table elevnn_store_8_mpseller_meta: Total rows added: 0 in 0.00 seconds
+0040.372 (0) Table elevnn_store_8_mpseller_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_meta.table.gz - 0.3 KB)
+0040.376 (0) Table elevnn_store_8_mpseller_orders: Total expected rows (approximate): 0
+0040.378 (0) Table elevnn_store_8_mpseller_orders: Total rows added: 0 in 0.00 seconds
+0040.379 (0) Table elevnn_store_8_mpseller_orders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_orders.table.gz - 0.3 KB)
+0040.384 (0) Table elevnn_store_8_mpsellerinfo: Total expected rows (approximate): 0
+0040.386 (0) Table elevnn_store_8_mpsellerinfo: Total rows added: 0 in 0.00 seconds
+0040.386 (0) Table elevnn_store_8_mpsellerinfo: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpsellerinfo.table.gz - 0.3 KB)
+0040.391 (0) Table elevnn_store_8_nf3_action_meta: Total expected rows (approximate): 316
+0040.395 (0) Table elevnn_store_8_nf3_action_meta: Total rows added: 316 in 0.00 seconds
+0040.396 (0) Table elevnn_store_8_nf3_action_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_action_meta.table.gz - 3.6 KB)
+0040.400 (0) Table elevnn_store_8_nf3_actions: Total expected rows (approximate): 12
+0040.404 (0) Table elevnn_store_8_nf3_actions: Total rows added: 12 in 0.00 seconds
+0040.405 (0) Table elevnn_store_8_nf3_actions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_actions.table.gz - 0.6 KB)
+0040.410 (0) Table elevnn_store_8_nf3_chunks: Total expected rows (approximate): 0
+0040.412 (0) Table elevnn_store_8_nf3_chunks: Total rows added: 0 in 0.00 seconds
+0040.413 (0) Table elevnn_store_8_nf3_chunks: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_chunks.table.gz - 0.3 KB)
+0040.418 (0) Table elevnn_store_8_nf3_field_meta: Total expected rows (approximate): 732
+0040.430 (0) Table elevnn_store_8_nf3_field_meta: Total rows added: 732 in 0.01 seconds
+0040.431 (0) Table elevnn_store_8_nf3_field_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_field_meta.table.gz - 11.8 KB)
+0040.437 (0) Table elevnn_store_8_nf3_fields: Total expected rows (approximate): 26
+0040.440 (0) Table elevnn_store_8_nf3_fields: Total rows added: 26 in 0.00 seconds
+0040.441 (0) Table elevnn_store_8_nf3_fields: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_fields.table.gz - 1.5 KB)
+0040.446 (0) Table elevnn_store_8_nf3_form_meta: Total expected rows (approximate): 243
+0040.450 (0) Table elevnn_store_8_nf3_form_meta: Total rows added: 243 in 0.00 seconds
+0040.451 (0) Table elevnn_store_8_nf3_form_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_form_meta.table.gz - 3.7 KB)
+0040.456 (0) Table elevnn_store_8_nf3_forms: Total expected rows (approximate): 3
+0040.460 (0) Table elevnn_store_8_nf3_forms: Total rows added: 3 in 0.00 seconds
+0040.461 (0) Table elevnn_store_8_nf3_forms: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_forms.table.gz - 0.6 KB)
+0040.466 (0) Table elevnn_store_8_nf3_object_meta: Total expected rows (approximate): 0
+0040.469 (0) Table elevnn_store_8_nf3_object_meta: Total rows added: 0 in 0.00 seconds
+0040.470 (0) Table elevnn_store_8_nf3_object_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_object_meta.table.gz - 0.3 KB)
+0040.475 (0) Table elevnn_store_8_nf3_objects: Total expected rows (approximate): 0
+0040.478 (0) Table elevnn_store_8_nf3_objects: Total rows added: 0 in 0.00 seconds
+0040.479 (0) Table elevnn_store_8_nf3_objects: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_objects.table.gz - 0.3 KB)
+0040.483 (0) Table elevnn_store_8_nf3_relationships: Total expected rows (approximate): 0
+0040.485 (0) Table elevnn_store_8_nf3_relationships: Total rows added: 0 in 0.00 seconds
+0040.485 (0) Table elevnn_store_8_nf3_relationships: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_relationships.table.gz - 0.4 KB)
+0040.491 (0) Table elevnn_store_8_nf3_upgrades: Total expected rows (approximate): 3
+0040.498 (0) Table elevnn_store_8_nf3_upgrades: Total rows added: 3 in 0.01 seconds
+0040.499 (0) Table elevnn_store_8_nf3_upgrades: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_upgrades.table.gz - 11.2 KB)
+0040.504 (0) Table elevnn_store_8_options: Total expected rows (approximate): 390
+0040.527 (0) Table elevnn_store_8_options: Total rows added: 390 in 0.02 seconds
+0040.529 (0) Table elevnn_store_8_options: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_options.table.gz - 75.1 KB)
+0040.535 (0) Table elevnn_store_8_postmeta: Total expected rows (approximate): 837
+0040.577 (0) Table elevnn_store_8_postmeta: Total rows added: 837 in 0.04 seconds
+0040.578 (0) Table elevnn_store_8_postmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_postmeta.table.gz - 123.7 KB)
+0040.583 (0) Table elevnn_store_8_posts: Total expected rows (approximate): 190
+0040.597 (0) Table elevnn_store_8_posts: Total rows added: 190 in 0.01 seconds
+0040.598 (0) Table elevnn_store_8_posts: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_posts.table.gz - 49.6 KB)
+0040.602 (0) Table elevnn_store_8_queue: Total expected rows (approximate): 0
+0040.604 (0) Table elevnn_store_8_queue: Total rows added: 0 in 0.00 seconds
+0040.605 (0) Table elevnn_store_8_queue: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_queue.table.gz - 0.4 KB)
+0040.609 (0) Table elevnn_store_8_seller_transaction: Total expected rows (approximate): 0
+0040.611 (0) Table elevnn_store_8_seller_transaction: Total rows added: 0 in 0.00 seconds
+0040.612 (0) Table elevnn_store_8_seller_transaction: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_seller_transaction.table.gz - 0.4 KB)
+0040.616 (0) Table elevnn_store_8_term_relationships: Total expected rows (approximate): 11
+0040.618 (0) Table elevnn_store_8_term_relationships: Total rows added: 11 in 0.00 seconds
+0040.619 (0) Table elevnn_store_8_term_relationships: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_term_relationships.table.gz - 0.4 KB)
+0040.624 (0) Table elevnn_store_8_term_taxonomy: Total expected rows (approximate): 20
+0040.626 (0) Table elevnn_store_8_term_taxonomy: Total rows added: 20 in 0.00 seconds
+0040.627 (0) Table elevnn_store_8_term_taxonomy: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_term_taxonomy.table.gz - 0.6 KB)
+0040.631 (0) Table elevnn_store_8_termmeta: Total expected rows (approximate): 0
+0040.633 (0) Table elevnn_store_8_termmeta: Total rows added: 0 in 0.00 seconds
+0040.633 (0) Table elevnn_store_8_termmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_termmeta.table.gz - 0.4 KB)
+0040.637 (0) Table elevnn_store_8_terms: Total expected rows (approximate): 20
+0040.639 (0) Table elevnn_store_8_terms: Total rows added: 20 in 0.00 seconds
+0040.640 (0) Table elevnn_store_8_terms: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_terms.table.gz - 0.6 KB)
+0040.644 (0) Table elevnn_store_8_wc_download_log: Total expected rows (approximate): 0
+0040.646 (0) Table elevnn_store_8_wc_download_log: Total rows added: 0 in 0.00 seconds
+0040.647 (0) Table elevnn_store_8_wc_download_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_download_log.table.gz - 0.4 KB)
+0040.651 (0) Table elevnn_store_8_wc_product_meta_lookup: Total expected rows (approximate): 0
+0040.654 (0) Table elevnn_store_8_wc_product_meta_lookup: Total rows added: 0 in 0.00 seconds
+0040.655 (0) Table elevnn_store_8_wc_product_meta_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_product_meta_lookup.table.gz - 0.5 KB)
+0040.659 (0) Table elevnn_store_8_wc_webhooks: Total expected rows (approximate): 0
+0040.660 (0) Table elevnn_store_8_wc_webhooks: Total rows added: 0 in 0.00 seconds
+0040.661 (0) Table elevnn_store_8_wc_webhooks: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_webhooks.table.gz - 0.5 KB)
+0040.665 (0) Table elevnn_store_8_woocommerce_api_keys: Total expected rows (approximate): 0
+0040.667 (0) Table elevnn_store_8_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0040.668 (0) Table elevnn_store_8_woocommerce_api_keys: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_api_keys.table.gz - 0.4 KB)
+0040.672 (0) Table elevnn_store_8_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0040.674 (0) Table elevnn_store_8_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0040.675 (0) Table elevnn_store_8_woocommerce_attribute_taxonomies: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0040.679 (0) Table elevnn_store_8_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0040.681 (0) Table elevnn_store_8_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0040.681 (0) Table elevnn_store_8_woocommerce_downloadable_product_permissions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0040.686 (0) Table elevnn_store_8_woocommerce_log: Total expected rows (approximate): 0
+0040.688 (0) Table elevnn_store_8_woocommerce_log: Total rows added: 0 in 0.00 seconds
+0040.689 (0) Table elevnn_store_8_woocommerce_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_log.table.gz - 0.4 KB)
+0040.693 (0) Table elevnn_store_8_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0040.695 (0) Table elevnn_store_8_woocommerce_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0040.695 (0) Table elevnn_store_8_woocommerce_order_itemmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_order_itemmeta.table.gz - 0.4 KB)
+0040.700 (0) Table elevnn_store_8_woocommerce_order_items: Total expected rows (approximate): 0
+0040.702 (0) Table elevnn_store_8_woocommerce_order_items: Total rows added: 0 in 0.00 seconds
+0040.702 (0) Table elevnn_store_8_woocommerce_order_items: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_order_items.table.gz - 0.4 KB)
+0040.707 (0) Table elevnn_store_8_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0040.708 (0) Table elevnn_store_8_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0040.709 (0) Table elevnn_store_8_woocommerce_payment_tokenmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0040.713 (0) Table elevnn_store_8_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0040.715 (0) Table elevnn_store_8_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0040.716 (0) Table elevnn_store_8_woocommerce_payment_tokens: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0040.720 (0) Table elevnn_store_8_woocommerce_sessions: Total expected rows (approximate): 1
+0040.722 (0) Table elevnn_store_8_woocommerce_sessions: Total rows added: 1 in 0.00 seconds
+0040.723 (0) Table elevnn_store_8_woocommerce_sessions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_sessions.table.gz - 0.9 KB)
+0040.727 (0) Table elevnn_store_8_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0040.729 (0) Table elevnn_store_8_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0040.730 (0) Table elevnn_store_8_woocommerce_shipping_zone_locations: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0040.734 (0) Table elevnn_store_8_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0040.736 (0) Table elevnn_store_8_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0040.737 (0) Table elevnn_store_8_woocommerce_shipping_zone_methods: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0040.741 (0) Table elevnn_store_8_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0040.743 (0) Table elevnn_store_8_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0040.744 (0) Table elevnn_store_8_woocommerce_shipping_zones: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zones.table.gz - 0.3 KB)
+0040.748 (0) Table elevnn_store_8_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0040.751 (0) Table elevnn_store_8_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0040.751 (0) Table elevnn_store_8_woocommerce_tax_rate_locations: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0040.755 (0) Table elevnn_store_8_woocommerce_tax_rates: Total expected rows (approximate): 0
+0040.757 (0) Table elevnn_store_8_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0040.758 (0) Table elevnn_store_8_woocommerce_tax_rates: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_tax_rates.table.gz - 0.4 KB)
+0040.763 (0) Table elevnn_store_8_yoast_seo_links: Total expected rows (approximate): 160
+0040.765 (0) Table elevnn_store_8_yoast_seo_links: Total rows added: 160 in 0.00 seconds
+0040.766 (0) Table elevnn_store_8_yoast_seo_links: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_yoast_seo_links.table.gz - 1.1 KB)
+0040.770 (0) Table elevnn_store_8_yoast_seo_meta: Total expected rows (approximate): 31
+0040.773 (0) Table elevnn_store_8_yoast_seo_meta: Total rows added: 31 in 0.00 seconds
+0040.774 (0) Table elevnn_store_8_yoast_seo_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_yoast_seo_meta.table.gz - 0.4 KB)
+0040.782 (0) Table elevnn_store_emailTemplate: Total expected rows (approximate): 1
+0040.784 (0) Table elevnn_store_emailTemplate: Total rows added: 1 in 0.00 seconds
+0040.785 (0) Table elevnn_store_emailTemplate: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_emailTemplate.table.gz - 0.4 KB)
+0040.789 (0) Table elevnn_store_failed_jobs: Total expected rows (approximate): 0
+0040.790 (0) Table elevnn_store_failed_jobs: Total rows added: 0 in 0.00 seconds
+0040.791 (0) Table elevnn_store_failed_jobs: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_failed_jobs.table.gz - 0.3 KB)
+0040.795 (0) Table elevnn_store_hustle_modules: Total expected rows (approximate): 0
+0040.797 (0) Table elevnn_store_hustle_modules: Total rows added: 0 in 0.00 seconds
+0040.797 (0) Table elevnn_store_hustle_modules: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_hustle_modules.table.gz - 0.4 KB)
+0040.802 (0) Table elevnn_store_hustle_modules_meta: Total expected rows (approximate): 0
+0040.803 (0) Table elevnn_store_hustle_modules_meta: Total rows added: 0 in 0.00 seconds
+0040.804 (0) Table elevnn_store_hustle_modules_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_hustle_modules_meta.table.gz - 0.4 KB)
+0040.807 (0) Table elevnn_store_mailchimp_carts: Total expected rows (approximate): 0
+0040.809 (0) Table elevnn_store_mailchimp_carts: Total rows added: 0 in 0.00 seconds
+0040.810 (0) Table elevnn_store_mailchimp_carts: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mailchimp_carts.table.gz - 0.3 KB)
+0040.814 (0) Table elevnn_store_mo_campaign_log: Total expected rows (approximate): 0
+0040.816 (0) Table elevnn_store_mo_campaign_log: Total rows added: 0 in 0.00 seconds
+0040.817 (0) Table elevnn_store_mo_campaign_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_campaign_log.table.gz - 0.4 KB)
+0040.821 (0) Table elevnn_store_mo_campaign_logmeta: Total expected rows (approximate): 0
+0040.822 (0) Table elevnn_store_mo_campaign_logmeta: Total rows added: 0 in 0.00 seconds
+0040.823 (0) Table elevnn_store_mo_campaign_logmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_campaign_logmeta.table.gz - 0.3 KB)
+0040.827 (0) Table elevnn_store_mo_conversions: Total expected rows (approximate): 0
+0040.829 (0) Table elevnn_store_mo_conversions: Total rows added: 0 in 0.00 seconds
+0040.830 (0) Table elevnn_store_mo_conversions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_conversions.table.gz - 0.4 KB)
+0040.835 (0) Table elevnn_store_mo_email_campaignmeta: Total expected rows (approximate): 0
+0040.836 (0) Table elevnn_store_mo_email_campaignmeta: Total rows added: 0 in 0.00 seconds
+0040.837 (0) Table elevnn_store_mo_email_campaignmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_email_campaignmeta.table.gz - 0.3 KB)
+0040.842 (0) Table elevnn_store_mo_email_campaigns: Total expected rows (approximate): 0
+0040.843 (0) Table elevnn_store_mo_email_campaigns: Total rows added: 0 in 0.00 seconds
+0040.844 (0) Table elevnn_store_mo_email_campaigns: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_email_campaigns.table.gz - 0.4 KB)
+0040.848 (0) Table elevnn_store_mo_optin_campaignmeta: Total expected rows (approximate): 1
+0040.850 (0) Table elevnn_store_mo_optin_campaignmeta: Total rows added: 1 in 0.00 seconds
+0040.851 (0) Table elevnn_store_mo_optin_campaignmeta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_optin_campaignmeta.table.gz - 0.4 KB)
+0040.855 (0) Table elevnn_store_mo_optin_campaigns: Total expected rows (approximate): 1
+0040.858 (0) Table elevnn_store_mo_optin_campaigns: Total rows added: 1 in 0.00 seconds
+0040.858 (0) Table elevnn_store_mo_optin_campaigns: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_optin_campaigns.table.gz - 0.4 KB)
+0040.862 (0) Table elevnn_store_mp_notifications: Total expected rows (approximate): 12
+0040.865 (0) Table elevnn_store_mp_notifications: Total rows added: 12 in 0.00 seconds
+0040.866 (0) Table elevnn_store_mp_notifications: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_notifications.table.gz - 0.8 KB)
+0040.870 (0) Table elevnn_store_mp_rma_conversation: Total expected rows (approximate): 0
+0040.871 (0) Table elevnn_store_mp_rma_conversation: Total rows added: 0 in 0.00 seconds
+0040.872 (0) Table elevnn_store_mp_rma_conversation: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_conversation.table.gz - 0.4 KB)
+0040.876 (0) Table elevnn_store_mp_rma_reasons: Total expected rows (approximate): 6
+0040.878 (0) Table elevnn_store_mp_rma_reasons: Total rows added: 6 in 0.00 seconds
+0040.879 (0) Table elevnn_store_mp_rma_reasons: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_reasons.table.gz - 0.5 KB)
+0040.885 (0) Table elevnn_store_mp_rma_request_meta: Total expected rows (approximate): 0
+0040.886 (0) Table elevnn_store_mp_rma_request_meta: Total rows added: 0 in 0.00 seconds
+0040.887 (0) Table elevnn_store_mp_rma_request_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_request_meta.table.gz - 0.3 KB)
+0040.891 (0) Table elevnn_store_mp_rma_requests: Total expected rows (approximate): 0
+0040.893 (0) Table elevnn_store_mp_rma_requests: Total rows added: 0 in 0.00 seconds
+0040.894 (0) Table elevnn_store_mp_rma_requests: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_requests.table.gz - 0.4 KB)
+0040.897 (0) Table elevnn_store_mpbadge: Total expected rows (approximate): 11
+0040.899 (0) Table elevnn_store_mpbadge: Total rows added: 11 in 0.00 seconds
+0040.900 (0) Table elevnn_store_mpbadge: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpbadge.table.gz - 0.8 KB)
+0040.903 (0) Table elevnn_store_mpbadge_assign: Total expected rows (approximate): 3
+0040.905 (0) Table elevnn_store_mpbadge_assign: Total rows added: 3 in 0.00 seconds
+0040.906 (0) Table elevnn_store_mpbadge_assign: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpbadge_assign.table.gz - 0.3 KB)
+0040.910 (0) Table elevnn_store_mpcommision: Total expected rows (approximate): 1
+0040.912 (0) Table elevnn_store_mpcommision: Total rows added: 1 in 0.00 seconds
+0040.913 (0) Table elevnn_store_mpcommision: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpcommision.table.gz - 0.4 KB)
+0040.916 (0) Table elevnn_store_mpfeedback: Total expected rows (approximate): 0
+0040.918 (0) Table elevnn_store_mpfeedback: Total rows added: 0 in 0.00 seconds
+0040.919 (0) Table elevnn_store_mpfeedback: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpfeedback.table.gz - 0.4 KB)
+0040.923 (0) Table elevnn_store_mporders: Total expected rows (approximate): 0
+0040.925 (0) Table elevnn_store_mporders: Total rows added: 0 in 0.00 seconds
+0040.925 (0) Table elevnn_store_mporders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mporders.table.gz - 0.4 KB)
+0040.930 (0) Table elevnn_store_mporders_meta: Total expected rows (approximate): 0
+0040.931 (0) Table elevnn_store_mporders_meta: Total rows added: 0 in 0.00 seconds
+0040.932 (0) Table elevnn_store_mporders_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mporders_meta.table.gz - 0.3 KB)
+0040.937 (0) Table elevnn_store_mpseller_asktoadmin: Total expected rows (approximate): 0
+0040.943 (0) Table elevnn_store_mpseller_asktoadmin: Total rows added: 0 in 0.00 seconds
+0040.943 (0) Table elevnn_store_mpseller_asktoadmin: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_asktoadmin.table.gz - 0.4 KB)
+0040.948 (0) Table elevnn_store_mpseller_asktoadmin_meta: Total expected rows (approximate): 0
+0040.949 (0) Table elevnn_store_mpseller_asktoadmin_meta: Total rows added: 0 in 0.00 seconds
+0040.950 (0) Table elevnn_store_mpseller_asktoadmin_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_asktoadmin_meta.table.gz - 0.3 KB)
+0040.954 (0) Table elevnn_store_mpseller_meta: Total expected rows (approximate): 0
+0040.955 (0) Table elevnn_store_mpseller_meta: Total rows added: 0 in 0.00 seconds
+0040.957 (0) Table elevnn_store_mpseller_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_meta.table.gz - 0.3 KB)
+0040.961 (0) Table elevnn_store_mpseller_orders: Total expected rows (approximate): 0
+0040.963 (0) Table elevnn_store_mpseller_orders: Total rows added: 0 in 0.00 seconds
+0040.964 (0) Table elevnn_store_mpseller_orders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_orders.table.gz - 0.3 KB)
+0040.969 (0) Table elevnn_store_mpsellerinfo: Total expected rows (approximate): 1
+0040.971 (0) Table elevnn_store_mpsellerinfo: Total rows added: 1 in 0.00 seconds
+0040.972 (0) Table elevnn_store_mpsellerinfo: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpsellerinfo.table.gz - 0.4 KB)
+0040.976 (0) Table elevnn_store_mstoreapp_wishlist: Total expected rows (approximate): 0
+0040.978 (0) Table elevnn_store_mstoreapp_wishlist: Total rows added: 0 in 0.00 seconds
+0040.979 (0) Table elevnn_store_mstoreapp_wishlist: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mstoreapp_wishlist.table.gz - 0.3 KB)
+0040.982 (0) Table elevnn_store_nf3_action_meta: Total expected rows (approximate): 210
+0040.986 (0) Table elevnn_store_nf3_action_meta: Total rows added: 210 in 0.00 seconds
+0040.987 (0) Table elevnn_store_nf3_action_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_action_meta.table.gz - 2.8 KB)
+0040.991 (0) Table elevnn_store_nf3_actions: Total expected rows (approximate): 8
+0040.994 (0) Table elevnn_store_nf3_actions: Total rows added: 8 in 0.00 seconds
+0040.995 (0) Table elevnn_store_nf3_actions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_actions.table.gz - 0.6 KB)
+0041.000 (0) Table elevnn_store_nf3_chunks: Total expected rows (approximate): 0
+0041.002 (0) Table elevnn_store_nf3_chunks: Total rows added: 0 in 0.00 seconds
+0041.003 (0) Table elevnn_store_nf3_chunks: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_chunks.table.gz - 0.3 KB)
+0041.007 (0) Table elevnn_store_nf3_field_meta: Total expected rows (approximate): 690
+0041.015 (0) Table elevnn_store_nf3_field_meta: Total rows added: 690 in 0.01 seconds
+0041.016 (0) Table elevnn_store_nf3_field_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_field_meta.table.gz - 11.7 KB)
+0041.020 (0) Table elevnn_store_nf3_fields: Total expected rows (approximate): 26
+0041.023 (0) Table elevnn_store_nf3_fields: Total rows added: 26 in 0.00 seconds
+0041.023 (0) Table elevnn_store_nf3_fields: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_fields.table.gz - 1.5 KB)
+0041.027 (0) Table elevnn_store_nf3_form_meta: Total expected rows (approximate): 145
+0041.031 (0) Table elevnn_store_nf3_form_meta: Total rows added: 145 in 0.00 seconds
+0041.032 (0) Table elevnn_store_nf3_form_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_form_meta.table.gz - 2.8 KB)
+0041.037 (0) Table elevnn_store_nf3_forms: Total expected rows (approximate): 2
+0041.039 (0) Table elevnn_store_nf3_forms: Total rows added: 2 in 0.00 seconds
+0041.040 (0) Table elevnn_store_nf3_forms: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_forms.table.gz - 0.5 KB)
+0041.045 (0) Table elevnn_store_nf3_object_meta: Total expected rows (approximate): 0
+0041.047 (0) Table elevnn_store_nf3_object_meta: Total rows added: 0 in 0.00 seconds
+0041.048 (0) Table elevnn_store_nf3_object_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_object_meta.table.gz - 0.3 KB)
+0041.052 (0) Table elevnn_store_nf3_objects: Total expected rows (approximate): 0
+0041.054 (0) Table elevnn_store_nf3_objects: Total rows added: 0 in 0.00 seconds
+0041.055 (0) Table elevnn_store_nf3_objects: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_objects.table.gz - 0.3 KB)
+0041.060 (0) Table elevnn_store_nf3_relationships: Total expected rows (approximate): 0
+0041.061 (0) Table elevnn_store_nf3_relationships: Total rows added: 0 in 0.00 seconds
+0041.062 (0) Table elevnn_store_nf3_relationships: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_relationships.table.gz - 0.4 KB)
+0041.067 (0) Table elevnn_store_nf3_upgrades: Total expected rows (approximate): 2
+0041.071 (0) Table elevnn_store_nf3_upgrades: Total rows added: 2 in 0.00 seconds
+0041.072 (0) Table elevnn_store_nf3_upgrades: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_upgrades.table.gz - 9.6 KB)
+0041.076 (0) Table elevnn_store_promag_email_templates: Total expected rows (approximate): 11
+0041.079 (0) Table elevnn_store_promag_email_templates: Total rows added: 11 in 0.00 seconds
+0041.080 (0) Table elevnn_store_promag_email_templates: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_email_templates.table.gz - 1.2 KB)
+0041.085 (0) Table elevnn_store_promag_fields: Total expected rows (approximate): 8
+0041.088 (0) Table elevnn_store_promag_fields: Total rows added: 8 in 0.00 seconds
+0041.089 (0) Table elevnn_store_promag_fields: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_fields.table.gz - 0.9 KB)
+0041.092 (0) Table elevnn_store_promag_friends: Total expected rows (approximate): 0
+0041.094 (0) Table elevnn_store_promag_friends: Total rows added: 0 in 0.00 seconds
+0041.095 (0) Table elevnn_store_promag_friends: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_friends.table.gz - 0.3 KB)
+0041.101 (0) Table elevnn_store_promag_group_requests: Total expected rows (approximate): 0
+0041.103 (0) Table elevnn_store_promag_group_requests: Total rows added: 0 in 0.00 seconds
+0041.104 (0) Table elevnn_store_promag_group_requests: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_group_requests.table.gz - 0.3 KB)
+0041.108 (0) Table elevnn_store_promag_groups: Total expected rows (approximate): 1
+0041.110 (0) Table elevnn_store_promag_groups: Total rows added: 1 in 0.00 seconds
+0041.111 (0) Table elevnn_store_promag_groups: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_groups.table.gz - 0.8 KB)
+0041.115 (0) Table elevnn_store_promag_msg_conversation: Total expected rows (approximate): 0
+0041.116 (0) Table elevnn_store_promag_msg_conversation: Total rows added: 0 in 0.00 seconds
+0041.117 (0) Table elevnn_store_promag_msg_conversation: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_msg_conversation.table.gz - 0.4 KB)
+0041.121 (0) Table elevnn_store_promag_msg_threads: Total expected rows (approximate): 0
+0041.123 (0) Table elevnn_store_promag_msg_threads: Total rows added: 0 in 0.00 seconds
+0041.124 (0) Table elevnn_store_promag_msg_threads: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_msg_threads.table.gz - 0.4 KB)
+0041.128 (0) Table elevnn_store_promag_notification: Total expected rows (approximate): 0
+0041.129 (0) Table elevnn_store_promag_notification: Total rows added: 0 in 0.00 seconds
+0041.130 (0) Table elevnn_store_promag_notification: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_notification.table.gz - 0.4 KB)
+0041.134 (0) Table elevnn_store_promag_paypal_log: Total expected rows (approximate): 0
+0041.136 (0) Table elevnn_store_promag_paypal_log: Total rows added: 0 in 0.00 seconds
+0041.137 (0) Table elevnn_store_promag_paypal_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_paypal_log.table.gz - 0.4 KB)
+0041.141 (0) Table elevnn_store_promag_sections: Total expected rows (approximate): 1
+0041.144 (0) Table elevnn_store_promag_sections: Total rows added: 1 in 0.00 seconds
+0041.146 (0) Table elevnn_store_promag_sections: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_sections.table.gz - 0.4 KB)
+0041.151 (0) Table elevnn_store_queue: Total expected rows (approximate): 0
+0041.153 (0) Table elevnn_store_queue: Total rows added: 0 in 0.00 seconds
+0041.153 (0) Table elevnn_store_queue: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_queue.table.gz - 0.4 KB)
+0041.158 (0) Table elevnn_store_redirection_404: Total expected rows (approximate): 702
+0041.166 (0) Table elevnn_store_redirection_404: Total rows added: 702 in 0.01 seconds
+0041.167 (0) Table elevnn_store_redirection_404: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_404.table.gz - 9.3 KB)
+0041.172 (0) Table elevnn_store_redirection_groups: Total expected rows (approximate): 3
+0041.176 (0) Table elevnn_store_redirection_groups: Total rows added: 3 in 0.00 seconds
+0041.177 (0) Table elevnn_store_redirection_groups: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_groups.table.gz - 0.5 KB)
+0041.181 (0) Table elevnn_store_redirection_items: Total expected rows (approximate): 12
+0041.184 (0) Table elevnn_store_redirection_items: Total rows added: 12 in 0.00 seconds
+0041.184 (0) Table elevnn_store_redirection_items: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_items.table.gz - 1 KB)
+0041.189 (0) Table elevnn_store_redirection_logs: Total expected rows (approximate): 303
+0041.195 (0) Table elevnn_store_redirection_logs: Total rows added: 303 in 0.01 seconds
+0041.196 (0) Table elevnn_store_redirection_logs: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_logs.table.gz - 4.8 KB)
+0041.200 (0) Table elevnn_store_seller_transaction: Total expected rows (approximate): 0
+0041.202 (0) Table elevnn_store_seller_transaction: Total rows added: 0 in 0.00 seconds
+0041.203 (0) Table elevnn_store_seller_transaction: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_seller_transaction.table.gz - 0.4 KB)
+0041.207 (0) Table elevnn_store_smush_dir_images: Total expected rows (approximate): 5
+0041.210 (0) Table elevnn_store_smush_dir_images: Total rows added: 5 in 0.00 seconds
+0041.210 (0) Table elevnn_store_smush_dir_images: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_smush_dir_images.table.gz - 0.8 KB)
+0041.214 (0) Table elevnn_store_tinvwl_analytics: Total expected rows (approximate): 2
+0041.217 (0) Table elevnn_store_tinvwl_analytics: Total rows added: 2 in 0.00 seconds
+0041.218 (0) Table elevnn_store_tinvwl_analytics: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_analytics.table.gz - 0.5 KB)
+0041.221 (0) Table elevnn_store_tinvwl_items: Total expected rows (approximate): 1
+0041.224 (0) Table elevnn_store_tinvwl_items: Total rows added: 1 in 0.00 seconds
+0041.225 (0) Table elevnn_store_tinvwl_items: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_items.table.gz - 0.4 KB)
+0041.228 (0) Table elevnn_store_tinvwl_lists: Total expected rows (approximate): 6
+0041.231 (0) Table elevnn_store_tinvwl_lists: Total rows added: 6 in 0.00 seconds
+0041.231 (0) Table elevnn_store_tinvwl_lists: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_lists.table.gz - 0.5 KB)
+0041.236 (0) Table elevnn_store_wc_admin_note_actions: Total expected rows (approximate): 3
+0041.239 (0) Table elevnn_store_wc_admin_note_actions: Total rows added: 3 in 0.00 seconds
+0041.239 (0) Table elevnn_store_wc_admin_note_actions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_admin_note_actions.table.gz - 0.5 KB)
+0041.243 (0) Table elevnn_store_wc_admin_notes: Total expected rows (approximate): 3
+0041.246 (0) Table elevnn_store_wc_admin_notes: Total rows added: 3 in 0.00 seconds
+0041.248 (0) Table elevnn_store_wc_admin_notes: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_admin_notes.table.gz - 0.9 KB)
+0041.252 (0) Table elevnn_store_wc_customer_lookup: Total expected rows (approximate): 2
+0041.255 (0) Table elevnn_store_wc_customer_lookup: Total rows added: 2 in 0.00 seconds
+0041.256 (0) Table elevnn_store_wc_customer_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_customer_lookup.table.gz - 0.6 KB)
+0041.260 (0) Table elevnn_store_wc_download_log: Total expected rows (approximate): 0
+0041.262 (0) Table elevnn_store_wc_download_log: Total rows added: 0 in 0.00 seconds
+0041.263 (0) Table elevnn_store_wc_download_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_download_log.table.gz - 0.4 KB)
+0041.267 (0) Table elevnn_store_wc_order_coupon_lookup: Total expected rows (approximate): 0
+0041.269 (0) Table elevnn_store_wc_order_coupon_lookup: Total rows added: 0 in 0.00 seconds
+0041.270 (0) Table elevnn_store_wc_order_coupon_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_coupon_lookup.table.gz - 0.4 KB)
+0041.274 (0) Table elevnn_store_wc_order_product_lookup: Total expected rows (approximate): 0
+0041.275 (0) Table elevnn_store_wc_order_product_lookup: Total rows added: 0 in 0.00 seconds
+0041.276 (0) Table elevnn_store_wc_order_product_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_product_lookup.table.gz - 0.5 KB)
+0041.280 (0) Table elevnn_store_wc_order_stats: Total expected rows (approximate): 0
+0041.282 (0) Table elevnn_store_wc_order_stats: Total rows added: 0 in 0.00 seconds
+0041.283 (0) Table elevnn_store_wc_order_stats: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_stats.table.gz - 0.5 KB)
+0041.290 (0) Table elevnn_store_wc_order_tax_lookup: Total expected rows (approximate): 0
+0041.292 (0) Table elevnn_store_wc_order_tax_lookup: Total rows added: 0 in 0.00 seconds
+0041.292 (0) Table elevnn_store_wc_order_tax_lookup: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_tax_lookup.table.gz - 0.4 KB)
+0041.296 (0) Table elevnn_store_wc_webhooks: Total expected rows (approximate): 0
+0041.298 (0) Table elevnn_store_wc_webhooks: Total rows added: 0 in 0.00 seconds
+0041.299 (0) Table elevnn_store_wc_webhooks: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_webhooks.table.gz - 0.5 KB)
+0041.303 (0) Table elevnn_store_wcfm_daily_analysis: Total expected rows (approximate): 0
+0041.305 (0) Table elevnn_store_wcfm_daily_analysis: Total rows added: 0 in 0.00 seconds
+0041.306 (0) Table elevnn_store_wcfm_daily_analysis: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_daily_analysis.table.gz - 0.4 KB)
+0041.309 (0) Table elevnn_store_wcfm_detailed_analysis: Total expected rows (approximate): 0
+0041.311 (0) Table elevnn_store_wcfm_detailed_analysis: Total rows added: 0 in 0.00 seconds
+0041.312 (0) Table elevnn_store_wcfm_detailed_analysis: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_detailed_analysis.table.gz - 0.4 KB)
+0041.316 (0) Table elevnn_store_wcfm_enquiries: Total expected rows (approximate): 0
+0041.318 (0) Table elevnn_store_wcfm_enquiries: Total rows added: 0 in 0.00 seconds
+0041.319 (0) Table elevnn_store_wcfm_enquiries: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries.table.gz - 0.4 KB)
+0041.323 (0) Table elevnn_store_wcfm_enquiries_meta: Total expected rows (approximate): 0
+0041.324 (0) Table elevnn_store_wcfm_enquiries_meta: Total rows added: 0 in 0.00 seconds
+0041.325 (0) Table elevnn_store_wcfm_enquiries_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries_meta.table.gz - 0.3 KB)
+0041.329 (0) Table elevnn_store_wcfm_enquiries_response: Total expected rows (approximate): 0
+0041.331 (0) Table elevnn_store_wcfm_enquiries_response: Total rows added: 0 in 0.00 seconds
+0041.332 (0) Table elevnn_store_wcfm_enquiries_response: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries_response.table.gz - 0.4 KB)
+0041.337 (0) Table elevnn_store_wcfm_following_followers: Total expected rows (approximate): 0
+0041.339 (0) Table elevnn_store_wcfm_following_followers: Total rows added: 0 in 0.00 seconds
+0041.340 (0) Table elevnn_store_wcfm_following_followers: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_following_followers.table.gz - 0.4 KB)
+0041.344 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders: Total expected rows (approximate): 0
+0041.346 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders: Total rows added: 0 in 0.00 seconds
+0041.347 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_affiliate_orders.table.gz - 0.7 KB)
+0041.351 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders_meta: Total expected rows (approximate): 0
+0041.353 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders_meta: Total rows added: 0 in 0.00 seconds
+0041.354 (0) Table elevnn_store_wcfm_marketplace_affiliate_orders_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_affiliate_orders_meta.table.gz - 0.4 KB)
+0041.358 (0) Table elevnn_store_wcfm_marketplace_orders: Total expected rows (approximate): 0
+0041.360 (0) Table elevnn_store_wcfm_marketplace_orders: Total rows added: 0 in 0.00 seconds
+0041.361 (0) Table elevnn_store_wcfm_marketplace_orders: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_orders.table.gz - 0.7 KB)
+0041.365 (0) Table elevnn_store_wcfm_marketplace_orders_meta: Total expected rows (approximate): 0
+0041.367 (0) Table elevnn_store_wcfm_marketplace_orders_meta: Total rows added: 0 in 0.00 seconds
+0041.368 (0) Table elevnn_store_wcfm_marketplace_orders_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_orders_meta.table.gz - 0.4 KB)
+0041.372 (0) Table elevnn_store_wcfm_marketplace_product_multivendor: Total expected rows (approximate): 0
+0041.374 (0) Table elevnn_store_wcfm_marketplace_product_multivendor: Total rows added: 0 in 0.00 seconds
+0041.375 (0) Table elevnn_store_wcfm_marketplace_product_multivendor: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_product_multivendor.table.gz - 0.4 KB)
+0041.379 (0) Table elevnn_store_wcfm_marketplace_refund_request: Total expected rows (approximate): 0
+0041.381 (0) Table elevnn_store_wcfm_marketplace_refund_request: Total rows added: 0 in 0.00 seconds
+0041.382 (0) Table elevnn_store_wcfm_marketplace_refund_request: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_refund_request.table.gz - 0.5 KB)
+0041.387 (0) Table elevnn_store_wcfm_marketplace_reverse_withdrawal: Total expected rows (approximate): 0
+0041.389 (0) Table elevnn_store_wcfm_marketplace_reverse_withdrawal: Total rows added: 0 in 0.00 seconds
+0041.389 (0) Table elevnn_store_wcfm_marketplace_reverse_withdrawal: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reverse_withdrawal.table.gz - 0.5 KB)
+0041.394 (0) Table elevnn_store_wcfm_marketplace_review_rating_meta: Total expected rows (approximate): 0
+0041.396 (0) Table elevnn_store_wcfm_marketplace_review_rating_meta: Total rows added: 0 in 0.00 seconds
+0041.396 (0) Table elevnn_store_wcfm_marketplace_review_rating_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_review_rating_meta.table.gz - 0.4 KB)
+0041.400 (0) Table elevnn_store_wcfm_marketplace_reviews: Total expected rows (approximate): 0
+0041.402 (0) Table elevnn_store_wcfm_marketplace_reviews: Total rows added: 0 in 0.00 seconds
+0041.403 (0) Table elevnn_store_wcfm_marketplace_reviews: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reviews.table.gz - 0.4 KB)
+0041.407 (0) Table elevnn_store_wcfm_marketplace_reviews_response: Total expected rows (approximate): 0
+0041.409 (0) Table elevnn_store_wcfm_marketplace_reviews_response: Total rows added: 0 in 0.00 seconds
+0041.410 (0) Table elevnn_store_wcfm_marketplace_reviews_response: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reviews_response.table.gz - 0.4 KB)
+0041.414 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_locations: Total expected rows (approximate): 0
+0041.416 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0041.416 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_locations: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_shipping_zone_locations.table.gz - 0.4 KB)
+0041.420 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_methods: Total expected rows (approximate): 0
+0041.422 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0041.423 (0) Table elevnn_store_wcfm_marketplace_shipping_zone_methods: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_shipping_zone_methods.table.gz - 0.4 KB)
+0041.427 (0) Table elevnn_store_wcfm_marketplace_store_taxonomies: Total expected rows (approximate): 0
+0041.429 (0) Table elevnn_store_wcfm_marketplace_store_taxonomies: Total rows added: 0 in 0.00 seconds
+0041.429 (0) Table elevnn_store_wcfm_marketplace_store_taxonomies: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_store_taxonomies.table.gz - 0.4 KB)
+0041.433 (0) Table elevnn_store_wcfm_marketplace_vendor_ledger: Total expected rows (approximate): 0
+0041.435 (0) Table elevnn_store_wcfm_marketplace_vendor_ledger: Total rows added: 0 in 0.00 seconds
+0041.436 (0) Table elevnn_store_wcfm_marketplace_vendor_ledger: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_vendor_ledger.table.gz - 0.4 KB)
+0041.441 (0) Table elevnn_store_wcfm_marketplace_withdraw_request: Total expected rows (approximate): 0
+0041.445 (0) Table elevnn_store_wcfm_marketplace_withdraw_request: Total rows added: 0 in 0.00 seconds
+0041.446 (0) Table elevnn_store_wcfm_marketplace_withdraw_request: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_withdraw_request.table.gz - 0.5 KB)
+0041.451 (0) Table elevnn_store_wcfm_marketplace_withdraw_request_meta: Total expected rows (approximate): 0
+0041.452 (0) Table elevnn_store_wcfm_marketplace_withdraw_request_meta: Total rows added: 0 in 0.00 seconds
+0041.455 (0) Table elevnn_store_wcfm_marketplace_withdraw_request_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_withdraw_request_meta.table.gz - 0.3 KB)
+0041.460 (0) Table elevnn_store_wcfm_membership_subscription: Total expected rows (approximate): 0
+0041.462 (0) Table elevnn_store_wcfm_membership_subscription: Total rows added: 0 in 0.00 seconds
+0041.463 (0) Table elevnn_store_wcfm_membership_subscription: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_membership_subscription.table.gz - 0.5 KB)
+0041.468 (0) Table elevnn_store_wcfm_messages: Total expected rows (approximate): 0
+0041.470 (0) Table elevnn_store_wcfm_messages: Total rows added: 0 in 0.00 seconds
+0041.470 (0) Table elevnn_store_wcfm_messages: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages.table.gz - 0.4 KB)
+0041.475 (0) Table elevnn_store_wcfm_messages_modifier: Total expected rows (approximate): 0
+0041.477 (0) Table elevnn_store_wcfm_messages_modifier: Total rows added: 0 in 0.00 seconds
+0041.478 (0) Table elevnn_store_wcfm_messages_modifier: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages_modifier.table.gz - 0.4 KB)
+0041.483 (0) Table elevnn_store_wcfm_messages_stat: Total expected rows (approximate): 0
+0041.484 (0) Table elevnn_store_wcfm_messages_stat: Total rows added: 0 in 0.00 seconds
+0041.485 (0) Table elevnn_store_wcfm_messages_stat: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages_stat.table.gz - 0.4 KB)
+0041.489 (0) Table elevnn_store_wcfm_support: Total expected rows (approximate): 0
+0041.491 (0) Table elevnn_store_wcfm_support: Total rows added: 0 in 0.00 seconds
+0041.492 (0) Table elevnn_store_wcfm_support: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support.table.gz - 0.4 KB)
+0041.496 (0) Table elevnn_store_wcfm_support_meta: Total expected rows (approximate): 0
+0041.498 (0) Table elevnn_store_wcfm_support_meta: Total rows added: 0 in 0.00 seconds
+0041.499 (0) Table elevnn_store_wcfm_support_meta: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support_meta.table.gz - 0.3 KB)
+0041.504 (0) Table elevnn_store_wcfm_support_response: Total expected rows (approximate): 0
+0041.505 (0) Table elevnn_store_wcfm_support_response: Total rows added: 0 in 0.00 seconds
+0041.507 (0) Table elevnn_store_wcfm_support_response: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support_response.table.gz - 0.4 KB)
+0041.513 (0) Table elevnn_store_wcpv_commissions: Total expected rows (approximate): 0
+0041.516 (0) Table elevnn_store_wcpv_commissions: Total rows added: 0 in 0.00 seconds
+0041.517 (0) Table elevnn_store_wcpv_commissions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcpv_commissions.table.gz - 0.5 KB)
+0041.522 (0) Table elevnn_store_wcpv_per_product_shipping_rules: Total expected rows (approximate): 0
+0041.524 (0) Table elevnn_store_wcpv_per_product_shipping_rules: Total rows added: 0 in 0.00 seconds
+0041.524 (0) Table elevnn_store_wcpv_per_product_shipping_rules: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcpv_per_product_shipping_rules.table.gz - 0.4 KB)
+0041.529 (0) Table elevnn_store_wfblockediplog: Total expected rows (approximate): 0
+0041.533 (0) Table elevnn_store_wfblockediplog: Total rows added: 0 in 0.00 seconds
+0041.534 (0) Table elevnn_store_wfblockediplog: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfblockediplog.table.gz - 0.3 KB)
+0041.537 (0) Table elevnn_store_wfblocks7: Total expected rows (approximate): 0
+0041.539 (0) Table elevnn_store_wfblocks7: Total rows added: 0 in 0.00 seconds
+0041.539 (0) Table elevnn_store_wfblocks7: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfblocks7.table.gz - 0.4 KB)
+0041.542 (0) Table elevnn_store_wfconfig: Total expected rows (approximate): 241
+0041.548 (0) Table elevnn_store_wfconfig: Total rows added: 241 in 0.00 seconds
+0041.551 (0) Table elevnn_store_wfconfig: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfconfig.table.gz - 10.2 KB)
+0041.555 (0) Table elevnn_store_wfcrawlers: Total expected rows (approximate): 8
+0041.558 (0) Table elevnn_store_wfcrawlers: Total rows added: 8 in 0.00 seconds
+0041.559 (0) Table elevnn_store_wfcrawlers: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfcrawlers.table.gz - 0.5 KB)
+0041.563 (0) Table elevnn_store_wffilechanges: Total expected rows (approximate): 0
+0041.565 (0) Table elevnn_store_wffilechanges: Total rows added: 0 in 0.00 seconds
+0041.566 (0) Table elevnn_store_wffilechanges: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wffilechanges.table.gz - 0.3 KB)
+0041.570 (0) Table elevnn_store_wffilemods: Total expected rows (approximate): 0
+0041.573 (0) Table elevnn_store_wffilemods: Total rows added: 0 in 0.00 seconds
+0041.574 (0) Table elevnn_store_wffilemods: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wffilemods.table.gz - 0.4 KB)
+0041.579 (0) Table elevnn_store_wfhits: Total expected rows (approximate): 2
+0041.581 (0) Table elevnn_store_wfhits: Total rows added: 2 in 0.00 seconds
+0041.582 (0) Table elevnn_store_wfhits: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfhits.table.gz - 0.8 KB)
+0041.586 (0) Table elevnn_store_wfhoover: Total expected rows (approximate): 0
+0041.587 (0) Table elevnn_store_wfhoover: Total rows added: 0 in 0.00 seconds
+0041.588 (0) Table elevnn_store_wfhoover: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfhoover.table.gz - 0.3 KB)
+0041.593 (0) Table elevnn_store_wfissues: Total expected rows (approximate): 4
+0041.595 (0) Table elevnn_store_wfissues: Total rows added: 4 in 0.00 seconds
+0041.596 (0) Table elevnn_store_wfissues: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfissues.table.gz - 1.3 KB)
+0041.601 (0) Table elevnn_store_wfknownfilelist: Total expected rows (approximate): 0
+0041.603 (0) Table elevnn_store_wfknownfilelist: Total rows added: 0 in 0.00 seconds
+0041.604 (0) Table elevnn_store_wfknownfilelist: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfknownfilelist.table.gz - 0.3 KB)
+0041.608 (0) Table elevnn_store_wflivetraffichuman: Total expected rows (approximate): 0
+0041.610 (0) Table elevnn_store_wflivetraffichuman: Total rows added: 0 in 0.00 seconds
+0041.610 (0) Table elevnn_store_wflivetraffichuman: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflivetraffichuman.table.gz - 0.3 KB)
+0041.615 (0) Table elevnn_store_wflocs: Total expected rows (approximate): 1
+0041.617 (0) Table elevnn_store_wflocs: Total rows added: 1 in 0.00 seconds
+0041.618 (0) Table elevnn_store_wflocs: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflocs.table.gz - 0.5 KB)
+0041.623 (0) Table elevnn_store_wflogins: Total expected rows (approximate): 2
+0041.626 (0) Table elevnn_store_wflogins: Total rows added: 2 in 0.00 seconds
+0041.627 (0) Table elevnn_store_wflogins: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflogins.table.gz - 0.6 KB)
+0041.630 (0) Table elevnn_store_wfls_2fa_secrets: Total expected rows (approximate): 0
+0041.634 (0) Table elevnn_store_wfls_2fa_secrets: Total rows added: 0 in 0.00 seconds
+0041.636 (0) Table elevnn_store_wfls_2fa_secrets: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfls_2fa_secrets.table.gz - 0.4 KB)
+0041.640 (0) Table elevnn_store_wfls_settings: Total expected rows (approximate): 17
+0041.643 (0) Table elevnn_store_wfls_settings: Total rows added: 17 in 0.00 seconds
+0041.644 (0) Table elevnn_store_wfls_settings: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfls_settings.table.gz - 0.7 KB)
+0041.647 (0) Table elevnn_store_wfnotifications: Total expected rows (approximate): 2
+0041.650 (0) Table elevnn_store_wfnotifications: Total rows added: 2 in 0.00 seconds
+0041.653 (0) Table elevnn_store_wfnotifications: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfnotifications.table.gz - 0.5 KB)
+0041.657 (0) Table elevnn_store_wfpendingissues: Total expected rows (approximate): 0
+0041.659 (0) Table elevnn_store_wfpendingissues: Total rows added: 0 in 0.00 seconds
+0041.660 (0) Table elevnn_store_wfpendingissues: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfpendingissues.table.gz - 0.4 KB)
+0041.665 (0) Table elevnn_store_wfreversecache: Total expected rows (approximate): 9
+0041.668 (0) Table elevnn_store_wfreversecache: Total rows added: 9 in 0.00 seconds
+0041.669 (0) Table elevnn_store_wfreversecache: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfreversecache.table.gz - 0.5 KB)
+0041.674 (0) Table elevnn_store_wfsnipcache: Total expected rows (approximate): 1
+0041.677 (0) Table elevnn_store_wfsnipcache: Total rows added: 1 in 0.00 seconds
+0041.678 (0) Table elevnn_store_wfsnipcache: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfsnipcache.table.gz - 0.4 KB)
+0041.684 (0) Table elevnn_store_wfstatus: Total expected rows (approximate): 20
+0041.687 (0) Table elevnn_store_wfstatus: Total rows added: 20 in 0.00 seconds
+0041.688 (0) Table elevnn_store_wfstatus: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfstatus.table.gz - 0.9 KB)
+0041.693 (0) Table elevnn_store_wftrafficrates: Total expected rows (approximate): 2
+0041.695 (0) Table elevnn_store_wftrafficrates: Total rows added: 2 in 0.00 seconds
+0041.695 (0) Table elevnn_store_wftrafficrates: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wftrafficrates.table.gz - 0.4 KB)
+0041.700 (0) Table elevnn_store_woocommerce_api_keys: Total expected rows (approximate): 2
+0041.703 (0) Table elevnn_store_woocommerce_api_keys: Total rows added: 2 in 0.00 seconds
+0041.704 (0) Table elevnn_store_woocommerce_api_keys: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_api_keys.table.gz - 0.7 KB)
+0041.708 (0) Table elevnn_store_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0041.709 (0) Table elevnn_store_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0041.710 (0) Table elevnn_store_woocommerce_attribute_taxonomies: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0041.715 (0) Table elevnn_store_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0041.717 (0) Table elevnn_store_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0041.718 (0) Table elevnn_store_woocommerce_downloadable_product_permissions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0041.721 (0) Table elevnn_store_woocommerce_log: Total expected rows (approximate): 0
+0041.723 (0) Table elevnn_store_woocommerce_log: Total rows added: 0 in 0.00 seconds
+0041.725 (0) Table elevnn_store_woocommerce_log: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_log.table.gz - 0.4 KB)
+0041.728 (0) Table elevnn_store_woocommerce_order_items: Total expected rows (approximate): 3
+0041.731 (0) Table elevnn_store_woocommerce_order_items: Total rows added: 3 in 0.00 seconds
+0041.732 (0) Table elevnn_store_woocommerce_order_items: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_order_items.table.gz - 0.5 KB)
+0041.737 (0) Table elevnn_store_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0041.740 (0) Table elevnn_store_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0041.741 (0) Table elevnn_store_woocommerce_payment_tokens: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0041.745 (0) Table elevnn_store_woocommerce_sessions: Total expected rows (approximate): 2
+0041.748 (0) Table elevnn_store_woocommerce_sessions: Total rows added: 2 in 0.00 seconds
+0041.749 (0) Table elevnn_store_woocommerce_sessions: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_sessions.table.gz - 1.1 KB)
+0041.754 (0) Table elevnn_store_woocommerce_shipping_zone_locations: Total expected rows (approximate): 1
+0041.756 (0) Table elevnn_store_woocommerce_shipping_zone_locations: Total rows added: 1 in 0.00 seconds
+0041.757 (0) Table elevnn_store_woocommerce_shipping_zone_locations: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0041.762 (0) Table elevnn_store_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0041.764 (0) Table elevnn_store_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0041.765 (0) Table elevnn_store_woocommerce_shipping_zone_methods: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0041.769 (0) Table elevnn_store_woocommerce_shipping_zones: Total expected rows (approximate): 1
+0041.773 (0) Table elevnn_store_woocommerce_shipping_zones: Total rows added: 1 in 0.00 seconds
+0041.774 (0) Table elevnn_store_woocommerce_shipping_zones: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zones.table.gz - 0.4 KB)
+0041.778 (0) Table elevnn_store_woocommerce_tax_rate_locati: Total expected rows (approximate): 2
+0041.781 (0) Table elevnn_store_woocommerce_tax_rate_locati: Total rows added: 2 in 0.00 seconds
+0041.782 (0) Table elevnn_store_woocommerce_tax_rate_locati: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rate_locati.table.gz - 0.4 KB)
+0041.786 (0) Table elevnn_store_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0041.788 (0) Table elevnn_store_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0041.789 (0) Table elevnn_store_woocommerce_tax_rate_locations: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0041.794 (0) Table elevnn_store_woocommerce_tax_rates: Total expected rows (approximate): 0
+0041.796 (0) Table elevnn_store_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0041.797 (0) Table elevnn_store_woocommerce_tax_rates: finishing file (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rates.table.gz - 0.4 KB)
+0041.799 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storecommentmeta
+0041.806 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storecomments
+0041.807 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storelinks
+0041.808 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeoptions
+0041.809 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storepostmeta
+0041.809 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeposts
+0041.810 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeterm_relationships
+0041.810 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeterm_taxonomy
+0041.811 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storetermmeta
+0041.812 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeterms
+0041.813 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeusermeta
+0041.814 (0) Skipping table (lacks our prefix (elevnn_store_)): elevnn_storeusers
+0041.814 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnncommentmeta
+0041.815 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnncomments
+0041.815 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnduplicator_packages
+0041.816 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnlinks
+0041.817 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnoptions
+0041.817 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnpostmeta
+0041.818 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnposts
+0041.819 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnsmush_dir_images
+0041.819 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnterm_relationships
+0041.820 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnterm_taxonomy
+0041.820 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnntermmeta
+0041.821 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnterms
+0041.821 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwc_download_log
+0041.822 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwc_webhooks
+0041.823 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfblockediplog
+0041.824 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfblocks7
+0041.824 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfconfig
+0041.825 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfcrawlers
+0041.825 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwffilechanges
+0041.826 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwffilemods
+0041.826 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfhits
+0041.827 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfhoover
+0041.828 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfissues
+0041.829 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfknownfilelist
+0041.829 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwflivetraffichuman
+0041.830 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwflocs
+0041.831 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwflogins
+0041.832 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfls_2fa_secrets
+0041.833 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfls_settings
+0041.833 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfnotifications
+0041.834 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfpendingissues
+0041.835 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfreversecache
+0041.835 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfsnipcache
+0041.836 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwfstatus
+0041.836 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwftrafficrates
+0041.837 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_api_keys
+0041.838 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_attribute_taxonomies
+0041.839 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_downloadable_product_permissions
+0041.840 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_log
+0041.841 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_order_itemmeta
+0041.841 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_order_items
+0041.842 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_payment_tokenmeta
+0041.843 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_payment_tokens
+0041.843 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_sessions
+0041.844 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_shipping_zone_locations
+0041.844 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_shipping_zone_methods
+0041.845 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_shipping_zones
+0041.846 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_tax_rate_locations
+0041.846 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnwoocommerce_tax_rates
+0041.847 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnyoast_seo_links
+0041.848 (0) Skipping table (lacks our prefix (elevnn_store_)): stories_elevnnyoast_seo_meta
+0041.848 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_commentmeta
+0041.849 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_comments
+0041.849 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_failed_jobs
+0041.850 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_links
+0041.851 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_loginizer_logs
+0041.852 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mailchimp_carts
+0041.853 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_campaign_log
+0041.853 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_campaign_logmeta
+0041.854 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_conversions
+0041.855 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_email_campaignmeta
+0041.855 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_email_campaigns
+0041.856 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_optin_campaignmeta
+0041.856 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_mo_optin_campaigns
+0041.857 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_options
+0041.858 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_postmeta
+0041.859 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_posts
+0041.860 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_queue
+0041.860 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_term_relationships
+0041.861 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_term_taxonomy
+0041.861 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_termmeta
+0041.862 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_terms
+0041.863 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_usermeta
+0041.863 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_users
+0041.864 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_wc_download_log
+0041.864 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_wc_webhooks
+0041.865 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_wcpv_commissions
+0041.866 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_wcpv_per_product_shipping_rules
+0041.866 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_api_keys
+0041.868 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_attribute_taxonomies
+0041.868 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_downloadable_product_permissions
+0041.869 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_log
+0041.870 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_order_itemmeta
+0041.870 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_order_items
+0041.871 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_payment_tokenmeta
+0041.871 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_payment_tokens
+0041.872 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_sessions
+0041.872 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_shipping_zone_locations
+0041.873 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_shipping_zone_methods
+0041.874 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_shipping_zones
+0041.874 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_tax_rate_locations
+0041.875 (0) Skipping table (lacks our prefix (elevnn_store_)): wpstg0_woocommerce_tax_rates
+0041.877 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_options.table.gz (1/318): adding to final database dump
+0041.928 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_site.table.gz (2/318): adding to final database dump
+0041.930 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blogs.table.gz (3/318): adding to final database dump
+0041.931 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_users.table.gz (4/318): adding to final database dump
+0041.932 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_usermeta.table.gz (5/318): adding to final database dump
+0041.935 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blog_versions.table.gz (6/318): adding to final database dump
+0041.935 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_blogmeta.table.gz (7/318): adding to final database dump
+0041.936 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_commentmeta.table.gz (8/318): adding to final database dump
+0041.937 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_comments.table.gz (9/318): adding to final database dump
+0041.938 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_links.table.gz (10/318): adding to final database dump
+0041.939 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_postmeta.table.gz (11/318): adding to final database dump
+0041.994 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_posts.table.gz (12/318): adding to final database dump
+0042.041 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_registration_log.table.gz (13/318): adding to final database dump
+0042.042 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_signups.table.gz (14/318): adding to final database dump
+0042.042 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_sitemeta.table.gz (15/318): adding to final database dump
+0042.047 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_term_relationships.table.gz (16/318): adding to final database dump
+0042.048 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_term_taxonomy.table.gz (17/318): adding to final database dump
+0042.048 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_termmeta.table.gz (18/318): adding to final database dump
+0042.049 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_terms.table.gz (19/318): adding to final database dump
+0042.050 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_product_meta_lookup.table.gz (20/318): adding to final database dump
+0042.051 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_order_itemmeta.table.gz (21/318): adding to final database dump
+0042.052 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_payment_tokenmeta.table.gz (22/318): adding to final database dump
+0042.053 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_yoast_seo_links.table.gz (23/318): adding to final database dump
+0042.054 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_yoast_seo_meta.table.gz (24/318): adding to final database dump
+0042.055 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_commentmeta.table.gz (25/318): adding to final database dump
+0042.055 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_comments.table.gz (26/318): adding to final database dump
+0042.056 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_duplicator_packages.table.gz (27/318): adding to final database dump
+0042.057 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_emailTemplate.table.gz (28/318): adding to final database dump
+0042.057 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_failed_jobs.table.gz (29/318): adding to final database dump
+0042.058 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_links.table.gz (30/318): adding to final database dump
+0042.059 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mailchimp_carts.table.gz (31/318): adding to final database dump
+0042.059 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mp_notifications.table.gz (32/318): adding to final database dump
+0042.060 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpcommision.table.gz (33/318): adding to final database dump
+0042.061 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpfeedback.table.gz (34/318): adding to final database dump
+0042.061 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mporders.table.gz (35/318): adding to final database dump
+0042.062 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mporders_meta.table.gz (36/318): adding to final database dump
+0042.063 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_asktoadmin.table.gz (37/318): adding to final database dump
+0042.063 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_asktoadmin_meta.table.gz (38/318): adding to final database dump
+0042.064 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_meta.table.gz (39/318): adding to final database dump
+0042.065 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpseller_orders.table.gz (40/318): adding to final database dump
+0042.065 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_mpsellerinfo.table.gz (41/318): adding to final database dump
+0042.066 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_action_meta.table.gz (42/318): adding to final database dump
+0042.067 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_actions.table.gz (43/318): adding to final database dump
+0042.068 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_chunks.table.gz (44/318): adding to final database dump
+0042.069 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_field_meta.table.gz (45/318): adding to final database dump
+0042.073 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_fields.table.gz (46/318): adding to final database dump
+0042.074 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_form_meta.table.gz (47/318): adding to final database dump
+0042.076 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_forms.table.gz (48/318): adding to final database dump
+0042.077 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_object_meta.table.gz (49/318): adding to final database dump
+0042.077 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_objects.table.gz (50/318): adding to final database dump
+0042.078 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_relationships.table.gz (51/318): adding to final database dump
+0042.079 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_nf3_upgrades.table.gz (52/318): adding to final database dump
+0042.082 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_options.table.gz (53/318): adding to final database dump
+0042.098 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_postmeta.table.gz (54/318): adding to final database dump
+0042.124 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_posts.table.gz (55/318): adding to final database dump
+0042.135 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_queue.table.gz (56/318): adding to final database dump
+0042.136 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_seller_transaction.table.gz (57/318): adding to final database dump
+0042.137 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_term_relationships.table.gz (58/318): adding to final database dump
+0042.138 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_term_taxonomy.table.gz (59/318): adding to final database dump
+0042.138 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_termmeta.table.gz (60/318): adding to final database dump
+0042.139 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_terms.table.gz (61/318): adding to final database dump
+0042.140 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_download_log.table.gz (62/318): adding to final database dump
+0042.140 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_product_meta_lookup.table.gz (63/318): adding to final database dump
+0042.141 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_wc_webhooks.table.gz (64/318): adding to final database dump
+0042.142 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_api_keys.table.gz (65/318): adding to final database dump
+0042.143 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_attribute_taxonomies.table.gz (66/318): adding to final database dump
+0042.143 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_downloadable_product_permissions.table.gz (67/318): adding to final database dump
+0042.144 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_log.table.gz (68/318): adding to final database dump
+0042.145 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_order_itemmeta.table.gz (69/318): adding to final database dump
+0042.145 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_order_items.table.gz (70/318): adding to final database dump
+0042.146 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_payment_tokenmeta.table.gz (71/318): adding to final database dump
+0042.151 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_payment_tokens.table.gz (72/318): adding to final database dump
+0042.152 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_sessions.table.gz (73/318): adding to final database dump
+0042.153 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zone_locations.table.gz (74/318): adding to final database dump
+0042.153 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zone_methods.table.gz (75/318): adding to final database dump
+0042.154 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_shipping_zones.table.gz (76/318): adding to final database dump
+0042.155 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_tax_rate_locations.table.gz (77/318): adding to final database dump
+0042.155 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_woocommerce_tax_rates.table.gz (78/318): adding to final database dump
+0042.156 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_yoast_seo_links.table.gz (79/318): adding to final database dump
+0042.157 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_8_yoast_seo_meta.table.gz (80/318): adding to final database dump
+0042.157 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_emailTemplate.table.gz (81/318): adding to final database dump
+0042.158 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_failed_jobs.table.gz (82/318): adding to final database dump
+0042.159 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_hustle_modules.table.gz (83/318): adding to final database dump
+0042.159 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_hustle_modules_meta.table.gz (84/318): adding to final database dump
+0042.160 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mailchimp_carts.table.gz (85/318): adding to final database dump
+0042.161 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_campaign_log.table.gz (86/318): adding to final database dump
+0042.161 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_campaign_logmeta.table.gz (87/318): adding to final database dump
+0042.162 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_conversions.table.gz (88/318): adding to final database dump
+0042.162 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_email_campaignmeta.table.gz (89/318): adding to final database dump
+0042.163 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_email_campaigns.table.gz (90/318): adding to final database dump
+0042.164 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_optin_campaignmeta.table.gz (91/318): adding to final database dump
+0042.164 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mo_optin_campaigns.table.gz (92/318): adding to final database dump
+0042.165 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_notifications.table.gz (93/318): adding to final database dump
+0042.166 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_conversation.table.gz (94/318): adding to final database dump
+0042.166 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_reasons.table.gz (95/318): adding to final database dump
+0042.167 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_request_meta.table.gz (96/318): adding to final database dump
+0042.168 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mp_rma_requests.table.gz (97/318): adding to final database dump
+0042.168 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpbadge.table.gz (98/318): adding to final database dump
+0042.169 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpbadge_assign.table.gz (99/318): adding to final database dump
+0042.171 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpcommision.table.gz (100/318): adding to final database dump
+0042.171 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpfeedback.table.gz (101/318): adding to final database dump
+0042.172 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mporders.table.gz (102/318): adding to final database dump
+0042.173 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mporders_meta.table.gz (103/318): adding to final database dump
+0042.174 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_asktoadmin.table.gz (104/318): adding to final database dump
+0042.174 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_asktoadmin_meta.table.gz (105/318): adding to final database dump
+0042.175 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_meta.table.gz (106/318): adding to final database dump
+0042.175 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpseller_orders.table.gz (107/318): adding to final database dump
+0042.176 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mpsellerinfo.table.gz (108/318): adding to final database dump
+0042.177 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_mstoreapp_wishlist.table.gz (109/318): adding to final database dump
+0042.177 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_action_meta.table.gz (110/318): adding to final database dump
+0042.179 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_actions.table.gz (111/318): adding to final database dump
+0042.179 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_chunks.table.gz (112/318): adding to final database dump
+0042.180 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_field_meta.table.gz (113/318): adding to final database dump
+0042.184 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_fields.table.gz (114/318): adding to final database dump
+0042.185 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_form_meta.table.gz (115/318): adding to final database dump
+0042.187 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_forms.table.gz (116/318): adding to final database dump
+0042.187 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_object_meta.table.gz (117/318): adding to final database dump
+0042.188 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_objects.table.gz (118/318): adding to final database dump
+0042.188 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_relationships.table.gz (119/318): adding to final database dump
+0042.189 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_nf3_upgrades.table.gz (120/318): adding to final database dump
+0042.192 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_email_templates.table.gz (121/318): adding to final database dump
+0042.193 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_fields.table.gz (122/318): adding to final database dump
+0042.194 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_friends.table.gz (123/318): adding to final database dump
+0042.194 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_group_requests.table.gz (124/318): adding to final database dump
+0042.195 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_groups.table.gz (125/318): adding to final database dump
+0042.196 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_msg_conversation.table.gz (126/318): adding to final database dump
+0042.197 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_msg_threads.table.gz (127/318): adding to final database dump
+0042.197 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_notification.table.gz (128/318): adding to final database dump
+0042.198 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_paypal_log.table.gz (129/318): adding to final database dump
+0042.199 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_promag_sections.table.gz (130/318): adding to final database dump
+0042.199 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_queue.table.gz (131/318): adding to final database dump
+0042.200 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_404.table.gz (132/318): adding to final database dump
+0042.203 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_groups.table.gz (133/318): adding to final database dump
+0042.204 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_items.table.gz (134/318): adding to final database dump
+0042.205 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_redirection_logs.table.gz (135/318): adding to final database dump
+0042.207 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_seller_transaction.table.gz (136/318): adding to final database dump
+0042.207 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_smush_dir_images.table.gz (137/318): adding to final database dump
+0042.208 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_analytics.table.gz (138/318): adding to final database dump
+0042.209 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_items.table.gz (139/318): adding to final database dump
+0042.210 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_tinvwl_lists.table.gz (140/318): adding to final database dump
+0042.210 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_admin_note_actions.table.gz (141/318): adding to final database dump
+0042.211 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_admin_notes.table.gz (142/318): adding to final database dump
+0042.212 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_customer_lookup.table.gz (143/318): adding to final database dump
+0042.212 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_download_log.table.gz (144/318): adding to final database dump
+0042.213 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_coupon_lookup.table.gz (145/318): adding to final database dump
+0042.214 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_product_lookup.table.gz (146/318): adding to final database dump
+0042.214 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_stats.table.gz (147/318): adding to final database dump
+0042.215 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_order_tax_lookup.table.gz (148/318): adding to final database dump
+0042.216 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wc_webhooks.table.gz (149/318): adding to final database dump
+0042.216 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_daily_analysis.table.gz (150/318): adding to final database dump
+0042.217 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_detailed_analysis.table.gz (151/318): adding to final database dump
+0042.218 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries.table.gz (152/318): adding to final database dump
+0042.218 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries_meta.table.gz (153/318): adding to final database dump
+0042.219 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_enquiries_response.table.gz (154/318): adding to final database dump
+0042.220 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_following_followers.table.gz (155/318): adding to final database dump
+0042.220 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_affiliate_orders.table.gz (156/318): adding to final database dump
+0042.221 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_affiliate_orders_meta.table.gz (157/318): adding to final database dump
+0042.222 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_orders.table.gz (158/318): adding to final database dump
+0042.222 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_orders_meta.table.gz (159/318): adding to final database dump
+0042.223 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_product_multivendor.table.gz (160/318): adding to final database dump
+0042.224 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_refund_request.table.gz (161/318): adding to final database dump
+0042.224 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reverse_withdrawal.table.gz (162/318): adding to final database dump
+0042.225 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_review_rating_meta.table.gz (163/318): adding to final database dump
+0042.226 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reviews.table.gz (164/318): adding to final database dump
+0042.226 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_reviews_response.table.gz (165/318): adding to final database dump
+0042.227 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_shipping_zone_locations.table.gz (166/318): adding to final database dump
+0042.228 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_shipping_zone_methods.table.gz (167/318): adding to final database dump
+0042.228 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_store_taxonomies.table.gz (168/318): adding to final database dump
+0042.229 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_vendor_ledger.table.gz (169/318): adding to final database dump
+0042.230 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_withdraw_request.table.gz (170/318): adding to final database dump
+0042.230 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_marketplace_withdraw_request_meta.table.gz (171/318): adding to final database dump
+0042.231 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_membership_subscription.table.gz (172/318): adding to final database dump
+0042.232 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages.table.gz (173/318): adding to final database dump
+0042.232 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages_modifier.table.gz (174/318): adding to final database dump
+0042.233 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_messages_stat.table.gz (175/318): adding to final database dump
+0042.233 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support.table.gz (176/318): adding to final database dump
+0042.234 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support_meta.table.gz (177/318): adding to final database dump
+0042.235 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcfm_support_response.table.gz (178/318): adding to final database dump
+0042.235 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcpv_commissions.table.gz (179/318): adding to final database dump
+0042.236 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wcpv_per_product_shipping_rules.table.gz (180/318): adding to final database dump
+0042.236 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfblockediplog.table.gz (181/318): adding to final database dump
+0042.237 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfblocks7.table.gz (182/318): adding to final database dump
+0042.238 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfconfig.table.gz (183/318): adding to final database dump
+0042.240 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfcrawlers.table.gz (184/318): adding to final database dump
+0042.241 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wffilechanges.table.gz (185/318): adding to final database dump
+0042.242 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wffilemods.table.gz (186/318): adding to final database dump
+0042.242 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfhits.table.gz (187/318): adding to final database dump
+0042.243 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfhoover.table.gz (188/318): adding to final database dump
+0042.244 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfissues.table.gz (189/318): adding to final database dump
+0042.245 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfknownfilelist.table.gz (190/318): adding to final database dump
+0042.245 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflivetraffichuman.table.gz (191/318): adding to final database dump
+0042.246 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflocs.table.gz (192/318): adding to final database dump
+0042.247 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wflogins.table.gz (193/318): adding to final database dump
+0042.247 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfls_2fa_secrets.table.gz (194/318): adding to final database dump
+0042.248 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfls_settings.table.gz (195/318): adding to final database dump
+0042.249 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfnotifications.table.gz (196/318): adding to final database dump
+0042.250 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfpendingissues.table.gz (197/318): adding to final database dump
+0042.251 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfreversecache.table.gz (198/318): adding to final database dump
+0042.253 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfsnipcache.table.gz (199/318): adding to final database dump
+0042.254 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wfstatus.table.gz (200/318): adding to final database dump
+0042.255 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_wftrafficrates.table.gz (201/318): adding to final database dump
+0042.256 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_api_keys.table.gz (202/318): adding to final database dump
+0042.257 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_attribute_taxonomies.table.gz (203/318): adding to final database dump
+0042.257 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_downloadable_product_permissions.table.gz (204/318): adding to final database dump
+0042.258 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_log.table.gz (205/318): adding to final database dump
+0042.259 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_order_items.table.gz (206/318): adding to final database dump
+0042.260 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_payment_tokens.table.gz (207/318): adding to final database dump
+0042.260 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_sessions.table.gz (208/318): adding to final database dump
+0042.261 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zone_locations.table.gz (209/318): adding to final database dump
+0042.262 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zone_methods.table.gz (210/318): adding to final database dump
+0042.263 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_shipping_zones.table.gz (211/318): adding to final database dump
+0042.263 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rate_locati.table.gz (212/318): adding to final database dump
+0042.264 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rate_locations.table.gz (213/318): adding to final database dump
+0042.265 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db-table-elevnn_store_woocommerce_tax_rates.table.gz (214/318): adding to final database dump
+0042.270 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz: finished writing out complete database file (1136 KB)
+0042.293 (0) Total database tables backed up: 214 (backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz, size: 1182676, sha256)
+0042.300 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0042.301 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0042.301 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0042.302 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0042.303 (0) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0042.303 (0) Saving backup history. Total backup size: 169.9 MB
+0042.305 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0042.307 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0042.308 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-032eb011db399fd594d12249918a593f)
+0047.667 (0) Google Drive: quota usage: used=5025.7 MB, total=30720 MB, available=25694.3 MB
+0047.669 (0) Google Drive: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip: Attempting to upload to Google Drive (into folder id: 1C2th4FepMwHRje5px2szD8P0Haj81m7x)
+0050.943 (0) Googledrive chunked upload: 1.4 % uploaded (1048576)
+0053.113 (0) Googledrive chunked upload: 2.8 % uploaded (2097152)
+0055.297 (0) Googledrive chunked upload: 4.2 % uploaded (3145728)
+0057.335 (0) Googledrive chunked upload: 5.6 % uploaded (4194304)
+0059.327 (0) Googledrive chunked upload: 7 % uploaded (5242880)
+0061.346 (0) Googledrive chunked upload: 8.4 % uploaded (6291456)
+0063.696 (0) Googledrive chunked upload: 9.8 % uploaded (7340032)
+0065.961 (0) Googledrive chunked upload: 11.2 % uploaded (8388608)
+0068.116 (0) Googledrive chunked upload: 12.6 % uploaded (9437184)
+0070.146 (0) Googledrive chunked upload: 14 % uploaded (10485760)
+0072.165 (0) Googledrive chunked upload: 15.4 % uploaded (11534336)
+0074.375 (0) Googledrive chunked upload: 16.8 % uploaded (12582912)
+0076.644 (0) Googledrive chunked upload: 18.2 % uploaded (13631488)
+0078.767 (0) Googledrive chunked upload: 19.6 % uploaded (14680064)
+0080.925 (0) Googledrive chunked upload: 21 % uploaded (15728640)
+0082.959 (0) Googledrive chunked upload: 22.4 % uploaded (16777216)
+0084.964 (0) Googledrive chunked upload: 23.8 % uploaded (17825792)
+0086.969 (0) Googledrive chunked upload: 25.3 % uploaded (18874368)
+0088.965 (0) Googledrive chunked upload: 26.7 % uploaded (19922944)
+0091.186 (0) Googledrive chunked upload: 28.1 % uploaded (20971520)
+0093.279 (0) Googledrive chunked upload: 29.5 % uploaded (22020096)
+0095.283 (0) Googledrive chunked upload: 30.9 % uploaded (23068672)
+0097.293 (0) Googledrive chunked upload: 32.3 % uploaded (24117248)
+0099.351 (0) Googledrive chunked upload: 33.7 % uploaded (25165824)
+0101.572 (0) Googledrive chunked upload: 35.1 % uploaded (26214400)
+0103.822 (0) Googledrive chunked upload: 36.5 % uploaded (27262976)
+0105.981 (0) Googledrive chunked upload: 37.9 % uploaded (28311552)
+0107.993 (0) Googledrive chunked upload: 39.3 % uploaded (29360128)
+0110.018 (0) Googledrive chunked upload: 40.7 % uploaded (30408704)
+0112.179 (0) Googledrive chunked upload: 42.1 % uploaded (31457280)
+0114.356 (0) Googledrive chunked upload: 43.5 % uploaded (32505856)
+0116.357 (0) Googledrive chunked upload: 44.9 % uploaded (33554432)
+0118.418 (0) Googledrive chunked upload: 46.3 % uploaded (34603008)
+0120.433 (0) Googledrive chunked upload: 47.7 % uploaded (35651584)
+0122.432 (0) Googledrive chunked upload: 49.1 % uploaded (36700160)
+0124.480 (0) Googledrive chunked upload: 50.5 % uploaded (37748736)
+0126.488 (0) Googledrive chunked upload: 51.9 % uploaded (38797312)
+0128.646 (0) Googledrive chunked upload: 53.3 % uploaded (39845888)
+0130.832 (0) Googledrive chunked upload: 54.7 % uploaded (40894464)
+0133.077 (0) Googledrive chunked upload: 56.1 % uploaded (41943040)
+0136.765 (0) Googledrive chunked upload: 57.5 % uploaded (42991616)
+0138.868 (0) Googledrive chunked upload: 58.9 % uploaded (44040192)
+0141.268 (0) Googledrive chunked upload: 60.3 % uploaded (45088768)
+0143.363 (0) Googledrive chunked upload: 61.7 % uploaded (46137344)
+0145.238 (0) Googledrive chunked upload: 63.1 % uploaded (47185920)
+0147.452 (0) Googledrive chunked upload: 64.5 % uploaded (48234496)
+0149.636 (0) Googledrive chunked upload: 65.9 % uploaded (49283072)
+0151.884 (0) Googledrive chunked upload: 67.3 % uploaded (50331648)
+0153.938 (0) Googledrive chunked upload: 68.7 % uploaded (51380224)
+0156.113 (0) Googledrive chunked upload: 70.1 % uploaded (52428800)
+0158.282 (0) Googledrive chunked upload: 71.5 % uploaded (53477376)
+0160.321 (0) Googledrive chunked upload: 73 % uploaded (54525952)
+0162.330 (0) Googledrive chunked upload: 74.4 % uploaded (55574528)
+0164.339 (0) Googledrive chunked upload: 75.8 % uploaded (56623104)
+0166.515 (0) Googledrive chunked upload: 77.2 % uploaded (57671680)
+0168.506 (0) Googledrive chunked upload: 78.6 % uploaded (58720256)
+0170.521 (0) Googledrive chunked upload: 80 % uploaded (59768832)
+0172.681 (0) Googledrive chunked upload: 81.4 % uploaded (60817408)
+0174.725 (0) Googledrive chunked upload: 82.8 % uploaded (61865984)
+0176.726 (0) Googledrive chunked upload: 84.2 % uploaded (62914560)
+0178.966 (0) Googledrive chunked upload: 85.6 % uploaded (63963136)
+0181.141 (0) Googledrive chunked upload: 87 % uploaded (65011712)
+0183.160 (0) Googledrive chunked upload: 88.4 % uploaded (66060288)
+0185.645 (0) Googledrive chunked upload: 89.8 % uploaded (67108864)
+0188.029 (0) Googledrive chunked upload: 91.2 % uploaded (68157440)
+0190.127 (0) Googledrive chunked upload: 92.6 % uploaded (69206016)
+0192.272 (0) Googledrive chunked upload: 94 % uploaded (70254592)
+0194.296 (0) Googledrive chunked upload: 95.4 % uploaded (71303168)
+0196.502 (0) Googledrive chunked upload: 96.8 % uploaded (72351744)
+0198.726 (0) Googledrive chunked upload: 98.2 % uploaded (73400320)
+0200.774 (0) Googledrive chunked upload: 99.6 % uploaded (74448896)
+0206.091 (0) Googledrive chunked upload: 100 % uploaded (74448896)
+0206.094 (0) Google Drive: OK: Archive backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip uploaded in 158.42 seconds
+0206.095 (0) Recording as successfully uploaded: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip
+0206.111 (0) Deleting local file: backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip: OK
+0207.242 (0) Google Drive: quota usage: used=5097 MB, total=30720 MB, available=25623 MB
+0207.250 (0) Google Drive: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip: Attempting to upload to Google Drive (into folder id: 1C2th4FepMwHRje5px2szD8P0Haj81m7x)
+0210.487 (0) Googledrive chunked upload: 19 % uploaded (1048576)
+0214.250 (0) Googledrive chunked upload: 37.9 % uploaded (2097152)
+0216.410 (0) Googledrive chunked upload: 56.9 % uploaded (3145728)
+0218.526 (0) Googledrive chunked upload: 75.9 % uploaded (4194304)
+0220.702 (0) Googledrive chunked upload: 94.8 % uploaded (5242880)
+0224.272 (0) Googledrive chunked upload: 100 % uploaded (5242880)
+0224.276 (0) Google Drive: OK: Archive backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip uploaded in 17.02 seconds
+0224.278 (0) Recording as successfully uploaded: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip
+0224.281 (0) Deleting local file: backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip: OK
+0225.624 (0) Google Drive: quota usage: used=5102.3 MB, total=30720 MB, available=25617.7 MB
+0225.626 (0) Google Drive: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip: Attempting to upload to Google Drive (into folder id: 1C2th4FepMwHRje5px2szD8P0Haj81m7x)
+0228.725 (0) Googledrive chunked upload: 1.1 % uploaded (1048576)
+0231.033 (0) Googledrive chunked upload: 2.2 % uploaded (2097152)
+0233.346 (0) Googledrive chunked upload: 3.3 % uploaded (3145728)
+0235.582 (0) Googledrive chunked upload: 4.5 % uploaded (4194304)
+0237.584 (0) Googledrive chunked upload: 5.6 % uploaded (5242880)
+0239.689 (0) Googledrive chunked upload: 6.7 % uploaded (6291456)
+0241.840 (0) Googledrive chunked upload: 7.8 % uploaded (7340032)
+0243.882 (0) Googledrive chunked upload: 8.9 % uploaded (8388608)
+0246.034 (0) Googledrive chunked upload: 10 % uploaded (9437184)
+0248.077 (0) Googledrive chunked upload: 11.1 % uploaded (10485760)
+0250.231 (0) Googledrive chunked upload: 12.3 % uploaded (11534336)
+0252.468 (0) Googledrive chunked upload: 13.4 % uploaded (12582912)
+0254.646 (0) The scheduled resumption is within 45 seconds - will reschedule
+0254.648 (0) Rescheduling resumption 1: moving to 345 seconds from now (1559185814)
+0254.651 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0254.652 (0) Googledrive chunked upload: 14.5 % uploaded (13631488)
+0256.626 (0) Googledrive chunked upload: 15.6 % uploaded (14680064)
+0258.795 (0) Googledrive chunked upload: 16.7 % uploaded (15728640)
+0260.960 (0) Googledrive chunked upload: 17.8 % uploaded (16777216)
+0263.001 (0) Googledrive chunked upload: 18.9 % uploaded (17825792)
+0265.251 (0) Googledrive chunked upload: 20.1 % uploaded (18874368)
+0267.285 (0) Googledrive chunked upload: 21.2 % uploaded (19922944)
+0269.287 (0) Googledrive chunked upload: 22.3 % uploaded (20971520)
+0271.299 (0) Googledrive chunked upload: 23.4 % uploaded (22020096)
+0273.174 (0) Googledrive chunked upload: 24.5 % uploaded (23068672)
+0275.181 (0) Googledrive chunked upload: 25.6 % uploaded (24117248)
+0277.343 (0) Googledrive chunked upload: 26.7 % uploaded (25165824)
+0279.511 (0) Googledrive chunked upload: 27.9 % uploaded (26214400)
+0281.565 (0) Googledrive chunked upload: 29 % uploaded (27262976)
+0283.676 (0) Googledrive chunked upload: 30.1 % uploaded (28311552)
+0285.821 (0) Googledrive chunked upload: 31.2 % uploaded (29360128)
+0288.066 (0) Googledrive chunked upload: 32.3 % uploaded (30408704)
+0290.230 (0) Googledrive chunked upload: 33.4 % uploaded (31457280)
+0292.541 (0) Googledrive chunked upload: 34.5 % uploaded (32505856)
+0294.692 (0) Googledrive chunked upload: 35.7 % uploaded (33554432)
+0296.921 (0) Googledrive chunked upload: 36.8 % uploaded (34603008)
+0298.972 (0) Googledrive chunked upload: 37.9 % uploaded (35651584)
+0301.128 (0) Googledrive chunked upload: 39 % uploaded (36700160)
+0303.140 (0) Googledrive chunked upload: 40.1 % uploaded (37748736)
+0305.327 (0) Googledrive chunked upload: 41.2 % uploaded (38797312)
+0307.425 (0) Googledrive chunked upload: 42.3 % uploaded (39845888)
+0309.606 (0) Googledrive chunked upload: 43.5 % uploaded (40894464)
+0311.790 (0) Googledrive chunked upload: 44.6 % uploaded (41943040)
+0313.804 (0) Googledrive chunked upload: 45.7 % uploaded (42991616)
+0320.132 (0) The time we have been running (320.1) is approaching the resumption interval (345) - increasing resumption interval to 351
+0320.134 (0) Googledrive chunked upload: 46.8 % uploaded (44040192)
+0324.475 (0) The time we have been running (324.5) is approaching the resumption interval (351) - increasing resumption interval to 355
+0324.478 (0) Googledrive chunked upload: 47.9 % uploaded (45088768)
+0330.796 (0) The time we have been running (330.8) is approaching the resumption interval (355) - increasing resumption interval to 361
+0330.799 (0) Googledrive chunked upload: 49 % uploaded (46137344)
+0335.127 (0) The time we have been running (335.1) is approaching the resumption interval (361) - increasing resumption interval to 366
+0335.130 (0) Googledrive chunked upload: 50.1 % uploaded (47185920)
+0339.506 (0) The time we have been running (339.5) is approaching the resumption interval (366) - increasing resumption interval to 370
+0339.507 (0) Googledrive chunked upload: 51.3 % uploaded (48234496)
+0345.841 (0) The time we have been running (345.8) is approaching the resumption interval (370) - increasing resumption interval to 376
+0345.843 (0) Googledrive chunked upload: 52.4 % uploaded (49283072)
+0350.190 (0) The time we have been running (350.2) is approaching the resumption interval (376) - increasing resumption interval to 381
+0350.192 (0) Googledrive chunked upload: 53.5 % uploaded (50331648)
+0355.264 (0) The time we have been running (355.3) is approaching the resumption interval (381) - increasing resumption interval to 386
+0355.270 (0) Googledrive chunked upload: 54.6 % uploaded (51380224)
+0362.786 (0) The time we have been running (362.8) is approaching the resumption interval (386) - increasing resumption interval to 393
+0362.789 (0) Googledrive chunked upload: 55.7 % uploaded (52428800)
+0370.037 (0) The time we have been running (370) is approaching the resumption interval (393) - increasing resumption interval to 401
+0370.039 (0) Googledrive chunked upload: 56.8 % uploaded (53477376)
+0374.347 (0) The time we have been running (374.3) is approaching the resumption interval (401) - increasing resumption interval to 405
+0374.349 (0) Googledrive chunked upload: 57.9 % uploaded (54525952)
+0381.020 (0) The time we have been running (380.7) is approaching the resumption interval (405) - increasing resumption interval to 411
+0381.111 (0) Googledrive chunked upload: 59.1 % uploaded (55574528)
+0387.580 (0) The time we have been running (387.6) is approaching the resumption interval (411) - increasing resumption interval to 418
+0387.583 (0) Googledrive chunked upload: 60.2 % uploaded (56623104)
+0393.940 (0) The time we have been running (393.9) is approaching the resumption interval (418) - increasing resumption interval to 424
+0393.944 (0) Googledrive chunked upload: 61.3 % uploaded (57671680)
+0400.497 (0) The time we have been running (400.5) is approaching the resumption interval (424) - increasing resumption interval to 431
+0400.499 (0) Googledrive chunked upload: 62.4 % uploaded (58720256)
+0404.904 (0) The time we have been running (404.9) is approaching the resumption interval (431) - increasing resumption interval to 435
+0404.906 (0) Googledrive chunked upload: 63.5 % uploaded (59768832)
+0409.243 (0) The time we have been running (409.2) is approaching the resumption interval (435) - increasing resumption interval to 440
+0409.247 (0) Googledrive chunked upload: 64.6 % uploaded (60817408)
+0415.592 (0) The time we have been running (415.6) is approaching the resumption interval (440) - increasing resumption interval to 446
+0415.596 (0) Googledrive chunked upload: 65.7 % uploaded (61865984)
+0416.583 (0) The time we have been running (416.6) is approaching the resumption interval (446) - increasing resumption interval to 447
+0416.586 (0) Googledrive chunked upload: 66.9 % uploaded (62914560)
+0419.737 (0) The time we have been running (419.7) is approaching the resumption interval (447) - increasing resumption interval to 450
+0419.739 (0) Googledrive chunked upload: 68 % uploaded (63963136)
+0424.065 (0) The time we have been running (424.1) is approaching the resumption interval (450) - increasing resumption interval to 455
+0424.068 (0) Googledrive chunked upload: 69.1 % uploaded (65011712)
+0430.400 (0) The time we have been running (430.4) is approaching the resumption interval (455) - increasing resumption interval to 461
+0430.404 (0) Googledrive chunked upload: 70.2 % uploaded (66060288)
+0436.861 (0) The time we have been running (436.9) is approaching the resumption interval (461) - increasing resumption interval to 467
+0436.863 (0) Googledrive chunked upload: 71.3 % uploaded (67108864)
+0441.187 (0) The time we have been running (441.2) is approaching the resumption interval (467) - increasing resumption interval to 472
+0441.189 (0) Googledrive chunked upload: 72.4 % uploaded (68157440)
+0447.829 (0) The time we have been running (447.8) is approaching the resumption interval (472) - increasing resumption interval to 478
+0447.831 (0) Googledrive chunked upload: 73.5 % uploaded (69206016)
+0454.163 (0) The time we have been running (454.2) is approaching the resumption interval (478) - increasing resumption interval to 485
+0454.166 (0) Googledrive chunked upload: 74.7 % uploaded (70254592)
+0458.525 (0) The time we have been running (458.5) is approaching the resumption interval (485) - increasing resumption interval to 489
+0458.527 (0) Googledrive chunked upload: 75.8 % uploaded (71303168)
+0462.845 (0) The time we have been running (462.8) is approaching the resumption interval (489) - increasing resumption interval to 493
+0462.848 (0) Googledrive chunked upload: 76.9 % uploaded (72351744)
+0469.268 (0) The time we have been running (469.3) is approaching the resumption interval (493) - increasing resumption interval to 500
+0469.269 (0) Googledrive chunked upload: 78 % uploaded (73400320)
+0475.612 (0) The time we have been running (475.6) is approaching the resumption interval (500) - increasing resumption interval to 506
+0475.614 (0) Googledrive chunked upload: 79.1 % uploaded (74448896)
+0480.830 (0) The time we have been running (480.8) is approaching the resumption interval (506) - increasing resumption interval to 511
+0480.835 (0) Googledrive chunked upload: 80.2 % uploaded (75497472)
+0488.348 (0) The time we have been running (488.3) is approaching the resumption interval (511) - increasing resumption interval to 519
+0488.350 (0) Googledrive chunked upload: 81.3 % uploaded (76546048)
+0494.688 (0) The time we have been running (494.7) is approaching the resumption interval (519) - increasing resumption interval to 525
+0494.690 (0) Googledrive chunked upload: 82.5 % uploaded (77594624)
+0501.000 (0) The time we have been running (501) is approaching the resumption interval (525) - increasing resumption interval to 531
+0501.003 (0) Googledrive chunked upload: 83.6 % uploaded (78643200)
+0505.943 (0) The time we have been running (505.9) is approaching the resumption interval (531) - increasing resumption interval to 536
+0505.946 (0) Googledrive chunked upload: 84.7 % uploaded (79691776)
+0512.782 (0) The time we have been running (512.8) is approaching the resumption interval (536) - increasing resumption interval to 543
+0512.784 (0) Googledrive chunked upload: 85.8 % uploaded (80740352)
+0517.272 (0) The time we have been running (517.3) is approaching the resumption interval (543) - increasing resumption interval to 548
+0517.273 (0) Googledrive chunked upload: 86.9 % uploaded (81788928)
+0521.586 (0) The time we have been running (521.6) is approaching the resumption interval (548) - increasing resumption interval to 552
+0521.587 (0) Googledrive chunked upload: 88 % uploaded (82837504)
+0527.929 (0) The time we have been running (527.9) is approaching the resumption interval (552) - increasing resumption interval to 558
+0527.932 (0) Googledrive chunked upload: 89.2 % uploaded (83886080)
+0532.340 (0) The time we have been running (532.3) is approaching the resumption interval (558) - increasing resumption interval to 563
+0532.347 (0) Googledrive chunked upload: 90.3 % uploaded (84934656)
+0538.765 (0) The time we have been running (538.8) is approaching the resumption interval (563) - increasing resumption interval to 569
+0538.768 (0) Googledrive chunked upload: 91.4 % uploaded (85983232)
+0541.768 (0) The time we have been running (541.8) is approaching the resumption interval (569) - increasing resumption interval to 572
+0541.770 (0) Googledrive chunked upload: 92.5 % uploaded (87031808)
+0548.145 (0) The time we have been running (548.1) is approaching the resumption interval (572) - increasing resumption interval to 579
+0548.147 (0) Googledrive chunked upload: 93.6 % uploaded (88080384)
+0553.271 (0) The time we have been running (553.3) is approaching the resumption interval (579) - increasing resumption interval to 584
+0553.273 (0) Googledrive chunked upload: 94.7 % uploaded (89128960)
+0557.620 (0) The time we have been running (557.6) is approaching the resumption interval (584) - increasing resumption interval to 588
+0557.622 (0) The scheduled resumption is within 45 seconds - will reschedule
+0557.624 (0) Rescheduling resumption 1: moving to 633 seconds from now (1559186405)
+0557.627 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 588 + 45 = 633
+0557.628 (0) Googledrive chunked upload: 95.8 % uploaded (90177536)
+0563.975 (0) Googledrive chunked upload: 97 % uploaded (91226112)
+0570.439 (0) Googledrive chunked upload: 98.1 % uploaded (92274688)
+0576.874 (0) Googledrive chunked upload: 99.2 % uploaded (93323264)
+0583.382 (0) Googledrive chunked upload: 100 % uploaded (93323264)
+0583.385 (0) Google Drive: OK: Archive backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip uploaded in 357.76 seconds
+0583.386 (0) Recording as successfully uploaded: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip
+0583.405 (0) Deleting local file: backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip: OK
+0583.827 (0) Google Drive: quota usage: used=5192 MB, total=30720 MB, available=25528 MB
+0583.829 (0) Google Drive: backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip: Attempting to upload to Google Drive (into folder id: 1C2th4FepMwHRje5px2szD8P0Haj81m7x)
+0584.959 (0) Googledrive chunked upload: 40.3 % uploaded (1048576)
+0585.542 (0) Googledrive chunked upload: 80.7 % uploaded (2097152)
+0588.156 (0) Googledrive chunked upload: 100 % uploaded (2097152)
+0588.159 (0) Google Drive: OK: Archive backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip uploaded in 4.33 seconds
+0588.160 (0) Recording as successfully uploaded: backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip
+0588.162 (0) Deleting local file: backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip: OK
+0588.690 (0) Google Drive: quota usage: used=5194.5 MB, total=30720 MB, available=25525.5 MB
+0588.695 (0) Google Drive: backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz: Attempting to upload to Google Drive (into folder id: 1C2th4FepMwHRje5px2szD8P0Haj81m7x)
+0589.944 (0) Googledrive chunked upload: 88.7 % uploaded (1048576)
+0592.253 (0) Googledrive chunked upload: 100 % uploaded (1048576)
+0592.256 (0) Google Drive: OK: Archive backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz uploaded in 3.56 seconds
+0592.257 (0) Recording as successfully uploaded: backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz
+0592.259 (0) Deleting local file: backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz: OK
+0592.260 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0592.261 (0) Number of backup sets in history: 4; groups (db): 1
+0592.262 (0) Examining (for databases) backup set with group_id=0, nonce=4ffaf680780c, datestamp=1559185214 (May 30 2019 03:00:14)
+0592.263 (0) This backup set is the backup set just made, so will not be deleted.
+0592.263 (0) Examining (for databases) backup set with group_id=0, nonce=635d020e5a5d, datestamp=1555187700 (Apr 13 2019 20:35:00)
+0592.263 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0592.263 (0) Examining (for databases) backup set with group_id=0, nonce=0596159f3d02, datestamp=1554789789 (Apr 09 2019 06:03:09)
+0592.263 (0) 1554789789: db: this set includes a database (backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz); db count is now 2
+0592.263 (0) 1554789789: db: over retain limit (2); will delete this database
+0592.263 (0) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz, service=googledrive
+0595.634 (0) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz: Deletion successful
+0595.638 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0595.639 (0) Examining (for databases) backup set with group_id=0, nonce=742c73f60245, datestamp=1554789653 (Apr 09 2019 06:00:53)
+0595.640 (0) 1554789653: db: this set includes a database (backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz); db count is now 2
+0595.640 (0) 1554789653: db: over retain limit (2); will delete this database
+0595.640 (0) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz, service=googledrive
+0597.052 (0) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz: Deletion successful
+0597.056 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0597.057 (0) Number of backup sets in history: 4; groups (files): 1
+0597.057 (0) Examining (for files) backup set with nonce=4ffaf680780c, datestamp=1559185214 (May 30 2019 03:00:14)
+0597.057 (0) This backup set is the backup set just made, so will not be deleted.
+0597.058 (0) This backup set is the backup set just made, so will not be deleted.
+0597.058 (0) This backup set is the backup set just made, so will not be deleted.
+0597.058 (0) This backup set is the backup set just made, so will not be deleted.
+0597.058 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0597.059 (0) Examining (for files) backup set with nonce=635d020e5a5d, datestamp=1555187700 (Apr 13 2019 20:35:00)
+0597.059 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0597.059 (0) Examining (for files) backup set with nonce=0596159f3d02, datestamp=1554789789 (Apr 09 2019 06:03:09)
+0597.059 (0) plugins: over retain limit (2); will delete this file entity
+0597.059 (0) themes: over retain limit (2); will delete this file entity
+0597.059 (0) uploads: over retain limit (2); will delete this file entity
+0597.059 (0) others: over retain limit (2); will delete this file entity
+0597.059 (0) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-plugins.zip, service=googledrive
+0597.059 (0) Deleting local copy (backup_2019-04-09-0103_Elevnn_0596159f3d02-plugins.zip)
+0597.062 (0) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-themes.zip, service=googledrive
+0597.068 (0) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-uploads.zip, service=googledrive
+0597.068 (0) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-others.zip, service=googledrive
+0598.689 (0) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-others.zip: Deletion successful
+0600.895 (0) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-uploads.zip: Deletion successful
+0603.099 (0) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-themes.zip: Deletion successful
+0603.100 (0) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-plugins.zip: Deletion failed: file was not found
+0603.103 (0) The time we have been running (603.1) is approaching the resumption interval (633) - increasing resumption interval to 634
+0603.105 (0) This backup set is now empty; will remove from history
+0603.106 (0) Corresponding log file (log.0596159f3d02.txt) not found - must have already been deleted
+0603.106 (0) Examining (for files) backup set with nonce=742c73f60245, datestamp=1554789653 (Apr 09 2019 06:00:53)
+0603.107 (0) plugins: over retain limit (2); will delete this file entity
+0603.107 (0) themes: over retain limit (2); will delete this file entity
+0603.107 (0) uploads: over retain limit (2); will delete this file entity
+0603.107 (0) others: over retain limit (2); will delete this file entity
+0603.107 (0) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-plugins.zip, service=googledrive
+0603.108 (0) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-themes.zip, service=googledrive
+0603.109 (0) Deleting local copy (backup_2019-04-09-0100_Elevnn_742c73f60245-themes.zip)
+0603.111 (0) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-uploads.zip, service=googledrive
+0603.115 (0) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-others.zip, service=googledrive
+1201.149 (1) Opened log file at time: Thu, 30 May 2019 03:20:15 +0000 on https://elevnn.com/
+1201.150 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.14 WP: 5.2.1 PHP: 7.0.33 (cgi-fcgi, Linux business18.web-hosting.com 2.6.32-954.3.5.lve1.4.64.el6.x86_64 #1 SMP Wed May 15 12:53:53 EDT 2019 x86_64) MySQL: 10.1.38-MariaDB-cll-lve WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 71.3M | 72M) multisite: Y openssl: OpenSSL 1.0.2k-fips  26 Jan 2017 mcrypt: Y LANG:  ZipArchive::addFile: Y
+1201.206 (1) Free space on disk containing Updraft's temporary directory: 788923.6 MB
+1201.213 (1) Backup run: resumption=1, nonce=4ffaf680780c, file_nonce=4ffaf680780c begun at=1559185214 (1201s ago), job type=backup, previous check-in=603.1s
+1201.215 (1) Scheduling a resumption (2) after 634 seconds (1559187049) in case this run gets aborted
+1201.226 (1) Checking if we have a zip executable available
+1201.226 (1) Zip engine: found/will use a binary zip: /usr/bin/zip
+1201.228 (1) Creation of backups of directories: already finished
+1201.229 (1) Saving backup status to database (elements: 8)
+1201.235 (1) Database dump (WordPress DB): Creation was completed already
+1201.240 (1) backup_2019-05-29-2200_Elevnn_4ffaf680780c-plugins.zip: plugins: This file has already been successfully uploaded
+1201.241 (1) backup_2019-05-29-2200_Elevnn_4ffaf680780c-themes.zip: themes: This file has already been successfully uploaded
+1201.242 (1) backup_2019-05-29-2200_Elevnn_4ffaf680780c-uploads.zip: uploads: This file has already been successfully uploaded
+1201.242 (1) backup_2019-05-29-2200_Elevnn_4ffaf680780c-others.zip: others: This file has already been successfully uploaded
+1201.244 (1) backup_2019-05-29-2200_Elevnn_4ffaf680780c-db.gz: db: This file has already been successfully uploaded
+1201.245 (1) Saving backup history. Total backup size: Unknown
+1201.247 (1) Resume backup (4ffaf680780c, 1): finish run
+1201.248 (1) There were no more files that needed uploading
+1201.249 (1) Restarting backup prune operation
+1201.250 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+1201.251 (1) Number of backup sets in history: 4; groups (db): 1
+1201.252 (1) Examining (for databases) backup set with group_id=0, nonce=4ffaf680780c, datestamp=1559185214 (May 30 2019 03:00:14)
+1201.253 (1) This backup set is the backup set just made, so will not be deleted.
+1201.253 (1) Examining (for databases) backup set with group_id=0, nonce=635d020e5a5d, datestamp=1555187700 (Apr 13 2019 20:35:00)
+1201.253 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+1201.253 (1) Examining (for databases) backup set with group_id=0, nonce=0596159f3d02, datestamp=1554789789 (Apr 09 2019 06:03:09)
+1201.253 (1) 1554789789: db: this set includes a database (backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz); db count is now 2
+1201.253 (1) 1554789789: db: over retain limit (2); will delete this database
+1201.253 (1) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz, service=googledrive
+1204.596 (1) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-db.gz: Deletion failed: file was not found
+1204.600 (1) This backup set remains non-empty (f=1/d=0); will retain in history
+1204.600 (1) Examining (for databases) backup set with group_id=0, nonce=742c73f60245, datestamp=1554789653 (Apr 09 2019 06:00:53)
+1204.601 (1) 1554789653: db: this set includes a database (backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz); db count is now 2
+1204.601 (1) 1554789653: db: over retain limit (2); will delete this database
+1204.601 (1) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz, service=googledrive
+1205.590 (1) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-db.gz: Deletion failed: file was not found
+1205.592 (1) This backup set remains non-empty (f=1/d=0); will retain in history
+1205.593 (1) Number of backup sets in history: 4; groups (files): 1
+1205.594 (1) Examining (for files) backup set with nonce=4ffaf680780c, datestamp=1559185214 (May 30 2019 03:00:14)
+1205.594 (1) This backup set is the backup set just made, so will not be deleted.
+1205.595 (1) This backup set is the backup set just made, so will not be deleted.
+1205.595 (1) This backup set is the backup set just made, so will not be deleted.
+1205.595 (1) This backup set is the backup set just made, so will not be deleted.
+1205.595 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+1205.596 (1) Examining (for files) backup set with nonce=635d020e5a5d, datestamp=1555187700 (Apr 13 2019 20:35:00)
+1205.596 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+1205.596 (1) Examining (for files) backup set with nonce=0596159f3d02, datestamp=1554789789 (Apr 09 2019 06:03:09)
+1205.596 (1) plugins: over retain limit (2); will delete this file entity
+1205.596 (1) themes: over retain limit (2); will delete this file entity
+1205.596 (1) uploads: over retain limit (2); will delete this file entity
+1205.596 (1) others: over retain limit (2); will delete this file entity
+1205.596 (1) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-plugins.zip, service=googledrive
+1205.597 (1) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-themes.zip, service=googledrive
+1205.598 (1) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-uploads.zip, service=googledrive
+1205.599 (1) Delete file: backup_2019-04-09-0103_Elevnn_0596159f3d02-others.zip, service=googledrive
+1206.571 (1) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-plugins.zip: Deletion failed: file was not found
+1206.572 (1) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-themes.zip: Deletion failed: file was not found
+1206.572 (1) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-uploads.zip: Deletion failed: file was not found
+1206.573 (1) Google Drive: backup_2019-04-09-0103_Elevnn_0596159f3d02-others.zip: Deletion failed: file was not found
+1206.575 (1) This backup set is now empty; will remove from history
+1206.576 (1) Corresponding log file (log.0596159f3d02.txt) not found - must have already been deleted
+1206.577 (1) Examining (for files) backup set with nonce=742c73f60245, datestamp=1554789653 (Apr 09 2019 06:00:53)
+1206.577 (1) plugins: over retain limit (2); will delete this file entity
+1206.577 (1) themes: over retain limit (2); will delete this file entity
+1206.577 (1) uploads: over retain limit (2); will delete this file entity
+1206.577 (1) others: over retain limit (2); will delete this file entity
+1206.577 (1) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-plugins.zip, service=googledrive
+1206.577 (1) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-themes.zip, service=googledrive
+1206.578 (1) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-uploads.zip, service=googledrive
+1206.579 (1) Delete file: backup_2019-04-09-0100_Elevnn_742c73f60245-others.zip, service=googledrive
+1210.242 (1) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-uploads.zip: Deletion successful
+1211.828 (1) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-plugins.zip: Deletion successful
+1211.829 (1) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-themes.zip: Deletion failed: file was not found
+1211.829 (1) Google Drive: backup_2019-04-09-0100_Elevnn_742c73f60245-others.zip: Deletion failed: file was not found
+1211.831 (1) This backup set is now empty; will remove from history
+1211.832 (1) Corresponding log file (log.742c73f60245.txt) not found - must have already been deleted
+1211.833 (1) Retain: saving new backup history (sets now: 2) and finishing retain operation
+1211.835 (1) There were no errors in the uploads, so the 'resume' event (2) is being unscheduled
+1211.838 (1) No email will/can be sent - the user has not configured an email address.
+1211.838 (1) The backup apparently succeeded and is now complete
