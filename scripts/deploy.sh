@@ -14,4 +14,4 @@ cp -a ./. $STAGING_DIR/
 
 STAGING_DOCKER_PATH=$STAGING_DIR/wordpress/docker-compose.yml
 echo "Starting up docker at $STAGING_DOCKER_PATH"
-docker-compose -f $STAGING_DOCKER_PATH up
+docker-compose -d -f $STAGING_DOCKER_PATH up
