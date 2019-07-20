@@ -1,0 +1,23 @@
+{
+  "name": "@elevnn/store",
+  "version": "0.0.1",
+  "description": "Elevnn Store wordpress site",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elevnnmarket/store-v1.git"
+  },
+  "author": "shrider.dev@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/elevnnmarket/store-v1/issues"
+  },
+  "homepage": "https://github.com/elevnnmarket/store-v1#readme",
+  "release": {
+    "branch": "master",
+    "dryRun": true
+  }
+}
