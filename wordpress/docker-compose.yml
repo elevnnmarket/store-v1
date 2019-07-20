@@ -14,7 +14,7 @@ services:
      image: wordpress:latest
      env_file: wordpress.env
      ports:
-       - "8000:80"
+       - "9000:80"
      restart: always
      volumes:
        - ./wp-content:/var/www/html/wp-content
