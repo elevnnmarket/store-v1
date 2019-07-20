@@ -9,7 +9,7 @@ echo "Deleting Staging ($STAGING_DIR)"
 rm -rf $STAGING_DIR
 
 echo "Copying to staging ($STAGING_DIR)"
-mkdir -P $STAGING_DIR/
+mkdir -p $STAGING_DIR/
 cp -a ./. $STAGING_DIR/
 
 STAGING_DOCKER_PATH=$STAGING_DIR/wordpress/docker-compose.yml
