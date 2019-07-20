@@ -18,6 +18,17 @@
   "homepage": "https://github.com/elevnnmarket/store-v1#readme",
   "release": {
     "branch": "master",
-    "dryRun": true
+    "dryRun": true,
+    "repositoryUrl": "git@github.com:elevnnmarket/store-v1.git",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/github", 
+        {
+          "successComment": "This ${issue.pull_request ? 'pull request' : 'issue'} is included in version ${nextRelease.version}",
+          "failComment": "This release from branch ${branch} had failed due to the following errors:\n- ${errors.map(err => err.message).join('\\n- ')}"
+        }
+      ]
+    ]
   }
 }
