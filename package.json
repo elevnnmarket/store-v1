@@ -19,7 +19,6 @@
   "release": {
     "branch": "master",
     "dryRun": true,
-    "repositoryUrl": "git@github.com:elevnnmarket/store-v1.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
