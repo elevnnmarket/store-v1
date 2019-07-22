@@ -1,5 +1,5 @@
 # Elevnn
-
+[![Build status](https://badge.buildkite.com/a6d952189b68fb17bd37e49d3b9df114c2e5e7c694af170205.svg)](https://buildkite.com/elevnn-1/version)
 
 ## Installing
 ### Git

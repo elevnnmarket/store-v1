@@ -15,8 +15,12 @@ services:
      env_file: wordpress.env
      ports:
        - "8080:80"
+     expose:
+        - "8080"
      restart: always
      volumes:
        - ./wp-content:/var/www/html/wp-content
+      environment:
+       - VIRTUAL_HOST=staging.elevnn.com
 volumes:
     db_data: {}
