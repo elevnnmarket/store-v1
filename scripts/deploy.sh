@@ -3,14 +3,14 @@
 # Deploy docker to staging
 echo "$(pwd) >>>>> Deploy"
 
-STAGING_DIR=${ELEVNN_STAGING:="~/staging"}
+STAGING_DIR=$DEPLOY_LOCATION
 echo "Staging directory: $STAGING_DIR"
 echo "Deleting Staging ($STAGING_DIR)"
 rm -rf $STAGING_DIR
 
 echo "Copying to staging ($STAGING_DIR)"
 mkdir -p $STAGING_DIR/
-cp -a ./. $STAGING_DIR/
+cp -a . $STAGING_DIR
 
 STAGING_DOCKER_PATH=$STAGING_DIR/wordpress/docker-compose.yml
 echo "Starting up docker at $STAGING_DOCKER_PATH"
