@@ -20,7 +20,7 @@ services:
      restart: always
      volumes:
        - ./wp-content:/var/www/html/wp-content
-      environment:
+     environment:
        - VIRTUAL_HOST=staging.elevnn.com
 volumes:
     db_data: {}
