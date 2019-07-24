@@ -18,7 +18,7 @@
   "homepage": "https://github.com/elevnnmarket/store-v1#readme",
   "release": {
     "branch": "master",
-    "dryRun": true,
+    "dryRun": false,
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
