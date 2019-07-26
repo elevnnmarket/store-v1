@@ -14,14 +14,14 @@ echo "Taking down Staging ($STAGING_DOCKER_PATH)"
 [ -f $STAGING_DOCKER_PATH ] && docker-compose -f $STAGING_DOCKER_PATH down
 
 echo "Deleting Staging ($STAGING_DIR)"
-rm -rf $STAGING_DIR
+rm -rf "$STAGING_DIR"
 
 echo "Copying to staging ($STAGING_DIR)"
-mkdir -p $STAGING_DIR/
-cp -a . $STAGING_DIR
+mkdir -p "$STAGING_DIR/"
+cp -a . "$STAGING_DIR"
 
 echo "Copying private files"
-cp $ENV_FILE $SECRET_FILE_DOCKER_LOCATION
+cp "$ENV_FILE" "$SECRET_FILE_DOCKER_LOCATION"
 
 echo "Starting up docker at $STAGING_DOCKER_PATH"
 docker-compose -f $STAGING_DOCKER_PATH up -d
