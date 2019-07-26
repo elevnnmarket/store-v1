@@ -7,6 +7,8 @@ services:
      volumes:
        - db_data:/var/lib/mysql
      restart: always
+     networks:
+       - webproxy
 
    wordpress:
      depends_on:
@@ -24,5 +26,11 @@ services:
        - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins/
      environment:
        - VIRTUAL_HOST=staging.elevnn.com
+     networks:
+       - webproxy
+
 volumes:
     db_data: {}
+
+networks:
+  webproxy:
