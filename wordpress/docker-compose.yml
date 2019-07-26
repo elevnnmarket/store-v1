@@ -19,7 +19,9 @@ services:
         - "8080"
      restart: always
      volumes:
-       - ./wp-content:/var/www/html/wp-content
+       - ./wp-content/themes:/var/www/html/wp-content/themes/
+       - ./wp-content/plugins:/var/www/html/wp-content/plugins/
+       - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins/
      environment:
        - VIRTUAL_HOST=staging.elevnn.com
 volumes:

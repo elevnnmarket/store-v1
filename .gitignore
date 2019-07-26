@@ -1,1 +1,4 @@
-**/wp-content/cache
+/wordpress/wp-content/*
+!/wordpress/wp-content/mu-plugins
+!/wordpress/wp-content/plugins
+!/wordpress/wp-content/themes
