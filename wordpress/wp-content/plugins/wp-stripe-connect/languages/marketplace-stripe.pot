@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Stripe Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-20 10:36+0000\n"
+"POT-Creation-Date: 2019-05-29 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,114 +13,117 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.0; wp-5.0.3"
+"X-Loco-Version: 2.2.2; wp-5.2.1"
 
-#: include/stripe-process-payment.php:209
+#: include/stripe-process-payment.php:210
 msgid " Stripe payment completed. "
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:328
+#: include/class-wc-stripe-connect.php:322
 msgid "3 or 4 digits usually found on the signature strip."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:163
+#: include/class-wc-stripe-connect.php:156
 msgid "Accepted Cards"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:184
-msgid ""
-"Allow customers to save billing information for future use (requires Stripe "
-"Payment Customer Vault)"
-msgstr ""
-
-#: include/class-wc-stripe-connect.php:832
+#: include/class-wc-stripe-connect.php:795
 msgid ""
 "Are you sure? (Subscriptions purchased with this card will be canceled.)"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:182
-msgid "Billing Information Storage"
+#: include/class-wc-stripe-connect.php:150
+#: include/class-wc-stripe-connect.php:153
+msgid "Authorize &amp; Capture"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:835
+#: include/class-wc-stripe-connect.php:151
+msgid "Authorize Only"
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:798
 msgid "Cancel"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:741
-#: include/class-wc-stripe-connect.php:788
+#: include/class-wc-stripe-connect.php:723
+#: include/class-wc-stripe-connect.php:760
 msgid "Card expiration date is invalid"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:721
-#: include/class-wc-stripe-connect.php:775
+#: include/class-wc-stripe-connect.php:261
+msgid "Card number"
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:703
+#: include/class-wc-stripe-connect.php:752
 msgid "Card number is invalid."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:326
+#: include/class-wc-stripe-connect.php:320
 msgid "Card security code"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:728
+#: include/class-wc-stripe-connect.php:710
 msgid "Card security code is invalid (only digits are allowed)."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:732
+#: include/class-wc-stripe-connect.php:714
 msgid "Card security code is invalid (wrong length)."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:272
+#: include/class-wc-stripe-connect.php:266
 msgid "Card type"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:940
+#: include/class-wc-stripe-connect.php:900
 msgid "Click here to connect to Stripe account"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:200
+#: include/class-wc-stripe-connect.php:188
 msgid "Click here to get paid like the pros."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:841
+#: include/class-wc-stripe-connect.php:804
 msgid "Credit card"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:99
-msgid "Credit Card (Stripe Connect)"
-msgstr ""
-
-#: include/class-wc-stripe-connect.php:267
-msgid "Credit Card number"
-msgstr ""
-
-#: include/class-wc-stripe-connect.php:175
+#: include/class-wc-stripe-connect.php:168
 msgid "CVV"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:825
+#: include/class-wc-stripe-connect.php:788
 msgid "Delete"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:102
+#: include/class-wc-stripe-connect.php:94
 msgid "Description"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:834
+#: include/class-wc-stripe-connect.php:797
 msgid "Edit"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:89
+#: include/class-wc-stripe-connect.php:81
 msgid "Enable Stripe Connect"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:88
+#: include/class-wc-stripe-connect.php:80
 msgid "Enable/Disable"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:848
+#: include/class-wc-stripe-connect.php:118
+msgid "Enter Stripe Connect Live Client Id "
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:111
+msgid "Enter Stripe Connect Test Client Id "
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:811
 msgid "Expiration"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:292
+#: include/class-wc-stripe-connect.php:287
 msgid "Expiration date"
 msgstr ""
 
@@ -132,94 +135,95 @@ msgstr ""
 msgid "http://webkul.com"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:444
+#: include/class-wc-stripe-connect.php:424
 msgid "Invalid payment method"
 msgstr ""
 
-#: include/stripe-process-payment.php:229
-#: include/stripe-process-payment.php:230
+#: include/stripe-process-payment.php:227
+#: include/stripe-process-payment.php:228
 msgid "it is error"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:123
+#: include/class-wc-stripe-connect.php:116
 msgid "Live client_id"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:294
+#: include/class-wc-stripe-connect.php:289
 msgid "Month"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:827
+#: include/class-wc-stripe-connect.php:790
 msgid "No"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:283
+#: include/class-wc-stripe-connect.php:278
 msgid "No card type found"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:821
+#: include/class-wc-stripe-connect.php:913
+msgid "Payment Description Or Payment Id"
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:784
 msgid "Payment Method"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:177
+#: include/class-wc-stripe-connect.php:170
 msgid "Require customer to enter credit card CVV code"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:153
+#: include/class-wc-stripe-connect.php:146
 msgid "Sale Method"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:839
+#: include/class-wc-stripe-connect.php:802
 msgid "Save"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:340
-msgid "Save this billing method?"
-msgstr ""
-
-#: include/class-wc-stripe-connect.php:802
+#: include/class-wc-stripe-connect.php:768
 msgid "Saved Payment Methods"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:342
-msgid "Select to store your billing information for future use."
-msgstr ""
-
-#: include/class-wc-stripe-connect.php:165
+#: include/class-wc-stripe-connect.php:158
 msgid "Select which card types to accept."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:155
+#: include/class-wc-stripe-connect.php:148
 msgid ""
 "Select which sale method to use. Authorize Only will authorize the customers "
 "card for the purchase amount only.  Authorize &amp; Capture will authorize "
 "the customer's card and collect funds."
 msgstr ""
 
-#: include/stripe-process-payment.php:207
+#: stripe-connect.php:31
+msgid "Settings"
+msgstr ""
+
+#: include/stripe-process-payment.php:208
 msgid "Sorry, the transaction was declined."
 msgstr ""
 
-#: include/stripe-process-payment.php:224
+#: include/stripe-process-payment.php:223
 msgid "Sorry, the transaction was declined. Please Check your Admin settings"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:633
-#: include/class-wc-stripe-connect.php:664
+#: include/class-wc-stripe-connect.php:615
+#: include/class-wc-stripe-connect.php:645
 msgid "Sorry, there was an error: "
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:709
+#: include/class-wc-stripe-connect.php:691
 msgid ""
 "Sorry, you need to create an account in order for us to save your payment "
 "information."
 msgstr ""
 
 #. Name of the plugin
+#: include/class-wc-stripe-connect.php:91
 msgid "Stripe Connect"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:76
+#: include/class-wc-stripe-connect.php:69
 #, php-format
 msgid ""
 "Stripe Connect is enabled and the <a href=\"%s\">force SSL option</a> is "
@@ -227,130 +231,134 @@ msgid ""
 "server has a valid SSL certificate."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:122
+#: include/class-wc-stripe-connect.php:115
 msgid "Stripe Connect Live client_id"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:115
+#: include/class-wc-stripe-connect.php:108
 msgid "Stripe Connect Test client_id"
 msgstr ""
 
-#: include/stripe-process-payment.php:220
+#: include/stripe-process-payment.php:219
 msgid "Stripe Failure Transaction."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:147
+#: include/class-wc-stripe-connect.php:140
 msgid "Stripe Live Publishable Key"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:141
+#: include/class-wc-stripe-connect.php:134
 msgid "Stripe Live Secret Key"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:197
+#: include/class-wc-stripe-connect.php:184
 msgid "Stripe Payment"
 msgstr ""
 
-#: include/stripe-process-payment.php:122
-msgid "Stripe payment failed. Payment Declined !"
-msgstr ""
-
-#: include/stripe-process-payment.php:97 include/stripe-process-payment.php:205
+#: include/stripe-process-payment.php:206
 msgid "Stripe payment failed. Payment declined."
 msgstr ""
 
-#: include/stripe-process-payment.php:222
+#: include/stripe-process-payment.php:221
 msgid ""
 "Stripe payment failed. Payment declined. Please Check your Admin settings"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:109
+#: include/class-wc-stripe-connect.php:102
 msgid "Stripe payment Mode Enable \"Test\" Disable \"Live\""
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:135
+#: include/class-wc-stripe-connect.php:128
 msgid "Stripe Test Publishable Key"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:129
+#: include/class-wc-stripe-connect.php:122
 msgid "Stripe Test Secret Key"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:693
+#: include/class-wc-stripe-connect.php:675
 msgid "Successfully deleted your information!"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:631
+#: include/class-wc-stripe-connect.php:613
 msgid "Successfully updated your information!"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:116
+#: include/class-wc-stripe-connect.php:109
 msgid "Test client_id"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:108
+#: include/class-wc-stripe-connect.php:101
 msgid "Test/Live"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:873
+#: include/class-wc-stripe-connect.php:837
 msgid "Thank you for your order."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:200
+#: stripe-connect.php:128
+#, php-format
+msgid ""
+"The Marketplace Stripe Connect plugin for WooCommerce requires <a "
+"href=\"%s\">WooCommerce</a> and <a href=\"%s\">Marketplace</a> to be "
+"installed and active."
+msgstr ""
+
+#: include/class-wc-stripe-connect.php:188
 msgid ""
 "The Stripe Payment Gateway is simple and powerful.  The plugin works by "
 "adding credit card fields on the checkout page, and then sending the details "
 "to Stripe Payment for verification."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:104
+#: include/class-wc-stripe-connect.php:97
 msgid "This controls the description which the user sees during checkout."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:98
+#: include/class-wc-stripe-connect.php:90
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:803
+#: include/class-wc-stripe-connect.php:769
 msgid ""
 "This information is stored to save time at the checkout and to pay for "
 "subscriptions."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:149
+#: include/class-wc-stripe-connect.php:142
 msgid ""
 "This is the API Stripe Live Publishable Key generated within the Stripe "
 "Payment gateway."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:143
+#: include/class-wc-stripe-connect.php:136
 msgid ""
 "This is the API Stripe Live Secret Key generated within the Stripe Payment "
 "gateway."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:137
+#: include/class-wc-stripe-connect.php:130
 msgid ""
 "This is the API Stripe Test Publishable Key generated within the Stripe "
 "Payment gateway."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:131
+#: include/class-wc-stripe-connect.php:124
 msgid ""
 "This is the API Stripe Test Secret Key generated within the Stripe Payment "
 "gateway."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:95
+#: include/class-wc-stripe-connect.php:87
 msgid "Title"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:252
+#: include/class-wc-stripe-connect.php:246
 msgid "Use a new payment method"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:225
-msgid "Use a stored credit card"
+#: include/class-wc-stripe-connect.php:221
+msgid "Use a stored card"
 msgstr ""
 
 #. Author of the plugin
@@ -361,10 +369,10 @@ msgstr ""
 msgid "WordPress WooCommerce Marketplace Stripe-Connect plugin."
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:311
+#: include/class-wc-stripe-connect.php:305
 msgid "Year"
 msgstr ""
 
-#: include/class-wc-stripe-connect.php:829
+#: include/class-wc-stripe-connect.php:792
 msgid "Yes"
 msgstr ""

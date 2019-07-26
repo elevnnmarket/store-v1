@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 05:01+0000\n"
+"POT-Creation-Date: 2019-06-18 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.0; wp-5.2"
+"X-Loco-Version: 2.2.0; wp-5.2.1"
 
 #: class-wc-email-seller-approve.php:20
 msgid " Account Approved"
@@ -27,7 +27,7 @@ msgstr ""
 msgid " deleted successfully."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:839
+#: includes/class-mp-form-handler.php:845
 msgid " file type "
 msgstr ""
 
@@ -50,6 +50,10 @@ msgstr ""
 
 #: includes/front/class-mp-user-functions.php:198
 msgid " Invalid username or e-mail."
+msgstr ""
+
+#: includes/templates/front/order/order-history.php:122
+msgid " items"
 msgstr ""
 
 #: includes/admin/class-mp-product-list.php:576
@@ -95,12 +99,8 @@ msgid ""
 "the mail() function..."
 msgstr ""
 
-#: includes/front/handlers/class-mp-register-handler.php:225
-msgid " Your username and password"
-msgstr ""
-
-#: includes/front/handlers/class-mp-register-handler.php:211
-msgid "! Here's how to log in:"
+#: includes/templates/front/single-product/edit-product.php:465
+msgid "0"
 msgstr ""
 
 #: includes/front/class-mp-user-functions.php:183
@@ -148,7 +148,7 @@ msgstr ""
 #: includes/templates/front/myaccount/favourite-seller.php:29
 #: includes/templates/front/shipping/add-shipping.php:187
 #: includes/templates/front/transaction/list.php:19
-#: includes/admin/account/seller/orders.php:131
+#: includes/admin/account/seller/orders.php:127
 msgid "Action"
 msgstr ""
 
@@ -190,7 +190,7 @@ msgstr ""
 msgid "Add New Shipping Zone"
 msgstr ""
 
-#: functions.php:468 includes/front/product-list.php:83
+#: functions.php:462 includes/front/product-list.php:83
 #: includes/widgets/class-mp-sellerpanel.php:54
 msgid "Add Product"
 msgstr ""
@@ -224,7 +224,7 @@ msgstr ""
 msgid "Add-ons"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:326
+#: includes/templates/front/order/order-view.php:420
 #, php-format
 msgid "added on %1$s at %2$s"
 msgstr ""
@@ -238,7 +238,7 @@ msgstr ""
 msgid "Address Information"
 msgstr ""
 
-#: functions.php:741
+#: functions.php:701
 msgid "address is too short or empty"
 msgstr ""
 
@@ -256,11 +256,11 @@ msgstr ""
 msgid "Adios!"
 msgstr ""
 
-#: includes/admin/account/seller/orders.php:303
+#: includes/admin/account/seller/orders.php:320
 msgid "Admin"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:184
+#: includes/templates/front/order/order-view.php:261
 #: includes/templates/admin/account/seller/manage-commission.php:25
 msgid "Admin Commission"
 msgstr ""
@@ -312,16 +312,16 @@ msgstr ""
 msgid "Allowed Categories for a seller to add products."
 msgstr ""
 
-#: functions.php:769 functions.php:810
+#: functions.php:729 functions.php:770
 msgid "Already Exists"
 msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-transaction-list.php:84
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:678
 #: includes/templates/front/transaction/list.php:18
-#: includes/templates/front/transaction/view.php:31
+#: includes/templates/front/transaction/view.php:57
 #: includes/admin/account/seller/transactions.php:122
-#: includes/templates/admin/account/seller/transaction/view.php:31
+#: includes/templates/admin/account/seller/transaction/view.php:36
 msgid "Amount"
 msgstr ""
 
@@ -334,7 +334,7 @@ msgstr ""
 msgid "Answer : "
 msgstr ""
 
-#: functions.php:807 includes/admin/sellerlist.php:176
+#: functions.php:767 includes/admin/sellerlist.php:176
 #: includes/templates/admin/account/seller/review.php:235
 msgid "Approve"
 msgstr ""
@@ -347,12 +347,13 @@ msgstr ""
 msgid "Apr"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:91
+#: woocommerce/templates/emails/seller-new-order.php:106
 #: woocommerce/templates/emails/plain/seller-new-order.php:69
+#: includes/templates/front/transaction/view.php:23
 msgid "April"
 msgstr ""
 
-#: functions.php:762
+#: functions.php:722
 msgid "Are You sure you want to delete customer(s) from list..?"
 msgstr ""
 
@@ -360,11 +361,11 @@ msgstr ""
 msgid "Are you sure you want to delete selected product(s) ?"
 msgstr ""
 
-#: functions.php:758
+#: functions.php:718
 msgid "Are You sure you want to delete this Customer..?"
 msgstr ""
 
-#: functions.php:757
+#: functions.php:717
 msgid "Are You sure you want to delete this Seller..?"
 msgstr ""
 
@@ -378,7 +379,7 @@ msgstr ""
 msgid "Are you sure you want to do this?"
 msgstr ""
 
-#: functions.php:805
+#: functions.php:765
 msgid "Are you sure you want to update the status of seller"
 msgstr ""
 
@@ -395,7 +396,7 @@ msgstr ""
 msgid "Ask Question"
 msgstr ""
 
-#: class-wc-email-asktoadmin.php:20 functions.php:462
+#: class-wc-email-asktoadmin.php:20 functions.php:456
 #: includes/front/mp-account-functions.php:37
 #: includes/widgets/class-mp-sellerpanel.php:78
 msgid "Ask To Admin"
@@ -411,7 +412,7 @@ msgstr ""
 msgid "Ask to admin"
 msgstr ""
 
-#: functions.php:744
+#: functions.php:704
 msgid "Ask Your Question (Message length should be less than 500)."
 msgstr ""
 
@@ -436,7 +437,7 @@ msgstr ""
 msgid "Assigned"
 msgstr ""
 
-#: functions.php:747
+#: functions.php:707
 #: includes/templates/front/single-product/edit-product.php:657
 msgid "attribue value by seprating comma eg. a|b|c"
 msgstr ""
@@ -445,11 +446,11 @@ msgstr ""
 msgid "Attribute all content to - "
 msgstr ""
 
-#: functions.php:746
+#: functions.php:706
 msgid "Attribute name"
 msgstr ""
 
-#: functions.php:748
+#: functions.php:708
 msgid "Attribute Value eg. a|b|c"
 msgstr ""
 
@@ -461,8 +462,9 @@ msgstr ""
 msgid "Aug"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:95
+#: woocommerce/templates/emails/seller-new-order.php:110
 #: woocommerce/templates/emails/plain/seller-new-order.php:73
+#: includes/templates/front/transaction/view.php:27
 msgid "August"
 msgstr ""
 
@@ -470,7 +472,7 @@ msgstr ""
 msgid "Auto Approve Seller"
 msgstr ""
 
-#: functions.php:770 functions.php:811
+#: functions.php:730 functions.php:771
 msgid "Available"
 msgstr ""
 
@@ -490,10 +492,6 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:158
-msgid "Background color"
-msgstr ""
-
 #: includes/admin/class-mp-product-list.php:586
 msgid "backorders allowed"
 msgstr ""
@@ -503,10 +501,6 @@ msgstr ""
 msgid "Banner Image"
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:142
-msgid "Base color"
-msgstr ""
-
 #: includes/templates/front/myaccount/preview.php:276
 #: includes/templates/front/myaccount/preview.php:283
 #: includes/templates/front/myaccount/seller-profile-details-section.php:101
@@ -514,28 +508,20 @@ msgstr ""
 msgid "Be the first one to review!"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:224
-#: includes/templates/front/order/invoice.php:223
+#: includes/templates/front/order/order-view.php:303
+#: includes/templates/front/order/invoice.php:229
 #: includes/templates/admin/order/admin-invoice.php:186
 msgid "Billing Address"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:714
-#: woocommerce/templates/emails/seller-new-order.php:234
+#: includes/class-mp-form-handler.php:720
+#: woocommerce/templates/emails/seller-new-order.php:268
 #: woocommerce/templates/emails/plain/seller-new-order.php:153
 msgid "Billing address"
 msgstr ""
 
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:672
 msgid "Billing Email"
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:150
-msgid "Body background color"
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:166
-msgid "Body text color"
 msgstr ""
 
 #: includes/admin/class-mp-extensions.php:47
@@ -546,7 +532,7 @@ msgstr ""
 msgid "Button Text"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:185
+#: includes/templates/front/order/invoice.php:191
 #: includes/templates/admin/order/admin-invoice.php:90
 msgid "Buyer Details"
 msgstr ""
@@ -561,7 +547,7 @@ msgid "By "
 msgstr ""
 
 #. %s: note author
-#: includes/templates/front/order/order-view.php:330
+#: includes/templates/front/order/order-view.php:424
 #, php-format
 msgid "by %s"
 msgstr ""
@@ -570,8 +556,8 @@ msgstr ""
 msgid "Can user publish his/her item online"
 msgstr ""
 
-#: includes/separate-seller-dashboard/class-seller-mp-profile.php:320
-#: includes/templates/front/myaccount/prof_edit.php:298
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:314
+#: includes/templates/front/myaccount/prof_edit.php:293
 #: includes/templates/front/single-product/edit-product.php:769
 msgid "Cancel"
 msgstr ""
@@ -584,7 +570,11 @@ msgstr ""
 msgid "Cancelled"
 msgstr ""
 
-#: functions.php:736
+#: includes/templates/front/order/order-view.php:349
+msgid "cancelled"
+msgstr ""
+
+#: functions.php:696
 msgid "Cannot Leave Field Blank"
 msgstr ""
 
@@ -604,7 +594,7 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:348
+#: includes/templates/front/order/order-view.php:442
 msgid "Cheat'n huh ???"
 msgstr ""
 
@@ -642,6 +632,7 @@ msgid "Choose&nbsp;file"
 msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-mp-profile.php:129
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:130
 #: includes/templates/front/myaccount/prof_edit.php:109
 #: includes/templates/front/myaccount/prof_edit.php:110
 msgid "City"
@@ -681,6 +672,10 @@ msgstr ""
 
 #: includes/admin/setcommision.php:46
 #: includes/templates/front/class-mp-user-functions.php:103
+#: includes/templates/front/order/order-view.php:178
+#: includes/templates/front/transaction/view.php:160
+#: includes/admin/account/seller/orders.php:291
+#: includes/templates/admin/account/seller/transaction/view.php:141
 msgid "Commission"
 msgstr ""
 
@@ -691,6 +686,10 @@ msgstr ""
 #: includes/admin/class-mp-notifications.php:176
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:468
 msgid "Completed"
+msgstr ""
+
+#: includes/templates/front/order/order-view.php:348
+msgid "completed"
 msgstr ""
 
 #: includes/admin/class-mp-admin-settings.php:38
@@ -709,7 +708,7 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:712
+#: includes/class-mp-form-handler.php:718
 msgid "Contact"
 msgstr ""
 
@@ -738,11 +737,11 @@ msgstr ""
 msgid "Current Password (Leave blank to leave unchanged)"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:707
+#: includes/class-mp-form-handler.php:713
 msgid "Customer Details"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:208
+#: includes/templates/front/order/order-view.php:286
 msgid "Customer details"
 msgstr ""
 
@@ -756,7 +755,7 @@ msgstr ""
 msgid "Customer Name"
 msgstr ""
 
-#: functions.php:480
+#: functions.php:474
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:122
 #: includes/widgets/class-mp-sellerpanel.php:72
 msgid "Dashboard"
@@ -773,8 +772,8 @@ msgstr ""
 #: includes/templates/front/myaccount/ask-to-admin.php:96
 #: includes/templates/front/order/order-history.php:10
 #: includes/templates/front/transaction/list.php:17
-#: includes/templates/front/transaction/view.php:27
-#: includes/templates/admin/account/seller/transaction/view.php:27
+#: includes/templates/front/transaction/view.php:53
+#: includes/templates/admin/account/seller/transaction/view.php:32
 msgid "Date"
 msgstr ""
 
@@ -782,8 +781,9 @@ msgstr ""
 msgid "Dec"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:99
+#: woocommerce/templates/emails/seller-new-order.php:114
 #: woocommerce/templates/emails/plain/seller-new-order.php:77
+#: includes/templates/front/transaction/view.php:31
 msgid "December"
 msgstr ""
 
@@ -813,6 +813,10 @@ msgstr ""
 msgid "Delete Follower"
 msgstr ""
 
+#: includes/templates/front/single-product/edit-product.php:873
+msgid "Delete image"
+msgstr ""
+
 #: includes/admin/sellerlist.php:41
 msgid "Delete Seller"
 msgstr ""
@@ -830,8 +834,8 @@ msgstr ""
 msgid "Description for your reference"
 msgstr ""
 
-#: includes/templates/front/transaction/view.php:50
-#: includes/templates/admin/account/seller/transaction/view.php:50
+#: includes/templates/front/transaction/view.php:76
+#: includes/templates/admin/account/seller/transaction/view.php:55
 msgid "Detail"
 msgstr ""
 
@@ -847,7 +851,7 @@ msgstr ""
 msgid "Dimensions (L×W×H) (cm):"
 msgstr ""
 
-#: functions.php:806 includes/admin/sellerlist.php:171
+#: functions.php:766 includes/admin/sellerlist.php:171
 #: includes/templates/admin/account/seller/review.php:236
 msgid "Disapprove"
 msgstr ""
@@ -856,9 +860,9 @@ msgstr ""
 msgid "Disapproved"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:172
+#: woocommerce/templates/emails/seller-new-order.php:201
 #: woocommerce/templates/emails/plain/seller-new-order.php:119
-#: includes/admin/account/seller/orders.php:128
+#: includes/admin/account/seller/orders.php:124
 msgid "Discount"
 msgstr ""
 
@@ -867,7 +871,7 @@ msgstr ""
 msgid "Display name"
 msgstr ""
 
-#: includes/templates/admin/account/seller/profile.php:54
+#: includes/templates/admin/account/seller/profile.php:52
 msgid "Display name :"
 msgstr ""
 
@@ -884,12 +888,12 @@ msgstr ""
 msgid "Do not allow"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:322
 msgid "Docs"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:634
-#: includes/class-mp-form-handler.php:636
+#: includes/class-mp-form-handler.php:640
+#: includes/class-mp-form-handler.php:642
 msgid "Download"
 msgstr ""
 
@@ -921,6 +925,7 @@ msgstr ""
 msgid "Downloadable Product"
 msgstr ""
 
+#: includes/templates/front/single-product/edit-product.php:751
 #: includes/templates/front/single-product/edit-product.php:766
 msgid "Draft"
 msgstr ""
@@ -931,19 +936,19 @@ msgstr ""
 msgid "E-mail"
 msgstr ""
 
-#: functions.php:728
+#: functions.php:688
 msgid "E-mail is not valid"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:319
+#: includes/class-mp-form-handler.php:321
 msgid "E-mail is required."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:311
+#: includes/class-mp-form-handler.php:313
 msgid "E-mail not valid."
 msgstr ""
 
-#: includes/admin/sellerlist.php:307 includes/admin/product.php:465
+#: includes/admin/sellerlist.php:307 includes/admin/product.php:458
 #: includes/templates/front/myaccount/profile.php:48
 #: includes/templates/front/single-product/edit-product.php:132
 #: includes/templates/front/shipping/add-shipping.php:265
@@ -955,7 +960,7 @@ msgstr ""
 msgid "edit"
 msgstr ""
 
-#: functions.php:486
+#: functions.php:480
 msgid "Edit Product"
 msgstr ""
 
@@ -963,21 +968,26 @@ msgstr ""
 msgid "Edit Profile"
 msgstr ""
 
-#: includes/templates/admin/account/user-profile.php:57
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:303
+#: includes/templates/front/myaccount/prof_edit.php:281
+msgid "eg : test@paypal.com"
+msgstr ""
+
+#: includes/templates/admin/account/user-profile.php:54
 msgid "eg- webkul"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:709
+#: includes/class-mp-form-handler.php:715
 #: includes/admin/settings/seller-assets-setting.php:21
 #: includes/templates/front/myaccount/profile.php:36
-#: includes/templates/front/order/order-view.php:212
-#: includes/templates/front/order/invoice.php:153
-#: includes/templates/front/order/invoice.php:199
+#: includes/templates/front/order/order-view.php:291
+#: includes/templates/front/order/invoice.php:159
+#: includes/templates/front/order/invoice.php:205
 #: includes/templates/admin/order/admin-invoice.php:104
 msgid "Email"
 msgstr ""
 
-#: includes/templates/admin/account/seller/profile.php:42
+#: includes/templates/admin/account/seller/profile.php:40
 msgid "Email :"
 msgstr ""
 
@@ -989,11 +999,11 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: functions.php:738
+#: functions.php:698
 msgid "Email adress is not valid"
 msgstr ""
 
-#: functions.php:737
+#: functions.php:697
 msgid "Email Id Already Registered"
 msgstr ""
 
@@ -1026,11 +1036,11 @@ msgid ""
 "Enter the number of days before a download link expires, or leave blank."
 msgstr ""
 
-#: functions.php:814
+#: functions.php:774
 msgid "Enter valid amount"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:364
+#: includes/class-mp-form-handler.php:366
 msgid "Entered phone number is not valid."
 msgstr ""
 
@@ -1045,7 +1055,7 @@ msgstr ""
 msgid "ERROR"
 msgstr ""
 
-#: functions.php:821 includes/front/handlers/class-mp-login-handler.php:37
+#: functions.php:781 includes/front/handlers/class-mp-login-handler.php:37
 #: includes/front/handlers/class-mp-login-handler.php:45
 #: includes/front/handlers/class-mp-login-handler.php:48
 #: includes/front/handlers/class-mp-login-handler.php:49
@@ -1056,7 +1066,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: functions.php:767
+#: functions.php:727
 msgid "Error Sending Mail."
 msgstr ""
 
@@ -1107,12 +1117,16 @@ msgstr ""
 msgid "Facebook SDK returned an error: "
 msgstr ""
 
-#: includes/class-mp-form-handler.php:376
+#: includes/class-mp-form-handler.php:378
 msgid "Facebook URL not valid"
 msgstr ""
 
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:474
 msgid "Failed"
+msgstr ""
+
+#: includes/templates/front/order/order-view.php:351
+msgid "failed"
 msgstr ""
 
 #: includes/templates/front/myaccount/favourite-seller.php:93
@@ -1131,8 +1145,9 @@ msgstr ""
 msgid "Feb"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:89
+#: woocommerce/templates/emails/seller-new-order.php:104
 #: woocommerce/templates/emails/plain/seller-new-order.php:67
+#: includes/templates/front/transaction/view.php:21
 msgid "February"
 msgstr ""
 
@@ -1140,7 +1155,7 @@ msgstr ""
 msgid "Feedback"
 msgstr ""
 
-#: functions.php:732
+#: functions.php:692
 msgid "Field left blank!!!"
 msgstr ""
 
@@ -1152,7 +1167,7 @@ msgstr ""
 msgid "File name"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:829
+#: includes/class-mp-form-handler.php:835
 msgid "file size too large "
 msgstr ""
 
@@ -1199,12 +1214,16 @@ msgstr ""
 msgid "First name"
 msgstr ""
 
-#: functions.php:726
+#: functions.php:686
 msgid "First name is not valid"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:332
+#: includes/class-mp-form-handler.php:334
 msgid "First name is not valid."
+msgstr ""
+
+#: includes/templates/front/order/order-history.php:122
+msgid "for"
 msgstr ""
 
 #: includes/templates/front/shipping/add-shipping.php:61
@@ -1216,7 +1235,7 @@ msgstr ""
 msgid "Free!"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:83
+#: woocommerce/templates/emails/seller-new-order.php:97
 #: woocommerce/templates/emails/plain/seller-new-order.php:61
 msgid "Friday"
 msgstr ""
@@ -1246,7 +1265,7 @@ msgstr ""
 msgid "Google Plus ID"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:396
+#: includes/class-mp-form-handler.php:398
 msgid "Google Plus URL not valid"
 msgstr ""
 
@@ -1259,8 +1278,8 @@ msgstr ""
 msgid "Grouped products"
 msgstr ""
 
-#: includes/templates/front/transaction/view.php:110
-#: includes/templates/admin/account/seller/transaction/view.php:112
+#: includes/templates/front/transaction/view.php:136
+#: includes/templates/admin/account/seller/transaction/view.php:117
 msgctxt "hash before order number"
 msgid "#"
 msgstr ""
@@ -1323,16 +1342,8 @@ msgstr ""
 msgid "I am a seller"
 msgstr ""
 
-#: includes/admin/class-email-templates.php:137
-msgid "ID"
-msgstr ""
-
 #: includes/admin/sellerlist.php:46
 msgid "ID "
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:100
-msgid "Id cannot be empty."
 msgstr ""
 
 #: includes/admin/settings/settings.php:90
@@ -1354,10 +1365,6 @@ msgstr ""
 
 #: includes/class-mp-ajax-functions.php:455
 msgid "If you have any problems, please contact me at "
-msgstr ""
-
-#: includes/front/handlers/class-mp-register-handler.php:221
-msgid "If you have any problems, please contact me at ."
 msgstr ""
 
 #: woocommerce/templates/emails/seller-approval.php:9
@@ -1395,8 +1402,8 @@ msgstr ""
 msgid "In stock"
 msgstr ""
 
-#: includes/templates/front/transaction/view.php:22
-#: includes/templates/admin/account/seller/transaction/view.php:22
+#: includes/templates/front/transaction/view.php:48
+#: includes/templates/admin/account/seller/transaction/view.php:27
 msgid "Information"
 msgstr ""
 
@@ -1404,11 +1411,7 @@ msgstr ""
 msgid "Insert file URL"
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:93
-msgid "Invalid Id."
-msgstr ""
-
-#: functions.php:724
+#: functions.php:684
 msgid "Invalid input."
 msgstr ""
 
@@ -1416,7 +1419,7 @@ msgstr ""
 msgid "Invalid or Duplicate SKU."
 msgstr ""
 
-#: functions.php:723
+#: functions.php:683
 msgid "Invalid Price."
 msgstr ""
 
@@ -1448,8 +1451,9 @@ msgstr ""
 msgid "Jan"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:88
+#: woocommerce/templates/emails/seller-new-order.php:103
 #: woocommerce/templates/emails/plain/seller-new-order.php:66
+#: includes/templates/front/transaction/view.php:20
 msgid "January"
 msgstr ""
 
@@ -1457,8 +1461,9 @@ msgstr ""
 msgid "Jul"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:94
+#: woocommerce/templates/emails/seller-new-order.php:109
 #: woocommerce/templates/emails/plain/seller-new-order.php:72
+#: includes/templates/front/transaction/view.php:26
 msgid "July"
 msgstr ""
 
@@ -1466,8 +1471,9 @@ msgstr ""
 msgid "Jun"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:93
+#: woocommerce/templates/emails/seller-new-order.php:108
 #: woocommerce/templates/emails/plain/seller-new-order.php:71
+#: includes/templates/front/transaction/view.php:25
 msgid "June"
 msgstr ""
 
@@ -1495,11 +1501,11 @@ msgstr ""
 msgid "Last name"
 msgstr ""
 
-#: functions.php:727
+#: functions.php:687
 msgid "Last name is not valid"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:342
+#: includes/class-mp-form-handler.php:344
 msgid "Last name is not valid."
 msgstr ""
 
@@ -1537,7 +1543,7 @@ msgstr ""
 msgid "Linkedin Profile ID"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:406
+#: includes/class-mp-form-handler.php:408
 msgid "LinkedIN URL not valid"
 msgstr ""
 
@@ -1569,7 +1575,7 @@ msgstr ""
 msgid "LxWxH in decimal form"
 msgstr ""
 
-#: functions.php:766
+#: functions.php:726
 msgid "Mail Sent Successfully"
 msgstr ""
 
@@ -1598,12 +1604,17 @@ msgstr ""
 msgid "Manage stock?"
 msgstr ""
 
+#: includes/templates/front/transaction/view.php:35
+msgid "Manual"
+msgstr ""
+
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:196
 msgid "Mar"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:90
+#: woocommerce/templates/emails/seller-new-order.php:105
 #: woocommerce/templates/emails/plain/seller-new-order.php:68
+#: includes/templates/front/transaction/view.php:22
 msgid "March"
 msgstr ""
 
@@ -1623,7 +1634,7 @@ msgstr ""
 msgid "Marketplace Flat Rate Shipping"
 msgstr ""
 
-#: includes/templates/admin/account/user-profile.php:40
+#: includes/templates/admin/account/user-profile.php:38
 msgid "Marketplace Seller Details"
 msgstr ""
 
@@ -1635,9 +1646,10 @@ msgstr ""
 msgid "Marketplace Seller Panel."
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:92
+#: woocommerce/templates/emails/seller-new-order.php:107
 #: woocommerce/templates/emails/plain/seller-new-order.php:70
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:198
+#: includes/templates/front/transaction/view.php:24
 msgid "May"
 msgstr ""
 
@@ -1658,7 +1670,7 @@ msgstr ""
 msgid "Message : "
 msgstr ""
 
-#: functions.php:765
+#: functions.php:725
 msgid "Message field cannot be empty."
 msgstr ""
 
@@ -1674,9 +1686,9 @@ msgstr ""
 msgid "Message: *"
 msgstr ""
 
-#: includes/templates/front/transaction/view.php:39
+#: includes/templates/front/transaction/view.php:65
 #: includes/admin/account/seller/transactions.php:124
-#: includes/templates/admin/account/seller/transaction/view.php:39
+#: includes/templates/admin/account/seller/transaction/view.php:44
 msgid "Method"
 msgstr ""
 
@@ -1689,12 +1701,12 @@ msgstr ""
 msgid "Minimum Commission"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:79
+#: woocommerce/templates/emails/seller-new-order.php:93
 #: woocommerce/templates/emails/plain/seller-new-order.php:57
 msgid "Monday"
 msgstr ""
 
-#: includes/admin/product.php:467
+#: includes/admin/product.php:460
 msgid "move this to the trash"
 msgstr ""
 
@@ -1709,8 +1721,13 @@ msgstr ""
 msgid "My Profile"
 msgstr ""
 
-#: includes/admin/account/seller/orders.php:217
+#: includes/admin/account/seller/orders.php:213
 msgid "N.A"
+msgstr ""
+
+#: includes/templates/front/order/order-view.php:306
+#: includes/templates/front/order/order-view.php:314
+msgid "N/A"
 msgstr ""
 
 #: includes/class-mp-ajax-functions.php:737
@@ -1720,9 +1737,13 @@ msgstr ""
 
 #: includes/class-mp-ajax-functions.php:797 includes/front/index.php:77
 #: includes/admin/sellerlist.php:207
-#: includes/templates/front/order/invoice.php:191
+#: includes/templates/front/order/invoice.php:197
 #: includes/templates/admin/order/admin-invoice.php:96
 msgid "Name"
+msgstr ""
+
+#: includes/templates/front/single-product/edit-product.php:854
+msgid "Never"
 msgstr ""
 
 #: class-wc-email-seller-order-placed.php:21
@@ -1758,15 +1779,19 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+#: includes/templates/front/order/invoice.php:245
+msgid "No billing address set."
+msgstr ""
+
 #: includes/class-mp-frontend-scripts.php:61
 msgid "No data available in table"
 msgstr ""
 
-#: functions.php:760 includes/templates/front/myaccount/shop-followers.php:148
+#: functions.php:720 includes/templates/front/myaccount/shop-followers.php:148
 msgid "No Followers Available."
 msgstr ""
 
-#: functions.php:771
+#: functions.php:731
 msgid "No Group found"
 msgstr ""
 
@@ -1795,7 +1820,7 @@ msgstr ""
 msgid "No seller&#39;s added yet."
 msgstr ""
 
-#: functions.php:759
+#: functions.php:719
 msgid "No Sellers Available."
 msgstr ""
 
@@ -1809,15 +1834,11 @@ msgstr ""
 msgid "No shipping methods offered to this zone."
 msgstr ""
 
-#: includes/templates/front/transaction/list.php:50
-msgid "No Transaction Avaliable"
-msgstr ""
-
-#: includes/admin/product.php:415
+#: includes/admin/product.php:408
 msgid "Nope! Security check failed!"
 msgstr ""
 
-#: functions.php:768 functions.php:809
+#: functions.php:728 functions.php:769
 #: includes/templates/front/myaccount/favourite-seller.php:76
 msgid "Not Available"
 msgstr ""
@@ -1831,7 +1852,7 @@ msgstr ""
 msgid "Notification"
 msgstr ""
 
-#: functions.php:474 includes/class-mp-save-notifications.php:321
+#: functions.php:468 includes/class-mp-save-notifications.php:321
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:28
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:28
 #: includes/front/mp-account-functions.php:34
@@ -1843,8 +1864,9 @@ msgstr ""
 msgid "Nov"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:98
+#: woocommerce/templates/emails/seller-new-order.php:113
 #: woocommerce/templates/emails/plain/seller-new-order.php:76
+#: includes/templates/front/transaction/view.php:30
 msgid "November"
 msgstr ""
 
@@ -1852,8 +1874,9 @@ msgstr ""
 msgid "Oct"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:97
+#: woocommerce/templates/emails/seller-new-order.php:112
 #: woocommerce/templates/emails/plain/seller-new-order.php:75
+#: includes/templates/front/transaction/view.php:29
 msgid "October"
 msgstr ""
 
@@ -1871,11 +1894,16 @@ msgid ""
 "purchase. "
 msgstr ""
 
+#: includes/templates/front/order/order-view.php:345
+msgid "on-hold"
+msgstr ""
+
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:471
 msgid "OnHold"
 msgstr ""
 
-#: functions.php:745
+#: functions.php:705
+#: includes/templates/front/single-product/edit-product.php:749
 #: includes/templates/front/single-product/edit-product.php:762
 msgid "Online"
 msgstr ""
@@ -1894,7 +1922,7 @@ msgstr ""
 msgid "Oops! That page can’t be found."
 msgstr ""
 
-#: functions.php:823
+#: functions.php:783
 msgid "Oops, Unable to send mail to the seller."
 msgstr ""
 
@@ -1912,19 +1940,19 @@ msgid "optional"
 msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-order-list.php:76
-#: woocommerce/templates/emails/seller-new-order.php:109
+#: woocommerce/templates/emails/seller-new-order.php:125
 #: includes/templates/front/order/order-history.php:8
-#: includes/templates/front/order/order-view.php:71
+#: includes/templates/front/order/order-view.php:80
 msgid "Order"
 msgstr ""
 
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:670
-#: includes/templates/front/order/invoice.php:161
+#: includes/templates/front/order/invoice.php:167
 #: includes/templates/admin/order/admin-invoice.php:132
 msgid "Order Date"
 msgstr ""
 
-#: functions.php:471
+#: functions.php:465
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:24
 #: includes/front/mp-account-functions.php:30
 #: includes/widgets/class-mp-sellerpanel.php:60
@@ -1932,18 +1960,18 @@ msgid "Order History"
 msgstr ""
 
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:668
-#: includes/templates/front/order/invoice.php:163
+#: includes/templates/front/order/invoice.php:169
 #: includes/templates/admin/order/admin-invoice.php:140
 msgid "Order ID"
 msgstr ""
 
 #: includes/templates/front/class-mp-user-functions.php:99
 #: includes/admin/account/seller/transactions.php:121
-#: includes/admin/account/seller/orders.php:122
+#: includes/admin/account/seller/orders.php:118
 msgid "Order Id"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:130
+#: includes/templates/front/order/invoice.php:136
 #: includes/templates/admin/order/admin-invoice.php:72
 msgid "Order Information"
 msgstr ""
@@ -1952,7 +1980,7 @@ msgstr ""
 msgid "Order Invoice"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:314
+#: includes/templates/front/order/order-view.php:406
 msgid "Order Notes"
 msgstr ""
 
@@ -1960,7 +1988,7 @@ msgstr ""
 msgid "Order per page"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:260
+#: includes/templates/front/order/order-view.php:339
 msgid "Order Status"
 msgstr ""
 
@@ -1973,7 +2001,7 @@ msgstr ""
 msgid "Order status updated."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:679
+#: includes/class-mp-form-handler.php:685
 msgid "Ordered By"
 msgstr ""
 
@@ -2011,8 +2039,8 @@ msgctxt "Page title"
 msgid "Seller"
 msgstr ""
 
-#: functions.php:817 includes/class-mp-commission.php:586
-#: includes/admin/account/seller/orders.php:222
+#: functions.php:777 includes/class-mp-commission.php:586
+#: includes/admin/account/seller/orders.php:218
 msgid "Paid"
 msgstr ""
 
@@ -2028,13 +2056,9 @@ msgstr ""
 msgid "Password reset is not allowed for this user"
 msgstr ""
 
-#: includes/front/handlers/class-mp-register-handler.php:214
-msgid "Password: "
-msgstr ""
-
 #: includes/class-mp-commission.php:588
-#: includes/admin/account/seller/orders.php:224
-#: includes/admin/account/seller/orders.php:354
+#: includes/admin/account/seller/orders.php:220
+#: includes/admin/account/seller/orders.php:370
 msgid "Pay"
 msgstr ""
 
@@ -2046,34 +2070,42 @@ msgstr ""
 msgid "Payment Details"
 msgstr ""
 
-#: includes/templates/admin/account/seller/profile.php:78
+#: includes/templates/admin/account/seller/profile.php:76
 msgid "Payment Details :"
 msgstr ""
 
-#: functions.php:819
+#: functions.php:779
 msgid "Payment has been already done."
 msgstr ""
 
-#: functions.php:818
+#: functions.php:778
 msgid "Payment has been successfully done."
 msgstr ""
 
-#: includes/separate-seller-dashboard/class-seller-mp-profile.php:307
-#: includes/templates/front/myaccount/prof_edit.php:285
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:302
+#: includes/templates/front/myaccount/prof_edit.php:280
 #: includes/templates/admin/account/user-profile.php:66
 msgid "Payment Information"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:213
+#: woocommerce/templates/emails/seller-new-order.php:249
 #: woocommerce/templates/emails/plain/seller-new-order.php:147
-#: includes/templates/front/order/order-view.php:178
-#: includes/templates/front/order/invoice.php:165
+#: includes/templates/front/order/order-view.php:255
+#: includes/templates/front/order/invoice.php:171
 #: includes/templates/admin/order/admin-invoice.php:148
 msgid "Payment Method"
 msgstr ""
 
+#: includes/templates/front/order/order-view.php:239
+msgid "Payment via Wallet"
+msgstr ""
+
 #: includes/templates/front/myaccount/class-mp-report-dashboard.php:469
 msgid "Pending"
+msgstr ""
+
+#: includes/templates/front/order/order-view.php:346
+msgid "pending payment"
 msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-mp-profile.php:111
@@ -2084,11 +2116,11 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: functions.php:730 includes/class-mp-form-handler.php:360
+#: functions.php:690 includes/class-mp-form-handler.php:362
 msgid "Phone number length must not exceed 10."
 msgstr ""
 
-#: functions.php:731
+#: functions.php:691
 msgid "Phone number not valid."
 msgstr ""
 
@@ -2104,43 +2136,43 @@ msgstr ""
 msgid "Please check your mail for activation link."
 msgstr ""
 
-#: functions.php:755
+#: functions.php:715
 msgid "Please enter password."
 msgstr ""
 
-#: functions.php:725
+#: functions.php:685
 msgid "Please Enter Product Name!!!"
 msgstr ""
 
-#: functions.php:721
+#: functions.php:681
 msgid "Please Enter SKU"
 msgstr ""
 
-#: functions.php:798
+#: functions.php:758
 msgid "Please enter template name."
 msgstr ""
 
-#: functions.php:804
+#: functions.php:764
 msgid "Please enter the page width."
 msgstr ""
 
-#: functions.php:797
+#: functions.php:757
 msgid "Please enter the valid template name"
 msgstr ""
 
-#: functions.php:799 includes/admin/class-add-email-template.php:67
+#: functions.php:759
 msgid "Please enter the valid template name."
 msgstr ""
 
-#: functions.php:756
+#: functions.php:716
 msgid "Please enter username"
 msgstr ""
 
-#: functions.php:754
+#: functions.php:714
 msgid "Please enter username or email address."
 msgstr ""
 
-#: functions.php:820
+#: functions.php:780
 msgid "Please enter valid page width."
 msgstr ""
 
@@ -2148,7 +2180,7 @@ msgstr ""
 msgid "Please enter valid phone number."
 msgstr ""
 
-#: functions.php:720
+#: functions.php:680
 msgid ""
 "please enter valid product sku, it shoud be equal or larger than 3 characters"
 msgstr ""
@@ -2173,11 +2205,7 @@ msgstr ""
 msgid "Please enter your Shop Name."
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:20
-msgid "Please fill all details."
-msgstr ""
-
-#: functions.php:808
+#: functions.php:768
 msgid "Please fill shop name."
 msgstr ""
 
@@ -2186,7 +2214,7 @@ msgstr ""
 msgid "Please review the request"
 msgstr ""
 
-#: functions.php:718
+#: functions.php:678
 msgid "Please select customer from the list"
 msgstr ""
 
@@ -2202,19 +2230,19 @@ msgstr ""
 msgid "Please select review(s)."
 msgstr ""
 
-#: functions.php:802
+#: functions.php:762
 msgid "Please select the background color."
 msgstr ""
 
-#: functions.php:800
+#: functions.php:760
 msgid "Please select the base color."
 msgstr ""
 
-#: functions.php:801
+#: functions.php:761
 msgid "Please select the body color."
 msgstr ""
 
-#: functions.php:803
+#: functions.php:763
 msgid "Please select the text color."
 msgstr ""
 
@@ -2232,6 +2260,7 @@ msgstr ""
 msgid "Postal Code"
 msgstr ""
 
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:136
 #: includes/templates/front/myaccount/prof_edit.php:116
 msgid "Postcode"
 msgstr ""
@@ -2243,17 +2272,13 @@ msgid ""
 "<code>90210...99000</code>) are also supported."
 msgstr ""
 
-#: includes/admin/class-email-templates.php:139
-msgid "Preview"
-msgstr ""
-
 #: includes/class-mp-frontend-scripts.php:60
 msgid "Previous"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:686 includes/front/product-list.php:94
+#: includes/class-mp-form-handler.php:692 includes/front/product-list.php:94
 #: includes/admin/product.php:360
-#: woocommerce/templates/emails/seller-new-order.php:114
+#: woocommerce/templates/emails/seller-new-order.php:130
 #: includes/templates/front/myaccount/feedback.php:49
 #: includes/templates/front/myaccount/preview.php:255
 #: includes/templates/front/myaccount/preview.php:403
@@ -2266,11 +2291,11 @@ msgstr ""
 msgid "Price Rating"
 msgstr ""
 
-#: functions.php:752
+#: functions.php:712
 msgid "Price, Value, Quality rating cannot be empty."
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:67
+#: includes/templates/front/order/order-view.php:76
 msgid "Print Invoice"
 msgstr ""
 
@@ -2279,16 +2304,20 @@ msgstr ""
 msgid "Processing"
 msgstr ""
 
-#: functions.php:816 includes/class-mp-frontend-scripts.php:67
+#: includes/templates/front/order/order-view.php:347
+msgid "processing"
+msgstr ""
+
+#: functions.php:776 includes/class-mp-frontend-scripts.php:67
 msgid "Processing..."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:684 includes/admin/product.php:357
-#: woocommerce/templates/emails/seller-new-order.php:112
-#: includes/templates/front/order/order-view.php:77
-#: includes/templates/front/order/invoice.php:280
+#: includes/class-mp-form-handler.php:690 includes/admin/product.php:357
+#: woocommerce/templates/emails/seller-new-order.php:128
+#: includes/templates/front/order/order-view.php:86
+#: includes/templates/front/order/invoice.php:286
 #: includes/templates/admin/order/admin-invoice.php:238
-#: includes/admin/account/seller/orders.php:123
+#: includes/admin/account/seller/orders.php:119
 msgid "Product"
 msgstr ""
 
@@ -2317,13 +2346,13 @@ msgstr ""
 msgid "Product from Seller"
 msgstr ""
 
-#: functions.php:465 includes/widgets/class-mp-sellerpanel.php:57
+#: functions.php:459 includes/widgets/class-mp-sellerpanel.php:57
 #: includes/admin/index.php:16 includes/admin/index.php:16
-#: includes/admin/product.php:502
+#: includes/admin/product.php:495
 msgid "Product List"
 msgstr ""
 
-#: includes/admin/product.php:426
+#: includes/admin/product.php:419
 msgid "product moved to the Trash."
 msgstr ""
 
@@ -2367,7 +2396,7 @@ msgstr ""
 msgid "Product Thumbnail"
 msgstr ""
 
-#: includes/admin/account/seller/orders.php:126
+#: includes/admin/account/seller/orders.php:122
 msgid "Product Total"
 msgstr ""
 
@@ -2390,16 +2419,16 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: functions.php:483
+#: functions.php:477
 msgid "Profile"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:155
+#: includes/templates/front/order/invoice.php:161
 msgid "Profile Link"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:473
-#: includes/class-mp-form-handler.php:476
+#: includes/class-mp-form-handler.php:479
+#: includes/class-mp-form-handler.php:482
 msgid "Profile updated successfully."
 msgstr ""
 
@@ -2419,11 +2448,11 @@ msgstr ""
 msgid "Quality Rating"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:685
-#: woocommerce/templates/emails/seller-new-order.php:113
-#: includes/templates/front/order/invoice.php:282
+#: includes/class-mp-form-handler.php:691
+#: woocommerce/templates/emails/seller-new-order.php:129
+#: includes/templates/front/order/invoice.php:288
 #: includes/templates/admin/order/admin-invoice.php:240
-#: includes/admin/account/seller/orders.php:124
+#: includes/admin/account/seller/orders.php:120
 msgid "Quantity"
 msgstr ""
 
@@ -2453,6 +2482,10 @@ msgstr ""
 msgid "Refunded"
 msgstr ""
 
+#: includes/templates/front/order/order-view.php:350
+msgid "refunded"
+msgstr ""
+
 #: includes/templates/front/shipping/shipping-list.php:44
 msgid "Region(s)"
 msgstr ""
@@ -2462,6 +2495,7 @@ msgid "Register"
 msgstr ""
 
 #: includes/class-mp-ajax-functions.php:621
+#: includes/front/handlers/class-mp-register-handler.php:142
 msgid "Registration complete check your mail for password!"
 msgstr ""
 
@@ -2483,8 +2517,14 @@ msgstr ""
 msgid "Remaining Amount"
 msgstr ""
 
-#: functions.php:749 includes/templates/front/myaccount/prof_edit.php:220
+#: includes/templates/front/order/order-view.php:244
+msgid "Remaining Payment"
+msgstr ""
+
+#: functions.php:709 includes/templates/front/myaccount/prof_edit.php:220
 #: includes/templates/front/single-product/variations.php:47
+#: includes/templates/front/single-product/edit-product.php:342
+#: includes/templates/front/single-product/edit-product.php:662
 msgid "Remove"
 msgstr ""
 
@@ -2508,7 +2548,7 @@ msgstr ""
 msgid "Reports"
 msgstr ""
 
-#: functions.php:753
+#: functions.php:713
 msgid "Required field."
 msgstr ""
 
@@ -2534,11 +2574,11 @@ msgstr ""
 msgid "Review added successfully."
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:136
-#: includes/templates/front/transaction/view.php:90
-#: includes/admin/account/seller/orders.php:261
-#: includes/templates/admin/account/seller/transaction/view.php:88
-#: includes/templates/admin/account/seller/transaction/view.php:95
+#: includes/templates/front/order/order-view.php:155
+#: includes/templates/front/transaction/view.php:116
+#: includes/admin/account/seller/orders.php:271
+#: includes/templates/admin/account/seller/transaction/view.php:92
+#: includes/templates/admin/account/seller/transaction/view.php:99
 msgid "Reward"
 msgstr ""
 
@@ -2560,7 +2600,7 @@ msgstr ""
 msgid "Sale Price"
 msgstr ""
 
-#: functions.php:722
+#: functions.php:682
 msgid "Sale Price cannot be greater than Regular Price."
 msgstr ""
 
@@ -2572,14 +2612,14 @@ msgstr ""
 msgid "Sale start date"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:84
+#: woocommerce/templates/emails/seller-new-order.php:98
 #: woocommerce/templates/emails/plain/seller-new-order.php:62
 msgid "Saturday"
 msgstr ""
 
 #: includes/admin/setcommision.php:294
 #: includes/templates/front/single-product/add-product.php:159
-#: includes/templates/front/order/order-view.php:288
+#: includes/templates/front/order/order-view.php:380
 msgid "Save"
 msgstr ""
 
@@ -2603,7 +2643,7 @@ msgstr ""
 msgid "Schedule"
 msgstr ""
 
-#: includes/admin/product.php:513
+#: includes/admin/product.php:506
 msgid "Search"
 msgstr ""
 
@@ -2641,11 +2681,18 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: functions.php:763
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:155
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:172
+#: includes/templates/front/myaccount/prof_edit.php:135
+#: includes/templates/front/myaccount/prof_edit.php:152
+msgid "Select a country"
+msgstr ""
+
+#: functions.php:723
 msgid "select customers to delete from list.!"
 msgstr ""
 
-#: functions.php:812
+#: functions.php:772
 msgid "Select or Upload Media Of Your Chosen Persuasion"
 msgstr ""
 
@@ -2657,7 +2704,7 @@ msgstr ""
 msgid "Select Seller"
 msgstr ""
 
-#: functions.php:739
+#: functions.php:699
 msgid "select seller option"
 msgstr ""
 
@@ -2677,7 +2724,7 @@ msgstr ""
 #: includes/templates/front/myaccount/preview.php:220
 #: includes/templates/front/myaccount/seller-profile-details-section.php:54
 #: includes/templates/front/single-product/product-author.php:41
-#: includes/admin/account/seller/orders.php:300
+#: includes/admin/account/seller/orders.php:317
 msgid "Seller"
 msgstr ""
 
@@ -2731,7 +2778,11 @@ msgstr ""
 msgid "Seller Name"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:122
+#: includes/templates/front/order/invoice.php:114
+msgid "Seller Order Invoice"
+msgstr ""
+
+#: includes/templates/front/order/invoice.php:128
 msgid "Seller Order Invoice Of Order"
 msgstr ""
 
@@ -2753,7 +2804,7 @@ msgstr ""
 msgid "Seller Register"
 msgstr ""
 
-#: functions.php:740
+#: functions.php:700
 msgid "seller store name is too short,contain white space or empty"
 msgstr ""
 
@@ -2761,7 +2812,7 @@ msgstr ""
 msgid "Seller updated for selected product(s)."
 msgstr ""
 
-#: functions.php:733
+#: functions.php:693
 msgid "Seller User Name is not valid"
 msgstr ""
 
@@ -2789,8 +2840,9 @@ msgstr ""
 msgid "Separate seller dashboard"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:96
+#: woocommerce/templates/emails/seller-new-order.php:111
 #: woocommerce/templates/emails/plain/seller-new-order.php:74
+#: includes/templates/front/transaction/view.php:28
 msgid "September"
 msgstr ""
 
@@ -2803,26 +2855,26 @@ msgid "Settings"
 msgstr ""
 
 #: includes/front/mp-account-functions.php:32
-#: woocommerce/templates/emails/seller-new-order.php:181
+#: woocommerce/templates/emails/seller-new-order.php:209
 #: woocommerce/templates/emails/plain/seller-new-order.php:123
 #: includes/templates/front/single-product/edit-product.php:146
-#: includes/templates/front/order/order-view.php:154
-#: includes/templates/front/order/order-view.php:172
-#: includes/templates/front/order/invoice.php:389
+#: includes/templates/front/order/order-view.php:173
+#: includes/templates/front/order/order-view.php:200
+#: includes/templates/front/order/invoice.php:403
 #: includes/templates/admin/order/admin-invoice.php:339
-#: includes/admin/account/seller/orders.php:127
-#: includes/admin/account/seller/orders.php:276
+#: includes/admin/account/seller/orders.php:123
+#: includes/admin/account/seller/orders.php:287
 msgid "Shipping"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:232
-#: includes/templates/front/order/invoice.php:225
+#: includes/templates/front/order/order-view.php:311
+#: includes/templates/front/order/invoice.php:231
 #: includes/templates/admin/order/admin-invoice.php:188
 msgid "Shipping Address"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:717
-#: woocommerce/templates/emails/seller-new-order.php:251
+#: includes/class-mp-form-handler.php:723
+#: woocommerce/templates/emails/seller-new-order.php:281
 #: woocommerce/templates/emails/plain/seller-new-order.php:169
 msgid "Shipping address"
 msgstr ""
@@ -2856,7 +2908,7 @@ msgid ""
 "different rates to different classes of product."
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:168
+#: includes/templates/front/order/invoice.php:174
 #: includes/templates/front/shipping/edit-shipping.php:158
 #: includes/templates/admin/order/admin-invoice.php:156
 msgid "Shipping Method"
@@ -2866,10 +2918,11 @@ msgstr ""
 msgid "Shipping Method(s)"
 msgstr ""
 
-#: functions.php:455 includes/templates/front/shipping/add-shipping.php:19
+#: functions.php:449 includes/templates/front/shipping/add-shipping.php:19
 msgid "Shipping Zone"
 msgstr ""
 
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:106
 #: includes/front/index.php:87
 #: includes/templates/front/myaccount/prof_edit.php:86
 msgid "Shop Address"
@@ -2879,11 +2932,12 @@ msgstr ""
 msgid "Shop Address 1"
 msgstr ""
 
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:124
 #: includes/templates/front/myaccount/prof_edit.php:104
 msgid "Shop Address 2"
 msgstr ""
 
-#: includes/templates/admin/account/seller/profile.php:66
+#: includes/templates/admin/account/seller/profile.php:64
 msgid "Shop Address :"
 msgstr ""
 
@@ -2891,7 +2945,7 @@ msgstr ""
 msgid "Shop Follower"
 msgstr ""
 
-#: functions.php:477
+#: functions.php:471
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:30
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:30
 #: includes/front/mp-account-functions.php:35
@@ -2908,23 +2962,24 @@ msgstr ""
 #: includes/templates/front/myaccount/prof_edit.php:80
 #: includes/templates/front/myaccount/seller-seperate-form.php:25
 #: includes/templates/front/myaccount/registration.php:24
-#: includes/templates/admin/account/user-profile.php:46
+#: includes/templates/admin/account/user-profile.php:43
 #: includes/templates/admin/account/seller/review.php:96
 msgid "Shop Name"
 msgstr ""
 
-#: functions.php:729
+#: functions.php:689
 msgid "Shop name is not valid"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:352
+#: includes/class-mp-form-handler.php:354
 msgid "Shop name is not valid."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:355
+#: includes/class-mp-form-handler.php:357
 msgid "Shop name is required."
 msgstr ""
 
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:112
 #: includes/templates/front/myaccount/prof_edit.php:92
 msgid "Shop Phone Number"
 msgstr ""
@@ -2933,7 +2988,7 @@ msgstr ""
 #: includes/templates/front/myaccount/prof_edit.php:85
 #: includes/templates/front/myaccount/seller-seperate-form.php:30
 #: includes/templates/front/myaccount/registration.php:29
-#: includes/templates/admin/account/user-profile.php:55
+#: includes/templates/admin/account/user-profile.php:52
 msgid "Shop URL"
 msgstr ""
 
@@ -2976,8 +3031,6 @@ msgid ""
 "product and service that can be purchased."
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:131
-#: woocommerce/templates/emails/seller-new-order.php:150
 #: woocommerce/templates/emails/plain/seller-new-order.php:98
 #: woocommerce/templates/emails/plain/seller-new-order.php:106
 msgid "SKU: "
@@ -3006,7 +3059,7 @@ msgstr ""
 msgid "Someone requested that the password be reset for the following account:"
 msgstr ""
 
-#: functions.php:815
+#: functions.php:775
 msgid "Sorry Account Balance is Low"
 msgstr ""
 
@@ -3019,7 +3072,7 @@ msgstr ""
 msgid "Sorry, you are not allowed to access invoice."
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:349
+#: includes/templates/front/order/order-view.php:443
 msgid "Sorry, You can't access other seller's orders."
 msgstr ""
 
@@ -3037,6 +3090,7 @@ msgid "Standard Payment"
 msgstr ""
 
 #: includes/class-mp-ajax-functions.php:92
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:182
 #: includes/templates/front/myaccount/prof_edit.php:162
 msgid "State"
 msgstr ""
@@ -3050,13 +3104,14 @@ msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-order-list.php:77
 #: includes/templates/front/order/order-history.php:9
-#: includes/admin/account/seller/orders.php:125
+#: includes/templates/front/order/order-view.php:360
+#: includes/admin/account/seller/orders.php:121
 #: includes/templates/admin/account/seller/review.php:102
 msgid "Status"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:294
-msgid "Status: Order status is completed."
+#: includes/templates/front/order/order-view.php:386
+msgid "Status: Order status is"
 msgstr ""
 
 #: includes/front/product-list.php:92 includes/admin/product.php:359
@@ -3080,10 +3135,6 @@ msgstr ""
 msgid "Stock status"
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:139
-msgid "Style Options"
-msgstr ""
-
 #: includes/admin/payammount.php:18
 msgid "SUBJECT"
 msgstr ""
@@ -3103,11 +3154,11 @@ msgstr ""
 msgid "Subject : "
 msgstr ""
 
-#: functions.php:742
+#: functions.php:702
 msgid "Subject field can not be blank."
 msgstr ""
 
-#: functions.php:764
+#: functions.php:724
 msgid "Subject field cannot be empty."
 msgstr ""
 
@@ -3115,7 +3166,7 @@ msgstr ""
 msgid "Subject Invalid."
 msgstr ""
 
-#: functions.php:743
+#: functions.php:703
 msgid "Subject not valid."
 msgstr ""
 
@@ -3127,16 +3178,17 @@ msgstr ""
 msgid "Submit Review"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:368
+#: includes/templates/front/order/invoice.php:384
 #: includes/templates/admin/order/admin-invoice.php:331
 msgid "SubTotal"
 msgstr ""
 
+#: woocommerce/templates/emails/seller-new-order.php:193
 #: includes/templates/front/class-mp-user-functions.php:104
 msgid "Subtotal"
 msgstr ""
 
-#: functions.php:822
+#: functions.php:782
 msgid "Success"
 msgstr ""
 
@@ -3144,12 +3196,12 @@ msgstr ""
 msgid "Summary"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:85
+#: woocommerce/templates/emails/seller-new-order.php:99
 #: woocommerce/templates/emails/plain/seller-new-order.php:63
 msgid "Sunday"
 msgstr ""
 
-#: functions.php:329
+#: functions.php:323
 msgid "Support"
 msgstr ""
 
@@ -3170,8 +3222,8 @@ msgstr ""
 msgid "Taxable"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:216
-#: includes/templates/front/order/invoice.php:207
+#: includes/templates/front/order/order-view.php:295
+#: includes/templates/front/order/invoice.php:213
 #: includes/templates/admin/order/admin-invoice.php:112
 msgid "Telephone"
 msgstr ""
@@ -3192,32 +3244,19 @@ msgstr ""
 msgid "Thanks for choosing marketplace."
 msgstr ""
 
-#: includes/admin/class-add-email-template.php:161
-msgid ""
-"The background color for this Marketplace email template. Default #f7f7f7."
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:145
-msgid "The base color for this Marketplace email template. Default #8a8a8a."
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:153
-msgid "The main body background color. Default #ffffff."
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:169
-msgid "The main body text color. Default #3c3c3c."
-msgstr ""
-
 #: includes/class-mp-post-data-handler.php:156
 msgid "The shop URL already EXISTS please try different shop url"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:680
+#: includes/class-mp-form-handler.php:686
 msgid "Their order is as follows:"
 msgstr ""
 
-#: functions.php:761
+#: includes/templates/front/order/order-view.php:431
+msgid "There are no notes yet."
+msgstr ""
+
+#: functions.php:721
 msgid "There was some issue in process. Please try again.!"
 msgstr ""
 
@@ -3225,11 +3264,11 @@ msgstr ""
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
-#: functions.php:796
+#: functions.php:756
 msgid "This field cannot be left blank"
 msgstr ""
 
-#: functions.php:719
+#: functions.php:679
 msgid "this field could not be left blank"
 msgstr ""
 
@@ -3251,17 +3290,9 @@ msgid ""
 "other shipping zone. Adding shipping methods to this zone is optional."
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:82
+#: woocommerce/templates/emails/seller-new-order.php:96
 #: woocommerce/templates/emails/plain/seller-new-order.php:60
 msgid "Thursday"
-msgstr ""
-
-#: includes/admin/class-email-templates.php:138
-msgid "Title"
-msgstr ""
-
-#: includes/admin/class-add-email-template.php:133
-msgid "Title cannot be changed."
 msgstr ""
 
 #: includes/class-mp-frontend-scripts.php:71
@@ -3281,19 +3312,19 @@ msgid "Top Selling Product"
 msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-order-list.php:79
-#: woocommerce/templates/emails/seller-new-order.php:220
+#: woocommerce/templates/emails/seller-new-order.php:256
 #: woocommerce/templates/emails/plain/seller-new-order.php:150
 #: includes/templates/front/order/order-history.php:11
-#: includes/templates/front/order/order-view.php:78
-#: includes/templates/front/order/order-view.php:191
-#: includes/templates/front/order/invoice.php:286
-#: includes/templates/front/order/invoice.php:398
+#: includes/templates/front/order/order-view.php:87
+#: includes/templates/front/order/order-view.php:268
+#: includes/templates/front/order/invoice.php:292
+#: includes/templates/front/order/invoice.php:412
 #: includes/templates/admin/order/admin-invoice.php:244
 #: includes/templates/admin/order/admin-invoice.php:347
 msgid "Total"
 msgstr ""
 
-#: includes/admin/account/seller/orders.php:129
+#: includes/admin/account/seller/orders.php:125
 msgid "Total Commission"
 msgstr ""
 
@@ -3321,7 +3352,7 @@ msgstr ""
 msgid "Total Sale"
 msgstr ""
 
-#: includes/admin/account/seller/orders.php:130
+#: includes/admin/account/seller/orders.php:126
 msgid "Total Seller Amount"
 msgstr ""
 
@@ -3333,7 +3364,7 @@ msgstr ""
 msgid "Tranaction Id"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:483
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:26
 #: includes/separate-seller-dashboard/class-mp-seller-backend-functions.php:26
 #: includes/front/mp-account-functions.php:31
@@ -3344,9 +3375,9 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
-#: includes/templates/front/transaction/view.php:18
+#: includes/templates/front/transaction/view.php:44
 #: includes/admin/account/seller/transactions.php:120
-#: includes/templates/admin/account/seller/transaction/view.php:18
+#: includes/templates/admin/account/seller/transaction/view.php:23
 msgid "Transaction Id"
 msgstr ""
 
@@ -3355,11 +3386,11 @@ msgstr ""
 msgid "Transactions"
 msgstr ""
 
-#: includes/admin/product.php:467
+#: includes/admin/product.php:460
 msgid "Trash"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:80
+#: woocommerce/templates/emails/seller-new-order.php:94
 #: woocommerce/templates/emails/plain/seller-new-order.php:58
 msgid "Tuesday"
 msgstr ""
@@ -3369,14 +3400,14 @@ msgstr ""
 msgid "Twitter Profile ID"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:386
+#: includes/class-mp-form-handler.php:388
 msgid "Twitter URL not valid"
 msgstr ""
 
 #: includes/admin/product.php:364
-#: includes/templates/front/transaction/view.php:35
+#: includes/templates/front/transaction/view.php:61
 #: includes/admin/account/seller/transactions.php:123
-#: includes/templates/admin/account/seller/transaction/view.php:35
+#: includes/templates/admin/account/seller/transaction/view.php:40
 msgid "Type"
 msgstr ""
 
@@ -3384,18 +3415,20 @@ msgstr ""
 msgid "UnAssigned"
 msgstr ""
 
-#: includes/templates/front/order/invoice.php:284
+#: includes/templates/front/order/invoice.php:290
 #: includes/templates/admin/order/admin-invoice.php:242
 msgid "Unit Price"
 msgstr ""
 
 #: includes/templates/front/single-product/variations.php:252
 #: includes/templates/front/single-product/variations.php:260
+#: includes/templates/front/single-product/edit-product.php:848
 msgid "Unlimited"
 msgstr ""
 
-#: includes/separate-seller-dashboard/class-seller-mp-profile.php:319
-#: includes/templates/front/myaccount/prof_edit.php:297
+#: includes/separate-seller-dashboard/class-seller-mp-profile.php:313
+#: includes/templates/front/myaccount/prof_edit.php:292
+#: includes/templates/front/single-product/edit-product.php:893
 msgid "Update"
 msgstr ""
 
@@ -3422,7 +3455,7 @@ msgstr ""
 msgid "Upload Thumb"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:839
+#: includes/class-mp-form-handler.php:845
 msgid "Upload valid "
 msgstr ""
 
@@ -3438,11 +3471,11 @@ msgstr ""
 msgid "Use "
 msgstr ""
 
-#: functions.php:813
+#: functions.php:773
 msgid "Use this media"
 msgstr ""
 
-#: functions.php:751
+#: functions.php:711
 #: includes/templates/front/single-product/edit-product.php:679
 msgid "Used for variations"
 msgstr ""
@@ -3461,11 +3494,11 @@ msgstr ""
 msgid "User Image"
 msgstr ""
 
-#: functions.php:735
+#: functions.php:695
 msgid "User Name Already Taken"
 msgstr ""
 
-#: functions.php:734
+#: functions.php:694
 msgid "user name available"
 msgstr ""
 
@@ -3490,7 +3523,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: includes/templates/admin/account/seller/profile.php:30
+#: includes/templates/admin/account/seller/profile.php:28
 msgid "Username :"
 msgstr ""
 
@@ -3503,7 +3536,6 @@ msgid "Username or email address"
 msgstr ""
 
 #: includes/front/class-mp-user-functions.php:220
-#: includes/front/handlers/class-mp-register-handler.php:213
 msgid "Username: "
 msgstr ""
 
@@ -3538,10 +3570,10 @@ msgstr ""
 
 #: includes/separate-seller-dashboard/class-seller-order-list.php:233
 #: includes/separate-seller-dashboard/class-seller-transaction-list.php:127
-#: includes/admin/product.php:466
-#: includes/templates/front/order/order-history.php:133
-#: includes/templates/front/transaction/list.php:30
-#: includes/admin/account/seller/transactions.php:234
+#: includes/admin/product.php:459
+#: includes/templates/front/order/order-history.php:123
+#: includes/templates/front/transaction/list.php:36
+#: includes/admin/account/seller/transactions.php:238
 msgid "View"
 msgstr ""
 
@@ -3557,7 +3589,7 @@ msgstr ""
 msgid "View Collection"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:322
 msgid "View Marketplace documentation"
 msgstr ""
 
@@ -3576,19 +3608,19 @@ msgstr ""
 msgid "Virtual"
 msgstr ""
 
-#: functions.php:750
+#: functions.php:710
 #: includes/templates/front/single-product/edit-product.php:671
 msgid "Visible on the product page"
 msgstr ""
 
-#: functions.php:329
+#: functions.php:323
 msgid "Visit customer support"
 msgstr ""
 
-#: includes/templates/front/order/order-view.php:143
-#: includes/templates/front/transaction/view.php:97
-#: includes/admin/account/seller/orders.php:266
-#: includes/templates/admin/account/seller/transaction/view.php:101
+#: includes/templates/front/order/order-view.php:162
+#: includes/templates/front/transaction/view.php:123
+#: includes/admin/account/seller/orders.php:276
+#: includes/templates/admin/account/seller/transaction/view.php:106
 msgid "Wallet"
 msgstr ""
 
@@ -3605,7 +3637,7 @@ msgstr ""
 msgid "Webkul"
 msgstr ""
 
-#: woocommerce/templates/emails/seller-new-order.php:81
+#: woocommerce/templates/emails/seller-new-order.php:95
 #: woocommerce/templates/emails/plain/seller-new-order.php:59
 msgid "Wednesday"
 msgstr ""
@@ -3623,7 +3655,6 @@ msgid "Weight in decimal form"
 msgstr ""
 
 #: woocommerce/templates/emails/seller-new-account.php:8
-#: includes/front/handlers/class-mp-register-handler.php:211
 msgid "Welcome to "
 msgstr ""
 
@@ -3635,7 +3666,7 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: functions.php:39 includes/templates/front/order/order-view.php:328
+#: functions.php:39 includes/templates/front/order/order-view.php:422
 msgid "WooCommerce"
 msgstr ""
 
@@ -3650,7 +3681,7 @@ msgstr ""
 msgid "WooCommerce Addons"
 msgstr ""
 
-#: functions.php:955
+#: functions.php:915
 #, php-format
 msgid ""
 "WooCommerce Marketplace depends on the last version of %s or later to work!"
@@ -3702,8 +3733,8 @@ msgstr ""
 msgid "You have already reviewed this shop."
 msgstr ""
 
-#: includes/class-mp-form-handler.php:680
-#: woocommerce/templates/emails/seller-new-order.php:108
+#: includes/class-mp-form-handler.php:686
+#: woocommerce/templates/emails/seller-new-order.php:124
 #: woocommerce/templates/emails/plain/seller-new-order.php:86
 msgid "You have received an order from"
 msgstr ""
@@ -3718,13 +3749,8 @@ msgid "Your account has been approved by admin "
 msgstr ""
 
 #: woocommerce/templates/emails/seller-new-account.php:9
-#: includes/front/handlers/class-mp-register-handler.php:218
 #: woocommerce/templates/emails/plain/seller-new-account.php:9
 msgid "Your account has been created awaiting for admin approval."
-msgstr ""
-
-#: includes/front/handlers/class-mp-register-handler.php:216
-msgid "Your account has been created Click here to login"
 msgstr ""
 
 #: includes/class-mp-ajax-functions.php:453
@@ -3740,8 +3766,8 @@ msgstr ""
 msgid "Your payment is successfull"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:889
-#: includes/class-mp-form-handler.php:893
+#: includes/class-mp-form-handler.php:895
+#: includes/class-mp-form-handler.php:899
 #: includes/front/class-mp-user-functions.php:160
 #: includes/front/class-mp-user-functions.php:164
 msgid "Your query has been received successfully."
@@ -3752,7 +3778,7 @@ msgstr ""
 msgid "Youtube Profile ID"
 msgstr ""
 
-#: includes/class-mp-form-handler.php:416
+#: includes/class-mp-form-handler.php:418
 msgid "Youtube URL not valid"
 msgstr ""
 

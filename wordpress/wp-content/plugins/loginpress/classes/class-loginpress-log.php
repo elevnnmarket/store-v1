@@ -56,6 +56,7 @@ class LoginPress_Log_Info {
 		if ( class_exists( 'LoginPress_Pro' ) ) {
 
 			$enable_repatcha     = ( isset( $loginpress_setting['enable_repatcha'] ) ) ? $loginpress_setting['enable_repatcha'] : 'Off';
+			$enable_force 			 = ( isset( $loginpress_setting['force_login'] ) ) ? $loginpress_setting['force_login'] : 'Off';
 			$loginpress_preset	 = get_option( 'customize_presets_settings', 'default1' );
 			$license_key         = LoginPress_Pro::get_registered_license_status();
 
@@ -63,17 +64,18 @@ class LoginPress_Log_Info {
 			$html .= 'Plugin Version:           ' . LOGINPRESS_PRO_VERSION . "\n";
 			$html .= 'LoginPress Template:      ' . $loginpress_preset . "\n";
 			$html .= 'License Status:           ' . $license_key . "\n";
+			$html .= 'Force Login:              ' . $enable_force . "\n";
 			$html .= 'Google Repatcha Status:   ' . $enable_repatcha . "\n";
 
 			if ( 'on' == $enable_repatcha ) {
-				$site_key          = ( isset( $loginpress_setting['site_key'] ) ) ? $loginpress_setting['site_key']                 : 'Not Set';
-				$secret_key        = ( isset( $loginpress_setting['secret_key'] ) ) ? $loginpress_setting['secret_key']             : 'Not Set';
-				$captcha_theme     = ( isset( $loginpress_setting['captcha_theme'] ) ) ? $loginpress_setting['captcha_theme']       : 'Light';
+				$site_key          = ( isset( $loginpress_setting['site_key'] ) ) ? $loginpress_setting['site_key'] : 'Not Set';
+				$secret_key        = ( isset( $loginpress_setting['secret_key'] ) ) ? $loginpress_setting['secret_key'] : 'Not Set';
+				$captcha_theme     = ( isset( $loginpress_setting['captcha_theme'] ) ) ? $loginpress_setting['captcha_theme'] : 'Light';
 				$captcha_language  = ( isset( $loginpress_setting['captcha_language'] ) ) ? $loginpress_setting['captcha_language'] : 'English (US)';
-				$captcha_enable_on = ( isset( $loginpress_setting['captcha_enable'] ) ) ? $loginpress_setting['captcha_enable']     : 'Not Set';
+				$captcha_enable_on = ( isset( $loginpress_setting['captcha_enable'] ) ) ? $loginpress_setting['captcha_enable'] : 'Not Set';
 
-				$html .= 'Repatcha Site Key:        ' . $site_key . "\n";
-				$html .= 'Repatcha Secret Key:      ' . $secret_key . "\n";
+				$html .= 'Repatcha Site Key:        ' . LoginPress_Pro::mask_license( $site_key ) . "\n";
+				$html .= 'Repatcha Secret Key:      ' . LoginPress_Pro::mask_license( $secret_key ) . "\n";
 				$html .= 'Repatcha Theme Used:      ' . $captcha_theme . "\n";
 				$html .= 'Repatcha Language Used:   ' . $captcha_language . "\n";
 				if ( is_array( $captcha_enable_on ) ) {
@@ -116,7 +118,7 @@ class LoginPress_Log_Info {
 		foreach( $plugins as $plugin_path => $plugin ) {
 			if( !in_array( $plugin_path, $active_plugins ) )
 				continue;
-			$html .= $plugin['Name'] . ': ' . $plugin['Version'] . "\n";
+			$html .= $plugin['Name'] . ': v(' . $plugin['Version'] . ")\n";
 		}
 
 		// WordPress inactive plugins
@@ -124,7 +126,7 @@ class LoginPress_Log_Info {
 		foreach( $plugins as $plugin_path => $plugin ) {
 			if( in_array( $plugin_path, $active_plugins ) )
 				continue;
-			$html .= $plugin['Name'] . ': ' . $plugin['Version'] . "\n";
+			$html .= $plugin['Name'] . ': v(' . $plugin['Version'] . ")\n";
 		}
 
 		if( is_multisite() ) {
@@ -137,7 +139,7 @@ class LoginPress_Log_Info {
 				if( ! array_key_exists( $plugin_base, $active_plugins ) )
 					continue;
 				$plugin  = get_plugin_data( $plugin_path );
-				$html .= $plugin['Name'] . ': ' . $plugin['Version'] . "\n";
+				$html .= $plugin['Name'] . ': v(' . $plugin['Version'] . ")\n";
 			}
 		}
 

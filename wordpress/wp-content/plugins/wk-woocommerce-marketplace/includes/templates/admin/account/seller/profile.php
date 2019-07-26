@@ -10,10 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $seller          = get_user_by( 'ID', $seller_id );
-$payment_details = get_user_meta( $seller_id, 'mp_seller_payment_method' );
-if ( ! empty( $payment_details ) && isset( $payment_details[0] ) && isset( $payment_details[0]['standard'] ) ) {
-	$payment_details = $payment_details[0]['standard'];
-} else {
+$payment_details = get_user_meta( $seller_id, 'mp_seller_payment_details', true );
+if ( empty( $payment_details ) ) {
 	$payment_details = 'No info. provided.';
 }
 ?>

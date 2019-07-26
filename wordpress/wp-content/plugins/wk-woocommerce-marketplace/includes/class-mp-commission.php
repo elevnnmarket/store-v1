@@ -304,32 +304,32 @@ if (!class_exists('MP_Commission')) {
 
             if ($order_id) {
                 $sellers = $this->get_sellers_in_order($order_id);
-
-                do_action('wkmp_manage_order_fee', $order_id);
+				
+				$order = wc_get_order($order_id);
+				
+				do_action('wkmp_manage_order_fee', $order_id);
 
                 if (!empty($sellers)) {
                     foreach ($sellers as $seller_id) {
-                        $sel_ord_data = $this->get_seller_order_info($order_id, $seller_id);
 
+                        $sel_ord_data = $this->get_seller_order_info($order_id, $seller_id);
                         $sel_amt = 0;
                         $admin_amt = 0;
 
                         $sel_ord_data = apply_filters('wk_marketplace_manage_order_fee', $sel_ord_data, $order_id, $seller_id);
 
                         if (!empty($sel_ord_data)) {
-                            $sel_amt = $sel_ord_data['total_sel_amt'] + $sel_ord_data['ship_data'];
-                            $admin_amt = $sel_ord_data['total_comision'];
+                            $sel_amt = apply_filters( 'mpmc_get_default_price', $sel_ord_data['total_sel_amt'] + $sel_ord_data['ship_data'], $order->get_currency());
+                            $admin_amt = apply_filters( 'mpmc_get_default_price', $sel_ord_data['total_comision'], $order->get_currency());
                         }
 
                         $sel_com_data = $wpdb->get_results($wpdb->prepare(" SELECT * from {$wpdb->prefix}mpcommision WHERE seller_id = %d", $seller_id));
 
                         if ($sel_com_data) {
-                            $sel_com_data = $sel_com_data[0];
 
-                            $admin_amount = floatval($sel_com_data->admin_amount) + $admin_amt;
-
-                            $seller_amount = floatval($sel_com_data->seller_total_ammount) + $sel_amt;
-
+							$sel_com_data = $sel_com_data[0];
+                            $admin_amount = (floatval($sel_com_data->admin_amount) + $admin_amt);
+                            $seller_amount = (floatval($sel_com_data->seller_total_ammount) + $sel_amt);
                             $wpdb->get_results($wpdb->prepare(" UPDATE {$wpdb->prefix}mpcommision set admin_amount = %f, seller_total_ammount = %f, last_com_on_total = %f WHERE seller_id = %d", $admin_amount, $seller_amount, $seller_amount, $seller_id));
                         } else {
                             $wpdb->insert(

@@ -96,8 +96,8 @@ class DCE_Extension_Prototype {
     }
 
     public final function add_common_sections($element, $args) {
-
-        $section_name = 'dce_section_' . strtolower($this->name) . '_advanced';
+        $low_name = strtolower($this->name);
+        $section_name = 'dce_section_' . $low_name . '_advanced';
 
         // Check if this section exists
         $section_exists = \Elementor\Plugin::instance()->controls_manager->get_control_from_stack($element->get_unique_name(), $section_name);
@@ -106,15 +106,65 @@ class DCE_Extension_Prototype {
             // We can't and should try to add this section to the stack
             return false;
         }
-
-        $element->start_controls_section(
-            $section_name, [
-                'tab' => Controls_Manager::TAB_ADVANCED,
-                'label' => __($this->name, DCE_TEXTDOMAIN),
-            ]
-        );
-
-        $element->end_controls_section();
+        
+        if ($low_name == 'visibility') {
+            
+            \Elementor\Controls_Manager::add_tab(
+                    'dce-'.$low_name,
+                    __( $this->name, DCE_TEXTDOMAIN )
+            );
+            
+            $element->start_controls_section(
+                $section_name, [
+                    'tab' => 'dce-'.$low_name,
+                    'label' => __($this->name, DCE_TEXTDOMAIN),
+                ]
+            );
+            $element->end_controls_section();
+            
+            foreach (DCE_Extension_Visibility::$tabs as $tkey => $tlabel) {
+                if (defined('DVE_PLUGIN_BASE')) {
+                    if ($tkey == 'context' || $tkey == 'custom') {
+                        continue;
+                    } 
+                }
+                $section_name = 'dce_section_'.$low_name.'_'.$tkey;
+                
+                $condition = [
+                                'enabled_'.$low_name.'!' => '',
+                                'dce_'.$low_name.'_hidden' => '',
+                                'dce_'.$low_name.'_mode' => 'quick',
+                            ];
+                if ($tkey == 'fallback') {
+                    $condition = ['enabled_'.$low_name.'!' => ''];
+                }
+                if ($tkey == 'repeater') {
+                    $condition = [
+                                'enabled_'.$low_name.'!' => '',
+                                'dce_'.$low_name.'_hidden' => '',
+                                'dce_'.$low_name.'_mode' => 'advanced',
+                            ];
+                }
+                
+                $element->start_controls_section(
+                    $section_name, [
+                        'tab' => 'dce-'.$low_name,
+                        'label' => __($tlabel, DCE_TEXTDOMAIN),
+                        'condition' => $condition,
+                    ]
+                );
+                $element->end_controls_section();
+            }
+            
+        } else {
+            $element->start_controls_section(
+                $section_name, [
+                    'tab' => Controls_Manager::TAB_ADVANCED,
+                    'label' => __($this->name, DCE_TEXTDOMAIN),
+                ]
+            );
+            $element->end_controls_section();
+        }
     }
 
     public function add_common_sections_actions() {

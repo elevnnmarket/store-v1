@@ -14,7 +14,7 @@ class DUP_Web_Services
 
     /**
      *
-     * @param DUP_PRO_Package $package
+     * @param DUP_Package $package
      */
     public static function package_delete_callback($package)
     {
@@ -28,11 +28,16 @@ class DUP_Web_Services
      */
     public static function ajax_reset_all()
     {
-        check_ajax_referer('duplicator_reset_all_settings', 'nonce');
-        DUP_Util::hasCapability('export');
-
         ob_start();
         try {
+            DUP_Handler::init_error_handler();
+
+            if (!check_ajax_referer('duplicator_reset_all_settings', 'nonce', false)) {
+                DUP_LOG::Trace('Security issue');
+                throw new Exception('Security issue');
+            }
+            DUP_Util::hasCapability('export', DUP_Util::SECURE_ISSUE_THROW);
+
             /** Execute function * */
             $error  = false;
             $result = array(

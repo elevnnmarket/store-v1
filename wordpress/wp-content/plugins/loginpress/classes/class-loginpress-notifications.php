@@ -28,11 +28,13 @@ if ( ! class_exists( 'LoginPress_Notification' ) ) :
     /**
     * Hook into actions and filters
     * @since  1.0.0
+    * @version 1.2.1
     */
     private function _hooks() {
       add_action( 'admin_init',             array( $this, 'loginpress_review_notice' ) );
       // add_action( 'admin_init' ,            array( $this, 'loginpress_addon_notice' ) );
-      add_action( 'admin_init', array( $this, 'loginpress_friday_sale_notice' ) );
+      // add_action( 'admin_init',             array( $this, 'loginpress_friday_sale_notice' ) );
+      // add_action( 'admin_init',             array( $this, 'loginpress_appsumo_notice' ) );
     }
 
     /**
@@ -221,11 +223,12 @@ if ( ! class_exists( 'LoginPress_Notification' ) ) :
      * Ask users to review our plugin on wordpress.org
      *
      * @since 1.1.3
+     * @version 1.2.1
      * @return boolean false
      */
     public function loginpress_friday_sale_notice() {
 
-      $this->loginpress_friday_sale_dismissal();
+      $this->loginpress_deals_notice_dismis( 'loginpress-friday-sale-nonce', 'loginpress_friday_sale_dismiss' );
 
       $activation_time 	= get_site_option( 'loginpress_friday_sale_active_time' );
       $addon_dismissal	= get_site_option( 'loginpress_friday_sale_dismiss' );
@@ -241,6 +244,32 @@ if ( ! class_exists( 'LoginPress_Notification' ) ) :
       if ( ! has_action( 'loginpress_pro_add_template' ) ) :
         // add_action( 'admin_notices' , array( $this, 'loginpress_friday_sale_notice_text' ) );
         // add_action( 'admin_notices', array( $this, 'new_loginpress_friday_sale_notice_text' ) ); // turn off on update 1.1.19
+      endif;
+    }
+
+    /**
+     * Ask users to review our plugin on wordpress.org
+     *
+     * @since 1.2.1
+     * @return boolean false
+     */
+    public function loginpress_appsumo_notice() {
+
+      $this->loginpress_deals_notice_dismis( 'loginpress-appsumo-nonce', 'loginpress_appsumo_dismiss' );
+
+      $activation_time 	= get_site_option( 'loginpress_appsumo_active_time' );
+      $addon_dismissal	= get_site_option( 'loginpress_appsumo_dismiss' );
+
+      if ( 'yes' == $addon_dismissal ) return;
+
+      if ( ! $activation_time ) :
+
+        $activation_time = time();
+        add_site_option( 'loginpress_appsumo_active_time', $activation_time );
+      endif;
+
+      if ( ! has_action( 'loginpress_pro_add_template' ) ) :
+        add_action( 'admin_notices', array( $this, 'loginpress_appsumo_notice_text' ) );
       endif;
     }
 
@@ -300,6 +329,30 @@ if ( ! class_exists( 'LoginPress_Notification' ) ) :
 				}
 			}
 
+      /**
+       * [loginpress_appsumo_notice_text description]
+       * @return [type] [description]
+       * @since 1.2.1
+       */
+      function loginpress_appsumo_notice_text() {
+
+        $scheme      = ( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_QUERY ) ) ? '&' : '?';
+        $url         = $_SERVER['REQUEST_URI'] . $scheme . 'loginpress_appsumo_dismiss=yes';
+        $dismiss_url = wp_nonce_url( $url, 'loginpress-appsumo-nonce' );
+
+  			if ( current_user_can( 'install_plugins' ) && ! has_action( 'loginpress_pro_add_template' ) ) {
+
+            wp_enqueue_style( 'loginpress_review_stlye', plugins_url( '../css/style-review.css', __FILE__ ), array(), LOGINPRESS_VERSION );
+
+    				$message = '<p> ';
+    				$message .= sprintf (__( '<strong>Biggest Summer Deal</strong> in the WordPress Universe! Get <strong>LoginPress Pro and all Premium Add-ons</strong> with <strong>20%% OFF</strong> [Limited Availability].<a href="https://wpbrigade.com/wordpress/plugins/loginpress-pro/?utm_source=loginpress-lite&utm_medium=freepluginbanner-button&utm_campaign=early20" target="_blank" style="text-decoration: none;"><span class="dashicons dashicons-smiley" style="margin-left: 10px;"></span> Grab The Deal</a>
+    					<a href="%1$s" style="text-decoration: none; margin-left: 10px;"><span class="dashicons dashicons-dismiss"></span> I\'m good with free version</a>' ), $dismiss_url );
+    				$message .=  "</p>";
+    				$class = 'loginpress-notice-success';
+    			  $this->loginpress_admin_notice( $message, $class );
+  				}
+  			}
+
     /**
      * Add custom admin notice
      * @param  string $message Custom Message
@@ -323,19 +376,20 @@ if ( ! class_exists( 'LoginPress_Notification' ) ) :
   	 *	Check and Dismiss addon message.
   	 *
   	 *	@since 1.1.3
+  	 *	@version
   	 */
-  	private function loginpress_friday_sale_dismissal() {
-      //delete_site_option( 'loginpress_friday_sale_dismiss' );
+  	private function loginpress_deals_notice_dismis( $nonce, $option ) {
+      //delete_site_option( $option );
   		if ( ! is_admin() ||
   			! current_user_can( 'manage_options' ) ||
   			! isset( $_GET['_wpnonce'] ) ||
-  			! wp_verify_nonce( sanitize_key( wp_unslash( $_GET['_wpnonce'] ) ), 'loginpress-friday-sale-nonce' ) ||
-  			! isset( $_GET['loginpress_friday_sale_dismiss'] ) ) :
+  			! wp_verify_nonce( sanitize_key( wp_unslash( $_GET['_wpnonce'] ) ), $nonce ) ||
+  			! isset( $_GET[$option] ) ) :
 
   			return;
   		endif;
 
-  		add_site_option( 'loginpress_friday_sale_dismiss', 'yes' );
+  		add_site_option( $option, 'yes' );
   	}
 
   }

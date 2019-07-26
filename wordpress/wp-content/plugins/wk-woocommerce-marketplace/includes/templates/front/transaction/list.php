@@ -24,10 +24,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php
 				if ( ! empty( $transactions ) && is_array( $transactions ) ) {
 					foreach ( $transactions as $trans ) {
+						$order = wc_get_order($trans['order_id']);
+						if($order){
+							$ord_currncy = $order->get_currency();
+						}else{
+							$ord_currncy = get_woocommerce_currency();
+						}
 						$transaction_id = $trans['transaction_id'];
-						$date           = get_date_from_gmt( $trans['transaction_date'] );
-						$amount         = wc_price( $trans['amount'] );
-						$action         = '<a href="' . site_url( get_option( 'wkmp_seller_page_title' ) . '/transaction/view/' ) . $trans['id'] . '" class="button">' . esc_html__( 'View', 'marketplace' ) . '</a>';
+						$date           = $trans['transaction_date'];
+						$amount         = wc_price( $trans['amount'], array('currency'=>$ord_currncy) );
+						$action         = '<a href="' . site_url( 'seller/transaction/view/' ) . $trans['id'] . '" class="button">' . __( 'View', 'marketplace' ) . '</a>';
 				?>
 						<tr>
 							<td>
@@ -45,9 +51,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</tr>
 				<?php
 					}
-				} else {
-
-					echo '<tr> <td colspan=4> ' . esc_html__( 'No Transaction Avaliable', 'marketplace' ) . '  </td> </tr>';
 				}
 				?>
 			</tbody>

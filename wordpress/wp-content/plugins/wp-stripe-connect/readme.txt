@@ -42,6 +42,7 @@ It is an ad-don of Wordpress WooCommerce Marketplace. To use this module you mus
 For any Query please generate a ticket at https://webkul.com/ticket/
 
 == 1.1.2 ==
+Enhancement - Implemented the Direct Charge API for payment.
 Enhancement - Updated the code structure.
 Enhancement - Updated commission part.
 Tweak - Added the translation in the plugin.

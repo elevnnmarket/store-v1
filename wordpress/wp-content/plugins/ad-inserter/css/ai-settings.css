@@ -1,14 +1,24 @@
 #ai-data {
-  font-family: "2.4.18"; /* Used for version number of the file */
+  font-family: "2.4.22"; /* Used for version number of the file */
 }
 
 #blocked-warning {
   display: none;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #fafafa;
+  display: block;
+  unicode-bidi: isolate;
+  margin: 0.5em 0;
+  overflow: hidden;
+}
+
 .ui-widget, .ai-form td {
-   font-family: Arial,Verdana,sans-serif;
-   font-size: 12px!important;
+  font-family: Arial,Verdana,sans-serif;
+  font-size: 12px!important;
 }
 
 .ai-form .ui-widget {
@@ -26,7 +36,17 @@
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-  background: #fff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x!important !important;
+  background: #fff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  font-weight: normal;
+  color: #555;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+  color: #555;
+  text-decoration: none;
 }
 
 /*.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {*/
@@ -103,12 +123,16 @@ a.clear-link, a.clear-link:hover, a.clear-link:focus {
 
 .ai-settings-table.left {
   float: left;
-  width: 59%
+  width: 63%
+}
+
+.ai-settings-table.left td.label {
+  max-width: 104px;
 }
 
 .ai-settings-table.right {
   float: right;
-  width: 41%
+  width: 37%
 }
 
 .ai-settings-table.ai-values td:first-child {
@@ -283,7 +307,10 @@ div.ai-tooltip .version {
   width: 14px;
   text-align: center;
   font-size: 12px;
+  font-weight: normal;
+  color: #555;
 }
+
 #ai-tabs {
   padding: .2em 0 0 .6em;
 }
@@ -294,7 +321,10 @@ div.ai-tooltip .version {
 
 #ai-plugin-settings-tabs li a {
   padding: .5em 0.4em;
-  font-size: 12px;
+  font-size: 11.4px;
+/*  max-width: 83px;*/
+/*  overflow: hidden;*/
+/*  text-overflow: ellipsis;*/
 }
 
 #header-buttons {
@@ -333,6 +363,7 @@ textarea.simple-editor.small {
 
 .ms-container .ms-selectable, .ms-container .ms-selection {
   width: 47%;
+  max-width: 340px;
 }
 
 .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection {
@@ -1294,6 +1325,10 @@ table.check-pages a span.dashicons {
   margin-top: 10px;
 }
 
+.filter-type-select {
+  max-width: 300px;
+}
+
 @media (max-width: 762px) {
    #ai-sidebar-right {
      float: none;
@@ -1368,6 +1403,10 @@ table.check-pages a span.dashicons {
 
    .scombobox-list p {
      font-size: 16px;
+   }
+
+   .filter-type-select {
+     max-width: 258px;
    }
 }
 
@@ -1506,7 +1545,7 @@ table.check-pages {
 table.check-pages th {
   font-weight: bold;
   text-align: center;
-  white-space: nowrap;
+/*  white-space: nowrap;*/
 }
 
 table.check-pages td {

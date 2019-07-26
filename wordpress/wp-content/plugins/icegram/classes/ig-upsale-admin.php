@@ -39,7 +39,7 @@ if ( !class_exists( 'Icegram_upsale' ) ) {
 		function display_cta_upsale( $params ){
 			global $icegram;
 		?>
-			<a class="ig_cta_upsale" href="https://www.icegram.com/cta-actions/?utm_source=in_app&utm_medium==cta&utm_campaign=ig_upsale" target="blank"><img src="<?php echo $icegram->plugin_url ?>/assets/images/cta-new-tab.png"/></a>
+			<a class="ig_cta_upsale" href="https://www.icegram.com/cta-actions/?utm_source=in_app&utm_medium=cta&utm_campaign=ig_upsale" target="blank"><img src="<?php echo $icegram->plugin_url ?>/assets/images/cta-new-tab.png"/></a>
 		<?php
 		return $params;
 		}

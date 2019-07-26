@@ -132,7 +132,7 @@ $page_name = $wpdb->get_var( "SELECT post_name FROM $wpdb->posts WHERE post_name
 							'default'     => $country_code,
 							'class'       => array( 'chzn-drop' ),
 							'options'     => $countries,
-							'placeholder' => __( 'Select a country' ),
+							'placeholder' => __( 'Select a country', 'marketplace' ),
 						) );
 						echo '</div></div>';
 						$state_code = isset( $user_meta_arr['billing_state'] ) ? $user_meta_arr['billing_state'] : '';
@@ -149,7 +149,7 @@ $page_name = $wpdb->get_var( "SELECT post_name FROM $wpdb->posts WHERE post_name
 									'default'     => $state_code,
 									'class'       => array( 'chzn-drop' ),
 									'options'     => $states,
-									'placeholder' => __( 'Select a country' ),
+									'placeholder' => __( 'Select a country', 'marketplace' ),
 								) );
 								?>
 							</div>
@@ -277,13 +277,8 @@ $page_name = $wpdb->get_var( "SELECT post_name FROM $wpdb->posts WHERE post_name
 
 	<!-- seller paymentmethod -->
 	<div class="wkmp_profile_input">
-		<?php
-		if ( isset( $user_meta_arr['mp_seller_payment_method'] ) ) {
-			$stripe_unserialize_data = maybe_unserialize( $user_meta_arr['mp_seller_payment_method'] );
-		}
-		?>
-		<label for="mp_seller_payment_method"><?php esc_html_e( 'Payment Information', 'marketplace' ); ?></label>
-		<textarea name="mp_seller_payment_method" placeholder="eg : test@paypal.com"><?php if ( isset( $stripe_unserialize_data['standard'] ) ) echo $stripe_unserialize_data['standard']; ?></textarea><br /><br />
+		<label for="mp_seller_payment_details"><?php esc_html_e( 'Payment Information', 'marketplace' ); ?></label>
+		<textarea name="mp_seller_payment_details" placeholder="<?php esc_html_e('eg : test@paypal.com', 'marketplace'); ?>"><?php if ( isset( $user_meta_arr['mp_seller_payment_details'] ) ) echo $user_meta_arr['mp_seller_payment_details']; ?></textarea><br /><br />
 			<?php
 				$paymet_gateways = WC()->payment_gateways->payment_gateways();
 				do_action( 'marketplace_payment_gateway' );

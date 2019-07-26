@@ -3,7 +3,7 @@
  * Plugin Name: Marketplace
  * Plugin URI: https://store.webkul.com/Wordpress-Woocommerce-Marketplace.html
  * Description: WordPress WooCommerce Marketplace convert your WordPress WooCommerce store in to Marketplace with separate seller product collection and separate seller.
- * Version: 4.8.3
+ * Version: 4.8.4
  * Author: Webkul
  * Author URI: http://webkul.com
  * License: GNU/GPL for more info see license.txt included with plugin
@@ -263,8 +263,6 @@ if (!class_exists('Marketplace')):
 
             add_action('wp_enqueue_scripts', array($this, 'front_enqueue_script'));
 
-            add_filter('mp_email_styles', array($this, 'mp_woocommerce_email_styles'), 10, 2);
-
             add_filter('plugin_action_links_'.plugin_basename(__FILE__), array($this, 'wk_mp_plugin_settings_link'));
 
             add_filter('woocommerce_email_classes', array($this, 'mp_add_new_email_notification'), 10, 1);
@@ -287,6 +285,8 @@ if (!class_exists('Marketplace')):
 
             add_action('woocommerce_order_status_cancelled', array($this, 'mp_action_on_order_cancel'), 10, 1);
 
+            add_action('woocommerce_order_status_failed', array($this, 'mp_action_on_order_failed'), 10, 1);
+
             do_action('marketplace_loaded');
 
             add_filter('plugin_row_meta', array($this, 'mp_plugin_row_meta'), 10, 2);
@@ -303,13 +303,15 @@ if (!class_exists('Marketplace')):
             return $array;
         }
 
-        public function wkmp_add_woocommerce_email_actions($actions)
+		public function wkmp_add_woocommerce_email_actions($actions)
         {
             $actions[] = 'asktoadmin_mail';
             $actions[] = 'woocommerce_product_notifier_admin';
             $actions[] = 'woocommerce_approve_seller';
             $actions[] = 'woocommerce_disapprove_seller';
             $actions[] = 'woocommerce_seller_new_order';
+            $actions[] = 'woocommerce_seller_order_cancelled';
+            $actions[] = 'woocommerce_seller_order_failed';
             $actions[] = 'woocommerce_admin_reply_to_seller';
             $actions[] = 'new_seller_registration';
             $actions[] = 'new_user_registration_link';
@@ -340,6 +342,8 @@ if (!class_exists('Marketplace')):
         {
             global $wpdb, $woocommerce, $commission;
 
+            $order = wc_get_order( $ord_id );
+
             $seller_list = $commission->get_sellers_in_order($ord_id);
 
             foreach ($seller_list as $seller_id) {
@@ -361,6 +365,49 @@ if (!class_exists('Marketplace')):
                     $s = $wpdb->get_results($wpdb->prepare(" UPDATE {$wpdb->prefix}mpcommision set admin_amount = %f, seller_total_ammount = %f WHERE seller_id = %d", $admin_amount, $seller_amount, $seller_id));
                 }
             }
+
+            $this->send_mail_to_inform_seller_for_order_status( $order );
+
+        }
+
+        public function mp_action_on_order_failed( $ord_id )
+        {
+            
+            $order = wc_get_order( $ord_id );
+            $this->send_mail_to_inform_seller_for_order_status( $order );
+
+        }
+
+         public function send_mail_to_inform_seller_for_order_status( $order )
+        {
+            $items = $order->get_items();
+            $per_seller_items = $this->product_from_diffrent_seller($items);
+            $recent_user = wp_get_current_user();
+            $cur_email = $recent_user->user_email;
+            $order_status = $order->get_status();
+            foreach ($per_seller_items as $key => $items) {
+                if( $order_status == 'cancelled' ) {
+                    do_action('woocommerce_seller_order_cancelled', $items, $key);
+                } else if( $order_status == 'failed' ) {
+                    do_action('woocommerce_seller_order_failed', $items, $key);
+                }
+            }
+		}
+		
+		public function product_from_diffrent_seller($items)
+        {
+            $mp_product_author = array();
+            foreach ($items as $key => $item) {
+                $item_id = $item['product_id'];
+                $author_email = $this->inform_marketplace_seller($item_id);
+                $send_to = $author_email[0]->user_email;
+                if (in_array($send_to, $mp_product_author)) {
+                    $mp_product_author[$send_to][] = $item;
+                } else {
+                    $mp_product_author[$send_to][] = $item;
+                }
+            }
+            return $mp_product_author;
         }
 
         /**
@@ -609,46 +656,6 @@ if (!class_exists('Marketplace')):
         }
 
         /**
-         * Includes email style function.
-         *
-         * @param string $css    mail css
-         * @param string $option mail id
-         */
-        public function mp_woocommerce_email_styles($css, $option)
-        {
-            $css = include WK_MARKETPLACE_DIR.'woocommerce/templates/emails/email-styles.php';
-
-            return $css;
-        }
-
-        /**
-         * Include style to mail body function.
-         *
-         * @param string $content     html content
-         * @param string $option_name mail id
-         */
-        public function style_inline($content, $option_name)
-        {
-            ob_start();
-
-            $css = apply_filters('mp_email_styles', ob_get_clean(), $option_name);
-
-            try {
-                if (!class_exists('Emogrifier')) {
-                    require_once plugin_dir_path(__DIR__).'woocommerce/includes/libraries/class-emogrifier.php';
-                }
-                $emogrifier = new Emogrifier($content, $css);
-
-                $content = $emogrifier->emogrify();
-            } catch (Exception $e) {
-                $logger = wc_get_logger();
-                $logger->error($e->getMessage(), array('source' => 'emogrifier'));
-            }
-
-            return $content;
-        }
-
-        /**
          * Adds marketplace email classes.
          *
          * @param array $email default mail array
@@ -666,6 +673,10 @@ if (!class_exists('Marketplace')):
             $email['WC_Email_Seller_register'] = include 'class-wc-email-seller-register.php';
 
             $email['WC_Email_Seller_order_placed'] = include 'class-wc-email-seller-order-placed.php';
+
+            $email['WC_Email_Seller_order_cancelled'] = include 'class-wc-email-seller-order-cancelled.php';
+
+            $email['WC_Email_Seller_order_failed'] = include 'class-wc-email-seller-order-failed.php';
 
             $email['WC_Email_Seller_Query_Reply'] = include 'class-wc-email-seller-query-reply.php';
 

@@ -3,8 +3,8 @@ Contributors: Webkul
 Tags: form, database, db, data, value, shortcode, submit
 WordPress :
   * Requires at least: 4.4
-  * Tested up to: 5.1.1
-WooCommerce: 3.5.x
+  * Tested up to: 5.1.2
+WooCommerce: 3.6.x
 License: GNU/GPL for more info see license.txt included with plugin
 License URI: https://store.webkul.com/license.html
 
@@ -60,6 +60,8 @@ Enhancement - Fixed shipping page issue.
 Enhancement - Fixed seller approve issue on seller-list page.
 Tweak - Added email templates
 Tweak - Added pagination in products list page in backend to load products faster.
+Tweak - Added compatibility with Webkul Marketplace Event Manager plugin.
+Tweak - Added compatibility with Webkul Marketplace Multicurrency plugin.
 Tweak - Added css for feedback popup.
 
 == 4.8.3

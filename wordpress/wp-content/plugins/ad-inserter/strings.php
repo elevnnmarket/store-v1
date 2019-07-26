@@ -175,7 +175,8 @@ define ('AI_TEXT_FIXED',                  _x('Fixed', 'size', 'ad-inserter'));
 define ('AI_TEXT_RESPONSIVE',             _x('Responsive', 'size', 'ad-inserter'));
 define ('AI_TEXT_FIXED_BY_VIEWPORT',      _x('Fixed by viewport', 'size', 'ad-inserter'));
 
-define ('DEFAULT_REPORT_HEADER_TITLE',          __('Ad Inserter Pro Report', 'ad-inserter'));
+                                                // Translators: %s: Ad Inserter Pro
+define ('DEFAULT_REPORT_HEADER_TITLE',          sprintf (__('%s Report', 'ad-inserter'), 'Ad Inserter Pro'));
 define ('DEFAULT_REPORT_HEADER_DESCRIPTION',    __('Impressions and clicks', 'ad-inserter'));
 define ('DEFAULT_REPORT_FOOTER',                AD_INSERTER_NAME . '        '. __('Advanced WordPress Ad Management Plugin', 'ad-inserter') . '        https://adinserter.pro/');
 

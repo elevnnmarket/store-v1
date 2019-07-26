@@ -3,7 +3,7 @@
 * Plugin Name: LoginPress - Customizing the WordPress Login
 * Plugin URI: https://WPBrigade.com/wordpress/plugins/loginpress/
 * Description: LoginPress is the best <code>wp-login</code> Login Page Customizer plugin by <a href="https://wpbrigade.com/">WPBrigade</a> which allows you to completely change the layout of login, register and forgot password forms.
-* Version: 1.2.0
+* Version: 1.2.4
 * Author: WPBrigade
 * Author URI: https://WPBrigade.com/
 * Text Domain: loginpress
@@ -22,7 +22,7 @@ if ( ! class_exists( 'LoginPress' ) ) :
     /**
     * @var string
     */
-    public $version = '1.2.0';
+    public $version = '1.2.4';
 
     /**
     * @var The single instance of the class
@@ -111,6 +111,7 @@ if ( ! class_exists( 'LoginPress' ) ) :
     /**
     * Hook into actions and filters
     * @since  1.0.0
+    * @version 1.2.2
     */
     private function _hooks() {
 
@@ -123,7 +124,6 @@ if ( ! class_exists( 'LoginPress' ) ) :
       add_action( 'admin_init',             array( $this, 'redirect_optin' ) );
       add_filter( 'auth_cookie_expiration', array( $this, '_change_auth_cookie_expiration' ), 10, 3 );
       //add_filter( 'plugins_api',            array( $this, 'get_addon_info_' ) , 100, 3 );
-      add_action( 'login_enqueue_scripts', array( $this, 'load_loginpress_assets' ) );
       if ( is_multisite() ) {
   			add_action( 'admin_init',             array( $this, 'redirect_loginpress_edit_page' ) );
   			add_action( 'admin_init',             array( $this, 'check_loginpress_page' ) );
@@ -327,24 +327,6 @@ if ( ! class_exists( 'LoginPress' ) ) :
 
  }
 
- /**
-    * Load assets on login screen.
-    *
-    * @since 1.0.0
-    * @version 1.1.14
-    */
-    function load_loginpress_assets() {
-
-      wp_enqueue_script( 'loginpress-script', plugins_url( 'js/loginpress.js', __FILE__ ), array( 'jquery' ), LOGINPRESS_VERSION );
-
-      // Array for localize.
-      $loginpress_localize = array(
-        'caps_lock' => __( 'Caps Lock is on', 'loginpress' ),
-      );
-
-      wp_localize_script( 'loginpress-script', 'loginpress_script', $loginpress_localize );
-    }
-
    /**
     * Session Expiration
     *
@@ -371,7 +353,7 @@ if ( ! class_exists( 'LoginPress' ) ) :
      */
     function _admin_scripts( $hook ) {
 
-      if( $hook == 'toplevel_page_loginpress-settings' || $hook == 'loginpress_page_loginpress-help' || $hook == 'loginpress_page_loginpress-import-export' || $hook == 'loginpress_page_loginpress-license' ) {
+      if( $hook == 'toplevel_page_loginpress-settings' || $hook == 'loginpress_page_loginpress-addons' || $hook == 'loginpress_page_loginpress-help' || $hook == 'loginpress_page_loginpress-import-export' || $hook == 'loginpress_page_loginpress-license' ) {
 
         wp_enqueue_style( 'loginpress_stlye', plugins_url( 'css/style.css', __FILE__ ), array(), LOGINPRESS_VERSION );
         wp_enqueue_script( 'loginpress_js', plugins_url( 'js/admin-custom.js', __FILE__ ), array(), LOGINPRESS_VERSION );
@@ -603,4 +585,3 @@ $notification = new TAV_Remote_Notification_Client( 125, '16765c0902705d62', 'ht
 
 register_activation_hook( __FILE__, array( 'LoginPress', 'plugin_activation' ) );
 register_uninstall_hook( __FILE__, array( 'LoginPress', 'plugin_uninstallation' ) );
-?>

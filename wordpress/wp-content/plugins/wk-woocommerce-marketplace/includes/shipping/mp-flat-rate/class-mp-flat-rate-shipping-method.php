@@ -267,7 +267,7 @@ if (!class_exists('MP_FLAT_RATE_SHIPPING_METHOD')) {
                                                 }
 
                                                 $ses_obj[$seller_details] = array(
-                                                    'cost' => $in_value->instance_settings['cost'],
+                                                    'cost' => apply_filters( 'mpmc_get_converted_price', $in_value->instance_settings['cost'] ),
                                                     'title' => $in_value->id,
                                                 );
 

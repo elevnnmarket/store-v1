@@ -242,8 +242,10 @@ class MP_Form_Handler
             $user_postcode = isset($_POST['wk_store_postcode']) ? strip_tags($_POST['wk_store_postcode']) : ''; // Input var okay.
 
             $user_country = isset($_POST['wk_store_country']) ? strip_tags($_POST['wk_store_country']) : ''; // Input var okay.
-
+			
             $user_state = isset($_POST['wk_store_state']) ? strip_tags($_POST['wk_store_state']) : ''; // Input var okay.
+
+			$user_payment_details = isset($_POST['mp_seller_payment_details']) ? strip_tags($_POST['mp_seller_payment_details']) : ''; // Input var okay.
 
             if ($user_address_1) {
                 if (preg_match('/^[A-Za-z0-9_ -]{1,40}$/', $user_address_1)) {
@@ -456,6 +458,10 @@ class MP_Form_Handler
                     $error['logo-error'] = $logo_error;
                 }
             }
+
+			if($user_payment_details != ''){
+				update_user_meta($current_user->ID, 'mp_seller_payment_details', $user_payment_details);
+			}
 
             do_action('mp_save_seller_profile_details', $_POST, $current_user->ID);
 

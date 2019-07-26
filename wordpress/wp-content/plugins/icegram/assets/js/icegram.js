@@ -326,13 +326,21 @@ Icegram_Message_Type.prototype.embed_form = function ( ) {
 					
 					this.el.find('.ig_form_container form').prepend(rm_error_div).append(rm_captch_div);
 				}
-				// es form support
+				// es form support shortcode
 				if(this.el.find('[data-es_form_id = "es_shortcode_form" ]').length > 0){
 					this.el.find('[data-es_form_id = "es_shortcode_form" ]').addClass('es_shortcode_form');
 					var es_captcha_div = jQuery(form_text).find('.es_captcha');
 					this.el.find('.es_shortcode_form').parent().append(es_captcha_div);
 					this.el.find('.es_shortcode_form').parent().addClass('es_form_container');
 				}
+				//es form support direct
+				if(this.el.find('form[data-source="ig-es"]').length > 0){
+					var es_captcha_div = jQuery(form_text).find('.es_captcha');
+					this.el.find('form[data-source="ig-es"] .ig_button').parent().before(es_captcha_div);
+					this.el.find('form[data-source="ig-es"] .es_captcha').addClass('ig_form_els');
+					this.el.find('form[data-source="ig-es"]').addClass('es_form_container');
+				}
+				
 				
 
 				if(form_has_label == undefined ){ 
@@ -877,7 +885,7 @@ var es_responseHandler = function (e, data) {
 	  			msg.el.trigger('form_success.ig_cta', [msg]);
   			}else{
   				if(typeof msg.data.use_form !== 'undefined'){
-		  			jQuery(e.target).append('<div class="es_msg es_msg_ig">'+ (data.detail.msg) +'</div>');
+		  			jQuery(e.target).append('<div class="es_msg es_msg_ig es_subscription_message '+data.detail.es_response+'">'+ (data.detail.msg) +'</div>');
 		  		}
   			}
   		}

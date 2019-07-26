@@ -1,6 +1,31 @@
 /**
  * This file handling some LIVE to the LoginPress Customizer live preview.
  */
+ /**
+   * [loginpress_manage_customizer_controls description]
+   * @param  [array/string] controler controler name.
+   * @param  boolean action    Trun on/off the customizer control.
+   * @return string           CSS code.
+   */
+   function loginpress_manage_customizer_controls( controler, action ) {
+
+    if ( Array.isArray( controler ) ) {
+      controler.forEach( function ( item, index ) {
+        if ( 'on' == action ) {
+          $( '#customize-control-loginpress_customization-' + item ).fadeIn().css( 'display', 'list-item' );
+        } else {
+          $( '#customize-control-loginpress_customization-' + item ).fadeOut().css( 'display', 'none' );
+        }
+      } );
+    } else {
+      if ( 'on' == action ) {
+        $( '#customize-control-loginpress_customization-' + controler ).fadeIn().css( 'display', 'list-item' );
+      } else {
+        $( '#customize-control-loginpress_customization-' + controler ).fadeOut().css( 'display', 'none' );
+      }
+    }
+  }
+  var formbg;
 jQuery(document).ready(function($) {
 
     // Update gallery default thumbnail on load. @since 1.1.3
@@ -46,7 +71,12 @@ jQuery(document).ready(function($) {
     }else{
       $('#customize-control-loginpress_customization-textfield_label_color,#customize-control-loginpress_customization-customize_form_label').show();
     }
-
+    if(checkbox_values == 'default18') {
+      loginpress_manage_customizer_controls( ['setting_logo', 'customize_logo_width', 'customize_logo_height'], 'off' );
+    } else {
+      loginpress_manage_customizer_controls( ['setting_logo', 'customize_logo_width', 'customize_logo_height'], 'on' );
+    }
+    formbg = $('#customize-preview iframe').contents().find( '#login' ).css( 'background');
   } );
 } ); // jQuery( document ).ready
 
@@ -391,7 +421,7 @@ jQuery(document).ready(function($) {
         // Control on footer back link text.
         if ('loginpress_customization[back_display_text]' == setting && false == loginPressVal ) {
 
-          // $( '#customize-preview iframe' ).contents().find( '.login #backtoblog' ).css( 'display', 'none' );
+          $( '#customize-preview iframe' ).contents().find( '.login #backtoblog' ).css( 'display', 'none' );
           $('#customize-control-loginpress_customization-login_back_text_decoration').fadeOut().css( 'display', 'none' );
           $('#customize-control-loginpress_customization-login_back_color').fadeOut().css( 'display', 'none' );
           $('#customize-control-loginpress_customization-login_back_color_hover').fadeOut().css( 'display', 'none' );
@@ -400,7 +430,7 @@ jQuery(document).ready(function($) {
 
         } else if ('loginpress_customization[back_display_text]' == setting && true == loginPressVal ) {
 
-          // $( '#customize-preview iframe' ).contents().find( '.login #backtoblog' ).css( 'display', 'block' );
+          $( '#customize-preview iframe' ).contents().find( '.login #backtoblog' ).css( 'display', 'block' );
           $('#customize-control-loginpress_customization-login_back_text_decoration').fadeIn().css( 'display', 'list-item' );
           $('#customize-control-loginpress_customization-login_back_color').fadeIn().css( 'display', 'list-item' );
           $('#customize-control-loginpress_customization-login_back_color_hover').fadeIn().css( 'display', 'list-item' );
@@ -427,8 +457,34 @@ jQuery(document).ready(function($) {
           $( '#customize-preview iframe' ).contents().find( '.login #loginpress_video-background' ).css( 'display', 'block' );
           if( $( '#customize-preview iframe' ).contents().find( '.login #loginpress_video-background' ).length > 0 ){
             $( '#customize-preview iframe' ).contents().find( '.login #loginpress_video-background' )[0].play();
+          } else {
+            // $( '#customize-preview iframe' ).contents().find( '.login #loginpress_video-background' )
+            var video = $('#customize-control-loginpress_customization-background_video video').html();
+            var muted_video = '';
+            if ( $('[data-customize-setting-link="loginpress_customization[background_video_muted]"]').is(':checked') ) {
+              muted_video = ' muted ';
+            }
+            if ( $('#customize-control-loginpress_customization-background_video video').length > 0 ) {
+              if( $('#customize_presets_settingsdefault6').is(':checked') || $('#customize_presets_settingsdefault10').is(':checked') || $('#customize_presets_settingsdefault17').is(':checked')) {
+                $( '#customize-preview iframe' ).contents().find('#login').append("<div id=\"loginpress_video-background-wrapper\"><video autoplay loop id=\"loginpress_video-background\"" + muted_video + " plays-inline>\n" + video + "</video></div>\n");
+              } else if( $('#customize_presets_settingsdefault17').is(':checked') || $('#customize_presets_settingsdefault18').is(':checked') ) {
+                $( '#customize-preview iframe' ).contents().find('.login').append("<div id=\"loginpress_video-background-wrapper\"><video autoplay loop id=\"loginpress_video-background\"" + muted_video + " plays-inline>\n" + video + "</video></div>\n");
+              } else {
+                $( '#customize-preview iframe' ).contents().find('.login').append("<video autoplay loop id=\"loginpress_video-background\"" + muted_video + " plays-inline>\n" + video + "</video>\n");
+              }
+              $( '#customize-preview iframe' ).contents().find( '.login #loginpress_video-background' )[0].play();
+            }
           }
           $('#customize-control-loginpress_customization-background_video').fadeIn().css( 'display', 'list-item' );
+          if($('#customize-control-loginpress_customization-background_video video').length>0){
+            $('#customize-control-loginpress_customization-background_video_object').fadeIn().css( 'display', 'list-item' );
+            $('#customize-control-loginpress_customization-video_obj_position').fadeIn().css( 'display', 'list-item' );
+            $('#customize-control-loginpress_customization-background_video_muted').fadeIn().css( 'display', 'list-item' );
+          }else{
+            $('#customize-control-loginpress_customization-background_video_object').fadeOut().css( 'display', 'none' );
+            $('#customize-control-loginpress_customization-video_obj_position').fadeOut().css( 'display', 'none' );
+            $('#customize-control-loginpress_customization-background_video_muted').fadeOut().css( 'display', 'none' );
+          }
 
         }
 
@@ -455,23 +511,28 @@ jQuery(document).ready(function($) {
       });
     });
   }
+  $(window).on('load',function(){
+    if($('[data-customize-setting-link="loginpress_customization[setting_form_display_bg]"]').is(':checked')){
+      loginpress_find('#login').addClass('login_tranparent');
+    }
 
-  // Update the login logo width in real time...
+  });
+  // Update the login logo width in real time... // v1.2.2
   wp.customize( 'loginpress_customization[setting_form_display_bg]', function( value ) {
     value.bind( function( loginPressVal ) {
-      var formbg;
       if($('#customize-control-loginpress_customization-form_background_color .wp-color-picker').val().length>0){
         formbg = $('#customize-control-loginpress_customization-form_background_color .wp-color-picker').val();
       }
-
       if ( loginPressVal == true ) {
-        loginpress_find( '#login, #loginform' ).css( 'background-color', 'transparent' );
-        loginpress_find( '#login, #loginform' ).css( 'background-image', 'none' );
+        // loginpress_find( '#login, #loginform' ).css( 'background-color', 'transparent' );
+        // loginpress_find( '#login, #loginform' ).css( 'background-image', 'none' );
+        loginpress_find('#login').addClass('login_tranparent');
         $('#customize-control-loginpress_customization-form_background_color').fadeOut().hide();
         $('#customize-control-loginpress_customization-setting_form_background').fadeOut().hide();
       } else{
-        loginpress_find('#loginform').css('background-image', 'url('+formbgimg+')');
-          loginpress_find( '#login, #loginform' ).css( 'background-color', formbg );
+        // loginpress_find('#loginform').css('background-image', 'url('+formbgimg+')');
+        //   loginpress_find( '#login, #loginform' ).css( 'background-color', formbg );
+        loginpress_find('#login').removeClass('login_tranparent');
 
         $('#customize-control-loginpress_customization-form_background_color').fadeIn().show();
         $('#customize-control-loginpress_customization-setting_form_background').fadeIn().show();
@@ -486,7 +547,9 @@ jQuery(document).ready(function($) {
    */
   function loginpress_customizer_bg(customizer_bg) {
 
-    if ( 'default1' == customizer_bg ) {
+    if ( 'default1' == customizer_bg && loginpress_script.filter_bg.length > 0 ) {
+      loginpress_bg = 'url(' + loginpress_script.filter_bg + ')';
+    } else if ( 'default1' == customizer_bg ) {
       loginpress_bg = 'url(' + loginpress_script.plugin_url + '/loginpress/img/bg.jpg)';
     } else if ( 'default2' == customizer_bg ) {
       loginpress_bg = 'url(' + loginpress_script.plugin_url + '/loginpress/img/bg2.jpg)';
@@ -523,6 +586,8 @@ jQuery(document).ready(function($) {
     }
   }
 
+
+
   // Enable / Disable LoginPress Background.
   wp.customize( 'loginpress_customization[loginpress_display_bg]', function(value) {
     value.bind( function(loginPressVal) {
@@ -550,7 +615,8 @@ jQuery(document).ready(function($) {
         }
 
         // Turn Off the Dependencies controls.
-        $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().hide();
+        // $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().hide();
+        loginpress_manage_customizer_controls( ['gallery_background', 'setting_background', 'background_repeat_radio', 'background_position', 'background_image_size'], 'off' );
 
       } else {
         if ( localStorage.loginpress_bg ) {
@@ -617,8 +683,9 @@ jQuery(document).ready(function($) {
         }
 
         // Turn On the Dependencies controls.
-        $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().show();
-        if($('#customize-control-loginpress_customization-setting_background .attachment-thumb').length>0){
+        // $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().show();
+        loginpress_manage_customizer_controls( ['gallery_background', 'setting_background', 'background_repeat_radio', 'background_position', 'background_image_size'], 'on' );
+        if( $('#customize-control-loginpress_customization-setting_background .attachment-thumb').length > 0 ) {
           $('#customize-control-loginpress_customization-gallery_background').hide();
         }
 
@@ -1361,6 +1428,8 @@ jQuery(document).ready(function($) {
       }
     });
   });
+
+
   /**
    * @since 1.0.9
    * @version 1.0.12
@@ -1380,12 +1449,12 @@ jQuery(document).ready(function($) {
     }
 
     if ( $('#customize-control-loginpress_customization-loginpress_display_bg input[type="checkbox"]').is(":checked") ) {
-      $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().show();
+      $('#customize-control-loginpress_customization-loginpress_display_bg').nextUntil('#customize-control-loginpress_customization-bg_video_group').show();
       if($('#customize-control-loginpress_customization-setting_background .attachment-thumb').length>0){
         $('#customize-control-loginpress_customization-gallery_background').hide();
       }
     } else {
-      $('#customize-control-loginpress_customization-loginpress_display_bg').nextAll().hide();
+      $('#customize-control-loginpress_customization-loginpress_display_bg').nextUntil('#customize-control-loginpress_customization-bg_video_group').hide();
     }
 
     if ( $('#customize-control-loginpress_customization-setting_background .attachment-media-view-image').length > 0  ) {
@@ -1466,16 +1535,75 @@ jQuery(document).ready(function($) {
       $('#customize-control-loginpress_customization-video_obj_position').css( 'display', 'none' );
       $('#customize-control-loginpress_customization-background_video_muted').css( 'display', 'none' );
     }
+    if ( $('#customize-control-loginpress_customization-background_video video').length > 0 && !$('#customize-control-loginpress_customization-loginpress_display_bg_video input[type="checkbox"]').is(":checked") ) {
 
+      $('#customize-control-loginpress_customization-background_video').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-background_video_object').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-video_obj_position').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-background_video_muted').css( 'display', 'none' );
+    } else if( !$('#customize-control-loginpress_customization-loginpress_display_bg_video input[type="checkbox"]').is(":checked")) {
+
+      $('#customize-control-loginpress_customization-background_video').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-background_video_object').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-video_obj_position').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-background_video_muted').css( 'display', 'none' );
+    } else if($('#customize-control-loginpress_customization-background_video video').length == 0 && $('#customize-control-loginpress_customization-loginpress_display_bg_video input[type="checkbox"]').is(":checked")) {
+
+      $('#customize-control-loginpress_customization-background_video').css( 'display', 'list-item' );
+      $('#customize-control-loginpress_customization-background_video_object').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-video_obj_position').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-background_video_muted').css( 'display', 'none' );
+    } else {
+      $('#customize-control-loginpress_customization-background_video').css( 'display', 'list-item' );
+      $('#customize-control-loginpress_customization-background_video_object').css( 'display', 'list-item' );
+      $('#customize-control-loginpress_customization-video_obj_position').css( 'display', 'list-item' );
+      $('#customize-control-loginpress_customization-background_video_muted').css( 'display', 'list-item' );
+    }
     $("<style type='text/css' id='loginpress-customize'></style>").appendTo(loginpress_find('head'));
     $("<style type='text/css' id='loginpress-iframe-bgColor'></style>").appendTo(loginpress_find('head'));
     $("<style type='text/css' id='loginpress-scbg-position'></style>").appendTo(loginpress_find('head'));
     $("<style type='text/css' id='loginpress-scbg-size'></style>").appendTo(loginpress_find('head'));
     $("<style type='text/css' id='loginpress-scbg-repeat'></style>").appendTo(loginpress_find('head'));
 
-    if ( loginpress_script.autoFocusPanel ) { // Auto Focus on LoginPress Panel // 1.1.26 
+    if ( loginpress_script.autoFocusPanel ) { // Auto Focus on LoginPress Panel // 1.2.0
       wp.customize.panel("loginpress_panel").focus();
     }
+
+    if ( 'v2-robot' != loginpress_script.recaptchaType ) { // Disabled reCaptcha Size Option in customizer. // 1.2.1 - 2.1.2 Pro
+      $("#customize-control-loginpress_customization-recaptcha_size select").attr('disabled', 'disabled');
+    }
+
+    if( $('#customize_presets_settingsdefault18').is(':checked') == true ) {
+
+      loginpress_manage_customizer_controls( ['setting_logo', 'customize_logo_width', 'customize_logo_height'], 'off' );
+      loginpress_find('#loginform #user_login').on('focus',function(){
+        loginpress_find('.login h1 a').attr('data-state', 'uifocus');
+        loginpress_find('.login h1 a').addClass('watchdown');
+      });
+      loginpress_find('#loginform #user_login').on('blur',function(){
+        loginpress_find('.login h1 a').attr('data-state', 'uiblur');
+        loginpress_find('.login h1 a').removeClass('watchdown').addClass('watchup');
+        setTimeout( function() {
+          loginpress_find('.login h1 a').removeClass('watchup');
+        }, 800);
+      });
+      loginpress_find('#loginform #user_pass').on('focus',function(){
+        loginpress_find('.login h1 a').attr('data-state', 'pwfocus');
+        setTimeout( function() {
+          loginpress_find('.login h1 a').addClass('yeti-hide');
+        }, 800);
+      });
+      loginpress_find('#loginform #user_pass').on('blur',function(){
+        loginpress_find('.login h1 a').attr('data-state', 'pwblur');
+        loginpress_find('.login h1 a').removeClass('yeti-hide').addClass('yeti-seak');
+        setTimeout( function() {
+          loginpress_find('.login h1 a').removeClass('yeti-seak');
+        }, 500);
+      });
+    } else {
+      loginpress_manage_customizer_controls( ['setting_logo', 'customize_logo_width', 'customize_logo_height'], 'on' );
+    }
+
 
   });
 

@@ -67,6 +67,14 @@ class Plugin_DVE {
                     $this->dce_file_include( 'class/DCE_Helper.php' );
                 }
 
+                add_action('elementor/frontend/after_register_styles', function() {
+                    wp_register_style(
+                        'dce-style', plugins_url('/assets/css/style.css', DVE__FILE__), [], DVE_VERSION
+                    );
+                    // Enqueue DCE Elementor Style
+                    wp_enqueue_style('dce-style');
+                });
+                
                 // DCE Custom Icons - in Elementor Editor
                 add_action('elementor/preview/enqueue_styles', function(){
                     wp_register_style(
@@ -112,9 +120,9 @@ class Plugin_DVE {
            wp_enqueue_style('dce-style-editor');
 
            wp_register_script(
-                   'dce-script-editor', plugins_url('/assets/js/dce-editor.js', DCE__FILE__), [], DVE_VERSION
+                   'dce-script-editor-visibility', plugins_url('/assets/js/dce-editor-visibility.js', DCE__FILE__), [], DVE_VERSION
            );
-           wp_enqueue_script('dce-script-editor');
+           wp_enqueue_script('dce-script-editor-visibility');
        }
        
        public function dce_file_include( $file ) {

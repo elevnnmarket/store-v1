@@ -103,13 +103,13 @@ if ( $current_user->ID ) {
 								</div>
 								<div class="wkmp_profile_input">
 									<label for="wk_shop_add"><?php esc_html_e( 'Shop URL', 'marketplace' ); ?></label>
-									<input type="text" placeholder="Shop Address" value="<?php echo isset( $user_meta_arr['shop_address'] ) ? esc_html( $user_meta_arr['shop_address'] ) : ''; ?>" name="wk_storeurl" id="wk_storeurl" class="wk_loginput" disabled="disabled" readonly/>
+									<input type="text" placeholder="<?php esc_html_e('Shop Address', 'marketplace'); ?>" value="<?php echo isset( $user_meta_arr['shop_address'] ) ? esc_html( $user_meta_arr['shop_address'] ) : ''; ?>" name="wk_storeurl" id="wk_storeurl" class="wk_loginput" disabled="disabled" readonly/>
 									<div class="error-class" id="seller_storeaddress"></div>
 									<i><?php echo esc_html__( 'Shop URL cannot be changed.', 'marketplace' ); ?></i>
 								</div>
 								<div class="wkmp_profile_input">
 									<label for="wk_shop_add"><?php esc_html_e( 'Phone Number', 'marketplace' ); ?></label>
-									<input type="text" placeholder="Shop Phone Number" value="<?php echo isset( $user_meta_arr['billing_phone'] ) ? esc_html( $user_meta_arr['billing_phone'] ) : ''; ?>" name="wk_storephone" id="wk_storephone" class="wk_loginput"/>
+									<input type="text" placeholder="<?php esc_html_e('Shop Phone Number', 'marketplace');?>" value="<?php echo isset( $user_meta_arr['billing_phone'] ) ? esc_html( $user_meta_arr['billing_phone'] ) : ''; ?>" name="wk_storephone" id="wk_storephone" class="wk_loginput"/>
 									<div class="error-class" id="seller_storephone"></div>
 								</div>
 
@@ -121,19 +121,19 @@ if ( $current_user->ID ) {
 
 								<div class="wkmp_profile_input">
 									<label for="wk_store_add2"><?php esc_html_e( 'Address Line 2', 'marketplace' ); ?></label>
-									<input type="text" placeholder="Shop Address 2" value="<?php echo isset( $user_meta_arr['billing_address_2'] ) ? esc_html( $user_meta_arr['billing_address_2'] ) : ''; ?>" name="wk_store_add2" id="wk-store-add2" class="wk_loginput"/>
+									<input type="text" placeholder="<?php esc_html_e('Shop Address 2', 'marketplace');?>" value="<?php echo isset( $user_meta_arr['billing_address_2'] ) ? esc_html( $user_meta_arr['billing_address_2'] ) : ''; ?>" name="wk_store_add2" id="wk-store-add2" class="wk_loginput"/>
 									<div class="error-class" id="seller_store_add2"></div>
 								</div>
 
 								<div class="wkmp_profile_input">
 									<label for="wk_store_city"><?php esc_html_e( 'City', 'marketplace' ); ?></label>
-									<input type="text" placeholder="City" value="<?php echo isset( $user_meta_arr['billing_city'] ) ? esc_html( $user_meta_arr['billing_city'] ) : ''; ?>" name="wk_store_city" id="wk-store-city" class="wk_loginput"/>
+									<input type="text" placeholder="<?php esc_html_e('City', 'marketplace'); ?>" value="<?php echo isset( $user_meta_arr['billing_city'] ) ? esc_html( $user_meta_arr['billing_city'] ) : ''; ?>" name="wk_store_city" id="wk-store-city" class="wk_loginput"/>
 									<div class="error-class" id="seller_store_city"></div>
 								</div>
 
 								<div class="wkmp_profile_input">
 									<label for="wk_store_postcode"><?php esc_html_e( 'Postal Code', 'marketplace' ); ?></label>
-									<input type="text" placeholder="Postcode" value="<?php echo isset( $user_meta_arr['billing_postcode'] ) ? esc_html( $user_meta_arr['billing_postcode'] ) : ''; ?>" name="wk_store_postcode" id="wk-store-postcode" class="wk_loginput"/>
+									<input type="text" placeholder="<?php esc_html_e('Postcode', 'marketplace'); ?>" value="<?php echo isset( $user_meta_arr['billing_postcode'] ) ? esc_html( $user_meta_arr['billing_postcode'] ) : ''; ?>" name="wk_store_postcode" id="wk-store-postcode" class="wk_loginput"/>
 									<div class="error-class" id="seller_store_postcode"></div>
 								</div>
 
@@ -152,7 +152,7 @@ if ( $current_user->ID ) {
 											'default'     => $country_code,
 											'class'       => array( 'chzn-drop' ),
 											'options'     => $countries,
-											'placeholder' => __( 'Select a country' ),
+											'placeholder' => __( 'Select a country', 'marketplace' ),
 										) );
 										echo '</div></div>';
 										$state_code = isset( $user_meta_arr['billing_state'] ) ? $user_meta_arr['billing_state'] : '';
@@ -169,7 +169,7 @@ if ( $current_user->ID ) {
 													'default' => $state_code,
 													'class' => array( 'chzn-drop' ),
 													'options' => $states,
-													'placeholder' => __( 'Select a country' ),
+													'placeholder' => __( 'Select a country', 'marketplace' ),
 												) );
 												?>
 											</div>
@@ -179,7 +179,7 @@ if ( $current_user->ID ) {
 										?>
 										<div class="wkmp_profile_input" >
 											<label for="wk_store_state"><?php esc_html_e( 'State / County', 'marketplace' ); ?></label>
-											<input id="wk_store_state" type="text" placeholder="State" name="wk_store_state" class="wk_loginput" value="<?php echo esc_html( $state_code ); ?>" />
+											<input id="wk_store_state" type="text" placeholder="<?php esc_html_e('State', 'marketplace'); ?>" name="wk_store_state" class="wk_loginput" value="<?php echo esc_html( $state_code ); ?>" />
 										</div>
 										<?php
 										}
@@ -299,18 +299,12 @@ if ( $current_user->ID ) {
 
 					<!-- seller paymentmethod -->
 					<div class="wkmp_profile_input">
+						<label for="mp_seller_payment_details"><?php esc_html_e( 'Payment Information', 'marketplace' ); ?></label>
+						<textarea name="mp_seller_payment_details" placeholder="<?php esc_html_e('eg : test@paypal.com', 'marketplace'); ?>"><?php if ( isset( $user_meta_arr['mp_seller_payment_details'] ) ) echo $user_meta_arr['mp_seller_payment_details']; ?></textarea><br /><br />
 						<?php
-						if ( isset( $user_meta_arr['mp_seller_payment_method'] ) ) {
-							$stripe_unserialize_data = maybe_unserialize( $user_meta_arr['mp_seller_payment_method'] );
-						}
+							$paymet_gateways = WC()->payment_gateways->payment_gateways();
+							do_action( 'marketplace_payment_gateway' );
 						?>
-						<label for="mp_seller_payment_method"><?php esc_html_e( 'Payment Information', 'marketplace' ); ?></label>
-						<textarea name="mp_seller_payment_method" placeholder="eg : test@paypal.com"><?php if ( isset( $stripe_unserialize_data['standard'] ) ) echo $stripe_unserialize_data['standard']; ?></textarea><br /><br />
-							<?php
-								$paymet_gateways = WC()->payment_gateways->payment_gateways();
-								do_action( 'marketplace_payment_gateway' );
-							?>
-
 					</div>
 
 					<?php do_action( 'mp_add_seller_profile_field', $current_user->ID ); ?>

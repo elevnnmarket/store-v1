@@ -29,7 +29,7 @@ if (!defined( 'AD_INSERTER_NAME'))
   define ('AD_INSERTER_NAME', 'Ad Inserter');
 
 if (!defined( 'AD_INSERTER_VERSION'))
-  define ('AD_INSERTER_VERSION', '2.4.18');
+  define ('AD_INSERTER_VERSION', '2.4.22');
 
 if (!defined ('AD_INSERTER_PLUGIN_BASENAME'))
   define ('AD_INSERTER_PLUGIN_BASENAME', plugin_basename (__FILE__));
@@ -152,6 +152,8 @@ define ('AI_OPTION_DETECT_VIEWPORT',             'detect_viewport');
 define ('AI_OPTION_ADB_BLOCK_ACTION',            'adb-block-action');
 define ('AI_OPTION_ADB_BLOCK_REPLACEMENT',       'adb-block-replacement');
 define ('AI_OPTION_CLOSE_BUTTON',                'close-button');
+define ('AI_OPTION_AUTO_CLOSE_TIME',             'auto-close-time');
+define ('AI_OPTION_STAY_CLOSED_TIME',            'stay-closed-time');
 define ('AI_OPTION_HORIZONTAL_MARGIN',           'horizontal-margin');
 define ('AI_OPTION_VERTICAL_MARGIN',             'vertical-margin');
 define ('AI_OPTION_ANIMATION',                   'animation');
@@ -752,6 +754,8 @@ define ('DEFAULT_DISABLE_CACHING',              AI_DISABLE_CACHING_ENABLED);
 define ('DEFAULT_GEO_DB',                       AI_GEO_DB_WEBNET77);
 define ('DEFAULT_GEO_DB_UPDATES',               AI_DISABLED);
 define ('DEFAULT_CLOSE_BUTTON',                 AI_CLOSE_NONE);
+define ('DEFAULT_AUTO_CLOSE_TIME',              '');
+define ('DEFAULT_STAY_CLOSED_TIME',             '');
 define ('DEFAULT_SERVER_SIDE_INSERTION',        AI_AUTOMATIC_INSERTION_FOOTER);
 define ('DEFAULT_HTML_ELEMENT_INSERTION',       AI_HTML_INSERTION_CLIENT_SIDE_DOM_READY);
 define ('DEFAULT_INSIDE_ELEMENT',               AI_HTML_PREPEND_CONTENT);

@@ -25,6 +25,32 @@
 				$document = $( document ); // Store references to the body and document elements
 
 				// Append our button to the <body> element
+				if( $('.login-action-login').length > 0 ) {
+					$('#loginform #user_login').on('focus',function(){
+						$('.login h1 a').attr('data-state', 'uifocus');
+						$('.login h1 a').addClass('watchdown');
+					});
+					$('#loginform #user_login').on('blur',function(){
+						$('.login h1 a').attr('data-state', 'uiblur');
+						$('.login h1 a').removeClass('watchdown').addClass('watchup');
+						setTimeout( function() {
+						  $('.login h1 a').removeClass('watchup');
+						}, 800);
+					});
+					$('#loginform #user_pass').on('focus',function(){
+						$('.login h1 a').attr('data-state', 'pwfocus');
+						setTimeout( function() {
+						  $('.login h1 a').addClass('yeti-hide');
+						}, 800);
+					});
+					$('#loginform #user_pass').on('blur',function(){
+						$('.login h1 a').attr('data-state', 'pwblur');
+						$('.login h1 a').removeClass('yeti-hide').addClass('yeti-seak');
+						setTimeout( function() {
+						  $('.login h1 a').removeClass('yeti-seak');
+						}, 800);
+					});
+				}
 				if( $('.login-action-login').length > 0 ) { // If .login-action-login exist
 
 					$body_bg.append( '<span class="loginpress-logo-partial loginpress-partial customize-partial-edit-shortcut" data-title="Change Logo"><button class="loginpress-event-button customize-partial-edit-shortcut-button" data-customizer-event="customize_logo_section"><span class="dashicons dashicons-edit"></span></button></span>' );

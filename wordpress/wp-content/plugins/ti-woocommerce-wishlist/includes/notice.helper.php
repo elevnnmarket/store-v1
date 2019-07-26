@@ -114,7 +114,7 @@ class TInvWL_Notice {
 		}
 		$output = '<div id="message" class="updated woocommerce-message"><a class="woocommerce-message-close notice-dismiss" href="' . esc_url( wp_nonce_url( add_query_arg( 'ti-hide-notice', $name, add_query_arg( 'ti-hide-notice-trigger', $key ) ), 'ti_hide', '_ti_notice_nonce' ) ) . '">' . __( 'Dismiss', 'ti-woocommerce-wishlist' ) . '</a>' . wp_kses_post( wpautop( $message ) ) . '</div>';
 
-		echo apply_filters( 'tinv_notice_' . $name, $output, $key, $message ); // WPCS: XSS ok.
+		echo apply_filters( 'tinvwl_notice_' . $name, $output, $key, $message ); // WPCS: XSS ok.
 	}
 
 	public static function remove( $name ) {
@@ -352,10 +352,10 @@ class TInvWL_Notice {
 			if ( ! empty( $name ) ) {
 				if ( isset( $data['_ti_notice_nonce'] ) && wp_verify_nonce( $data['_ti_notice_nonce'], 'ti_hide' ) ) {
 					self::hide( $name, $data['ti-hide-notice-trigger'] );
-					do_action( 'tinv_notice_hide_' . $name );
+					do_action( 'tinvwl_notice_hide_' . $name );
 				} elseif ( isset( $data['_ti_notice_nonce'] ) && wp_verify_nonce( $data['_ti_notice_nonce'], 'ti_remove' ) ) {
 					self::remove_notice( $name );
-					do_action( 'tinv_notice_remove_' . $name );
+					do_action( 'tinvwl_notice_remove_' . $name );
 				}
 			}
 		}

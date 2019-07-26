@@ -69,19 +69,19 @@ if (!class_exists('MP_Register_Handler')) {
             return $error;
         }
 
-		public function wk_seller_registration_redirect($redirect){
+        public function wk_seller_registration_redirect($redirect){
 
-			global $wpdb;
-			$query = "SELECT * FROM  {$wpdb->prefix}mpsellerinfo WHERE user_id = ".get_current_user_id();
-			$result = $wpdb->get_results($query);
+            global $wpdb;
+            $query = "SELECT * FROM  {$wpdb->prefix}mpsellerinfo WHERE user_id = ".get_current_user_id();
+            $result = $wpdb->get_results($query);
 
-			if($result){
-				
-				$redirect  = site_url( '/seller-info' );
-			}
+            if($result){
+                
+                $redirect  = site_url( '/seller-info' );
+            }
 
-			return $redirect;
-		}
+            return $redirect;
+        }
 
         /**
          * Inject first and last name to WooCommerce for new seller registraion.
@@ -111,11 +111,6 @@ if (!class_exists('MP_Register_Handler')) {
         public function process_registration($user_id, $data)
         {
             global $wpdb;
-            $Isregistered = '';
-            $a = '';
-            $page_id = $this->get_page_id(get_option('wkmp_seller_page_title'));
-
-            $b = get_permalink(get_option('woocommerce_myaccount_page_id'));
 
             if (isset($data['register'])) {
                 if (isset($data['user_login']) && isset($data['wk_firstname']) && isset($data['wk_lastname']) && isset($data['user_login']) && isset($data['user_nicename']) && isset($data['store_name'])) {
@@ -137,8 +132,6 @@ if (!class_exists('MP_Register_Handler')) {
                         if (email_exists($user_email)) {
                             $user_creds = array('user_nicename' => "$store_url", 'display_name' => "$user_nick");
                             $newuser_id = wp_update_user($user_creds);
-
-                            $Isregistered = 'Regitered';
                         }
                         unset($_POST);
 
@@ -160,7 +153,7 @@ if (!class_exists('MP_Register_Handler')) {
                         throw new Exception('success');
                     } catch (Exception $e) {
                         if ($e->getMessage() == 'success') {
-                            wc_add_notice(apply_filters('register_errors', 'Registration complete check your mail for password!'), $e->getMessage());
+                            wc_add_notice(apply_filters('register_errors', esc_html__('Registration complete check your mail for password!', 'marketplace')), $e->getMessage());
                         } else {
                             wc_add_notice(apply_filters('register_errors', $e->getMessage()), 'error');
                         }
@@ -169,16 +162,7 @@ if (!class_exists('MP_Register_Handler')) {
             }
         }
 
-        public function get_page_id($page_name)
-        {
-            global $wpdb;
-            $page_ID = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."'");
-
-            return $page_ID;
-        }
-
         //send mail to new registerd user
-
         public function mp_seller_meta($user, $seller_key, $seller_val)
         {
             global $wpdb;
@@ -200,47 +184,6 @@ if (!class_exists('MP_Register_Handler')) {
             }
 
             return $seller_res;
-        }
-
-        //send new user mail
-        public function mp_user_welcome($user_id, $newuser_pass, $permalink)
-        {
-            $mp_user = new WP_User($user_id);
-            $user_login = stripslashes($mp_user->user_login);
-            $user_email = stripslashes($mp_user->user_email);
-            $message = sprintf(__('New user registration on ').get_option('blogname').':')."\r\n\r\n";
-            $message .= sprintf(__('Username: ').$user_login)."\r\n\r\n";
-            $message .= sprintf(__('E-mail: ').$user_email)."\r\n";
-
-            @wp_mail(
-                get_option('admin_email'),
-                sprintf(get_option('blogname').__(' New User Registration ')),
-                $message
-            );
-            if (empty($newuser_pass)) {
-                return;
-            }
-
-            $message = __('Hi '.$user_login.',')."\r\n\r\n";
-            $message .= sprintf(__('Welcome to ', 'marketplace').get_option('blogname').__("! Here's how to log in:", 'marketplace'))."\r\n\r\n";
-            $message .= wp_login_url()."\r\n";
-            $message .= sprintf(__('Username: ', 'marketplace').$user_login)."\r\n";
-            $message .= sprintf(__('Password: ', 'marketplace').$newuser_pass)."\r\n\r\n";
-            if (get_option('wkmp_auto_approve_seller')) {
-                $message .= sprintf(__('Your account has been created Click here to login', 'marketplace'), $permalink)."\r\n\r\n";
-            } else {
-                $message .= sprintf(__('Your account has been created awaiting for admin approval.', 'marketplace'))."\r\n\r\n";
-            }
-
-            $message .= sprintf(__('If you have any problems, please contact me at .', 'marketplace').get_option('admin_email'))."\r\n\r\n";
-            $message .= __('Adios!');
-            $mail_send = wp_mail(
-                $user_email,
-                sprintf(get_option('blogname').__(' Your username and password', 'marketplace')),
-                $message
-            );
-
-            return $mail_send;
         }
     }
 }

@@ -3,10 +3,10 @@
  * Plugin Name: Icegram - Popups, Optins, CTAs & lot more...
  * Plugin URI: https://www.icegram.com/
  * Description: All in one solution to inspire, convert and engage your audiences. Action bars, Popup windows, Messengers, Toast notifications and more. Awesome themes and powerful rules.
- * Version: 1.10.28.2
+ * Version: 1.10.30.1
  * Author: icegram
  * Author URI: https://www.icegram.com/
- * Copyright (c) 2014-16 Icegram
+ * Copyright (c) 2014-19 Icegram
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -33,9 +33,10 @@ class Icegram {
     public static $current_page_id;
     
     function __construct() {
-        global $ig_feedback; 
+        global $ig_feedback, $ig_tracker;
+        $feedback_version = '1.0.5';
 
-        $this->version = "1.10.28.2";
+        $this->version = "1.10.30.1";
         $this->shortcode_instances = array();
         $this->mode = 'local';
         $this->plugin_url   = untrailingslashit( plugins_url( '/', __FILE__ ) );
@@ -44,7 +45,9 @@ class Icegram {
         $this->cache_compatibility = get_option('icegram_cache_compatibility', 'no');
 
         if( is_admin() ){
-            $ig_feedback = new IG_Feedback_V_1_0_1( 'Icegram', 'icegram', 'ig', 'igfree.', false );
+            $ig_tracker = 'IG_Tracker_V_' . str_replace('.', '_', $feedback_version);
+            $ig_feedback_class = 'IG_Feedback_V_' . str_replace('.', '_', $feedback_version);
+            $ig_feedback = new $ig_feedback_class( 'Icegram', 'icegram', 'ig', 'igfree.', false );
             $ig_feedback->render_deactivate_feedback();
         }
 
@@ -93,7 +96,6 @@ class Icegram {
         add_filter( 'rainmaker_validate_request',  array(&$this,'form_submission_validate_request'), 10, 2);
         add_filter( 'icegram_data', array( $this, 'two_step_mobile_popup' ), 100, 1);
         
-        add_action ( 'wp_ajax_ig_submit_survey',  array(&$this,'ig_submit_survey' ));
 
         if ( defined( 'DOING_AJAX' ) ) {
             if($this->cache_compatibility === 'yes'){
@@ -527,6 +529,7 @@ class Icegram {
                     update_option( 'ig_last_gallery_items', $ig_gallery_json ); 
                 }
             }else{ 
+                update_option( 'requested_gallery_item_with_ajax', 'yes');
             ?>
                 <script type="text/javascript">
                     jQuery(document).ready(function(){
@@ -544,6 +547,7 @@ class Icegram {
                                             data: {
                                                 action: 'save_gallery_data',
                                                 galleryitems: JSON.stringify(response),
+                                                security: '<?php echo wp_create_nonce( 'gallery-save-data' ); // WPCS: XSS ok. ?>'
                                             },
                                             success: function( res ) {
                                                 if ( res != undefined && res != '' && res.success != undefined && res.success == 'yes' ) {
@@ -602,6 +606,7 @@ class Icegram {
                                             data: {
                                                 action: 'save_gallery_data',
                                                 categories: response,
+                                                security: '<?php echo wp_create_nonce( 'gallery-save-data' ); // WPCS: XSS ok. ?>'
                                             },
                                             success: function( res ) {
                                                 if ( res != undefined && res != '' && res.success != undefined && res.success == 'yes' ) {
@@ -625,24 +630,26 @@ class Icegram {
     }
 
     public function save_gallery_data(){
-        if(!empty($_REQUEST) && !empty($_REQUEST['galleryitems'])){
-            $ig_gallery_json = stripslashes($_REQUEST['galleryitems']);
-            update_option( 'ig_last_gallery_items', $ig_gallery_json ); 
-        }
-        if(!empty($_REQUEST) && !empty($_REQUEST['categories'])){
-            $categories = $_REQUEST['categories'];
-            $cat_list = array();
-            foreach ($categories as $category) {
-               if($category['parent'] == 0 ){
-                $cat_list[$category['term_id']]['name'] = $category['name'] ;
-                $cat_list[$category['term_id']]['slug'] = $category['slug'] ;
-               }else{
-                $cat_list[$category['parent']]['list'][] = $category;
-               }
+        check_ajax_referer( 'gallery-save-data', 'security' );
+        if ( current_user_can( 'manage_options' ) ) {
+            if(!empty($_REQUEST) && !empty($_REQUEST['galleryitems'])){
+                $ig_gallery_json = stripslashes($_REQUEST['galleryitems']);
+                update_option( 'ig_last_gallery_items', $ig_gallery_json ); 
             }
-            update_option( 'ig_cat_list', $cat_list ); 
+            if(!empty($_REQUEST) && !empty($_REQUEST['categories'])){
+                $categories = $_REQUEST['categories'];
+                $cat_list = array();
+                foreach ($categories as $category) {
+                   if($category['parent'] == 0 ){
+                    $cat_list[$category['term_id']]['name'] = $category['name'] ;
+                    $cat_list[$category['term_id']]['slug'] = $category['slug'] ;
+                   }else{
+                    $cat_list[$category['parent']]['list'][] = $category;
+                   }
+                }
+                update_option( 'ig_cat_list', $cat_list ); 
+            }
         }
-
 
     }
 
@@ -953,6 +960,10 @@ class Icegram {
         $form_html_original = !empty($message_data["rainmaker_form_code"]) 
                                 ? ('[rainmaker_form id="'. $message_data["rainmaker_form_code"] .'"]')
                                 :(!empty($message_data['form_html_original']) ? $message_data['form_html_original'] : '');
+        $form_html_original = !empty($message_data["es_form_code"]) 
+                                ? ('[email-subscribers-form id="'. $message_data["es_form_code"] .'"]')
+                                :$form_html_original;
+
         if(!empty($form_html_original)){
             $message_data['form_html'] = do_shortcode( shortcode_unautop( $form_html_original) );
         }
@@ -1239,21 +1250,26 @@ class Icegram {
 
     // Include all classes required for Icegram plugin
     function include_classes() {
-
-        require_once('classes/feedback/class-ig-tracker-v-1-0-1.php');
-        require_once('classes/feedback/class-ig-feedback-v-1-0-1.php');
+        $feedback_version = '1.0.5';
+        $feedback_version_for_file = str_replace('.', '-', $feedback_version);
+        $t = 'classes/feedback/class-ig-tracker-v-' . $feedback_version_for_file . '.php';
+        $f = 'classes/feedback/class-ig-feedback-v-' . $feedback_version_for_file . '.php';
+        require_once($t);
+        require_once($f);
         require_once('classes/feedback.php');
 
         $classes = glob( $this->plugin_path . '/classes/*.php' );
         foreach ( $classes as $file ) {
             // Files with 'admin' in their name are included only for admin section
-            if ( is_file( $file ) && ( (strpos($file, '-admin') >= 0 && is_admin()) || (strpos($file, '-admin') === false) ) ) {
-                $all_active_plugins = IG_Tracker_V_1_0_1::get_active_plugins();
+            if ( is_file( $file ) && ( (strpos($file, '-admin') >= 0 && is_admin()) ) ){
+                $all_active_plugins = IG_Tracker_V_1_0_5::get_plugins();
                 if( (strpos($file, 'ig-upsale-admin.php') !== false ) && in_array('icegram-engage/icegram-engage.php', $all_active_plugins)){
                     continue;
                 }
                 include_once $file;
-            } 
+            } else if( !is_admin()){
+                include_once $file;
+            }
         }
 
         // Load built in message types
@@ -1372,7 +1388,8 @@ class Icegram {
                         'post_content'   =>  ( !empty( $campaign['post_content'] ) ) ? esc_attr( $campaign['post_content'] ) : '',
                         'post_name'      =>  ( !empty( $campaign['post_title'] ) ) ? sanitize_title( $campaign['post_title'] ) : '',
                         'post_title'     =>  ( !empty( $campaign['post_title'] ) ) ? $campaign['post_title'] : '',
-                        'post_status'    =>  ( !empty( $campaign['post_status'] ) ) ? $campaign['post_status'] : 'draft',
+                        // 'post_status'    =>  ( !empty( $campaign['post_status'] ) ) ? $campaign['post_status'] : 'draft',
+                        'post_status'    =>  'draft',
                         'post_type'      =>  'ig_campaign'
                      );
 
@@ -1465,9 +1482,9 @@ class Icegram {
 
     function import_gallery_item(){
         if(!empty($_REQUEST['action']) && $_REQUEST['action'] == 'fetch_messages' && !empty($_REQUEST['campaign_id']) && !empty($_REQUEST['gallery_item'])){    
+            $url = 'https://www.icegram.com/gallery/wp-admin/admin-ajax.php?utm_source=ig_inapp&utm_campaign=ig_gallery&utm_medium='.$_REQUEST['campaign_id']; 
             $params = $_REQUEST;
             $imported_gallery_items = array();
-            $url = 'https://www.icegram.com/gallery/wp-admin/admin-ajax.php?utm_source=ig_inapp&utm_campaign=ig_gallery&utm_medium='.$_REQUEST['campaign_id']; 
             $options = array(
             'timeout' => 15,
             'method' => 'POST',
@@ -1653,6 +1670,7 @@ class Icegram {
         }
         return self::$current_page_id;
     }
+
     static function get_current_page_url() {
         if(!empty($_REQUEST['cache_compatibility']) && $_REQUEST['cache_compatibility'] == 'yes'){
             $pageURL = (!empty($_REQUEST['referral_url'])) ? $_REQUEST['referral_url'] : '';
@@ -1845,6 +1863,19 @@ class Icegram {
             }
         }
         return $request_data;
+    }
+
+    public static function get_ig_meta_info(){
+        $total_campaigns = wp_count_posts('ig_campaign');
+        $total_campaigns_publish = $total_campaigns->publish;
+        $total_campaigns_draft = $total_campaigns->draft;
+
+        $meta_info = array(
+            'total_campaigns_publish'   => $total_campaigns_publish,
+            'total_campaigns_draft'     => $total_campaigns_draft,
+        );
+
+        return $meta_info;
     }
 
 }

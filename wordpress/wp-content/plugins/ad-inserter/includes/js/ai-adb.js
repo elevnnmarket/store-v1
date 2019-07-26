@@ -223,24 +223,27 @@ var ai_adb_detected = function(n) {
       });
 
       if (ai_adb_debugging) console.log ("AI AD BLOCKING action check");
-//        $.removeCookie (ai_adb_pgv_cookie_name, {path: "/" });
+//        AiCookies.remove (ai_adb_pgv_cookie_name, {path: "/" });
 
       if (ai_adb_page_views != 0) {
         var ai_adb_page_view_counter = 1;
-        var cookie = $.cookie (ai_adb_pgv_cookie_name);
+//        var cookie = $.cookie (ai_adb_pgv_cookie_name);
+        var cookie = AiCookies.get (ai_adb_pgv_cookie_name);
         if (typeof cookie != "undefined") ai_adb_page_view_counter = parseInt (cookie) + 1;
         if (ai_adb_debugging) console.log ("AI AD BLOCKING page views cookie:", cookie, "- page view:", ai_adb_page_view_counter);
         if (ai_adb_page_view_counter < ai_adb_page_views) {
           if (ai_adb_debugging) console.log ("AI AD BLOCKING", ai_adb_page_views, "page views not reached, no action");
           var d1 = ai_adb_page_view_counter;
           var AI_ADB_STATUS_MESSAGE=1;
-          $.cookie (ai_adb_pgv_cookie_name, ai_adb_page_view_counter, {expires: 365, path: "/"});
+//          $.cookie (ai_adb_pgv_cookie_name, ai_adb_page_view_counter, {expires: 365, path: "/"});
+          AiCookies.set (ai_adb_pgv_cookie_name, ai_adb_page_view_counter, {expires: 365, path: "/"});
           return;
         }
       }
 
       if (ai_adb_message_cookie_lifetime != 0 && (ai_adb_action != 1 || !ai_adb_message_undismissible)) {
-        var cookie = $.cookie (ai_adb_act_cookie_name);
+//        var cookie = $.cookie (ai_adb_act_cookie_name);
+        var cookie = AiCookies.get (ai_adb_act_cookie_name);
         if (ai_adb_debugging) console.log ("AI AD BLOCKING cookie:", cookie);
         if (typeof cookie != "undefined" && cookie == "AI_CONST_AI_ADB_COOKIE_VALUE") {
           if (ai_adb_debugging) console.log ("AI AD BLOCKING valid cookie detected, no action");
@@ -249,8 +252,11 @@ var ai_adb_detected = function(n) {
         }
 
         else if (ai_adb_debugging) console.log ("AI AD BLOCKING invalid cookie");
-        $.cookie (ai_adb_act_cookie_name, "AI_CONST_AI_ADB_COOKIE_VALUE", {expires: ai_adb_message_cookie_lifetime, path: "/"});
-      } else $.removeCookie (ai_adb_act_cookie_name, {path: "/" });
+//        $.cookie (ai_adb_act_cookie_name, "AI_CONST_AI_ADB_COOKIE_VALUE", {expires: ai_adb_message_cookie_lifetime, path: "/"});
+        AiCookies.set (ai_adb_act_cookie_name, "AI_CONST_AI_ADB_COOKIE_VALUE", {expires: ai_adb_message_cookie_lifetime, path: "/"});
+      } else
+//          $.removeCookie (ai_adb_act_cookie_name, {path: "/" });
+          AiCookies.remove (ai_adb_act_cookie_name, {path: "/" });
 
       if (ai_adb_debugging) console.log ("AI AD BLOCKING action", ai_adb_action);
 
@@ -283,7 +289,7 @@ var ai_adb_detected = function(n) {
             if (ai_adb_debugging) console.log ("AI AD BLOCKING MESSAGE click detection installed");
 
           } else {
-//                $.removeCookie (ai_adb_act_cookie_name, {path: "/" });
+//                AiCookies.remove (ai_adb_act_cookie_name, {path: "/" });
             }
 
           if (ai_adb_debugging) console.log ("AI AD BLOCKING MESSAGE");
@@ -301,11 +307,13 @@ var ai_adb_detected = function(n) {
               }
 
             if (redirect) {
-              var cookie = $.cookie (ai_adb_page_redirection_cookie_name);
+//              var cookie = $.cookie (ai_adb_page_redirection_cookie_name);
+              var cookie = AiCookies.get (ai_adb_page_redirection_cookie_name);
               if (typeof cookie == "undefined") {
                 var date = new Date();
                 date.setTime (date.getTime() + (10 * 1000));
-                $.cookie (ai_adb_page_redirection_cookie_name, window.location.href, {expires: date, path: "/" });
+//                $.cookie (ai_adb_page_redirection_cookie_name, window.location.href, {expires: date, path: "/" });
+                AiCookies.set (ai_adb_page_redirection_cookie_name, window.location.href, {expires: date, path: "/" });
 
                 window.location.replace (ai_adb_redirection_url)
               } else {
@@ -314,7 +322,8 @@ var ai_adb_detected = function(n) {
                 }
             } else {
                 if (ai_adb_debugging) console.log ("AI AD BLOCKING already on page", window.location.href);
-                jQuery.removeCookie (ai_adb_page_redirection_cookie_name, {path: "/"});
+//                jQuery.removeCookie (ai_adb_page_redirection_cookie_name, {path: "/"});
+                AiCookies.remove (ai_adb_page_redirection_cookie_name, {path: "/"});
               }
           }
           break;
@@ -347,10 +356,12 @@ var ai_adb_undetected = function(n) {
 //        }
 
 //      if (redirected_page) {
-//        var cookie = jQuery.cookie (ai_adb_page_redirection_cookie_name);
+//        //var cookie = jQuery.cookie (ai_adb_page_redirection_cookie_name);
+//        var cookie = AiCookies.get (ai_adb_page_redirection_cookie_name);
 //        if (typeof cookie != "undefined" && cookie.toLowerCase().substring (0, 4) == "http") {
 //          if (ai_adb_debugging) console.log ("AI AD BLOCKING returning to", cookie);
-//          jQuery.removeCookie (ai_adb_page_redirection_cookie_name, {path: "/"});
+//          //jQuery.removeCookie (ai_adb_page_redirection_cookie_name, {path: "/"});
+//          AiCookies.remove (ai_adb_page_redirection_cookie_name, {path: "/"});
 //          window.location.replace (cookie);
 //        }
 //      }
@@ -376,8 +387,10 @@ jQuery (document).ready (function ($) {
   $(window).ready (function () {
 
     $("#ai-adb-bar").click (function () {
-      $.removeCookie (ai_adb_act_cookie_name, {path: "/" });
-      $.removeCookie (ai_adb_pgv_cookie_name, {path: "/" });
+//      $.removeCookie (ai_adb_act_cookie_name, {path: "/" });
+//      $.removeCookie (ai_adb_pgv_cookie_name, {path: "/" });
+      AiCookies.remove (ai_adb_act_cookie_name, {path: "/" });
+      AiCookies.remove (ai_adb_pgv_cookie_name, {path: "/" });
       var AI_ADB_STATUS_MESSAGE=5;
       var ai_dummy = 0; // Do not remove - to keep semicolon above
     });
@@ -452,122 +465,4 @@ jQuery (window).on ('load', function () {
       jQuery (document).ready (function () {ai_adb_undetected (6)});
     }
 });
-
-/*!
- * jQuery Cookie Plugin v1.4.1
- * https://github.com/carhartl/jquery-cookie
- *
- * Copyright 2013 Klaus Hartl
- * Released under the MIT license
- */
-(function (factory) {
-  if (typeof define === "function" && define.amd) {
-    // AMD
-    define(["jquery"], factory);
-  } else if (typeof exports === "object") {
-    // CommonJS
-    factory(require("jquery"));
-  } else {
-    // Browser globals
-    factory(jQuery);
-  }
-}(function ($) {
-
-  var pluses = /\+/g;
-
-  function encode(s) {
-    return config.raw ? s : encodeURIComponent(s);
-  }
-
-  function decode(s) {
-    return config.raw ? s : decodeURIComponent(s);
-  }
-
-  function stringifyCookieValue(value) {
-    return encode(config.json ? JSON.stringify(value) : String(value));
-  }
-
-  function parseCookieValue(s) {
-    if (s.indexOf('"') === 0) {
-      // This is a quoted cookie as according to RFC2068, unescape...
-      s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
-    }
-
-    try {
-      // Replace server-side written pluses with spaces.
-      // If we can\'t decode the cookie, ignore it, it\'s unusable.
-      // If we can\'t parse the cookie, ignore it, it\'s unusable.
-      s = decodeURIComponent(s.replace(pluses, " "));
-      return config.json ? JSON.parse(s) : s;
-    } catch(e) {}
-  }
-
-  function read(s, converter) {
-    var value = config.raw ? s : parseCookieValue(s);
-    return $.isFunction(converter) ? converter(value) : value;
-  }
-
-  var config = $.cookie = function (key, value, options) {
-
-    // Write
-
-    if (value !== undefined && !$.isFunction(value)) {
-      options = $.extend({}, config.defaults, options);
-
-      if (typeof options.expires === "number") {
-        var days = options.expires, t = options.expires = new Date();
-        t.setTime(+t + days * 864e+5);
-      }
-
-      return (document.cookie = [
-        encode(key), "=", stringifyCookieValue(value),
-        options.expires ? "; expires=" + options.expires.toUTCString() : "", // use expires attribute, max-age is not supported by IE
-        options.path    ? "; path=" + options.path : "",
-        options.domain  ? "; domain=" + options.domain : "",
-        options.secure  ? "; secure" : ""
-      ].join(""));
-    }
-
-    // Read
-
-    var result = key ? undefined : {};
-
-    // To prevent the for loop in the first place assign an empty array
-    // in case there are no cookies at all. Also prevents odd result when
-    // calling $.cookie().
-    var cookies = document.cookie ? document.cookie.split("; ") : [];
-
-    for (var i = 0, l = cookies.length; i < l; i++) {
-      var parts = cookies[i].split("=");
-      var name = decode(parts.shift());
-      var cookie = parts.join("=");
-
-      if (key && key === name) {
-        // If second argument (value) is a function it\'s a converter...
-        result = read(cookie, value);
-        break;
-      }
-
-      // Prevent storing a cookie that we couldn\'t decode.
-      if (!key && (cookie = read(cookie)) !== undefined) {
-        result[name] = cookie;
-      }
-    }
-
-    return result;
-  };
-
-  config.defaults = {};
-
-  $.removeCookie = function (key, options) {
-    if ($.cookie(key) === undefined) {
-      return false;
-    }
-
-    // Must not alter options, thus extending a fresh object...
-    $.cookie(key, "", $.extend({}, options, { expires: -1 }));
-    return !$.cookie(key);
-  };
-
-}));
 

@@ -529,7 +529,7 @@ function generate_settings_form (){
 
     $adb_block_action_active = $obj->get_adb_block_action () != AI_ADB_BLOCK_ACTION_DO_NOTHING;
 
-    $display_options = $obj->get_show_label () || $obj->get_lazy_loading () || $obj->get_close_button () || $obj->get_iframe ();
+    $display_options = $obj->get_show_label () || $obj->get_lazy_loading () || $obj->get_close_button () || $obj->get_auto_close_time () || $obj->get_stay_closed_time () || $obj->get_iframe ();
 
     $show_misc =
       $insertion_options ||
@@ -765,7 +765,7 @@ function generate_settings_form (){
 
       <table class="ai-settings-table left">
         <tr>
-          <td>
+          <td class="label">
             <?php _e ('Comment', 'ad-inserter'); ?>
           </td>
           <td style="width: 100%; padding-left: 7px;">
@@ -774,7 +774,7 @@ function generate_settings_form (){
         </tr>
 
         <tr>
-          <td title="Publisher ID">
+          <td class="label" title="Publisher ID">
             <?php _ex ('Publisher ID', 'AdSense', 'ad-inserter'); ?>
           </td>
           <td style="width: 100%; padding-left: 7px;">
@@ -783,7 +783,7 @@ function generate_settings_form (){
         </tr>
 
         <tr>
-          <td title="Ad Slot ID">
+          <td class="label" title="Ad Slot ID">
             <?php _ex ('Ad Slot ID', 'AdSense', 'ad-inserter'); ?>
           </td>
           <td style="padding-left: 7px;">
@@ -792,7 +792,7 @@ function generate_settings_form (){
         </tr>
 
         <tr>
-          <td>
+          <td class="label">
             <?php _e ('Ad Type', 'ad-inserter'); ?>
           </td>
           <td style="padding-left: 7px;">
@@ -816,7 +816,7 @@ function generate_settings_form (){
         </tr>
 
         <tr>
-          <td>
+          <td class="label">
             <?php _e ('AMP Ad', 'ad-inserter'); ?>
           </td>
           <td style="padding-left: 7px;">
@@ -871,7 +871,7 @@ function generate_settings_form (){
           <td style="padding-left: 7px; float: left;">
             <span class="adsense-full-width-responsive">
               <?php _e ('Full width', 'ad-inserter'); ?>
-              <select class="adsense-full-width" style="margin-top: -1px;">
+              <select class="adsense-full-width" style="margin-top: 1px;">
                  <option value="enabled"><?php _ex ('Enabled', 'Full width', 'ad-inserter'); ?></option>
                  <option value="disabled" selected><?php _ex ('Disabled', 'Full width', 'ad-inserter'); ?></option>
               </select>
@@ -984,17 +984,17 @@ function generate_settings_form (){
           &nbsp;
           <label for="display-posts-<?php echo $block; ?>" title="<?php _e ('Individual post exceptions (if enabled here) can be configured in post editor. Leave blank for no individual post exceptions.', 'ad-inserter'); ?>"><?php _e ('Posts', 'ad-inserter'); ?></label>
         </td>
-        <td class="ai-page-type ai-hp" style="width: 25%; padding-left: 8px;">
+        <td class="ai-page-type ai-hp" style="width: 25%; padding-left: 4px;">
           <input type="hidden" name="<?php echo AI_OPTION_DISPLAY_ON_HOMEPAGE, WP_FORM_FIELD_POSTFIX, $block; ?>" value="0" />
           <input id= "display-homepage-<?php echo $block; ?>" style="margin-left: 10px;" type="checkbox" name="<?php echo AI_OPTION_DISPLAY_ON_HOMEPAGE, WP_FORM_FIELD_POSTFIX, $block; ?>" title="<?php _e ('Enable insertion on homepage: latest posts (including on sub-pages), static page or theme homepage (available positions may depend on hooks used by the theme)', 'ad-inserter'); ?>" value="1" default="<?php echo $default->get_display_settings_home(); ?>" <?php if ($obj->get_display_settings_home()==AI_ENABLED) echo 'checked '; ?> />
           <label for="display-homepage-<?php echo $block; ?>" title="<?php _e ('Enable insertion on homepage: latest posts (including on sub-pages), static page or theme homepage (available positions may depend on hooks used by the theme)', 'ad-inserter'); ?>"><?php _e ('Homepage', 'ad-inserter'); ?></label>
         </td>
-        <td class="ai-page-type ai-cp" style="width: 30%; padding-left: 8px;">
+        <td class="ai-page-type ai-cp" style="width: 30%; padding-left: 4px;">
           <input type="hidden" name="<?php echo AI_OPTION_DISPLAY_ON_CATEGORY_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" value="0" />
           <input id= "display-category-<?php echo $block; ?>" style="margin-left: 10px;" type="checkbox" name="<?php echo AI_OPTION_DISPLAY_ON_CATEGORY_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" title="<?php _e ('Enable insertion on category blog pages (including sub-pages)', 'ad-inserter'); ?>" value="1" default="<?php echo $default->get_display_settings_category(); ?>" <?php if ($obj->get_display_settings_category()==AI_ENABLED) echo 'checked '; ?> />
           <label for="display-category-<?php echo $block; ?>" title="<?php _e ('Enable insertion on category blog pages (including sub-pages)', 'ad-inserter'); ?>"><?php _e ('Category pages', 'ad-inserter'); ?></label>
         </td>
-        <td style="padding-left: 20px;">
+        <td style="padding-left: 6px;">
             <span class="page-checker-button checkbox-button dashicons dashicons-editor-justify" title="<?php _e ('Check theme for available positions for automatic insertion', 'ad-inserter'); ?>"></span>
         </td>
       </tr>
@@ -1012,17 +1012,17 @@ function generate_settings_form (){
           &nbsp;
           <label for="display-pages-<?php echo $block; ?>" title="<?php _e ('Individual static page exceptions (if enabled here) can be configured in page editor. Leave blank for no individual page exceptions.', 'ad-inserter'); ?>"><?php _e ('Static pages', 'ad-inserter'); ?></label>
         </td>
-        <td class="ai-page-type ai-sp" style="padding-left: 8px;">
+        <td class="ai-page-type ai-sp" style="padding-left: 4px;">
           <input type="hidden" name="<?php echo AI_OPTION_DISPLAY_ON_SEARCH_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" value="0" />
           <input id= "display-search-<?php echo $block; ?>" style="margin-left: 10px;" type="checkbox" name="<?php echo AI_OPTION_DISPLAY_ON_SEARCH_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" title="<?php _e ('Enable insertion on search blog pages', 'ad-inserter'); ?>" value="1" default="<?php echo $default->get_display_settings_search(); ?>" <?php if ($obj->get_display_settings_search()==AI_ENABLED) echo 'checked '; ?> />
           <label for="display-search-<?php echo $block; ?>" title="<?php _e ('Enable insertion on search blog pages', 'ad-inserter'); ?>"><?php _e ('Search pages', 'ad-inserter'); ?></label>
         </td>
-        <td class="ai-page-type ai-ap" style="padding-left: 8px;">
+        <td class="ai-page-type ai-ap" style="padding-left: 4px;">
           <input type="hidden" name="<?php echo AI_OPTION_DISPLAY_ON_ARCHIVE_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" value="0" />
           <input id= "display-archive-<?php echo $block; ?>" style="margin-left: 10px;" type="checkbox" name="<?php echo AI_OPTION_DISPLAY_ON_ARCHIVE_PAGES, WP_FORM_FIELD_POSTFIX, $block; ?>" title="<?php _e ('Enable insertion on tag or archive blog pages', 'ad-inserter'); ?>" value="1" default="<?php echo $default->get_display_settings_archive(); ?>" <?php if ($obj->get_display_settings_archive()==AI_ENABLED) echo 'checked '; ?> />
           <label for="display-archive-<?php echo $block; ?>" title="<?php _e ('Enable insertion on tag or archive blog pages', 'ad-inserter'); ?>"><?php _e ('Tag / Archive pages', 'ad-inserter'); ?></label>
         </td>
-        <td id="exceptions-button-container-<?php echo $block; ?>" style="padding-left: 20px;">
+        <td id="exceptions-button-container-<?php echo $block; ?>" style="padding-left: 6px;">
 <?php
   if (!empty ($block_exceptions [$block])) {
 ?>
@@ -1522,7 +1522,7 @@ function generate_settings_form (){
             <button id="id-button-<?php echo $block; ?>" type="button" class='ai-button' style="display: none; outline: transparent; float: right; margin-top: 1px; width: 15px; height: 15px;" title="<?php _e ('Toggle post/page ID editor', 'ad-inserter'); ?>"></button>
           </td>
           <td style="padding-right: 7px;">
-            <input id="id-list-<?php echo $block; ?>" class="ai-list-lowercase ai-list-custom" style="width: 100%;" title="<?php _e ('Comma separated post/page IDs', 'ad-inserter'); ?>" type="text" name="<?php echo AI_OPTION_ID_LIST, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_id_list(); ?>" value="<?php echo $id_list; ?>" size="54" maxlength="500"/>
+            <input id="id-list-<?php echo $block; ?>" class="ai-list-lowercase ai-list-custom" style="width: 100%;" title="<?php _e ('Comma separated post/page IDs', 'ad-inserter'); ?>" type="text" name="<?php echo AI_OPTION_ID_LIST, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_id_list(); ?>" value="<?php echo $id_list; ?>" size="54" maxlength="2500"/>
           </td>
           <td style="padding-right: 7px;">
             <input type="radio" name="<?php echo AI_OPTION_ID_LIST_TYPE, WP_FORM_FIELD_POSTFIX, $block; ?>" id="id-blacklist-<?php echo $block; ?>" default="<?php echo $default->get_id_list_type() == AI_BLACK_LIST; ?>" value="<?php echo AI_BLACK_LIST; ?>" <?php if ($obj->get_id_list_type() == AI_BLACK_LIST) echo 'checked '; ?> />
@@ -1548,7 +1548,7 @@ function generate_settings_form (){
             <button id="url-button-<?php echo $block; ?>" type="button" class='ai-button' style="display: none; outline: transparent; float: right; margin-top: 1px; width: 15px; height: 15px;" title="<?php _e ('Toggle url editor', 'ad-inserter'); ?>"></button>
           </td>
           <td style="padding-right: 7px;">
-            <input id="url-list-<?php echo $block; ?>" class="ai-list-space ai-clean-protocol ai-clean-domain" style="width: 100%;" type="text" name="<?php echo AI_OPTION_URL_LIST, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_ad_url_list(); ?>" value="<?php echo $url_list; ?>" size="54" maxlength="500" title="<?php _e ('Comma separated urls (page addresses) starting with / after domain name (e.g. /permalink-url, use only when you need to taget a specific url not accessible by other means). You can also use partial urls with * (/url-start*. *url-pattern*, *url-end)', 'ad-inserter'); ?>" />
+            <input id="url-list-<?php echo $block; ?>" class="ai-list-space ai-clean-protocol ai-clean-domain" style="width: 100%;" type="text" name="<?php echo AI_OPTION_URL_LIST, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_ad_url_list(); ?>" value="<?php echo $url_list; ?>" size="54" maxlength="2500" title="<?php _e ('Comma separated urls (page addresses) starting with / after domain name (e.g. /permalink-url, use only when you need to taget a specific url not accessible by other means). You can also use partial urls with * (/url-start*. *url-pattern*, *url-end)', 'ad-inserter'); ?>" />
           </td>
           <td style="padding-right: 7px;">
             <input type="radio" name="<?php echo AI_OPTION_URL_LIST_TYPE, WP_FORM_FIELD_POSTFIX, $block; ?>" id="url-blacklist-<?php echo $block; ?>" default="<?php echo $default->get_ad_url_list_type() == AI_BLACK_LIST; ?>" value="<?php echo AI_BLACK_LIST; ?>" <?php if ($obj->get_ad_url_list_type() == AI_BLACK_LIST) echo 'checked '; ?> />
@@ -1857,7 +1857,7 @@ function generate_settings_form (){
           </span>
           <span style="display: table-cell; padding-left: 10px;">
             <?php _e('using', 'ad-inserter'); ?>
-            <select id="filter-type-<?php echo $block; ?>" style="padding-left: 10px; margin: 0 1px;" name="<?php echo AI_OPTION_FILTER_TYPE, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_filter_type(); ?>">
+            <select id="filter-type-<?php echo $block; ?>" class="filter-type-select" style="padding-left: 10px; margin: 0 1px;" name="<?php echo AI_OPTION_FILTER_TYPE, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_filter_type(); ?>">
                <option value="<?php echo AI_FILTER_AUTO; ?>" <?php echo ($filter_type == AI_FILTER_AUTO) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_AUTO_COUNTER; ?></option>
                <option value="<?php echo AI_FILTER_PHP_FUNCTION_CALLS; ?>" <?php echo ($filter_type == AI_FILTER_PHP_FUNCTION_CALLS) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_PHP_FUNCTION_CALLS_COUNTER; ?></option>
                <option value="<?php echo AI_FILTER_CONTENT_PROCESSING; ?>" <?php echo ($filter_type == AI_FILTER_CONTENT_PROCESSING) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_CONTENT_PROCESSING_COUNTER; ?></option>
@@ -1889,7 +1889,7 @@ function generate_settings_form (){
       </div>
 
       <div id="tab-scheduling-<?php echo $block; ?>" class="rounded" style="min-height: 24px;">
-        <select id="scheduling-<?php echo $block; ?>" style="margin: 2px 1px;" name="<?php echo AI_OPTION_SCHEDULING, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_scheduling(); ?>">
+        <select id="scheduling-<?php echo $block; ?>" style="margin: 2px 1px; max-width: 580px;" name="<?php echo AI_OPTION_SCHEDULING, WP_FORM_FIELD_POSTFIX, $block; ?>" default="<?php echo $default->get_scheduling(); ?>">
           <option value="<?php echo AI_SCHEDULING_OFF; ?>" <?php echo ($obj->get_scheduling() == AI_SCHEDULING_OFF) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_INSERT_IMMEDIATELY; ?></option>
           <option value="<?php echo AI_SCHEDULING_DELAY_FOR; ?>" <?php echo ($obj->get_scheduling() == AI_SCHEDULING_DELAY_FOR) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DELAY_INSERTION; ?></option>
           <option value="<?php echo AI_SCHEDULING_INSERT_ONLY_FOR; ?>" <?php echo ($obj->get_scheduling() == AI_SCHEDULING_INSERT_ONLY_FOR) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_INSERT_ONLY; ?></option>
@@ -1915,13 +1915,12 @@ function generate_settings_form (){
                   <label for="show-label-<?php echo $block; ?>"><?php _e ('Ad label', 'ad-inserter'); ?></label>
                 </td>
   <?php if (function_exists ('ai_display_lazy')) ai_display_lazy ($block, $obj, $default, 'lazy-loading-'.$block, AI_OPTION_CLOSE_BUTTON . WP_FORM_FIELD_POSTFIX . $block); ?>
-                <td>
-  <?php if (function_exists ('ai_display_close')) ai_display_close ($block, $obj, $default, 'close-button-'.$block, AI_OPTION_CLOSE_BUTTON . WP_FORM_FIELD_POSTFIX . $block); ?>
-                </td>
               </tr>
             </tbody>
           </table>
         </div>
+
+<?php if (function_exists ('ai_close_button')) ai_close_button ($block, $obj, $default); ?>
 
 <?php if (function_exists ('ai_iframes')) ai_iframes ($block, $obj, $default); ?>
       </div>
@@ -2351,23 +2350,32 @@ function generate_settings_form (){
       </div>
 
       <div id="device-detection-settings-h" class="rounded">
-        <input type="hidden" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" value="0" />
-        <input type="checkbox" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" id="server-side-detection-h" style="margin-top: 1px;" value="1" default="<?php echo $default->get_detection_server_side(); ?>" <?php if ($adH->get_detection_server_side ()==AI_ENABLED) echo 'checked '; ?> />
-        <label for="server-side-detection-h"><?php _e ('Use server-side detection to insert code only for', 'ad-inserter'); ?> </label>
-        <select id="display-for-devices-h" name="<?php echo AI_OPTION_DISPLAY_FOR_DEVICES, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" default="<?php echo $default->get_display_for_devices(); ?>" >
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_MOBILE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_MOBILE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_MOBILE_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_TABLET_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_TABLET_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_PHONE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_PHONE_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_TABLET_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_TABLET_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_PHONE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_PHONE_DEVICES; ?></option>
-        </select>
-
-        <span style="float: right; margin-top: 2px;">
-          <input type="hidden" name="<?php echo AI_OPTION_ENABLE_404, '_block_h'; ?>" value="0" />
-          <input style="margin-left: 10px; margin-top: 1px;" type="checkbox" name="<?php echo AI_OPTION_ENABLE_404, '_block_h'; ?>" id="enable-header-404" value="1" default="<?php echo $default->get_enable_404(); ?>" <?php if ($adH->get_enable_404 () == AI_ENABLED) echo 'checked '; ?> />
-          <label for="enable-header-404" title="<?php _e ('Enable insertion of this code into HTML page header on page for Error 404: Page not found', 'ad-inserter'); ?>"><?php _e ('Insert on Error 404 page', 'ad-inserter'); ?></label>
-        </span>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input type="hidden" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" value="0" />
+                <input type="checkbox" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" id="server-side-detection-h" value="1" default="<?php echo $default->get_detection_server_side(); ?>" <?php if ($adH->get_detection_server_side ()==AI_ENABLED) echo 'checked '; ?> />
+                <label for="server-side-detection-h"><?php _e ('Use server-side detection to insert code only for', 'ad-inserter'); ?> </label>
+                <select id="display-for-devices-h" name="<?php echo AI_OPTION_DISPLAY_FOR_DEVICES, WP_FORM_FIELD_POSTFIX, AI_HEADER_OPTION_NAME; ?>" default="<?php echo $default->get_display_for_devices(); ?>" >
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_MOBILE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_MOBILE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_MOBILE_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_TABLET_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_TABLET_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_PHONE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_PHONE_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_TABLET_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_TABLET_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_PHONE_DEVICES; ?>" <?php echo ($adH->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_PHONE_DEVICES; ?></option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="hidden" name="<?php echo AI_OPTION_ENABLE_404, '_block_h'; ?>" value="0" />
+                <input type="checkbox" name="<?php echo AI_OPTION_ENABLE_404, '_block_h'; ?>" id="enable-header-404" value="1" default="<?php echo $default->get_enable_404(); ?>" <?php if ($adH->get_enable_404 () == AI_ENABLED) echo 'checked '; ?> />
+                <label for="enable-header-404" title="<?php _e ('Enable insertion of this code into HTML page header on page for Error 404: Page not found', 'ad-inserter'); ?>"><?php _e ('Insert on Error 404 page', 'ad-inserter'); ?></label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -2409,23 +2417,33 @@ function generate_settings_form (){
       </div>
 
       <div id="device-detection-settings-f" class="rounded">
-        <input type="hidden" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" value="0" />
-        <input style="margin-top: 1px;" type="checkbox" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" id="server-side-detection-f" value="1" default="<?php echo $default->get_detection_server_side(); ?>" <?php if ($adF->get_detection_server_side ()==AI_ENABLED) echo 'checked '; ?> />
-        <label for="server-side-detection-f"><?php _e ('Use server-side detection to insert code only for', 'ad-inserter'); ?> </label>
-        <select id="display-for-devices-f" name="<?php echo AI_OPTION_DISPLAY_FOR_DEVICES, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" default="<?php echo $default->get_display_for_devices(); ?>" >
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_MOBILE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_MOBILE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_MOBILE_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_TABLET_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_TABLET_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_PHONE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_PHONE_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_TABLET_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_TABLET_DEVICES; ?></option>
-          <option value="<?php echo AI_INSERT_FOR_DESKTOP_PHONE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_PHONE_DEVICES; ?></option>
-        </select>
 
-        <span style="float: right; margin-top: 2px;">
-          <input type="hidden" name="<?php echo AI_OPTION_ENABLE_404, '_block_f'; ?>" value="0" />
-          <input style="margin-left: 10px; margin-top: 1px;" type="checkbox" name="<?php echo AI_OPTION_ENABLE_404, '_block_f'; ?>" id="enable-footer-404" value="1" default="<?php echo $default->get_enable_404(); ?>" <?php if ($adF->get_enable_404 () == AI_ENABLED) echo 'checked '; ?> />
-          <label for="enable-footer-404" title="<?php _e ('Enable insertion of this code into HTML page footer on page for Error 404: Page not found', 'ad-inserter'); ?>"><?php _e ('Insert on Error 404 page', 'ad-inserter'); ?></label>
-        </span>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input type="hidden" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" value="0" />
+                <input type="checkbox" name="<?php echo AI_OPTION_DETECT_SERVER_SIDE, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" id="server-side-detection-f" value="1" default="<?php echo $default->get_detection_server_side(); ?>" <?php if ($adF->get_detection_server_side ()==AI_ENABLED) echo 'checked '; ?> />
+                <label for="server-side-detection-f"><?php _e ('Use server-side detection to insert code only for', 'ad-inserter'); ?> </label>
+                <select id="display-for-devices-f" name="<?php echo AI_OPTION_DISPLAY_FOR_DEVICES, WP_FORM_FIELD_POSTFIX, AI_FOOTER_OPTION_NAME; ?>" default="<?php echo $default->get_display_for_devices(); ?>" >
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_MOBILE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_MOBILE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_MOBILE_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_TABLET_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_TABLET_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_PHONE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_PHONE_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_TABLET_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_TABLET_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_TABLET_DEVICES; ?></option>
+                  <option value="<?php echo AI_INSERT_FOR_DESKTOP_PHONE_DEVICES; ?>" <?php echo ($adF->get_display_for_devices() == AI_INSERT_FOR_DESKTOP_PHONE_DEVICES) ? AD_SELECT_SELECTED : AD_EMPTY_VALUE; ?>><?php echo AI_TEXT_DESKTOP_PHONE_DEVICES; ?></option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="hidden" name="<?php echo AI_OPTION_ENABLE_404, '_block_f'; ?>" value="0" />
+                <input type="checkbox" name="<?php echo AI_OPTION_ENABLE_404, '_block_f'; ?>" id="enable-footer-404" value="1" default="<?php echo $default->get_enable_404(); ?>" <?php if ($adF->get_enable_404 () == AI_ENABLED) echo 'checked '; ?> />
+                <label for="enable-footer-404" title="<?php _e ('Enable insertion of this code into HTML page footer on page for Error 404: Page not found', 'ad-inserter'); ?>"><?php _e ('Insert on Error 404 page', 'ad-inserter'); ?></label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -2811,6 +2829,7 @@ function generate_settings_form (){
 
   $sidebar = 0;
   $number_of_used_blocks = count ($used_blocks);
+
   if (isset ($ai_wp_data [AI_DAYS_SINCE_INSTAL])) {
     if ($ai_wp_data [AI_DAYS_SINCE_INSTAL] >  2)
       $sidebar = 1;
@@ -2828,7 +2847,7 @@ function generate_settings_form (){
       $sidebar = 4;
 
   } else {
-      if ($number_of_used_blocks >= 3) $sidebar = 4;
+      if ($number_of_used_blocks >= 1) $sidebar = 4;
     }
 
 //  $sidebar = 0;
@@ -2940,11 +2959,30 @@ function generate_settings_form (){
     }
 
     function replace_blocked_js (js_src) {
-      var js_selector = 'script[src*="'+js_src+'"]';
-      if (jQuery (js_selector).length) {
-        var js = jQuery(js_selector);
-        js.after (js.clone ().attr ('src', ajaxurl+'?action=ai_ajax_backend&css=' + js_src + '&ai_check=<?php echo wp_create_nonce ('adinserter_data'); ?>'));
-      }
+//      var js_selector = 'script[src*="'+js_src+'"]';
+//      if (jQuery (js_selector).length) {
+//        var js = jQuery(js_selector);
+//        console.log ('src', ajaxurl+'?action=ai_ajax_backend&js=' + js_src + '&ai_check=<?php echo wp_create_nonce ('adinserter_data'); ?>');
+//        js.after (js.clone ().attr ('src', ajaxurl+'?action=ai_ajax_backend&js=' + js_src + '&ai_check=<?php echo wp_create_nonce ('adinserter_data'); ?>'));
+//      }
+
+      var script = ajaxurl+'?action=ai_ajax_backend&js=' + js_src + '&ai_check=<?php echo wp_create_nonce ('adinserter_data'); ?>';
+      jQuery.getScript (script, function (data, textStatus, jqxhr) {
+//        console.log( data ); // Data returned
+//        console.log( textStatus ); // Success
+//        console.log( jqxhr.status ); // 200
+//        console.log( "Load was performed." );
+//      }).fail(function( jqxhr, settings, exception ) {
+//        console.log ('FAIL');
+//        console.log( jqxhr ); // Data returned
+//        console.log( settings ); // Success
+//        console.log( exception ); // 200
+      });
+    }
+
+    function show_warining () {
+      jQuery("#blocked-warning").attr ('title', message).show ();
+      jQuery("#blocked-warning .blocked-warning-text").css ('color', '#00f');
     }
 
     jQuery("#blocked-warning.warning-enabled").show ();
@@ -2987,22 +3025,30 @@ function generate_settings_form (){
     if (blocking_counter >= 2) {
       var message = 'Ad blocking test: ' + blocking_counter + ' images not loaded';
       console.log ('AI AD BLOCKING:', blocking_counter, 'images not loaded');
-      jQuery("#blocked-warning").attr ('title', message).show ();
-      jQuery("#blocked-warning .blocked-warning-text").css ('color', '#00f');
+
+      show_warining ();
+
+      setTimeout (function() {
+        show_warining ();
+      }, 2000);
+
+      setTimeout (function() {
+        show_warining ();
+      }, 5000);
 
 //      replace_blocked_image ('ai-loading',    'loading.gif',     'block'); // new ids not used in js
 //      replace_blocked_image ('ai-loading-2',  'loading.gif',     'block');
 
-//      replace_blocked_css ('ai-admin-css',                'css/ai-settings.css');
-//      replace_blocked_css ('ai-admin-jquery-ui-css',      'css/jquery-ui-1.10.3.custom.min.css');
-//      replace_blocked_css ('ai-admin-flags-css',          'css/flags.css');
-//      replace_blocked_css ('ai-admin-multi-select-css',   'css/multi-select.css');
-//      replace_blocked_css ('ai-image-picker-css',         'css/image-picker.css');
-//      replace_blocked_css ('ai-combobox-css-css',         'css/jquery.scombobox.min.css');
-//      replace_blocked_css ('ai-admin-gen-css',            'css/ai-admin.css');
+      replace_blocked_css ('ai-admin-css',                'ai-settings.css');
+      replace_blocked_css ('ai-admin-jquery-ui-css',      'jquery-ui-1.10.3.custom.min.css');
+      replace_blocked_css ('ai-admin-flags-css',          'flags.css');
+      replace_blocked_css ('ai-admin-multi-select-css',   'multi-select.css');
+      replace_blocked_css ('ai-image-picker-css',         'image-picker.css');
+      replace_blocked_css ('ai-combobox-css-css',         'jquery.scombobox.min.css');
+      replace_blocked_css ('ai-admin-gen-css',            'ai-admin.css');
 //      replace_blocked_css ('puc-debug-bar-style-v4-css',  'includes/update-checker/css/puc-debug-bar.css');
 
-//      replace_blocked_js ('js/ad-inserter.js');
+//      replace_blocked_js ('ad-inserter.js');
     }
   }
 </script>
@@ -3502,7 +3548,7 @@ function code_block_list () {
     $blocks_new = json_decode ($_GET ["blocks-new"]);
 
     if (!empty ($blocks_org) && count ($blocks_org) == count ($blocks_new)) {
-      // Uodate widgets
+      // Update widgets
       $current_options = get_option (AI_OPTION_NAME);
       $new_options     = $current_options;
 
@@ -3510,13 +3556,18 @@ function code_block_list () {
       foreach ($blocks_org as $index => $block) {
         $new_block = $blocks_new [$index];
         if ($block >= 1 && $block <= 96 && $new_block >= 1 && $new_block <= 96) {
-          $new_options [$block] = $current_options [$new_block];
+          if (isset ($current_options [$new_block])) {
+            $new_options [$block] = $current_options [$new_block];
+          } else {
+              unset ($new_options [$block]);
+            }
         } else $error = true;
       }
 
       if (!$error) {
         // Update AI_OPTION_FALLBACK and AI_OPTION_ADB_BLOCK_REPLACEMENT
         for ($block = 1; $block <= 96; $block ++) {
+
           if (isset ($new_options [$block][AI_OPTION_FALLBACK])) {
             $ai_option_fallback = $new_options [$block][AI_OPTION_FALLBACK];
             if ($ai_option_fallback != '')
@@ -4309,7 +4360,7 @@ function sidebar_addense_alternative () { ?>
         <div style="clear: both;"></div>
       </div>
       <div class="ai-form rounded" style="height: 90px; padding: 8px 4px 8px 12px;">
-        <a href='https://www.infolinks.com/join-us/?kid=3114832' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-1" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-1.jpg" /></a>
+        <a href='https://www.infolinks.com/publishers/?kid=3114832&loc=2' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-1" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-1.jpg" /></a>
       </div>
 <?php
       break;
@@ -4414,20 +4465,22 @@ function sidebar_help () { ?>
             ); ?>
           </div>
           <div>
-            <?php /* translators: %s: HTML tags */ printf (__('%s New to %s AdSense? %s %s %s Connect your site %s - Advanced %s AdSense code: %s %s In-feed ads, %s %s Auto ads, %s %s AMP ads %s', 'ad-inserter'),
+            <?php /* translators: %s: HTML tags */ printf (__('%s New to %s AdSense? %s %s %s Connect your site %s - %s In-feed ads, %s %s Auto ads, %s %s AMP ads %s &mdash; How to %s integrate %s Infolinks %s ad code %s', 'ad-inserter'),
             '<strong>',
             '<a href="https://adinserter.pro/documentation/adsense-ads" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
             '</a>',
             '</strong>',
             '<a href="https://adinserter.pro/documentation/adsense-ads#connect-your-site" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
             '</a>',
-            '<a href="https://adinserter.pro/documentation/adsense-ads#ad-code" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
-            '</a>',
             '<a href="https://adinserter.pro/documentation/adsense-ads#in-feed-ads" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
             '</a>',
             '<a href="https://adinserter.pro/documentation/adsense-ads#auto-ads" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
             '</a>',
             '<a href="https://adinserter.pro/documentation/adsense-ads#amp" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
+            '</a>',
+            '<a href="https://adinserter.pro/documentation/infolinks-ads" style="text-decoration: none; box-shadow: 0 0 0;" target="_blank">',
+            '<strong>',
+            '</strong>',
             '</a>'
             ); ?>
 
@@ -4473,11 +4526,11 @@ function sidebar_pro () {
 <!--            <a href="https://adinserter.pro/" class="clear-link" title="Automate ad placement on posts and pages" target="_blank"><img id="ai-pro-1" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>icon-256x256.jpg" /></a>-->
             <a href="https://www.ezoic.com/?utm_source=ad-inserter&utm_medium=ads&utm_campaign=ad-inserter-ads&utm_term=adinserter&utm_content=ezoic&loc=2" class="clear-link" title="<?php _e ('Looking for AdSense alternative?', 'ad-inserter'); ?>" target="_blank"><img id="ai-ez-2" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>ez-2.jpg" /></a>
 <?php   break; case 1: ?>
-            <a href='https://www.infolinks.com/join-us/?kid=3114832' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-3.jpg"  /></a>
+            <a href='https://www.infolinks.com/publishers/?kid=3114832&loc=2' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-3.jpg"  /></a>
 <?php   break; case 2: ?>
             <a href='https://www.media.net/program?ha=e9Pw4uwo2Uw/5xjjsB3lnYZZWUI+hzRSONzDaYA9EwX+3jg/PJYwFshOFEjop5NH2wRNDfr357ZTY1zlhCk7zw%3D%3D&loc=2' class="clear-link" title="<?php _e ('Looking for AdSense alternative?', 'ad-inserter'); ?>" target="_blank"><img id="ai-media-8" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>contextual-8.gif" /></a>
 <?php   break; case 3: ?>
-            <a href='https://www.infolinks.com/join-us/?kid=3114832' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-2" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-2.jpg" /></a>
+            <a href='https://www.infolinks.com/publishers/?kid=3114832&loc=2' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-2" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-2.jpg" /></a>
 <?php   break;
       } ?>
           </div>
@@ -4485,7 +4538,7 @@ function sidebar_pro () {
 <?php switch ($version) {
         case 0:
         ?>
-            <a href='https://www.infolinks.com/join-us/?kid=3114832' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-3.jpg" /></a>
+            <a href='https://www.infolinks.com/publishers/?kid=3114832&loc=2' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-3.jpg" /></a>
 <?php   break;
         case 1:
         ?>
@@ -4511,7 +4564,7 @@ function sidebar_pro () {
             <a href='https://www.media.net/program?ha=e9Pw4uwo2Uw/5xjjsB3lnYZZWUI+hzRSONzDaYA9EwX+3jg/PJYwFshOFEjop5NH2wRNDfr357ZTY1zlhCk7zw%3D%3D&loc=2' class="clear-link" title="<?php _e ('Looking for AdSense alternative?', 'ad-inserter'); ?>" target="_blank"><img id="ai-media-8" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>contextual-8.gif" /></a>
 <?php   break; case 2: ?>
 <!--            <a href="https://adinserter.pro/documentation/black-and-white-lists#geo-targeting" class="clear-link" title="Geotargeting - black/white-list countries" target="_blank"><img id="ai-pro-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>ai-countries-250.png" /></a>-->
-            <a href='https://www.infolinks.com/join-us/?kid=3114832' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-2" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-2.jpg" /></a>
+            <a href='https://www.infolinks.com/publishers/?kid=3114832&loc=2' class="clear-link" title="<?php _e ('Use Infolinks ads with Adsense to earn more', 'ad-inserter'); ?>" target="_blank"><img id="ai-info-2" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>info-2.jpg" /></a>
 <?php   break; case 3: ?>
 <!--            <a href="https://adinserter.pro/documentation/black-and-white-lists#geo-targeting" class="clear-link" title="Geotargeting - black/white-list countries" target="_blank"><img id="ai-pro-3" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>ai-countries-250.png" /></a>-->
             <a href='https://www.media.net/program?ha=e9Pw4uwo2Uw/5xjjsB3lnYZZWUI+hzRSONzDaYA9EwX+3jg/PJYwFshOFEjop5NH2wRNDfr357ZTY1zlhCk7zw%3D%3D&loc=2' class="clear-link" title="<?php _e ('Looking for AdSense alternative?', 'ad-inserter'); ?>" target="_blank"><img id="ai-media-10" src="<?php echo AD_INSERTER_PLUGIN_IMAGES_URL; ?>contextual-10.gif" /></a>

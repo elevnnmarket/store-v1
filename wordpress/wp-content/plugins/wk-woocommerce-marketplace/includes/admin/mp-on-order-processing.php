@@ -6,6 +6,8 @@ $table_name = $wpdb->prefix . 'mporders';
 
 $order = new WC_Order($order_id);
 
+$choosen_ship_method = WC()->session->get('chosen_shipping_methods');
+
 $items = $order->get_items();
 
 // for calculation for advance commission.
@@ -18,7 +20,8 @@ if (class_exists('wk_advanced_commission') && (1 == get_option('advanced_commiss
 }
 
 foreach ($items as $key => $item) {
-    $item_id = $item->get_id();
+
+	$item_id = $item->get_id();
 
     $assigned_seller = wc_get_order_item_meta($item_id, 'assigned_seller', true);
 
@@ -28,22 +31,10 @@ foreach ($items as $key => $item) {
         $product_id = $item['variation_id'];
 
         $commission_data = $mp_comision->calculate_product_commission($item['variation_id'], $item['quantity'], $item['line_total'], $assigned_seller);
-
-        if (!empty($assigned_seller)) {
-            $product_price = $wpdb->get_var($wpdb->prepare("SELECT price FROM {$wpdb->prefix}spc_assigned_variable_products WHERE product_id=%d AND user_id=%d", $product_id, $assigned_seller));
-        }
     } else {
         $product_id = $item['product_id'];
 
         $commission_data = $mp_comision->calculate_product_commission($item['product_id'], $item['quantity'], $item['line_total'], $assigned_seller);
-
-        if (!empty($assigned_seller)) {
-            $product_price = $wpdb->get_var($wpdb->prepare("SELECT price FROM {$wpdb->prefix}spc_assigned_products WHERE product_id=%d AND user_id=%d", $product_id, $assigned_seller));
-        }
-    }
-
-    if (empty($assigned_seller)) {
-        $product_price = wc_get_price_excluding_tax(wc_get_product($product_id));
     }
 
     $seller_id = $commission_data['seller_id'];
@@ -52,7 +43,7 @@ foreach ($items as $key => $item) {
 
     $product_qty = $item['quantity'];
 
-    $discount_applied = number_format((float) (($product_qty * $product_price) - $amount), 2, '.', '');
+    $discount_applied = number_format((float) ($item->get_subtotal() - $item->get_total()), 2, '.', '');
 
     $admin_amount = $commission_data['admin_commission'];
 
@@ -92,6 +83,10 @@ foreach ($items as $key => $item) {
     $wpdb->insert("{$wpdb->prefix}mporders", $data);
 }
 
+foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
+    $shipping_method[$shipping_item_obj->get_method_id()] = $shipping_item_obj->get_method_title();
+}
+
 // shipping calculation.
 $ship_sess = WC()->session->get('shipping_sess_cost');
 
@@ -103,32 +98,35 @@ $ship_cost = 0;
 
 if (!empty($ship_sess)) {
     foreach ($ship_sess as $sel_id => $sel_detail) {
-        $shiping_cost = $sel_detail['cost'];
+		if(in_array($sel_detail['title'], $choosen_ship_method )){
 
-        $shiping_cost = number_format((float) $shiping_cost, 2, '.', '');
-
-        $ship_cost = $ship_cost + $shiping_cost;
-
-        $push_arr = array(
-            'shipping_method_id' => !empty($sel_detail['title']) ? $sel_detail['title'] : '',
-
-            'shipping_cost' => $shiping_cost,
-        );
-
-        foreach ($push_arr as $key => $value) {
-            $wpdb->insert(
-                $wpdb->prefix . 'mporders_meta',
-                array(
-                    'seller_id' => $sel_id,
-
-                    'order_id' => $order_id,
-
-                    'meta_key' => $key,
-
-                    'meta_value' => $value,
-                )
-            );
-        }
+			$shiping_cost = $sel_detail['cost'];
+	
+			$shiping_cost = number_format((float) $shiping_cost, 2, '.', '');
+	
+			$ship_cost = $ship_cost + $shiping_cost;
+	
+			$push_arr = array(
+				'shipping_method_id' => !empty($sel_detail['title']) ? $sel_detail['title'] : '',
+	
+				'shipping_cost' => $shiping_cost,
+			);
+	
+			foreach ($push_arr as $key => $value) {
+				$wpdb->insert(
+					$wpdb->prefix . 'mporders_meta',
+					array(
+						'seller_id' => $sel_id,
+	
+						'order_id' => $order_id,
+	
+						'meta_key' => $key,
+	
+						'meta_value' => $value,
+					)
+				);
+			}
+		}
     }
 }
 

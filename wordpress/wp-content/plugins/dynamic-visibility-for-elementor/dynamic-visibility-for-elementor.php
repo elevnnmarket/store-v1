@@ -4,7 +4,7 @@
  * Plugin Name: Dynamic Visibility for Elementor
  * Description: With Dynamic Visibility for Elementor you can easily hide or show every element (also entire sections) in your page, quickly or with advanced conditions
  * Plugin URI:  https://www.dynamic.ooo/widget/dynamic-visibility/
- * Version:     2.0.4
+ * Version:     3.0.1
  * Author:      Dynamic.ooo
  * Author URI:  https://www.dynamic.ooo/
  * Text Domain: dynamic-visibility-for-elementor
@@ -12,7 +12,7 @@
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-define('DVE_VERSION', '2.0.4');
+define('DVE_VERSION', '3.0.1');
 define('DVE_TEXTDOMAIN', 'dynamic-visibility-for-elementor');
 
 /**

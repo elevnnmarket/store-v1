@@ -4,7 +4,7 @@ Tags: security, firewall, malware scanner, web application firewall, two factor 
 Requires at least: 3.9
 Requires PHP: 5.3
 Tested up to: 5.2
-Stable tag: 7.3.3
+Stable tag: 7.3.5
 
 Secure your website with the most comprehensive WordPress security plugin. Firewall, malware scan, blocking, live traffic, login security & more.
 
@@ -41,6 +41,8 @@ Wordfence includes an endpoint firewall and malware scanner that were built from
 * Wordfence Central is a powerful and efficient way to manage the security for multiple sites in one place.
 * Efficiently assess the security status of all your websites in one view. View detailed security findings without leaving Wordfence Central.
 * Powerful templates make configuring Wordfence a breeze.
+* Highly configurable alerts can be delivered via email, SMS or Slack. Improve the signal to noise ratio by leveraging severity level options and a daily digest option.
+* Track and alert on important security events including administrator logins, breached password usage and surges in attack activity.
 * Free to use for unlimited sites.
 
 #### SECURITY TOOLS
@@ -182,6 +184,25 @@ Secure your website with Wordfence.
 9. Logging in is easy with Wordfence 2FA.
 
 == Changelog ==
+
+= 7.3.5 - July 16, 2019 =
+* Improvement: Improved tagging of the login endpoint for brute force protection.
+* Improvement: Added additional information about reCAPTCHA to its setting control.
+* Improvement: Added a constant that may be overridden to customize the expiration time of login verification email links.
+* Improvement: reCAPTCHA keys are now tested on saving to prevent accidentally inputting a v2 key.
+* Improvement: Added a setting to control the reCAPTCHA human/bot threshold.
+* Improvement: Added a separate option to trigger removal of Login Security tables and data on deactivation.
+* Improvement: Reworked the reCAPTCHA implementation to trigger the token check on login/registration form submission to avoid the token expiring.
+* Fix: Widened the reCAPTCHA key fields to allow the full keys to be visible.
+* Fix: Fixed encoding of the ellipsis character when reporting malware finds.
+* Fix: Disabling the IP blacklist once again correctly clears the block cache.
+* Fix: Addressed an issue when outbound UDP connections are blocked where the NTP check could log an error.
+* Fix: Added handling for reCAPTCHA's JavaScript failing to load, which previously blocked logging in.
+* Fix: Fixed the functionality of the button to send 2FA grace period notifications.
+* Fix: Fixed a missing icon for some help links when running in standalone mode.
+
+= 7.3.4 - June 17, 2019 =
+* Improvement: Added security events and alerting features built into Wordfence Central.
 
 = 7.3.3 - June 11, 2019 =
 * Improvement: Added support for managing the login security settings to Wordfence Central.

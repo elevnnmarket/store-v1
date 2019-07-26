@@ -48,8 +48,6 @@ class Seller_Order_List extends WP_List_Table
      */
     public function prepare_items()
     {
-        global $wpdb;
-
         $columns = $this->get_columns();
 
         $sortable = $this->get_sortable_columns();
@@ -61,8 +59,6 @@ class Seller_Order_List extends WP_List_Table
         $data = $this->table_data();
 
         $totalitems = count($data);
-
-        $user = get_current_user_id();
 
         $screen = get_current_screen();
 
@@ -235,7 +231,19 @@ class Seller_Order_List extends WP_List_Table
      */
     public function column_product_total($item)
     {
-        return sprintf('%s', wc_price($item['product_total']));
+        $order = wc_get_order( $item['order_id'] );
+        return sprintf('%s', wc_price($item['product_total'], array('currency' => $order->get_currency())));
+    }
+
+    /**
+     * Checkbox column data.
+     *
+     * @param array $item column data
+     */
+    public function column_shipping($item)
+    {
+        $order = wc_get_order( $item['order_id'] );
+        return sprintf('%s', wc_price($item['shipping'], array('currency' => $order->get_currency())));
     }
 
     /**
@@ -245,7 +253,8 @@ class Seller_Order_List extends WP_List_Table
      */
     public function column_total_commission($item)
     {
-        return sprintf('%s', wc_price($item['total_commission']));
+        $order = wc_get_order($item['order_id']);
+        return sprintf('%s', wc_price($item['total_commission'], array('currency' => $order->get_currency())));
     }
 
     /**
@@ -255,34 +264,41 @@ class Seller_Order_List extends WP_List_Table
      */
     public function column_total_seller_amount($item)
     {
+        $order = wc_get_order($item['order_id']);
         $rwd_note = '';
         if (!empty($item['reward_data'])) {
             if (!empty($item['reward_data']['seller'])) {
-                $rwd_note = ' - ' . wc_price($item['reward_data']['seller']) . '( ' . __('Reward', 'marketplace') . ' )';
+                $rwd_note = ' - ' . wc_price($item['reward_data']['seller'], array('currency' => $order->get_currency())) . '( ' . __('Reward', 'marketplace') . ' )';
             }
         }
         if (!empty($item['wallet_data'])) {
             if (!empty($item['wallet_data']['seller'])) {
-                $rwd_note .= ' - ' . wc_price($item['wallet_data']['seller']) . '( ' . __('Wallet', 'marketplace') . ' )';
+                $rwd_note .= ' - ' . wc_price($item['wallet_data']['seller'], array('currency' => $order->get_currency())) . '( ' . __('Wallet', 'marketplace') . ' )';
             }
         }
 
         if ($item['total_seller_amount'] != $item['product_total']) {
             $tip = '<p>';
-            $tip .= wc_price($item['total_seller_amount']);
+            $tip .= wc_price($item['total_seller_amount'], array('currency' => $order->get_currency()));
             $tip .= ' = ';
-            $tip .= wc_price($item['product_total']);
-            $tip .= ' + ';
-            $tip .= wc_price($item['shipping']) . ' ( ' . __('Shipping', 'marketplace') . ' ) ';
+            $tip .= wc_price($item['product_total'], array('currency' => $order->get_currency()));
+			if( $item['shipping'] != 0 ) {
+				$tip .= ' + ';
+				$tip .= wc_price($item['shipping'], array('currency' => $order->get_currency())) . ' ( ' . __('Shipping', 'marketplace') . ' ) ';
+			}
+			if( $item['total_commission'] != 0 ) {
+				$tip .= ' - ';
+				$tip .= wc_price($item['total_commission'], array('currency' => $order->get_currency())) . ' ( ' . __('Commission', 'marketplace') . ' ) ';
+			}
             if (!empty($rwd_note)) {
                 $tip .= $rwd_note;
             }
             $tip .= ' ';
             $tip .= '</p>';
-            return sprintf('%s %s', '<span style="display:inline-block">' . wc_price($item['total_seller_amount']) . '</span>', wc_help_tip($tip, true));
+            return sprintf('%s %s', '<span style="display:inline-block">' . wc_price($item['total_seller_amount'], array('currency' => $order->get_currency())) . '</span>', wc_help_tip($tip, true));
         }
 
-        return sprintf('%s', wc_price($item['total_seller_amount']));
+        return sprintf('%s', wc_price($item['total_seller_amount'], array('currency' => $order->get_currency())));
     }
 
     /**
@@ -292,6 +308,7 @@ class Seller_Order_List extends WP_List_Table
      */
     public function column_discount($item)
     {
+        $order = wc_get_order($item['order_id']);
         if (!empty($item)) {
             $discount = $item['discount'];
             $result = '-';
@@ -305,7 +322,7 @@ class Seller_Order_List extends WP_List_Table
             }
             if ($amt != 0) {
                 $tip = '<p>';
-                $tip .= wc_price($amt);
+                $tip .= wc_price($amt, array('currency' => $order->get_currency()));
                 $tip .= '</p>';
 
                 return sprintf('%s %s', $result, wc_help_tip($tip, true));
@@ -325,7 +342,6 @@ class Seller_Order_List extends WP_List_Table
         $mp_commission = new MP_Commission();
 
         $data = array();
-
         $sel_order = $wpdb->get_results($wpdb->prepare("SELECT DISTINCT order_id from {$wpdb->prefix}mporders where seller_id = %d", $this->seller_id));
 
         if (!empty($sel_order)) {
@@ -335,8 +351,8 @@ class Seller_Order_List extends WP_List_Table
                 $or_status = !empty(wc_get_order($o_id)) ? wc_get_order($o_id)->get_status() : '';
 
                 if ($or_status == 'completed') {
-					
                     $sel_ord_data = $mp_commission->get_seller_final_order_info($o_id, $this->seller_id);
+
                     $data[] = $sel_ord_data;
                 }
             }
@@ -362,7 +378,7 @@ class Seller_Order_List extends WP_List_Table
      */
     public function process_bulk_action()
     {
-        global $wpdb, $commission, $transaction;
+        global $commission, $transaction;
 
         if ($this->current_action() === 'pay') {
             if (isset($_POST['oid'])) {
@@ -385,7 +401,7 @@ class Seller_Order_List extends WP_List_Table
                         }
                     }
                     if ($amount > 0) {
-                        $response = $transaction->generate($this->seller_id, $t_order_ids, $t_item_ids, $amount, '');
+                        $transaction->generate($this->seller_id, $t_order_ids, $t_item_ids, $amount, '');
                     }
                 }
             }

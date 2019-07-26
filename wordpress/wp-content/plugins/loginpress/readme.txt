@@ -3,8 +3,8 @@ Requires at least: 4.0
 Tested up to: 5.2
 Contributors: WPBrigade, hiddenpearls, AbdulWahab610
 Author URI: https://wpbrigade.com
-Tags: wp-login, login, login customizer, custom login, wordpress login, login customizer, custom login page, login error, login page style, loginpress
-Stable tag: 1.2.0
+Tags: wp-login, login, login customizer, custom login, wordpress login,
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -214,6 +214,29 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
 
 == Changelog ==
 
+= 1.2.4 - 2019-07-23 =
+* BugFix: Compatibility issue, fatal error fixed.
+
+= 1.2.3 - 2019-07-23 =
+* New Feature: Compatible LoginPress Customizer with WebARX plugin.
+* New Feature: Add settings for "remember me" option already checked on login form.
+* New Feature: Create a hook for change the default login page background.
+* Bugfix: Footer issue in Safari Browser.
+* Bugfix: LoginPress Dashicon confliction with other custom dashicons.
+* Bugfix: Video Previewer issue in customizer.
+
+= 1.2.2 - 2019-07-15 =
+* New Feature: One click Install / Activate / Deactivate Add-Ons on addons page.
+* Bugfix: Enable / Disable "Back To" link issue in customizer.
+* Bugfix: "remember me" color issue in customizer.
+* Bugfix: Login form transparacny issue in customizer.
+* Bugfix: Optimized plugin speed and code improvement.
+* Enhancement: Allow SVG file type if SVG mime enable in WordPress.
+
+= 1.2.1 - 2019-07-08 =
+* Bugfix: PHP warning.
+* Enhancement: Update log file.
+
 = 1.2.0 - 2019-06-09 =
 * Bugfix: Login error message in Customizer.
 * Enhancement: Auto Focus on the LoginPress Panel in Customizer.
@@ -312,7 +335,7 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
 
 = 1.1.6 - 2018-06-25 =
 * Bugfix: Forget & Registration Form Transparency issue.
-* Bugfix: license issue fix for premium users.
+* Bugfix: License issue fix for premium users.
 * Update: LoginPress addons ( Auto Login, Login Redirects, Social Login ) and LoginPress Pro.
 * Compatibility: Compatible with WordPress 4.9.
 
@@ -324,7 +347,7 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
 * Compatibility: Compatible with WordPress 4.9.
 
 = 1.1.4 - 2018-03-31 =
-* Bugfix: addons notice links
+* Bugfix: Addons notice links.
 
 = 1.1.3 - 2018-03-30 =
 * New Feature: Compatible with Multisite.
@@ -336,84 +359,84 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
 * New Feature: Introducing Login Button (Padding, Padding top, Padding bottom, Radius, Shadow, Opacity, Text size) control.
 * New Feature: Introducing Footer Copyright Text (Enable / Disable) control.
 * New Feature: Introducing Brand text position control in footer.
-* Enhancement: Compatible with Plugin Password Protected.
-* Enhancement: Compatible with Plugin Divi 100 Login Page.
-* Enhancement: Compatible with Plugin Fusion Builder.
-* Enhancement: Code refactoring.
 * Bugfix: Login Logo issue in mobile Responsive.
 * Bugfix: Form Background Color issue.
 * Bugfix: Footer text issue in Customizer.
 * Bugfix: Typos in Customizer.
+* Enhancement: Compatible with Plugin Password Protected.
+* Enhancement: Compatible with Plugin Divi 100 Login Page.
+* Enhancement: Compatible with Plugin Fusion Builder.
+* Enhancement: Code refactoring.
 * Compatibility: Compatible with WordPress 4.9.
 
 = 1.1.2 - 2018-01-20 =
-* Compatibility: Compatible with WordPress 4.9.
-* Bugfix: logo sizing
+* Bugfix: Logo sizing
 * Bugfix: Compatibility issue with PHP 5.3
+* Compatibility: Compatible with WordPress 4.9.
 
 = 1.1.1 - 2018-01-19 =
 * Compatibility: Compatible with WordPress 4.9.
-* Bugfix: default background fixed
+* Bugfix: Default background fixed
 
 = 1.1.0 - 2018-01-19 =
-* Compatibility: Compatible with WordPress 4.9.
 * New Feature: Introducing Background Gallery with a selected set of HD Backgrounds for Login Screen.
 * New Feature: Launched LoginPress addons (Auto Login, Hide Login, Login Redirects, Social Login, Login Widget, Limit Login Attempts)
 * New Feature: Login Addons can be installed from addons page within the plugin.
 * New Feature: Launched login logout menu addon on wordpress.org can be installed from LoginPress addons screen.
 * Bugfix: Custom Previewer Icon issue on Preview screen
 * Bugfix: Date_function() is deprecated
-* Enhancement: Code refactoring
+* Enhancement: Code refactoring.
+* Compatibility: Compatible with WordPress 4.9.
 
 = 1.0.23 - 2017-12-26 =
-* Compatibility: Compatible with WordPress 4.9.1
 * New Feature: Implement Edit Shortcut Icons in the Customizer Preview.
-* Enhancement: Improved the UI/UX of the whole plugin.
-* Enhancement: Apply live Google Fonts on footer text in Customizer (Pro Feature).
 * Bugfix: Welcome messages in Customizer.
 * Bugfix: Activation multiple plugins issue.
 * Bugfix: PHP 7 Warning.
 * Bugfix: RTL Settings pages.
 * Bugfix: Typo in log file.
 * Bugfix: Optimized plugin speed and code improvement.
+* Enhancement: Improved the UI/UX of the whole plugin.
+* Enhancement: Apply live Google Fonts on footer text in Customizer (Pro Feature).
+* Compatibility: Compatible with WordPress 4.9.1
 
 
 = 1.0.22 - 2017-09-08 =
 * New Feature: Custom Password Field on Registration Form.
 * New Feature: Should be Login with Username and/or Email Address.
-* Enhancement: LoginPress Customization array in configuration. "Help Page"
 * Bugfix: array_key_exists(); on installation.
+* Enhancement: LoginPress Customization array in configuration. "Help Page"
 
 = 1.0.21 - 2017-08-25 =
-* Bugfix: Translation bug fixed which changes multilingual backend to english.
+* Bugfix: Translation bug fixed which changes multilingual backend to English.
 
 = 1.0.20 - 2017-08-25 =
-* Enhancement: Make Placeholder in customizer welcome input fields
-* Bugfix: CSS Confliction with Jetpack
-* Bugfix: optin form style issue on RTL WP
-* Bugfix: welcome message support issue
+* Bugfix: CSS Confliction with Jetpack.
+* Bugfix: Optin form style issue on RTL WP.
+* Bugfix: Welcome message support issue.
+* Enhancement: Make Placeholder in customizer welcome input fields.
 
 = 1.0.19 - 2017-08-22 =
-* Enhancement: (New Feature) User Login with Email only.
-* Enhancement: (New Feature) Introduced Help Page with System Info.
-* Enhancement: (New Feature) Introduced Add-ons page, list of all possible add-ons.
-* Enhancement: (New Feature) Introduced Export/Import settings page.
-* Enhancement: (New Feature) Compatible with WPML.
+* New Feature: User Login with Email only.
+* New Feature: Introduced Help Page with System Info.
+* New Feature: Introduced Add-ons page, list of all possible Add-Ons.
+* New Feature: Introduced Export/Import settings page.
+* New Feature: Compatible with WPML.
 * Enhancement: Add 'px' automatically in input field.
-* Bugfix: code cleanup.
+* Enhancement: Code refactoring.
 
 = 1.0.18 - 2017-07-03 =
-* Enhancement: Set login session expiration time.
 * Bugfix: Compatible with Rename wp-login.php
 * Bugfix: Conflict with Leaflet Maps Marker.
-* Bugfix: Password Reset Success Message
+* Bugfix: Password Reset Success Message.
 * Bugfix: Enqueue settings page CSS & JS files only on settings page.
 * Bugfix: Optimized plugin speed and code improvement.
+* Enhancement: Set login session expiration time.
 
 
 = 1.0.17 - 2017-06-14 =
-* Enhancement: Compatible with 4.8
 * Enhancement: Pro features promo introducing in Free version.
+* Enhancement: Compatible with 4.8
 
 = 1.0.16 - 2017-06-09 =
 * Bugfix: Login errors confliction with WooCommerce login form.
@@ -426,20 +449,20 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
     * Enhancement: Code improvement.
 
 = 1.0.15 - 2017-05-31 =
-* Enhancement: opt-in for plugin users.
+* Enhancement: Opt-in for plugin users.
 * Enhancement: Add footer link through customizer.
-* Enhancement: Code cleanup
+* Enhancement: Code refactoring.
 
 = 1.0.14 - 2017-04-29 =
 * Bugfix: Backgrounds and Colors for pre-defined templates.
-* Enhancement: Code cleanup
+* Enhancement: Code refactoring.
 
 = 1.0.13 - 2017-04-14 =
-* Bugfix: Code improvement
 * Enhancement: Introducing Pro features e.g Google fonts, Google reCaptcha. Adding compatibility for those features in Free version.
+* Enhancement: Code improvement.
 
 = 1.0.12 - 2017-03-23 =
-* Bugfix: Remove conflictions
+* Bugfix: Remove conflictions.
 * Enhancement: Add Button to deactivate plugin without feedback.
 
 
@@ -455,40 +478,40 @@ Please visit <a target="_blank" rel="friend" href="https://WPBrigade.com/wordpre
 * Bugfix: Default background issue fixed.
 
 = 1.0.9 - 2017-02-01 =
-* Bugfix: path issue in 1.0.8
+* Bugfix: Path issue in 1.0.8
 
 = 1.0.8 - 2017-02-01 =
-* Enhancement: Reset settings option added
-* Enhancement: Login Page themes launch
-* Enhancement: Added Premium version
+* Enhancement: Reset settings option added.
+* Enhancement: Login Page themes launch.
+* Enhancement: Added Premium version.
 
 = 1.0.7 - 2017-01-24 =
 * Bug fix: Color and Background management fixed and themes launch.
 
 = 1.0.6 - 2017-01-20 =
-* Bug fix: site lock out bug fixed.
+* Bug fix: Site lock out bug fixed.
 
 = 1.0.5 - 2017-01-13 =
 * Bug fix: Redirect 404 page error.
 
 = 1.0.4 - 2017-01-12 =
 * Bug fix: Default background path fixed.
-* Bug fix: bugfix for PHP 5.3
+* Bug fix: Bugfix for PHP 5.3
 
 = 1.0.3 - 2017-01-06 =
 * Bug fix: Default background.
 * Bug fix: Responsive layout.
 
 = 1.0.2 - 2016-12-24 =
-* code cleanup and readme update.
+* Enhancement: Code refactoring and readme update.
 
 = 1.0.1 - 2016-11-08 =
-* Changing menu name to LoginPress in WordPress Customizer
+* Enhancement: Changing panel name "LoginPress" in WordPress Customizer.
 
 = 1.0.0 - 2016-09-08 =
 * Initial Release.
 
 == Upgrade Notice ==
 
-= 1.2.0=
+= 1.2.4 =
 * Important Release, upgrade immediately.

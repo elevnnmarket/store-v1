@@ -119,8 +119,8 @@ if ( function_exists( 'tinvwl_comet_cache_reject' ) ) {
 	add_action( 'tinvwl_before_action_owner', 'tinvwl_comet_cache_reject' );
 	add_action( 'tinvwl_before_action_user', 'tinvwl_comet_cache_reject' );
 	add_action( 'tinvwl_addproduct_tocart', 'tinvwl_comet_cache_reject' );
-	add_action( 'tinv_wishlist_addtowishlist_button', 'tinvwl_comet_cache_reject' );
-	add_action( 'tinv_wishlist_addtowishlist_dialogbox', 'tinvwl_comet_cache_reject' );
+	add_action( 'tinvwl_wishlist_addtowishlist_button', 'tinvwl_comet_cache_reject' );
+	add_action( 'tinvwl_wishlist_addtowishlist_dialogbox', 'tinvwl_comet_cache_reject' );
 }
 
 if ( ! function_exists( 'gf_productaddon_support' ) ) {
@@ -1504,19 +1504,24 @@ if ( ! function_exists( 'tinv_wishlist_metasupport_woocommerce_tm_extra_product_
 	 * @return array
 	 */
 	function tinv_wishlist_metasupport_woocommerce_tm_extra_product_options( $meta, $product_id, $variation_id ) {
-		if ( array_key_exists( 'tcaddtocart', $meta ) && function_exists( 'TM_EPO_API' ) && function_exists( 'TM_EPO' ) ) {
-			$has_epo = TM_EPO_API()->has_options( $product_id );
-			if ( TM_EPO_API()->is_valid_options( $has_epo ) ) {
+		if ( array_key_exists( 'tcaddtocart', $meta ) && ( defined( 'THEMECOMPLETE_EPO_VERSION' ) || defined( 'TM_EPO_VERSION' ) ) ) {
+			$api     = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_API() : TM_EPO_API();
+			$core    = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO() : TM_EPO();
+			$version = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_VERSION : TM_EPO_VERSION;
+			$cart    = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_CART() : TM_EPO_CART();
+
+			$has_epo = $api->has_options( $product_id );
+			if ( $api->is_valid_options( $has_epo ) ) {
 				$post_data = array();
 				foreach ( $meta as $key => $value ) {
 					$post_data[ $key ] = $value['display'];
 				}
 
-				$cart_class = version_compare( TM_EPO_VERSION, '4.8.0', '<' ) ? TM_EPO() : TM_EPO_CART();
+				$cart_class = version_compare( $version, '4.8.0', '<' ) ? $core : $cart;
 
 				$cart_item = $cart_class->add_cart_item_data_helper( array(), $product_id, $post_data );
 
-				if ( 'normal' == TM_EPO()->tm_epo_hide_options_in_cart && 'advanced' != TM_EPO()->tm_epo_cart_field_display && ! empty( $cart_item['tmcartepo'] ) ) {
+				if ( 'normal' == $core->tm_epo_hide_options_in_cart && 'advanced' != $core->tm_epo_cart_field_display && ! empty( $cart_item['tmcartepo'] ) ) {
 					$cart_item['quantity']         = 1;
 					$cart_item['data']             = wc_get_product( $variation_id ? $variation_id : $product_id );
 					$cart_item['tm_cart_item_key'] = '';
@@ -1557,29 +1562,36 @@ if ( ! function_exists( 'tinvwl_item_price_woocommerce_tm_extra_product_options'
 	 * @return string
 	 */
 	function tinvwl_item_price_woocommerce_tm_extra_product_options( $price, $wl_product, $product ) {
-		if ( array_key_exists( 'tcaddtocart', (array) @$wl_product['meta'] ) && function_exists( 'TM_EPO_API' ) && function_exists( 'TM_EPO' ) && TM_EPO()->tm_epo_hide_options_in_cart == 'normal' ) {
-			$product_id = $wl_product['product_id'];
-			$has_epo    = TM_EPO_API()->has_options( $product_id );
-			if ( TM_EPO_API()->is_valid_options( $has_epo ) ) {
+		if ( array_key_exists( 'tcaddtocart', (array) @$wl_product['meta'] ) && ( defined( 'THEMECOMPLETE_EPO_VERSION' ) || defined( 'TM_EPO_VERSION' ) ) ) {
 
-				$cart_class = version_compare( TM_EPO_VERSION, '4.8.0', '<' ) ? TM_EPO() : TM_EPO_CART();
+			$api     = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_API() : TM_EPO_API();
+			$core    = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO() : TM_EPO();
+			$version = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_VERSION : TM_EPO_VERSION;
+			$cart    = defined( 'THEMECOMPLETE_EPO_VERSION' ) ? THEMECOMPLETE_EPO_CART() : TM_EPO_CART();
+			if ( $core->tm_epo_hide_options_in_cart == 'normal' ) {
+				$product_id = $wl_product['product_id'];
+				$has_epo    = $api->has_options( $product_id );
+				if ( $api->is_valid_options( $has_epo ) ) {
 
-				$cart_item             = $cart_class->add_cart_item_data_helper( array(), $product_id, $wl_product['meta'] );
-				$cart_item['quantity'] = 1;
-				$cart_item['data']     = $product;
+					$cart_class = version_compare( $version, '4.8.0', '<' ) ? $core : $cart;
 
-				$product_price = apply_filters( 'wc_epo_add_cart_item_original_price', $cart_item['data']->get_price(), $cart_item );
-				if ( ! empty( $cart_item['tmcartepo'] ) ) {
-					$to_currency = tc_get_woocommerce_currency();
-					foreach ( $cart_item['tmcartepo'] as $value ) {
-						if ( array_key_exists( $to_currency, $value['price_per_currency'] ) ) {
-							$value         = floatval( $value['price_per_currency'][ $to_currency ] );
-							$product_price += $value;
+					$cart_item             = $cart_class->add_cart_item_data_helper( array(), $product_id, $wl_product['meta'] );
+					$cart_item['quantity'] = 1;
+					$cart_item['data']     = $product;
+
+					$product_price = apply_filters( 'wc_epo_add_cart_item_original_price', $cart_item['data']->get_price(), $cart_item );
+					if ( ! empty( $cart_item['tmcartepo'] ) ) {
+						$to_currency = version_compare( $version, '4.9.0', '<' ) ? tc_get_woocommerce_currency() : themecomplete_get_woocommerce_currency();
+						foreach ( $cart_item['tmcartepo'] as $value ) {
+							if ( array_key_exists( $to_currency, $value['price_per_currency'] ) ) {
+								$value         = floatval( $value['price_per_currency'][ $to_currency ] );
+								$product_price += $value;
+							}
 						}
 					}
-				}
 
-				$price = apply_filters( 'wc_tm_epo_ac_product_price', apply_filters( 'woocommerce_cart_item_price', $cart_class->get_price_for_cart( $product_price, $cart_item, '' ), $cart_item, '' ), '', $cart_item, $product, $product_id );
+					$price = apply_filters( 'wc_tm_epo_ac_product_price', apply_filters( 'woocommerce_cart_item_price', $cart_class->get_price_for_cart( $product_price, $cart_item, '' ), $cart_item, '' ), '', $cart_item, $product, $product_id );
+				}
 			}
 		}
 
@@ -1604,23 +1616,25 @@ if ( ! function_exists( 'TII18n' ) ) {
 // WP Multilang string translations.
 if ( function_exists( 'wpm_translate_string' ) ) {
 
-	add_filter( 'tinvwl-general-default_title', 'wpm_translate_string' );
-	add_filter( 'tinvwl-general-text_browse', 'wpm_translate_string' );
-	add_filter( 'tinvwl-general-text_added_to', 'wpm_translate_string' );
-	add_filter( 'tinvwl-general-text_already_in', 'wpm_translate_string' );
-	add_filter( 'tinvwl-general-text_removed_from', 'wpm_translate_string' );
+	add_filter( 'tinvwl_default_wishlist_title', 'wpm_translate_string' );
+	add_filter( 'tinvwl_view_wishlist_text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_added_to_wishlist_text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_already_in_wishlist_text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_removed_from_wishlist_text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_remove_from_wishlist_text', 'wpm_translate_string' );
 
-	add_filter( 'tinvwl-add_to_wishlist_catalog-text', 'wpm_translate_string' );
-	add_filter( 'tinvwl-add_to_wishlist_catalog-text_remove', 'wpm_translate_string' );
+	add_filter( 'tinvwl_added_to_wishlist_text_loop', 'wpm_translate_string' );
+	add_filter( 'tinvwl_remove_from_wishlist_text_loop', 'wpm_translate_string' );
 
-	add_filter( 'tinvwl-product_table-text_add_to_cart', 'wpm_translate_string' );
 
-	add_filter( 'tinvwl-table-text_add_select_to_cart', 'wpm_translate_string' );
-	add_filter( 'tinvwl-table-text_add_all_to_cart', 'wpm_translate_string' );
+	add_filter( 'tinvwl_add_to_cart_text', 'wpm_translate_string' );
 
-	add_filter( 'tinvwl-social-share_on', 'wpm_translate_string' );
+	add_filter( 'tinvwl_add_selected_to_cart_text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_add_all_to_cart_text', 'wpm_translate_string' );
 
-	add_filter( 'tinvwl-topline-text', 'wpm_translate_string' );
+	add_filter( 'tinvwl_share_on_text', 'wpm_translate_string' );
+
+	add_filter( 'tinvwl_wishlist_products_counter_text', 'wpm_translate_string' );
 
 } // End if().
 
@@ -2149,7 +2163,7 @@ if ( ! function_exists( 'tinv_wishlist_qty_woo_advanced_qty' ) ) {
 			$args = $advanced_qty->qty_input_args( array(
 				'min_value' => 1,
 				'max_value' => '',
-				'step'      => 1
+				'step'      => 1,
 			), $product );
 
 			$quantity = $args['input_value'];
@@ -2212,8 +2226,6 @@ if ( ! function_exists( 'tinv_wishlist_item_meta_woocommerce_custom_product_addo
 			$form     = new WCPA_Form();
 			$frontend = new WCPA_Front_End();
 			$data     = array();
-
-
 			$post_ids = $form->get_form_ids( $product_id );
 
 			if ( wcpa_get_option( 'form_loading_order_by_date' ) === true ) {
@@ -2237,9 +2249,7 @@ if ( ! function_exists( 'tinv_wishlist_item_meta_woocommerce_custom_product_addo
 				}
 			}
 
-
 			foreach ( $data as $v ) {
-
 				$form_data = clone $v;
 				unset( $form_data->values ); //avoid saving large number of data
 				unset( $form_data->className ); //avoid saving no use data
@@ -2576,14 +2586,14 @@ if ( defined( 'myCRED_VERSION' ) ) {
 							<div class="form-group">
 								<label for="<?php echo $this->field_id( array(
 									'tinvwl_added',
-									'limit'
+									'limit',
 								) ); ?>"><?php _e( 'Limit', 'ti-woocommerce-wishlist' ); ?></label>
 								<?php echo $this->hook_limit_setting( $this->field_name( array(
 									'tinvwl_added',
-									'limit'
+									'limit',
 								) ), $this->field_id( array(
 									'tinvwl_added',
-									'limit'
+									'limit',
 								) ), $prefs['tinvwl_added']['limit'] ); ?>
 							</div>
 						</div>
@@ -2599,7 +2609,7 @@ if ( defined( 'myCRED_VERSION' ) ) {
 								       class="form-control"/>
 								<span class="description"><?php echo $this->available_template_tags( array(
 										'general',
-										'post'
+										'post',
 									) ); ?></span>
 							</div>
 						</div>
@@ -2621,11 +2631,11 @@ if ( defined( 'myCRED_VERSION' ) ) {
 							<div class="form-group">
 								<label for="<?php echo $this->field_id( array(
 									'tinvwl_purchased',
-									'limit'
+									'limit',
 								) ); ?>"><?php _e( 'Limit', 'ti-woocommerce-wishlist' ); ?></label>
 								<?php echo $this->hook_limit_setting( $this->field_name( array(
 									'tinvwl_purchased',
-									'limit'
+									'limit',
 								) ), $this->field_id( array(
 									'tinvwl_purchased',
 									'limit',

@@ -188,7 +188,6 @@ class Seller_Transaction_List extends WP_List_Table
      */
     private function table_data()
     {
-        global $wpdb, $commission;
         $data = array();
         $i = 0;
         $transaction_id = array();
@@ -199,27 +198,32 @@ class Seller_Transaction_List extends WP_List_Table
         $created_on = array();
         if (!empty($this->transaction)) {
             foreach ($this->transaction as $transaction) {
-                $price = 0;
-                $id[] = $transaction['id'];
-                $transaction_id[] = $transaction['transaction_id'];
-                $order_id[] = $transaction['order_id'];
-                $amount[] = wc_price($transaction['amount']);
-                $type[] = $transaction['type'];
-                $method[] = $transaction['method'];
-                $created_on[] = get_date_from_gmt($transaction['transaction_date']);
-                $data[] = array(
-                    'id' => $id[$i],
-                    'transaction_id' => $transaction_id[$i],
-                    'order_id' => $order_id[$i],
-                    'amount' => $amount[$i],
-                    'type' => $type[$i],
-                    'method' => $method[$i],
-                    'created_on' => $created_on[$i],
-                );
-                ++$i;
-            }
-        }
+				$order = wc_get_order($transaction['order_id']);
+				if($order){
 
+					$amount[] = wc_price($transaction['amount'], array('currency' => $order->get_currency() ));
+				}else{
+					
+					$amount[] = wc_price($transaction['amount'], array('currency' => get_woocommerce_currency() ));
+				}
+				$id[] = $transaction['id'];
+				$transaction_id[] = $transaction['transaction_id'];
+				$order_id[] = $transaction['order_id'];
+				$type[] = $transaction['type'];
+				$method[] = $transaction['method'];
+				$created_on[] = get_date_from_gmt($transaction['transaction_date']);
+				$data[] = array(
+					'id' => $id[$i],
+					'transaction_id' => $transaction_id[$i],
+					'order_id' => $order_id[$i],
+					'amount' => $amount[$i],
+					'type' => $type[$i],
+					'method' => $method[$i],
+					'created_on' => $created_on[$i],
+				);
+				++$i;
+            }
+		}
         return $data;
     }
 

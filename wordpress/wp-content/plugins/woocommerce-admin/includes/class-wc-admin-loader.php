@@ -61,6 +61,12 @@ class WC_Admin_Loader {
 
 		// priority is 20 to run after https://github.com/woocommerce/woocommerce/blob/a55ae325306fc2179149ba9b97e66f32f84fdd9c/includes/admin/class-wc-admin-menus.php#L165.
 		add_action( 'admin_head', array( 'WC_Admin_Loader', 'remove_app_entry_page_menu_item' ), 20 );
+
+		/*
+		* Remove the emoji script as it always defaults to replacing emojis with Twemoji images.
+		* Gutenberg has also disabled emojis. More on that here -> https://github.com/WordPress/gutenberg/pull/6151
+		*/
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	}
 
 	/**
@@ -80,7 +86,7 @@ class WC_Admin_Loader {
 	 */
 	public static function is_feature_enabled( $feature ) {
 		$features = self::get_features();
-		return in_array( $feature, $features );
+		return in_array( $feature, $features, true );
 	}
 
 	/**
@@ -142,12 +148,14 @@ class WC_Admin_Loader {
 	 * @todo The entry point for the embed needs moved to this class as well.
 	 */
 	public static function register_page_handler() {
+		$analytics_cap = apply_filters( 'woocommerce_admin_analytics_menu_capability', 'view_woocommerce_reports' );
 		wc_admin_register_page(
 			array(
-				'id'     => 'woocommerce-dashboard', // Expected to be overridden if dashboard is enabled.
-				'parent' => 'woocommerce',
-				'title'  => null,
-				'path'   => self::APP_ENTRY_POINT,
+				'id'         => 'woocommerce-dashboard', // Expected to be overridden if dashboard is enabled.
+				'parent'     => 'woocommerce',
+				'title'      => null,
+				'path'       => self::APP_ENTRY_POINT,
+				'capability' => $analytics_cap,
 			)
 		);
 
@@ -237,6 +245,7 @@ class WC_Admin_Loader {
 			'wc-components',
 			self::get_url( 'components/index.js' ),
 			array(
+				'wp-api-fetch',
 				'wp-components',
 				'wp-data',
 				'wp-element',
@@ -258,7 +267,7 @@ class WC_Admin_Loader {
 		wp_register_style(
 			'wc-components',
 			self::get_url( 'components/style.css' ),
-			array( 'wp-edit-blocks' ),
+			array( 'wp-components' ),
 			self::get_file_version( 'components/style.css' )
 		);
 		wp_style_add_data( 'wc-components', 'rtl', 'replace' );
@@ -266,7 +275,7 @@ class WC_Admin_Loader {
 		wp_register_style(
 			'wc-components-ie',
 			self::get_url( 'components/ie.css' ),
-			array( 'wp-edit-blocks' ),
+			array( 'wp-components' ),
 			self::get_file_version( 'components/ie.css' )
 		);
 		wp_style_add_data( 'wc-components-ie', 'rtl', 'replace' );
@@ -370,21 +379,18 @@ class WC_Admin_Loader {
 		$sections = self::get_embed_breadcrumbs();
 		$sections = is_array( $sections ) ? $sections : array( $sections );
 		?>
-		<div id="woocommerce-embedded-root">
+		<div id="woocommerce-embedded-root" class="is-embed-loading">
 			<div class="woocommerce-layout">
 				<div class="woocommerce-layout__header is-embed-loading">
 					<h1 class="woocommerce-layout__header-breadcrumbs">
 					<span>
-						<a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-admin#/' ) ); ?>"><?php esc_html_e( 'WooCommerce', 'woocommerce-admin' ); ?></a>
+						<a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-admin' ) ); ?>"><?php esc_html_e( 'WooCommerce', 'woocommerce-admin' ); ?></a>
 					</span>
 						<?php foreach ( $sections as $section ) : ?>
 							<?php self::output_breadcrumbs( $section ); ?>
 						<?php endforeach; ?>
 					</h1>
 				</div>
-			</div>
-			<div class="woocommerce-layout__primary is-embed-loading" id="woocommerce-layout__primary">
-				<div id="woocommerce-layout__notice-list" class="woocommerce-layout__notice-list"></div>
 			</div>
 		</div>
 		<?php
@@ -396,8 +402,6 @@ class WC_Admin_Loader {
 	 * @param string $admin_body_class Body class to add.
 	 */
 	public static function add_admin_body_classes( $admin_body_class = '' ) {
-		global $hook_suffix;
-
 		if ( ! self::is_admin_page() && ! self::is_embed_page() ) {
 			return $admin_body_class;
 		}
@@ -406,6 +410,12 @@ class WC_Admin_Loader {
 		$classes[] = 'woocommerce-page';
 		if ( self::is_embed_page() ) {
 			$classes[] = 'woocommerce-embed-page';
+		}
+
+		// Some routes or features like onboarding hide the wp-admin navigation and masterbar. Setting `woocommerce_admin_is_loading` to true allows us
+		// to premeptively hide these elements while the JS app loads. This class is removed when `<Layout />` is rendered.
+		if ( self::is_admin_page() && apply_filters( 'woocommerce_admin_is_loading', false ) ) {
+			$classes[] = 'woocommerce-admin-is-loading';
 		}
 
 		$features = self::get_features();
@@ -509,19 +519,25 @@ class WC_Admin_Loader {
 			$current_user_data[ $user_field ] = json_decode( get_user_meta( get_current_user_id(), 'wc_admin_' . $user_field, true ) );
 		}
 
-		$settings['orderStatuses']     = self::get_order_statuses( wc_get_order_statuses() );
-		$settings['currentUserData']   = $current_user_data;
-		$settings['currency']          = self::get_currency_settings();
-		$settings['reviewsEnabled']    = get_option( 'woocommerce_enable_reviews' );
-		$settings['manageStock']       = get_option( 'woocommerce_manage_stock' );
-		$settings['commentModeration'] = get_option( 'comment_moderation' );
+		$settings['orderStatuses']        = self::get_order_statuses( wc_get_order_statuses() );
+		$settings['currentUserData']      = $current_user_data;
+		$settings['currency']             = self::get_currency_settings();
+		$settings['reviewsEnabled']       = get_option( 'woocommerce_enable_reviews' );
+		$settings['manageStock']          = get_option( 'woocommerce_manage_stock' );
+		$settings['commentModeration']    = get_option( 'comment_moderation' );
+		$settings['notifyLowStockAmount'] = get_option( 'woocommerce_notify_low_stock_amount' );
 		// @todo On merge, once plugin images are added to core WooCommerce, `wcAdminAssetUrl` can be retired,
 		// and `wcAssetUrl` can be used in its place throughout the codebase.
 		$settings['wcAdminAssetUrl'] = plugins_url( 'images/', plugin_dir_path( dirname( __FILE__ ) ) . 'woocommerce-admin.php' );
 
 		if ( ! empty( $preload_data_endpoints ) ) {
 			foreach ( $preload_data_endpoints as $key => $endpoint ) {
-				$settings['dataEndpoints'][ $key ] = $preload_data[ $endpoint ]['body'];
+				// Handle error case: rest_do_request() doesn't guarantee success.
+				if ( empty( $preload_data[ $endpoint ] ) ) {
+					$settings['dataEndpoints'][ $key ] = array();
+				} else {
+					$settings['dataEndpoints'][ $key ] = $preload_data[ $endpoint ]['body'];
+				}
 			}
 		}
 		$settings = self::get_custom_settings( $settings );
@@ -589,6 +605,14 @@ class WC_Admin_Loader {
 			'type'        => 'multiselect',
 			'options'     => $statuses,
 		);
+		$settings[] = array(
+			'id'          => 'woocommerce_default_date_range',
+			'option_key'  => 'woocommerce_default_date_range',
+			'label'       => __( 'Default Date Range', 'woocommerce-admin' ),
+			'description' => __( 'Default Date Range', 'woocommerce-admin' ),
+			'default'     => 'period=month&compare=previous_year',
+			'type'        => 'text',
+		);
 		return $settings;
 	}
 
@@ -604,7 +628,7 @@ class WC_Admin_Loader {
 		$settings['wcAdminSettings']         = array();
 
 		foreach ( $wc_admin_group_settings as $setting ) {
-			if ( ! empty( $setting['id'] ) && ! empty( $setting['value'] ) ) {
+			if ( ! empty( $setting['id'] ) ) {
 				$settings['wcAdminSettings'][ $setting['id'] ] = $setting['value'];
 			}
 		}

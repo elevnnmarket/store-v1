@@ -217,7 +217,7 @@ if ( ! class_exists( 'LoginPress_Filter_API' ) ) :
           'buy-now'         => 'https://wpbrigade.com/wordpress/plugins/loginpress/?utm_source=loginpress-lite&utm_medium=featured-filter&utm_campaign=pro-upgrade',
           'num_ratings'     => 51,
           'last_updated'    => '2017-07-06 7:07pm GMT',
-          'description'     => __( 'LoginPress Plugin by LoginPress holds a lot of customization fields to change the layout of the login page of WordPress. You can modify the look and feel of login page completely even the login error messages, forgot error messages, registration error messages, forget password hint message and many more.', 'loginpress' ),
+          'description'     => __( 'LoginPress Plugin by WPBrigade holds a lot of customization fields to change the layout of the login page of WordPress. You can modify the look and feel of login page completely even the login error messages, forgot error messages, registration error messages, forget password hint message and many more.', 'loginpress' ),
         ),
 			);
 

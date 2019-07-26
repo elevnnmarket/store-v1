@@ -99,7 +99,6 @@ class TInvWL_Public_TInvWL {
 		$this->topwishlist = TInvWL_Public_WishlistCounter::instance( $this->_name );
 	}
 
-
 	/**
 	 * @param $rules
 	 *
@@ -133,10 +132,10 @@ class TInvWL_Public_TInvWL {
 		add_action( 'init', array( $this, 'legacy_transfer' ), 90 );
 		add_action( 'clear_auth_cookie', array( $this, 'set_user_sharekey' ) );
 
-		add_action( $this->_name . '_after_wishlist_table', array( $this, 'wishlist_button_action_before' ), 0 );
-		add_action( $this->_name . '_after_wishlist_table', array( $this, 'wishlist_button_action_after' ), 15 );
-		add_action( $this->_name . '_after_wishlist_table', array( $this, 'wishlist_button_updcart_before' ), 15 );
-		add_action( $this->_name . '_after_wishlist_table', array( $this, 'wishlist_button_action_after' ), 100 );
+		add_action( 'tinvwl_after_wishlist_table', array( $this, 'wishlist_button_action_before' ), 0 );
+		add_action( 'tinvwl_after_wishlist_table', array( $this, 'wishlist_button_action_after' ), 15 );
+		add_action( 'tinvwl_after_wishlist_table', array( $this, 'wishlist_button_updcart_before' ), 15 );
+		add_action( 'tinvwl_after_wishlist_table', array( $this, 'wishlist_button_action_after' ), 100 );
 	}
 
 	/**
@@ -474,16 +473,16 @@ class TInvWL_Public_TInvWL {
 		wp_register_script( $this->_name, TINVWL_URL . 'assets/js/public' . $suffix . '.js', array(
 			'jquery',
 			version_compare( WC_VERSION, '3.0.0', '<' ) ? 'jquery-cookie' : 'js-cookie',
-			apply_filters( 'tinvwl-wc-cart-fragments', true ) ? 'wc-cart-fragments' : 'jquery',
+			apply_filters( 'tinvwl_wc_cart_fragments_enabled', true ) ? 'wc-cart-fragments' : 'jquery',
 		), $this->_version, true );
 		wp_localize_script( $this->_name, 'tinvwl_add_to_wishlist', array(
 			'text_create'                => __( 'Create New', 'ti-woocommerce-wishlist' ),
-			'text_already_in'            => apply_filters( 'tinvwl-general-text_already_in', tinv_get_option( 'general', 'text_already_in' ) ),
+			'text_already_in'            => apply_filters( 'tinvwl_already_in_wishlist_text', tinv_get_option( 'general', 'text_already_in' ) ),
 			'simple_flow'                => tinv_get_option( 'general', 'simple_flow' ),
 			'i18n_make_a_selection_text' => esc_attr__( 'Please select some product options before adding this product to your wishlist.', 'ti-woocommerce-wishlist' ),
 			'tinvwl_break_submit'        => esc_attr__( 'No items or actions are selected.', 'ti-woocommerce-wishlist' ),
 			'tinvwl_clipboard'           => esc_attr__( 'Copied!', 'ti-woocommerce-wishlist' ),
-			'allow_parent_variable'      => apply_filters( 'tinvwl-allow_parent_variable', false ),
+			'allow_parent_variable'      => apply_filters( 'tinvwl_allow_add_parent_variable_product', false ),
 			'wc_cart_fragments_refresh'  => apply_filters( 'tinvwl_wc_cart_fragments_refresh', true ),
 		) );
 
@@ -577,7 +576,7 @@ class TInvWL_Public_TInvWL {
 	 * @return array
 	 */
 	function account_menu_items( $items ) {
-		$index_position = apply_filters( $this->_name . '_myaccount_position_wishlist', - 1, $items );
+		$index_position = apply_filters( 'tinvwl_myaccount_position_wishlist', - 1, $items );
 		$items          = array_merge(
 			array_slice( $items, 0, $index_position, true ),
 			array(

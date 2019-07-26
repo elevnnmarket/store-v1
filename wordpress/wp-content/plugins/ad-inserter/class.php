@@ -9,8 +9,8 @@ abstract class ai_BaseCodeBlock {
   var $fallback;
   var $client_side_list_detection;
   var $w3tc_code;
-  var $w3tc_code2;
-  var $before_w3tc_code2;
+  var $w3tc_fallback_code;
+  var $before_w3tc_fallback_code;
   var $needs_class;
   var $code_version;
   var $version_name;
@@ -57,8 +57,8 @@ abstract class ai_BaseCodeBlock {
     $this->fallback = 0;
     $this->client_side_list_detection = false;
     $this->w3tc_code = '';
-    $this->w3tc_code2 = '';
-    $this->before_w3tc_code2 = '';
+    $this->w3tc_fallback_code = '';
+    $this->before_w3tc_fallback_code = '';
     $this->needs_class = false;
     $this->code_version = 0;
     $this->version_name = '';
@@ -622,6 +622,9 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
     $this->wp_options [AI_OPTION_DETECT_CLIENT_SIDE]         = AI_DISABLED;
     $this->wp_options [AI_OPTION_CLIENT_SIDE_ACTION]         = DEFAULT_CLIENT_SIDE_ACTION;
     $this->wp_options [AI_OPTION_CLOSE_BUTTON]               = DEFAULT_CLOSE_BUTTON;
+    $this->wp_options [AI_OPTION_AUTO_CLOSE_TIME]            = DEFAULT_AUTO_CLOSE_TIME;
+    $this->wp_options [AI_OPTION_STAY_CLOSED_TIME]           = DEFAULT_STAY_CLOSED_TIME;
+
     for ($viewport = 1; $viewport <= 6; $viewport ++) {
       $this->wp_options [AI_OPTION_DETECT_VIEWPORT . '_' . $viewport] = AI_DISABLED;
     }
@@ -2148,10 +2151,14 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
       $additional_code .= $this->ai_getAdLabel ();
     }
 
+    $close_button = $this->get_close_button ();
+    $auto_close_time = $this->get_auto_close_time ();
+    $stay_closed_time = $this->get_stay_closed_time ();
+
     if (!$ai_wp_data [AI_CODE_FOR_IFRAME]) {
       $alignment_type = $this->get_alignment_type ();
-      if ($force_close_button || ($this->get_close_button () != AI_CLOSE_NONE && !$ai_wp_data [AI_WP_AMP_PAGE] && $alignment_type != AI_ALIGNMENT_NO_WRAPPING)) {
-        switch ($this->get_close_button ()) {
+      if ($force_close_button || (($close_button != AI_CLOSE_NONE || $auto_close_time) && !$ai_wp_data [AI_WP_AMP_PAGE] && $alignment_type != AI_ALIGNMENT_NO_WRAPPING)) {
+        switch ($close_button) {
           case AI_CLOSE_TOP_RIGHT:
             $button_class = 'ai-close-button';
             break;
@@ -2165,11 +2172,26 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
             $button_class = 'ai-close-button ai-close-bottom ai-close-left';
             break;
           default:
-            $button_class = 'ai-close-button';
+            $button_class = 'ai-close-button ai-close-none';
             break;
         }
 
-        $additional_code .= "<span class='$button_class'></span>\n";
+        $timeout_code = '';
+        if ($auto_close_time = $this->get_auto_close_time ()) {
+          $timeout_code = " data-ai-close-timeout='{$auto_close_time}'";
+        }
+
+        $closed_code = '';
+        if ($stay_closed_time = $this->get_stay_closed_time ()) {
+          $closed_code = " data-ai-closed-time='{$stay_closed_time}'";
+        }
+
+        $closed_block_code = '';
+        if ($closed_code != '' || $timeout_code != '') {
+          $closed_block_code = " data-ai-block='{$this->number}'";
+        }
+
+        $additional_code .= "<span class='$button_class'{$timeout_code}{$closed_code}{$closed_block_code}></span>\n";
       }
     }
 
@@ -2733,6 +2755,23 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
               break;
           }
         }
+
+        if ($this->get_stay_closed_time ()) {
+          // Check for cookie
+          if (get_dynamic_blocks () == AI_DYNAMIC_BLOCKS_SERVER_SIDE_W3TC && !defined ('AI_NO_W3TC')) {
+            if ($this->w3tc_code == '') $this->w3tc_code = '$ai_code = base64_decode (\''.base64_encode ($processed_code).'\'); $ai_index = 0; $ai_enabled = true;';
+
+            $this->w3tc_code .= 'if ($ai_enabled) $ai_enabled = ai_check_block (' . $this->number . ');';
+
+            $processed_code = '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
+            $processed_code .= $this->w3tc_code . ' if ($ai_enabled) echo $ai_code;';
+            $processed_code .= '<!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
+          } else {
+              $processed_code = "<div class='ai-client-check' data-code='".base64_encode ($processed_code)."' data-block='{$this->number}'></div>\n";
+              if (!get_disable_js_code ())
+                $processed_code .= "<script>if (ai_check_block ({$this->number})) {var ai_block_div = document.getElementsByClassName ('ai-client-check'); ai_insert_code (ai_block_div [ai_block_div.length - 1]);}</script>\n";
+            }
+        }
       }
     }
 
@@ -2806,7 +2845,7 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
          $additional_block_style = '';
        }
 
-    if ($this->get_close_button () && !$ai_wp_data [AI_WP_AMP_PAGE] && !$ai_wp_data [AI_CODE_FOR_IFRAME]) {
+    if (($this->get_close_button () || $this->get_auto_close_time ()) && !$ai_wp_data [AI_WP_AMP_PAGE] && !$ai_wp_data [AI_CODE_FOR_IFRAME]) {
       $classes [] = 'ai-close';
     }
 
@@ -2869,8 +2908,8 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
 
       $this->w3tc_code .= ' $ai_code = str_replace (\'[#AI_DATA#]\', base64_encode ("[' . $this->number . ',$ai_index]"), base64_decode (\''.base64_encode ($wrapper_before).'\')) . $ai_code . base64_decode (\''.base64_encode ($wrapper_after).'\');';
 
-      if ($this->w3tc_code2 != '' ) {
-        $this->w3tc_code = $this->w3tc_code2 . ' $ai_code2 = $ai_enabled ? $ai_code : "";' . $this->w3tc_code . ' $ai_code = str_replace ("[#AI_CODE2#]", $ai_code2, $ai_code);';
+      if ($this->w3tc_fallback_code != '' ) {
+        $this->w3tc_code = $this->w3tc_fallback_code . ' $ai_code2 = $ai_enabled ? $ai_code : "";' . $this->w3tc_code . ' $ai_code = str_replace ("[#AI_CODE2#]", $ai_code2, $ai_code);';
       }
 
       $code = '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
@@ -2892,17 +2931,19 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
 
         $wrapper_after  = "</div>\n";
 
-        if ($this->w3tc_code2 != '' ) {
-          $this->before_w3tc_code2 = $wrapper_before . $code . $wrapper_after;
+        $wrapped_code = $wrapper_before . $code . $wrapper_after;
+
+        if ($this->w3tc_fallback_code != '' ) {
+          $this->before_w3tc_fallback_code = $wrapped_code;
 
           $code2 = '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
-          $code2 .= $this->w3tc_code2 .' if ($ai_enabled) echo $ai_code;';
+          $code2 .= $this->w3tc_fallback_code .' if ($ai_enabled) echo $ai_code;';
           $code2 .= '<!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 
           $code = str_replace ("[#AI_CODE2#]", $code2, $code);
         }
 
-        $code = $wrapper_before . $code . $wrapper_after;
+        $code = $wrapped_code;
       }
 
     return $code;
@@ -2991,7 +3032,7 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
 
       $serverside_insertion_code = "<div class='ai-viewports $viewport_classes' data-code='[#AI_CODE#]' data-block='{$this->number}'></div>\n";
       if (!get_disable_js_code ())
-        $serverside_insertion_code .= "<script>var ai_script = document.getElementsByClassName ('ai-viewports'); ai_insert_viewport (ai_script [ai_script.length - 1]);</script>\n";
+        $serverside_insertion_code .= "<script>var ai_block_div = document.getElementsByClassName ('ai-viewports'); ai_insert_code (ai_block_div [ai_block_div.length - 1]);</script>\n";
     }
     elseif ($viewports_insertion && $html_element_insertion) {
       $this->counters = '<span class="ai-selector-counter"></span>';
@@ -3002,7 +3043,7 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
       $serverside_insertion_code = "<div class='ai-viewports $viewport_classes' data-insertion='$insertion' data-selector='$selector' data-code='[#AI_CODE#]' data-block='{$this->number}'></div>\n";
       if (!get_disable_js_code () && $this->get_html_element_insertion () == AI_HTML_INSERTION_CLIENT_SIDE)
         // Try to insert it immediately. If the code is server-side inserted before the HTML element, it will be client-side inserted after DOM ready (remaining .ai-viewports)
-        $serverside_insertion_code .= "<script>var ai_script = document.getElementsByClassName ('ai-viewports'); ai_insert_viewport (ai_script [ai_script.length - 1]);</script>\n";
+        $serverside_insertion_code .= "<script>var ai_block_div = document.getElementsByClassName ('ai-viewports'); ai_insert_code (ai_block_div [ai_block_div.length - 1]);</script>\n";
     }
     else { // only HTML element insertion
       $this->counters = '<span class="ai-selector-counter"></span>';
@@ -3055,12 +3096,12 @@ abstract class ai_CodeBlock extends ai_BaseCodeBlock {
       $serverside_insertion_code .= '<!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 
     } else {
-        if ($this->w3tc_code2 != '' && get_dynamic_blocks () == AI_DYNAMIC_BLOCKS_SERVER_SIDE_W3TC && !defined ('AI_NO_W3TC')) {
-          $this->w3tc_code2 .= ' $ai_code = str_replace ("[#AI_CODE2#]", $ai_enabled ? $ai_code : "", base64_decode ("'. base64_encode ($this->before_w3tc_code2) . '"));';
-          $this->w3tc_code2 .= ' $ai_code = str_replace ("[#AI_CODE#]", base64_encode ($ai_code), base64_decode ("'. base64_encode ($serverside_insertion_code) . '"));';
+        if ($this->w3tc_fallback_code != '' && get_dynamic_blocks () == AI_DYNAMIC_BLOCKS_SERVER_SIDE_W3TC && !defined ('AI_NO_W3TC')) {
+          $this->w3tc_fallback_code .= ' $ai_code = str_replace ("[#AI_CODE2#]", $ai_enabled ? $ai_code : "", base64_decode ("'. base64_encode ($this->before_w3tc_fallback_code) . '"));';
+          $this->w3tc_fallback_code .= ' $ai_code = str_replace ("[#AI_CODE#]", base64_encode ($ai_code), base64_decode ("'. base64_encode ($serverside_insertion_code) . '"));';
 
           $serverside_insertion_code = '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
-          $serverside_insertion_code .= $this->w3tc_code2 .' echo $ai_code;';
+          $serverside_insertion_code .= $this->w3tc_fallback_code .' echo $ai_code;';
           $serverside_insertion_code .= '<!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
         } else
 
@@ -3105,6 +3146,18 @@ echo '</body>
 
   public function get_close_button (){
      $option = isset ($this->wp_options [AI_OPTION_CLOSE_BUTTON]) ? $this->wp_options [AI_OPTION_CLOSE_BUTTON] : DEFAULT_CLOSE_BUTTON;
+     return $option;
+  }
+
+  public function get_auto_close_time () {
+     $option = isset ($this->wp_options [AI_OPTION_AUTO_CLOSE_TIME]) ? $this->wp_options [AI_OPTION_AUTO_CLOSE_TIME] : DEFAULT_AUTO_CLOSE_TIME;
+     if ($option == '0') $option = '';
+     return $option;
+  }
+
+  public function get_stay_closed_time () {
+     $option = isset ($this->wp_options [AI_OPTION_STAY_CLOSED_TIME]) ? $this->wp_options [AI_OPTION_STAY_CLOSED_TIME] : DEFAULT_STAY_CLOSED_TIME;
+     if ($option == '0') $option = '';
      return $option;
   }
 
@@ -3855,7 +3908,7 @@ echo '</body>
               } else {
                   foreach ($filter_values as $filter_value) {
                     $filter_value = trim ($filter_value);
-                    if ($filter_value [0] == '%') {
+                    if (isset ($filter_value [0]) && $filter_value [0] == '%') {
                       $mod_value = substr ($filter_value, 1);
                       if (is_numeric ($mod_value) && $mod_value > 0) {
                         if (($index + 1) % $mod_value == 0) {
@@ -4513,7 +4566,7 @@ echo '</body>
               } else {
                   foreach ($filter_values as $filter_value) {
                     $filter_value = trim ($filter_value);
-                    if ($filter_value [0] == '%') {
+                    if (isset ($filter_value [0]) && $filter_value [0] == '%') {
                       $mod_value = substr ($filter_value, 1);
                       if (is_numeric ($mod_value) && $mod_value > 0) {
                         if (($index + 1) % $mod_value == 0) {
@@ -4543,7 +4596,7 @@ echo '</body>
       $avoid_paragraph_texts_above = explode (",", html_entity_decode (trim ($avoid_text_above)));
       $avoid_paragraph_texts_below = explode (",", html_entity_decode (trim ($avoid_text_below)));
 
-      $direction = $this->get_avoid_direction();
+      $direction  = $this->get_avoid_direction();
       $max_checks = $this->get_avoid_try_limit();
 
       $failed_clearance_positions = array ();
@@ -4982,6 +5035,10 @@ echo '</body>
           $terms = explode (':', $taxonomy_disabled);
           if ($terms [1] == $post_type) return false;
         }
+        elseif (strpos ($taxonomy_disabled, 'yoast-primary-category:') === 0) {
+          $primary_category = explode (':', $taxonomy_disabled);
+          if ($primary_category [1] == ai_yoast_primary_category ()) return false;
+        }
 
         foreach ($taxonomy_names as $taxonomy_name) {
           $terms = get_the_terms (0, $taxonomy_name);
@@ -5037,6 +5094,10 @@ echo '</body>
             $post_type = get_post_type ();
             $terms = explode (':', $taxonomy_enabled);
             if ($terms [1] == $post_type) return true;
+          }
+          elseif (strpos ($taxonomy_enabled, 'yoast-primary-category:') === 0) {
+            $primary_category = explode (':', $taxonomy_enabled);
+            if ($primary_category [1] == ai_yoast_primary_category ()) return true;
           }
 
           foreach ($taxonomy_names as $taxonomy_name) {
@@ -5513,7 +5574,7 @@ echo '</body>
 
     foreach ($filter_values as $filter_value) {
       $filter_value = trim ($filter_value);
-      if ($filter_value [0] == '%') {
+      if (isset ($filter_value [0]) && $filter_value [0] == '%') {
         $mod_value = substr ($filter_value, 1);
         if (is_numeric ($mod_value) && $mod_value > 0) {
           if ($counter_for_filter % $mod_value == 0) return $filter_ok;

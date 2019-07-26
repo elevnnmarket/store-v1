@@ -219,7 +219,7 @@ html[dir="rtl"] .loginpress-premium{
 .form-table td fieldset label{
   font-size: 13px;
 }
-.site_key, .secret_key, .captcha_theme, .captcha_language, .captcha_enable, .privacy_policy, .rename_email_send_to{
+.site_key, .secret_key, .captcha_theme, .captcha_language, .good_score, .captcha_enable, .privacy_policy, .rename_email_send_to{
   display: none;
 }
 

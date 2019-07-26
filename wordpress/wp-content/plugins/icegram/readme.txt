@@ -3,8 +3,8 @@ Contributors: icegram, storeapps, niravmehta, sandhyam, putler
 Donate link: https://www.icegram.com/
 Tags: popup, wordpress popups,Exit-popup, optin-popup, popups, hellobar, optin, lead capture, form, marketing,  notification, messenger, targeting, monster, ninja ,wordpress lead generation, wordpress lightbox optin, wordpress lightbox optin form, wordpress lightbox optins, wordpress mobile optin forms, wordpress mobile popup, wordpress mobile popups, wordpress optin form, wordpress overlay popup, wordpress popup, wordpress popup form, wordpress popup plugin, wordpress popup solution, wordpress popups ,  popups, subscribe,  wp popups, optin bars, action grabber, promotion, popup message, leads, lists,  builder, action bar,  floating bar, footer bar, hellobar alternative, pop over, Popup plugin, aweber, campaign monitor, constant contact, email list, exit-intent, onclick popup, analytics, Hubspot, popup ads, pop-up,  Mailing list pop-up, re-targeting, Animation,Popups with Animation ,Responsive Popup, split testing,  AB testing
 Requires at least: 3.9
-Tested up to: 5.2.1
-Stable tag: 1.10.28.2
+Tested up to: 5.2.2
+Stable tag: 1.10.30.1
 License: GPLv3
 
 The best WP popup plugin that let's you create a popup within seconds. Customize popup, target popups to show offers, email signups, social buttons etc and instantly increase conversions on your website.
@@ -217,6 +217,9 @@ Contact Us, provide as much detail of the problem as you can. We will try to sol
 5. Target your Icegram message using these display rules
 
 == Upgrade Notice ==
+= 1.10.30.1 =
+Bug Fix release
+
 = 1.10.28.2 =
 Bug Fix release
 
@@ -465,6 +468,15 @@ Initial Release
 
 
 == Changelog ==
+= 1.10.30.1 =
+*Fix: Fatal error 'ES_DB_Forms' class not found.
+
+= 1.10.30 =
+* New: [Email Subscribers & Newsletters](https://wordpress.org/plugins/email-subscribers/) is the recommended method of adding forms in Icegram
+
+= 1.10.29 =
+* Fix: Fixed security issue in the gallery
+
 = 1.10.28.2 =
 * Fix: Fatal error "IG_Tracker_V_1_0_1" class not found.
 

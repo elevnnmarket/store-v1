@@ -391,17 +391,10 @@ global $wpdb;
             usort($data_return, array($this, 'usort_reorder'));
         }
 
-        // if (!empty($data_return)) {
-        //     $found_data = array_slice($data_return, (($current_page - 1) * $per_page), $per_page);
-        // }
-
         $this->set_pagination_args(array(
             'total_items' => $total_items,
             'per_page' => $per_page,
         ));
-
-        // var_dump( data );
-        // die;
 
         $this->items = $data_return;
     }

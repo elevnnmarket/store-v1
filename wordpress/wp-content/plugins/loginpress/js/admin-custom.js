@@ -1,17 +1,172 @@
 (function($) {
   'use strict';
 
-  $(function() {
+  $( function() {
+
+    /**
+     * Install LoginPress Add-Ons on one click.
+     * @since 1.2.2
+     */
+		$(document).on( 'change', '.loginpress-install-pro-addon', function (e) {
+
+			e.preventDefault();
+      e.stopPropagation();
+      var addonBtn     = $(this);
+      var addonWrapper = $(this).closest('.loginpress-extension');
+			var nonce        = addonWrapper.find('input[name="loginpress_pro_addon_nonce"]').val();
+			var pluginSlug   = addonWrapper.find('input[name="loginpress_pro_addon_slug"]').val();
+			var pluginID     = addonWrapper.find('input[name="loginpress_pro_addon_id"]').val();
+
+			$.ajax({
+				type: 'GET',
+				url : 'update.php',
+				data: {
+					action  : 'install-plugin',
+					plugin  : pluginSlug,
+					lgp     : 1,
+					id      : pluginID,
+					_wpnonce: nonce
+        },
+        beforeSend: function(){
+          addonWrapper.find('.loginpress-addon-enable').show();
+        },
+				success: function (res) {
+					activateAddon( pluginSlug, nonce, addonWrapper, addonBtn );
+				},
+				error  : function (res) {
+					console.log(res);
+          addonWrapper.find('.loginpress-uninstalling').hide();
+          addonWrapper.find('.loginpress-uninstall').hide();
+          addonWrapper.find('.loginpress-addon-enable').hide();
+          addonWrapper.find('.loginpress-wrong').show();
+          setTimeout( function() {
+            addonWrapper.find('.loginpress-wrong').hide();
+          }, 2000);
+				}
+			});
+
+    });
+
+    /**
+     * Deactivate LoginPress Add-Ons on one click.
+     * @since 1.2.2
+     */
+    $(document).on( 'change', '.loginpress-uninstall-pro-addon', function (e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+      var addonBtn     = $(this);
+      var addonWrapper = $(this).closest('.loginpress-extension');
+      var nonce        = addonWrapper.find('input[name="loginpress_pro_addon_nonce"]').val();
+      var pluginSlug   = addonWrapper.find('input[name="loginpress_pro_addon_slug"]').val();
+
+      $.ajax({
+        type: 'POST',
+        url : ajaxurl,
+        data: {
+          action  : 'loginpress_deactivate_addon',
+          slug    : pluginSlug,
+          _wpnonce: nonce
+        },
+        beforeSend: function(){
+          addonWrapper.find('.loginpress-uninstalling').show();
+        },
+        success: function (res) {
+          var newNonce = res;
+
+          addonWrapper.find('input[name="loginpress_pro_addon_nonce"]').val(newNonce);
+          addonWrapper.find('.loginpress-uninstalling').hide();
+          addonWrapper.find('.loginpress-uninstall').show();
+          addonBtn.addClass('loginpress-active-pro-addon').removeClass('loginpress-install-pro-addon loginpress-uninstall-pro-addon').html('Activate Plugin');
+          setTimeout( function() {
+            addonWrapper.find('.loginpress-uninstall').hide();
+          }, 3000);
+        },
+        error: function (res) {
+          console.log(res);
+          addonWrapper.find('.loginpress-uninstalling').hide();
+          addonWrapper.find('.loginpress-uninstall').hide();
+          addonWrapper.find('.loginpress-wrong').show();
+          setTimeout( function() {
+            addonWrapper.find('.loginpress-wrong').hide();
+          }, 2000);
+        }
+      });
+
+    });
+
+    /**
+     * Activate LoginPress Add-Ons on one click.
+     * @since 1.2.2
+     */
+		$(document).on( 'change', '.loginpress-active-pro-addon', function (e) {
+
+			e.preventDefault();
+			e.stopPropagation();
+      var addonBtn     = $(this);
+      var addonWrapper = $(this).closest('.loginpress-extension');
+      var nonce        = addonWrapper.find('input[name="loginpress_pro_addon_nonce"]').val();
+			var pluginSlug   = addonWrapper.find('input[name="loginpress_pro_addon_slug"]').val();
+
+      activateAddon( pluginSlug, nonce, addonWrapper, addonBtn );
+
+		});
+
+    /**
+     * Activate LoginPress Add-Ons.
+     * @param  string pluginSlug
+     * @param  string nonce
+     * @param  string addonWrapper
+     * @param  string addonBtn
+     * @since 1.2.2
+     */
+		function activateAddon( pluginSlug, nonce, addonWrapper, addonBtn ) {
+
+			$.ajax({
+				url : ajaxurl,
+				type: 'POST',
+				data: {
+					slug  : pluginSlug,
+          action: 'loginpress_activate_addon',
+          _wpnonce: nonce
+				},
+        beforeSend: function(){
+          addonWrapper.find('.loginpress-addon-enable').show();
+        },
+        success: function (res) {
+          var newNonce = res;
+
+          addonWrapper.find('.loginpress-addon-enable').hide();
+          addonWrapper.find('.loginpress-install').show();
+          addonBtn.addClass('loginpress-uninstall-pro-addon').removeClass('loginpress-install-pro-addon loginpress-active-pro-addon').html('Uninstall');
+          addonWrapper.find('input[name="loginpress_pro_addon_nonce"]').val(newNonce);
+
+          setTimeout( function() {
+            addonWrapper.find('.loginpress-install').hide();
+          }, 3000);
+				},
+				error  : function ( xhr, textStatus, errorThrown ) {
+					console.log('Ajax Not Working');
+          addonWrapper.find('.loginpress-uninstalling').hide();
+          addonWrapper.find('.loginpress-uninstall').hide();
+          addonWrapper.find('.loginpress-wrong').show();
+          setTimeout( function() {
+            addonWrapper.find('.loginpress-wrong').hide();
+          }, 2000);
+				}
+			});
+
+		}
+
     // Code to fire when the DOM is ready.
-    $('.wpbrigade-video-link').on('click', function(e) {
+    $('.wpbrigade-video-link').on( 'click', function(e) {
       e.preventDefault();
       var target = $(this).data('video-id');
-      $('#' + target).fadeIn();
-    });
+      $( '#' + target ).fadeIn();
+    } );
     $('.wpbrigade-close-popup').on('click', function(e) {
       $(this).parent().parent().fadeOut();
-      $('.wpbrigade-video-wrapper iframe').attr('src',
-        'https://www.youtube.com/embed/GMAwsHomJlE');
+      $('.wpbrigade-video-wrapper iframe').attr( 'src', 'https://www.youtube.com/embed/GMAwsHomJlE' );
     });
 
     // $("#wpb-loginpress_setting\\[enable_repatcha_promo\\]").on('click', function() {
@@ -32,9 +187,9 @@
       var loginpressFileExt = loginpressFileImp.substr(
         loginpressFileImp.lastIndexOf('.') + 1);
 
-      $('.loginpress-import').attr("disabled", "disabled");
+      $('.loginpress-import').attr( "disabled", "disabled" );
 
-      if ('json' == loginpressFileExt) {
+      if ( 'json' == loginpressFileExt ) {
         $(".import_setting .wrong-import").html("");
         $('.loginpress-import').removeAttr("disabled");
       } else {
@@ -43,8 +198,7 @@
       }
     });
 
-    $("#wpb-loginpress_setting\\[enable_privacy_policy\\]").on('click',
-      function() {
+    $("#wpb-loginpress_setting\\[enable_privacy_policy\\]").on( 'click', function() {
 
         var privacy_editor = $(
           '#wpb-loginpress_setting\\[enable_privacy_policy\\]');
@@ -57,11 +211,7 @@
 
     $(window).on('load', function() {
 
-      $(
-        '<tr class="recapthca-promo-img"><th class="recapthca-promo" colspan="2"><img src="' +
-        loginpress_script.plugin_url +
-        '/loginpress/img/promo/recaptcha_promo.png"><a class="recapthca-promo-link" href="https://wpbrigade.com/wordpress/plugins/loginpress-pro/?utm_source=loginpress-lite&amp;utm_medium=recaptcha-settings&amp;utm_campaign=pro-upgrade" target="_blank"><span>Unlock Premium Feature</span></a></th></tr>'
-      ).insertAfter($(".enable_repatcha_promo").closest('tr'));
+      $( '<tr class="recapthca-promo-img"><th class="recapthca-promo" colspan="2"><img src="' + loginpress_script.plugin_url + '/loginpress/img/promo/recaptcha_promo.png"><a class="recapthca-promo-link" href="https://wpbrigade.com/wordpress/plugins/loginpress-pro/?utm_source=loginpress-lite&amp;utm_medium=recaptcha-settings&amp;utm_campaign=pro-upgrade" target="_blank"><span>Unlock Premium Feature</span></a></th></tr>' ).insertAfter($(".enable_repatcha_promo").closest('tr'));
 
       var promotion = $(
         '#wpb-loginpress_setting\\[enable_repatcha_promo\\]');

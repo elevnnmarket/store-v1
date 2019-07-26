@@ -6,7 +6,7 @@ Tags: ads, adsense, ad rotation, ad manager, amp, amazon, ad blocking detection,
 Requires at least: 4.0
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 2.4.18
+Stable tag: 2.4.22
 License: GPLv3
 
 Manage ads: Google AdSense, Media.net, Amazon banners, ad rotation, sticky widgets, AMP ads, DFP, PHP, tracking, AdSense header and footer code
@@ -21,6 +21,18 @@ This plugin is more than AdSense plugin or plugin for ads. It provides many adva
 
 **Insert ads where other plugins fail**.
 It's all about the [settings](https://adinserter.pro/documentation).
+
+
+[Plugin reviews](https://wordpress.org/support/topic/wow-684/):
+
+> I've been using another ad placement manager for a couple years and just recently started using Ad Inserter.
+>
+> I'm blown AWAY with the power and flexibility of it.
+>
+> I can HIGHLY recommend this plugin to anyone looking for an easy way to manage ads within WordPress.
+>
+> Difficult to choose, but certainly top 3 plugins I've ever used in WordPress, ever.
+
 
 **Features** - check [documentation](https://adinserter.pro/documentation/features) for the complete list
 
@@ -301,6 +313,23 @@ If you are not happy to reveal this information and you have opted in, simply di
 
 == Changelog ==
 
+= 2.4.22 =
+- Fix for remote code execution vulnerability - credit to Wordfence
+
+= 2.4.21 =
+- Fix for possible error Class not found (Pro only)
+
+= 2.4.20 =
+- Fix for path traversal vulnerability - credit to Wilfried Becard of Synacktiv (https://synacktiv.com)
+- Fix for block rearrangement issues
+- Few minor bug fixes, cosmetic changes and code improvements
+
+= 2.4.19 =
+- Added support for taxonomy for Yoast primary category
+- Layout changes to accomodate longer translated texts
+- Fix for escape character not saved in header, footer and ad blocking message code
+- Few minor bug fixes, cosmetic changes and code improvements
+
 = 2.4.18 =
 - Added support for full width responsive AdSense code option
 - Few minor bug fixes, cosmetic changes and code improvements
@@ -418,6 +447,23 @@ If you are not happy to reveal this information and you have opted in, simply di
 For the changelog of earlier versions, please refer to the separate changelog.txt file.
 
 == Upgrade Notice ==
+
+= 2.4.22 =
+Fix for remote code execution vulnerability
+
+= 2.4.21 =
+Fix for possible error Class not found (Pro only)
+
+= 2.4.20 =
+Fix for path traversal vulnerability;
+Fix for block rearrangement issues;
+Few minor bug fixes, cosmetic changes and code improvements
+
+= 2.4.19 =
+Added support for taxonomy for Yoast primary category;
+Layout changes to accomodate longer translated texts;
+Fix for escape character not saved in header, footer and ad blocking message code;
+Few minor bug fixes, cosmetic changes and code improvements
 
 = 2.4.18 =
 Added support for full width responsive AdSense code option;

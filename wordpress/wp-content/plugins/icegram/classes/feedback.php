@@ -17,9 +17,19 @@ if ( ! function_exists( 'ig_get_additional_info' ) ) {
 	 * @since 1.5.17
 	 */
 	function ig_get_additional_info( $additional_info, $system_info = false ) {
-		global $icegram;
+		global $icegram, $ig_tracker;
 		$additional_info['version'] = $icegram->version;
+		if ( $system_info ) {
 
+			$additional_info['active_plugins']   = implode( ', ', $ig_tracker::get_active_plugins() );
+			$additional_info['inactive_plugins'] = implode( ', ', $ig_tracker::get_inactive_plugins() );
+			$additional_info['current_theme']    = $ig_tracker::get_current_theme_info();
+			$additional_info['wp_info']          = $ig_tracker::get_wp_info();
+			$additional_info['server_info']      = $ig_tracker::get_server_info();
+
+			// IG Specific information
+			$additional_info['plugin_meta_info'] = Icegram::get_ig_meta_info();
+		}
 		return $additional_info;
 
 	}

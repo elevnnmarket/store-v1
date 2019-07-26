@@ -10,36 +10,46 @@ namespace DynamicContentForElementor;
 class DCE_Helper {
 
     public static function is_plugin_active($plugin) {
+        return self::is_plugin_active_for_local($plugin) || self::is_plugin_active_for_network($plugin);
+    }
+    public static function is_plugin_active_for_local($plugin) {
+        if (is_multisite())
+            return false;
         $active_plugins = get_option('active_plugins', array());
-        
-        $full = in_array($plugin, (array) $active_plugins) || self::is_plugin_active_for_network($plugin);
-        
-        $short = false;
+        return self::check_plugin($plugin, $active_plugins);
+    }
+    public static function is_plugin_active_for_network($plugin) {
+        if (!is_multisite())
+            return false;
+        $active_plugins = get_site_option('active_sitewide_plugins');
+        $active_plugins = array_keys($active_plugins);
+        return self::check_plugin($plugin, $active_plugins);
+    }
+    public static function check_plugin($plugin, $active_plugins = array()) {
+        if (in_array($plugin, (array) $active_plugins)) {
+            return true;
+        }
         if (!empty($active_plugins)) {
             foreach ($active_plugins as $aplugin) {
                 $tmp = basename($aplugin);
                 $tmp = pathinfo($tmp, PATHINFO_FILENAME);
                 if ($plugin == $tmp) {
-                    $short = true;
-                    break;
+                    return true;
                 }
             }
         }
-        
-        return $full || $short;
-    }
-
-    public static function is_plugin_active_for_network($plugin) {
-        if (!is_multisite())
-            return false;
-
-        $plugins = get_site_option('active_sitewide_plugins');
-        if (isset($plugins[$plugin]))
-            return true;
-
+        if (!empty($active_plugins)) {
+            foreach ($active_plugins as $aplugin) {
+                $pezzi = explode('/', $aplugin);
+                $tmp = reset($pezzi);
+                if ($plugin == $tmp) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
-    
+
     /**
     * Custom Function for Remove Specific Tag in the string.
     */
@@ -47,7 +57,7 @@ class DCE_Helper {
         $string =  preg_replace('/<'.$tag.'[^>]*>/i', '', $string);
         $string = preg_replace('/<\/'.$tag.'>/i', '', $string);
         return $string;
-    } 
+    }
 
     public static function remove_empty_p($content) {
         //$content = force_balance_tags( $content );
@@ -56,10 +66,79 @@ class DCE_Helper {
         $content = str_replace("<p></p>", "", $content);
         return $content;
     }
+    
+    public static function get_user_metas($grouped = false) {
+        global $wp_meta_keys;
+
+        $userMetas = $userMetasGrouped = array();
+
+        // ACF
+        /*$acf = get_posts(array('post_type' => 'acf-field', 'numberposts' => -1, 'post_status' => 'publish', 'suppress_filters' => false));
+        if (!empty($acf)) {
+            foreach ($acf as $aacf) {
+                $aacf_meta = maybe_unserialize($aacf->post_content);
+                $userMetas[$aacf->post_excerpt] = $aacf->post_title.' ['.$aacf_meta['type'].']';
+                $userMetasGrouped['ACF'][$aacf->post_excerpt] = $userMetas[$aacf->post_excerpt];
+            }
+        }*/
+
+        // PODS
+        /*$pods = get_posts(array('post_type' => '_pods_field', 'numberposts' => -1, 'post_status' => 'publish', 'suppress_filters' => false));
+        if (!empty($pods)) {
+            foreach ($pods as $apod) {
+                $type = get_post_meta($apod->ID, 'type', true);
+                $userMetas[$apod->post_name] = $apod->post_title.' ['.$type.']';
+                $userMetasGrouped['PODS'][$apod->post_name] = $userMetas[$apod->post_name];
+            }
+        }*/
+
+        // TOOLSET
+        /*$toolset = get_option('wpcf-fields', false);
+        if ($toolset) {
+            $toolfields = maybe_unserialize($toolset);
+            if (!empty($toolfields)) {
+                foreach ($toolfields as $atool) {
+                    $userMetas[$atool['meta_key']] = $atool['name'].' ['.$atool['type'].']';
+                    $userMetasGrouped['TOOLSET'][$atool['meta_key']] = $userMetas[$atool['meta_key']];
+                }
+            }
+        }*/
+
+        // MANUAL
+        global $wpdb;
+        $query = 'SELECT DISTINCT meta_key FROM ' . $wpdb->prefix . 'usermeta ORDER BY meta_key';
+        $results = $wpdb->get_results($query);
+        if (!empty($results)) {
+            $metas = array();
+            foreach ($results as $key => $auser) {
+                $metas[$auser->meta_key] = $auser->meta_key;
+            }
+            //$manual_metas = array_diff_key($metas, $userMetas);
+            $manual_metas = $metas;
+            foreach ($manual_metas as $ameta) {
+                if (substr($ameta, 0, 1) == '_') {
+                    $ameta = $tmp = substr($ameta, 1);
+                    if (in_array($tmp, $manual_metas)) {
+                        continue;
+                    }
+                }
+                if (!isset($postMetas[$ameta])) {
+                    $userMetas[$ameta] = $ameta;
+                    $userMetasGrouped['NATIVE'][$ameta] = $ameta;
+                }
+            }
+        }
+
+        if ($grouped) {
+            return $userMetasGrouped;
+        }
+
+        return $userMetas;
+    }
 
     public static function get_post_metas($grouped = false) {
         global $wp_meta_keys;
-        
+
         $postMetas = $postMetasGrouped = array();
 
         // REGISTERED in FUNCTION
@@ -67,11 +146,13 @@ class DCE_Helper {
         foreach ($cpts as $ckey => $cvalue) {
             $cpt_metas = get_registered_meta_keys($ckey);
             if (!empty($cpt_metas)) {
-                $postMetas = array_merge($postMetas, $cpt_metas);
-                $postMetasGrouped['CPT_'.$ckey] = $cpt_metas;
+                foreach($cpt_metas as $fkey => $actpmeta) {
+                    $postMetas[$fkey] = $fkey.' ['.$actpmeta['type'].']';
+                    $postMetasGrouped['CPT_'.$ckey][$fkey] = $fkey.' ['.$actpmeta['type'].']';
+                }
             }
         }
-        
+
         // ACF
         $acf = get_posts(array('post_type' => 'acf-field', 'numberposts' => -1, 'post_status' => 'publish', 'suppress_filters' => false));
         if (!empty($acf)) {
@@ -88,7 +169,7 @@ class DCE_Helper {
             foreach ($pods as $apod) {
                 $type = get_post_meta($apod->ID, 'type', true);
                 $postMetas[$apod->post_name] = $apod->post_title.' ['.$type.']';
-                $postMetasGrouped['PODS'][$aacf->post_excerpt] = $postMetas[$apod->post_name];
+                $postMetasGrouped['PODS'][$apod->post_name] = $postMetas[$apod->post_name];
             }
         }
 
@@ -103,7 +184,7 @@ class DCE_Helper {
                 }
             }
         }
-        
+
         // MANUAL
         global $wpdb;
         $query = 'SELECT DISTINCT meta_key FROM ' . $wpdb->prefix . 'postmeta ORDER BY meta_key';
@@ -114,17 +195,27 @@ class DCE_Helper {
                 $metas[$apost->meta_key] = $apost->meta_key;
             }
             $manual_metas = array_diff_key($metas, $postMetas);
-            $postMetas = array_merge($postMetas, $manual_metas);
-            $postMetasGrouped['NATIVE'] = $manual_metas;
+            foreach ($manual_metas as $ameta) {
+                if (substr($ameta, 0, 8) == '_oembed_') {
+                    continue;
+                }
+                if (substr($ameta, 0, 1) == '_') {
+                    $ameta = $tmp = substr($ameta, 1);
+                    if (in_array($tmp, $manual_metas)) {
+                        continue;
+                    }
+                }
+                if (!isset($postMetas[$ameta])) {
+                    $postMetas[$ameta] = $ameta;
+                    $postMetasGrouped['NATIVE'][$ameta] = $ameta;
+                }
+            }
         }
-        
-        
-        
-        
+
         if ($grouped) {
             return $postMetasGrouped;
         }
-        
+
         return $postMetas;
     }
 
@@ -146,7 +237,7 @@ class DCE_Helper {
         }
 
         if ($meta) {
-            
+
             $postMeta = get_registered_meta_keys('post');
             $postFields = array_merge(array_keys($postProp), array_keys($postMeta));
 
@@ -204,7 +295,7 @@ class DCE_Helper {
             'post_mime_type',
             'comment_count',
         );
-        
+
         if ($meta_name) {
             //$post_fields = self::get_post_fields();
             //var_dump($post_fields);
@@ -333,8 +424,9 @@ class DCE_Helper {
         return $listTax;
     }
 
-    public static function get_taxonomy_terms($taxonomy = null) {
+    public static function get_taxonomy_terms($taxonomy = null, $flat = false) {
         $listTerms = [];
+        $flatTerms = [];
         $listTerms[''] = 'None';
 
         if ($taxonomy) {
@@ -356,11 +448,16 @@ class DCE_Helper {
                         foreach ($terms as $aterm) {
                             //$listTerms[$tkey]['options'][$aterm->term_id] = $aterm->name.' ('.$aterm->slug.')';
                             $tmp['options'][$aterm->term_id] = $aterm->name . ' (' . $aterm->slug . ')';
+                            $flatTerms[$aterm->term_id] = $atax.' > '.$aterm->name . ' (' . $aterm->slug . ')';
                         }
                         $listTerms[] = $tmp;
+                        
                     }
                 }
             }
+        }
+        if ($flat) {
+            return $flatTerms;
         }
         //print_r($listTerms); die();
         return $listTerms;
@@ -658,7 +755,32 @@ class DCE_Helper {
         ];
         return $tf_p;
     }
-
+     public static function get_gsap_ease() {
+        $tf_p = [
+            'easeNone' => __('None', DCE_TEXTDOMAIN),
+            'easeIn' => __('In', DCE_TEXTDOMAIN),
+            'easeOut' => __('Out', DCE_TEXTDOMAIN),
+            'easeInOut' => __('InOut', DCE_TEXTDOMAIN),
+        ];
+        return $tf_p;
+    }
+    public static function get_gsap_timingFunctions() {
+        $tf_p = [
+            'Power0' => __('Linear', DCE_TEXTDOMAIN),
+            'Power1' => __('Power1', DCE_TEXTDOMAIN),
+            'Power2' => __('Power2', DCE_TEXTDOMAIN),
+            'Power3' => __('Power3', DCE_TEXTDOMAIN),
+            'Power4' => __('Power4', DCE_TEXTDOMAIN),
+            'SlowMo' => __(' SlowMo', DCE_TEXTDOMAIN),
+            'Back' => __('Back', DCE_TEXTDOMAIN),
+            'Elastic' => __('Elastic', DCE_TEXTDOMAIN),
+            'Bounce' => __('Bounce', DCE_TEXTDOMAIN),
+            'Circ' => __('Circ', DCE_TEXTDOMAIN),
+            'Expo' => __('Expo', DCE_TEXTDOMAIN),
+            'Sine' => __('Sine', DCE_TEXTDOMAIN),
+        ];
+        return $tf_p;
+    }
     public static function get_ease_timingFunctions() {
         $tf_p = [
             'linear' => __('Linear', DCE_TEXTDOMAIN),
@@ -943,88 +1065,69 @@ class DCE_Helper {
         return $ret;
     }
 
-    public static function get_all_acf($group = false) {
+    
+    public static function get_all_acf($group = false, $types = array()) {
 
         $acfList = [];
+        
+        if (!is_array($types)) {
+            $types = array($types); 
+        } 
+        if (empty($types)) {
+            $types = array(
+                'text',
+                'textarea',
+                'select',
+                'number',
+                'date_time_picker',
+                'date_picker',
+                'oembed',
+                'file',
+                'url',
+                'image',
+                'wysiwyg',
+            );
+        }
 
         $acfList[0] = 'Select the Field';
+        
         $tipo = 'acf-field';
-
         $get_templates = get_posts(array('post_type' => $tipo, 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'title', 'suppress_filters' => false));
 
         if (!empty($get_templates)) {
-            ///print_r($template);
-            /*
-              foreach ( $this->get_acf_field() as $key => $value ) {
-              //printf( '$idSelect = "%1$s";', get_settings('acf_field_list') );
-
-              }
-             */
             foreach ($get_templates as $template) {
-                $gruppoAppartenenza = get_the_title($template->post_parent);
-                //print_r($template);
-                //$acfList[ $template->ID ] =  $template->post_parent .' - '. $template->ID .' - '. $template->post_title .' - '.$template->post_name; //post_name, post_title //print_r($template);
-                $arrayField = maybe_unserialize($template->post_content);
-                if (isset($arrayField['type']) && (
-                        $arrayField['type'] == 'text' ||
-                        $arrayField['type'] == 'textarea' ||
-                        $arrayField['type'] == 'select' ||
-                        $arrayField['type'] == 'number' ||
-                        $arrayField['type'] == 'oembed' ||
-                        $arrayField['type'] == 'file' ||
-                        $arrayField['type'] == 'url' ||
-                        $arrayField['type'] == 'image' ||
-                        $arrayField['type'] == 'wysiwyg'
-                        )) {
 
-                    if ($group) {
-                        $acfList[$gruppoAppartenenza]['options'][$template->post_excerpt] = $template->post_title . '[' . $template->post_excerpt . '] (' . $arrayField['type'] . ')';
-                        $acfList[$gruppoAppartenenza]['label'] = $gruppoAppartenenza;
-                    } else {
-                        $acfList[$template->post_excerpt] = $template->post_title . ' (' . $arrayField['type'] . ')'; //.var_export(maybe_unserialize($template->post_content), true); //post_name,
+                $gruppoAppartenenza = get_post($template->post_parent);
+                $gruppoAppartenenzaField = maybe_unserialize($gruppoAppartenenza->post_content);
+                $arrayField = maybe_unserialize($template->post_content);
+                if (isset($arrayField['type']) && in_array($arrayField['type'],$types)) {
+                    if($group){
+                        
+                        if (isset($gruppoAppartenenzaField['type']) && $gruppoAppartenenzaField['type'] == 'group') {
+                            $acfList[$gruppoAppartenenza->post_excerpt]['options'][$gruppoAppartenenza->post_excerpt.'_'.$template->post_excerpt] = $template->post_title . '[' . $template->post_excerpt . '] (' . $arrayField['type'] . ')';
+                        } else {
+                            $acfList[$gruppoAppartenenza->post_excerpt]['options'][$template->post_excerpt] = $template->post_title . '[' . $template->post_excerpt . '] (' . $arrayField['type'] . ')';
+                        }
+                        $acfList[$gruppoAppartenenza->post_excerpt]['label'] = $gruppoAppartenenza->post_title;
+                    }else{
+                        if (isset($gruppoAppartenenzaField['type']) && $gruppoAppartenenzaField['type'] == 'group') {
+                            $acfList[$gruppoAppartenenza->post_excerpt.'_'.$template->post_excerpt] = $template->post_title . ' [' . $template->post_excerpt . '] (' . $arrayField['type'] . ')'; //.$template->post_content; //post_name,
+                        } else {
+                            $acfList[$template->post_excerpt] = $template->post_title . ' [' . $template->post_excerpt . '] (' . $arrayField['type'] . ')'; //.$template->post_content; //post_name,
+                        }
                     }
                 }
             }
         }
-        /* $groupID = '109';
-          $acfList = [];
-          $fields = get_fields($groupID);
-
-          $fields = get_field_objects();
-          if( $fields )
-          {
-          foreach( $fields as $field_name => $field )
-          {
-          if( $field['value'] )
-          {
-          echo '<dl>';
-          echo '<dt>' . $field['label'] . '</dt>';
-          echo '<dd>' . $field['value'] . '</dd>';
-          echo '</dl>';
-          $acfList[ ] =  $field['value'];
-          }
-          }
-          } */
         return $acfList;
     }
-
+    
+    public static function get_acf_field_urlfile($group = false) {
+        return self::get_all_acf($group, array('file', 'url'));
+    }
+    
     public static function get_acf_field_relations() {
-        $acfList = [];
-        $acfList[0] = __('Select the Field', DCE_TEXTDOMAIN);
-        $tipo = 'acf-field';
-        $get_templates = get_posts(array('post_type' => $tipo, 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'title'));
-        if (!empty($get_templates)) {
-
-            foreach ($get_templates as $template) {
-                $gruppoAppartenenza = $template->post_parent;
-                $arrayField = maybe_unserialize($template->post_content);
-
-                if ($arrayField['type'] == 'relationship') {
-                    $acfList[$template->post_excerpt] = $template->post_title . ' (' . $arrayField['type'] . ')'; //.$template->post_content; //post_name,
-                }
-            }
-        }
-        return $acfList;
+        return self::get_all_acf($group, 'relationship');
     }
 
     public static function get_acf_field_relational_post() {
@@ -1044,30 +1147,25 @@ class DCE_Helper {
         return $acfList;
     }
 
-    public static function get_acf_field_urlfile($group = false) {
-        $acfList = [];
-        $acfList[0] = __('Select the Field', DCE_TEXTDOMAIN);
-        $tipo = 'acf-field';
-        $get_templates = get_posts(array('post_type' => $tipo, 'numberposts' => -1, 'post_status' => 'publish', 'suppress_filters' => false));
-        if (!empty($get_templates)) {
+    
 
-            foreach ($get_templates as $template) {
-                $gruppoAppartenenza = get_the_title($template->post_parent);
-                $arrayField = maybe_unserialize($template->post_content);
-
-                if (isset($arrayField['type'])) {
-                    if ($arrayField['type'] == 'url' || $arrayField['type'] == 'file') {
-                        if ($group) {
-                            $acfList[$gruppoAppartenenza]['options'][$template->post_excerpt] = $template->post_title . ' [' . $template->post_excerpt . '] (' . $arrayField['type'] . ')';
-                            $acfList[$gruppoAppartenenza]['label'] = $gruppoAppartenenza;
-                        } else {
-                            $acfList[$template->post_excerpt] = $template->post_title . ' (' . $arrayField['type'] . ')';
-                        }
+    public static function get_pods_field($t = null) {
+        $podsList = [];
+        $podsList[0] = __('Select the Field', DCE_TEXTDOMAIN);
+        $pods = get_posts(array('post_type' => '_pods_field', 'numberposts' => -1, 'post_status' => 'publish', 'suppress_filters' => false));
+        if (!empty($pods)) {
+            foreach ($pods as $apod) {
+                $type = get_post_meta($apod->ID, 'type', true);
+                if (!$t || $type == $t) {
+                    $title = $apod->post_title;
+                    if (!$t) {
+                        $title .= ' [' . $type . ']';
                     }
+                    $podsList[$apod->post_name] = $title;
                 }
             }
         }
-        return $acfList;
+        return $podsList;
     }
 
     public static function recursive_array_search($needle, $haystack, $currentKey = '') {
@@ -1132,6 +1230,8 @@ class DCE_Helper {
     public static function path_to_url($dir) {
         $dirs = wp_upload_dir();
         $url = str_replace($dirs["basedir"], $dirs["baseurl"], $dir);
+        $url = str_replace(ABSPATH, get_home_url(null, '/'), $url);
+        //$url = urlencode($url);
         return $url;
     }
 
@@ -1235,11 +1335,11 @@ class DCE_Helper {
             if ($the_parent != 0) {
                 $type_page = get_post_type($the_parent);
                 $id_page = self::get_rev_ID($the_parent, $type_page);
-            } else {
-                // the parent not exist
-                $id_page = 0;
-                $type_page = get_post_type($id_page);
-            }
+            } /* else {
+              // the parent not exist
+              $id_page = 0;
+              $type_page = get_post_type($id_page);
+              } */
 
             $product = self::wooc_data($id_page); //wc_get_product( $id_page );
             $post = get_post($id_page);
@@ -1305,7 +1405,9 @@ class DCE_Helper {
       } */
 
     public static function get_templates() {
-        return \Elementor\Plugin::instance()->templates_manager->get_source('local')->get_items();
+        return \Elementor\Plugin::instance()->templates_manager->get_source('local')->get_items([
+                    'type' => ['section','archive','page','single'],
+                ]);
     }
 
     public static function dce_numeric_posts_nav() {
@@ -1394,7 +1496,7 @@ class DCE_Helper {
         $url = get_permalink($ggg['id']);
 
         if ($i > 1) {
-            if ('' === get_option('permalink_structure') || in_array($post->post_status, [ 'draft', 'pending'])) {
+            if ('' === get_option('permalink_structure') || in_array($post->post_status, ['draft', 'pending'])) {
                 $url = add_query_arg('page', $i, $url);
             } elseif (get_option('show_on_front') === 'page' && (int) get_option('page_on_front') === $post->ID) {
                 $url = trailingslashit($url) . user_trailingslashit("$wp_rewrite->pagination_base/" . $i, 'single_paged');
@@ -1706,6 +1808,62 @@ class DCE_Helper {
         }
 
         return $postValue;
+    }
+
+    public static function to_string($avalue) {
+        if (!is_array($avalue) && !is_object($avalue)) {
+            return $avalue;
+        }
+        if (is_object($avalue) && get_class($avalue) == 'WP_Term') {
+            return $avalue->name;
+        }
+        if (is_object($avalue) && get_class($avalue) == 'WP_Post') {
+            return $avalue->post_title;
+        }
+        if (is_object($avalue) && get_class($avalue) == 'WP_User') {
+            return $avalue->display_name;
+        }
+        if (is_array($avalue)) {
+
+            if (isset($avalue['post_title'])) {
+                return $avalue['post_title'];
+            }
+            if (isset($avalue['display_name'])) {
+                return $avalue['display_name'];
+            }
+            if (isset($avalue['name'])) {
+                return $avalue['name'];
+            }
+            if (count($avalue) == 1) {
+                return reset($avalue);
+            }
+            return print_r($avalue, true);
+        }
+        return '';
+    }
+
+    public static function str_to_array($delimiter, $string, $format = null) {
+        $pieces = explode($delimiter, $string);
+        $pieces = array_map('trim', $pieces);
+        //$pieces = array_filter($pieces);
+        $tmp = array();
+        foreach ($pieces as $value) {
+            if ($value != '') {
+                $tmp[] = $value;
+            }
+        }
+        $pieces = $tmp;
+        if ($format) {
+            $pieces = array_map($format, $pieces);
+        }
+        return $pieces;
+    }
+
+    public static function get_image_id($image_url) {
+        global $wpdb;
+        $sql = "SELECT ID FROM " . $wpdb->prefix . "posts WHERE guid LIKE '%" . $image_url . "';";
+        $attachment = $wpdb->get_col($sql);
+        return reset($attachment);
     }
 
 }

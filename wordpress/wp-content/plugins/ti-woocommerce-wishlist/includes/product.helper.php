@@ -119,9 +119,7 @@ class TInvWL_Product {
 			return false;
 		}
 		if ( $product_data ) {
-			$data['quantity'] = $product_data['quantity'] + $_data['quantity'];
-
-			return $this->update( $data, $meta );
+			return $this->update( $data, $meta, $product_data['ID'] );
 		} else {
 			return $this->add( $data, $meta );
 		}
@@ -377,8 +375,8 @@ class TInvWL_Product {
 			}
 
 			if ( $default['external'] ) {
-				if ( isset( $product['product_id'] ) && apply_filters( 'wpml_object_id', $product['product_id'], 'product', false ) ) {
-					$ids[] = apply_filters( 'wpml_object_id', $product['product_id'], 'product', false );
+				if ( isset( $product['product_id'] ) ) {
+					$ids[] = ( apply_filters( 'wpml_object_id', $product['product_id'], 'product', false ) ) ? apply_filters( 'wpml_object_id', $product['product_id'], 'product', false ) : $product['product_id'];
 				}
 			}
 			$product['meta'] = array();
@@ -405,9 +403,9 @@ class TInvWL_Product {
 						continue;
 					}
 
-					if ( $_product->get_id() === absint( apply_filters( 'wpml_object_id', $wlproduct['product_id'], 'product', false ) ) ) {
+					if ( $_product->get_id() === absint( ( apply_filters( 'wpml_object_id', $wlproduct['product_id'], 'product', false ) ) ? apply_filters( 'wpml_object_id', $wlproduct['product_id'], 'product', false ) : $wlproduct['product_id'] ) ) {
 						if ( in_array( $_product->get_type(), array( 'variable', 'grouped' ) ) ) {
-							$products[ $key ]['data'] = $wlproduct['variation_id'] ? wc_get_product( apply_filters( 'wpml_object_id', $wlproduct['variation_id'], 'product', false ) ) : $_product;
+							$products[ $key ]['data'] = $wlproduct['variation_id'] ? wc_get_product( $wlproduct['variation_id'] ) : $_product;
 						} else {
 							$products[ $key ]['data'] = $_product;
 						}
@@ -447,12 +445,13 @@ class TInvWL_Product {
 	 *
 	 * @param array $data Object product.
 	 * @param array $meta Object meta form data.
+	 * @param int $id Wishlist item ID.
 	 *
 	 * @return boolean
 	 * @global wpdb $wpdb
 	 *
 	 */
-	function update( $data = array(), $meta = array() ) {
+	function update( $data = array(), $meta = array(), $id = 0 ) {
 		if ( empty( $meta ) && array_key_exists( 'meta', $data ) && ! empty( $data['meta'] ) ) {
 			$meta = $data['meta'];
 		}
@@ -491,12 +490,25 @@ class TInvWL_Product {
 
 		global $wpdb;
 
-		return false !== $wpdb->update( $this->table, $data, array(
-				'product_id'   => $data['product_id'],
-				'variation_id' => $data['variation_id'],
-				'wishlist_id'  => $data['wishlist_id'],
-				'formdata'     => $this->prepare_save_meta( $meta, $data['product_id'], $data['variation_id'] ),
-			) ); // WPCS: db call ok; no-cache ok; unprepared SQL ok.
+		$res_update = $wpdb->update( $this->table, $data, array(
+			'product_id'   => $data['product_id'],
+			'variation_id' => $data['variation_id'],
+			'wishlist_id'  => $data['wishlist_id'],
+			'formdata'     => $this->prepare_save_meta( $meta, $data['product_id'], $data['variation_id'] ),
+		) );
+
+		if ( $res_update !== false ) { // @codingStandardsIgnoreLine WordPress.VIP.DirectDatabaseQuery.DirectQuery
+
+			/* Run a 3rd party code when product updated on a wishlist.
+			 *
+			 * @param array $data product data including author and wishlist IDs.
+			 * */
+			do_action( 'tinvwl_product_updated', $data );
+
+			return ( $id ) ? $id : true;
+		}
+
+		return false;
 	}
 
 	/**
@@ -604,7 +616,7 @@ class TInvWL_Product {
 				'variation_id',
 				'quantity',
 				'undefined',
-				'product_sku'
+				'product_sku',
 			) as $field
 		) {
 			if ( array_key_exists( $field, $meta ) ) {

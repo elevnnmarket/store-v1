@@ -19,7 +19,7 @@ function first_presets() {
      * visit:       https://wordpress.org/plugins/loginpress/    *
      *************************************************************/
     body.login {
-      background-image: url(<?php echo plugins_url( 'img/bg.jpg', LOGINPRESS_PLUGIN_BASENAME )  ?>);
+      background-image: url(<?php echo esc_url( apply_filters( 'loginpress_default_bg', plugins_url( 'img/bg.jpg', LOGINPRESS_PLUGIN_BASENAME ) ) ); ?>);
       /*background-color: #ddd5c3;*/
       background-repeat: no-repeat;
       background-position: center;
@@ -185,6 +185,7 @@ function first_presets() {
     }
     .footer-wrapper{
     	/* display: table-footer-group; */
+      position: -webkit-sticky;
       position: sticky;
       top: 100vh;
     }

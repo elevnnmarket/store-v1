@@ -18,7 +18,7 @@ function loginpress_get_option_key( $loginpress_key, $loginpress_array ) {
 
 	if ( array_key_exists( $loginpress_key, $loginpress_array ) ) {
 
-		if ( 'loginpress_custom_js' == $loginpress_key || 'loginpress_custom_css' == $loginpress_key ) {
+		if ( 'loginpress_custom_css' == $loginpress_key ) {
 			return $loginpress_array[ $loginpress_key ];
 		} else {
 			return esc_js( $loginpress_array[ $loginpress_key ] );
@@ -191,7 +191,6 @@ $loginpress_footer_link_color	  = loginpress_get_option_key( 'login_footer_text_
 $loginpress_footer_link_hover	  = loginpress_get_option_key( 'login_footer_text_hover', $loginpress_array );
 $loginpress_footer_link_bg_clr	= loginpress_get_option_key( 'login_footer_backgroung_hover', $loginpress_array );
 $loginpress_custom_css 			 	  = loginpress_get_option_key( 'loginpress_custom_css', $loginpress_array );
-$loginpress_custom_js 				 	= loginpress_get_option_key( 'loginpress_custom_js', $loginpress_array );
 
 $loginpress_display_bg 	        = loginpress_bg_option( 'loginpress_display_bg', $loginpress_array );
 $loginpress_display_bg_video    = loginpress_bg_option( 'loginpress_display_bg_video', $loginpress_array );
@@ -294,7 +293,7 @@ body.login #loginpress_video-background-wrapper{
 		top: 0;
 		overflow: hidden;
 		right: 0;
-		width: calc(50% + 100px);
+		width: calc(50% + 130px);
 		height: 100%;
 		z-index: 1;
 	<?php endif; ?>
@@ -429,9 +428,9 @@ body.login {
 	height: <?php echo $loginpress_logo_height . loginpress_important(); ?>;
 	<?php endif; ?>
 	<?php if ( ! empty( $loginpress_logo_width ) || ! empty( $loginpress_logo_height ) ) : ?>
-	background-size: cover <?php echo loginpress_important(); ?>;
+	background-size: contain <?php echo loginpress_important(); ?>;
 	<?php else: ?>
-		background-size: cover;
+		background-size: contain;
 	<?php endif; ?>
 
 	<?php if ( ! empty( $loginpress_logo_padding ) ) : ?>
@@ -529,9 +528,9 @@ box-shadow: <?php echo loginpress_box_shadow( $loginpress_textfield_shadow, $log
 	<?php endif; ?>
 }
 
-.login label[for="rememberme"] {
+.login form .forgetmenot label {
 	<?php if ( ! empty( $loginpress_form_remeber_label ) ) : ?>
-	color: <?php echo $loginpress_form_remeber_label; ?>;
+	color: <?php echo $loginpress_form_remeber_label . loginpress_important(); ?>;
 	<?php endif; ?>
 }
 
@@ -982,6 +981,14 @@ text-shadow: none;
 		left: 5px;
 		right: auto;
 	}
+	.loginpress-show-love{
+		display: none !important;
+	}
+}
+@media screen and (max-height: 700px) {
+	.loginpress-show-love{
+		display: none !important;
+	}
 }
 /* The only rule that matters */
 #loginpress_video-background {
@@ -993,44 +1000,45 @@ text-shadow: none;
   height: 100% !important ;
   z-index: -100 !important ;
 }
+body.login #login.login_tranparent,body.login  #login.login_tranparent #loginform{
+	background: none !important;
+}
+body.login{
+	display: flex;
+	flex-direction: column;
+}
 </style>
 
 <?php // $content = ob_get_clean(); ?>
-
-<?php if ( ! empty( $loginpress_custom_js ) ) : ?>
-<script>
-<?php echo $loginpress_custom_js; ?>
-</script>
-<?php endif; ?>
-
 <?php if ( isset( $loginpress_display_bg_video ) && $loginpress_display_bg_video && ! empty( $loginpress_bg_video ) ) : ?>
 <?php if ( ( $loginpress_theme_tem == 'default6' || $loginpress_theme_tem == 'default10' || $loginpress_theme_tem == 'default17' ) ) : ?>
 	<script>
-			window.onload = function() {
+	document.addEventListener('DOMContentLoaded', function(){
 			// document.body.innerHTML="<video autoplay loop id=\"loginpress_video-background\" muted plays-inline>\n" + "<source src=\"<?php // echo $loginpress_bg_video;?>\">\n" + "</video>\n"+document.body.innerHTML;
 			// '"<video autoplay loop id=\"loginpress_video-background\" muted plays-inline>\n" + "<source src=\"<?php // echo $loginpress_bg_video;?>\">\n" + "</video>\n"'.
 			// document.getElementById("login").appendChild("<video autoplay loop id=\"loginpress_video-background\" muted plays-inline>\n" + "<source src=\"<?php  // echo $loginpress_bg_video;?>\">\n" + "</video>\n");
-			(function($){
-				$('<div id="loginpress_video-background-wrapper"><video autoplay loop id="loginpress_video-background" <?php echo $loginpress_video_voice; ?> plays-inline><source src="<?php echo $loginpress_bg_video;?>"></video></div>').appendTo($('#login'));
-			}(jQuery));
-		}
+			// (function($){
+			// 	$('<div id="loginpress_video-background-wrapper"><video autoplay loop id="loginpress_video-background" <?php echo $loginpress_video_voice; ?> plays-inline><source src="<?php //echo $loginpress_bg_video;?>"></video></div>').appendTo($('#login'));
+			// }(jQuery));
+			document.getElementById('login').innerHTML="<div id=\"loginpress_video-background-wrapper\"><video autoplay loop id=\"loginpress_video-background\" <?php echo $loginpress_video_voice; ?> plays-inline>\n" + "<source src=\"<?php echo $loginpress_bg_video;?>\">\n" + "</video></div>\n"+document.getElementById('login').innerHTML;
+		}, false);
 	</script>
 <?php else: ?>
 	<script>
 	<?php if ($loginpress_theme_tem == 'default17') : ?>
-			window.onload = function() {
+	document.addEventListener('DOMContentLoaded', function(){
 			document.body.innerHTML="<div id=\"loginpress_video-background-wrapper\"><video autoplay loop id=\"loginpress_video-background\" <?php echo $loginpress_video_voice; ?> plays-inline>\n" + "<source src=\"<?php echo $loginpress_bg_video;?>\">\n" + "</video></div>\n"+document.body.innerHTML;
-		}
+		}, false);
 	<?php endif; ?>
 	<?php if ($loginpress_theme_tem == 'default8') : ?>
-			window.onload = function() {
+	document.addEventListener('DOMContentLoaded', function(){
 			document.body.innerHTML="<div id=\"loginpress_video-background-wrapper\"><video autoplay loop id=\"loginpress_video-background\" <?php echo $loginpress_video_voice; ?> plays-inline>\n" + "<source src=\"<?php echo $loginpress_bg_video;?>\">\n" + "</video></div>\n"+document.body.innerHTML;
-		}
+		}, false);
 	<?php endif; ?>
 	<?php if ($loginpress_theme_tem != 'default17' && $loginpress_theme_tem != 'default8') : ?>
-			window.onload = function() {
+	document.addEventListener('DOMContentLoaded', function(){
 			document.body.innerHTML="<video autoplay loop id=\"loginpress_video-background\" <?php echo $loginpress_video_voice; ?> plays-inline>\n" + "<source src=\"<?php echo $loginpress_bg_video;?>\">\n" + "</video>\n"+document.body.innerHTML;
-		}
+		}, false);
 	<?php endif; ?>
 	</script>
 <?php endif; ?>

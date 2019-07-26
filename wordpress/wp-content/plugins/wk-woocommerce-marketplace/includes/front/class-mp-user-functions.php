@@ -161,7 +161,7 @@ function admin_mailer() {
 						</div>
 						<?php
                     } else {
-                        $error['success'] = esc_html__('Your query has been received successfully.', 'marketplace');
+                        wc_print_notice( esc_html__('Your query has been received successfully.', 'marketplace'), 'success' );
                     }
 				}
 			}

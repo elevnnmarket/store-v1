@@ -4,7 +4,8 @@ function ai_insert (insertion, selector, insertion_code) {
   } else var elements = document.querySelectorAll (selector);
 
   Array.prototype.forEach.call (elements, function (element, index) {
-    var ai_debug = typeof ai_debugging !== 'undefined';
+    var ai_debug = typeof ai_debugging !== 'undefined'; // 1
+//    var ai_debug = false;
 
     if (element.hasAttribute ('id')) {
       selector_string = '#' + element.getAttribute ('id');
@@ -74,7 +75,7 @@ function ai_insert (insertion, selector, insertion_code) {
   });
 }
 
-function ai_insert_viewport (element) {
+function ai_insert_code (element) {
 
   function hasClass (element, cls) {
     if (element == null) return false;
@@ -97,7 +98,8 @@ function ai_insert_viewport (element) {
       element.className = element.className.replace (new RegExp ('(^|\\b)' + cls.split (' ').join ('|') + '(\\b|$)', 'gi'), ' ');
   }
 
-  var ai_debug = typeof ai_debugging !== 'undefined';
+  var ai_debug = typeof ai_debugging !== 'undefined'; // 2
+//  var ai_debug = false;
 
   if (ai_debug) console.log ('AI VIEWPORT INSERTION class:', element.getAttribute ('class'));
 

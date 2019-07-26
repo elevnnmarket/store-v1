@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Handling all the AJAX calls in LoginPress.
 *
 * @since 1.0.19
-* @version 1.1.23
+* @version 1.2.2
 * @class LoginPress_AJAX
 */
 
@@ -26,13 +26,15 @@ if ( ! class_exists( 'LoginPress_AJAX' ) ) :
     public static function init() {
 
       $ajax_calls = array(
-        'export'     => false,
-        'import'     => false,
-        'help'       => false,
-        'deactivate' => false,
-        'optout_yes' => false,
-        'presets'    => false,
-        'video_url'  => false
+        'export'           => false,
+        'import'           => false,
+        'help'             => false,
+        'deactivate'       => false,
+        'optout_yes'       => false,
+        'presets'          => false,
+				'video_url'        => false,
+				'activate_addon'   => false,
+				'deactivate_addon' => false
       );
 
       foreach ( $ajax_calls as $ajax_call => $no_priv ) {
@@ -43,7 +45,51 @@ if ( ! class_exists( 'LoginPress_AJAX' ) ) :
           add_action( 'wp_ajax_nopriv_loginpress_' . $ajax_call, array( __CLASS__, $ajax_call ) );
         }
       }
-    }
+		}
+
+    /**
+     * Activate Plugins.
+     * @since 1.2.2
+     */
+		function activate_addon() {
+
+      $plugin = esc_html( $_POST['slug'] );
+
+      check_ajax_referer( 'install-plugin_' . $plugin, '_wpnonce' );
+
+      if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( 'No cheating, huh!' );
+      }
+
+			if ( ! is_plugin_active( $plugin ) ) {
+				activate_plugin( $plugin );
+      }
+
+      echo wp_create_nonce( 'uninstall_' . $plugin );
+
+			wp_die();
+		}
+
+    /**
+     * Deactivate Plugins.
+     * @since 1.2.2
+     */
+		function deactivate_addon() {
+
+      $plugin = esc_html( $_POST['slug'] );
+
+      check_ajax_referer( 'uninstall_' . $plugin, '_wpnonce' );
+
+      if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( 'No cheating, huh!' );
+      }
+
+      deactivate_plugins( $plugin );
+
+      echo wp_create_nonce( 'install-plugin_' . $plugin );
+
+			wp_die();
+		}
 
     /**
     * [Import LoginPress Settings]

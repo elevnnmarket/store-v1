@@ -52,11 +52,10 @@ if ( !class_exists( 'Icegram_Message_Admin' ) ) {
 			<style type="text/css">
 				<?php
 					foreach ( $icegram->message_types as $message_type => $message ) {
-						
 						if( !empty( $message['admin_style'] ) ) {
 							$message_type = 'ig_'.$message_type;
 							$label_bg_color 		= $message['admin_style']['label_bg_color'];
-							$theme_header_height 	= $message['admin_style']['theme_header_height'];
+							$theme_header_height 	= (int)$message['admin_style']['theme_header_height'];
 							$theme_header_bg_size	= ( $theme_header_height + 3 )."em";					
 							$thumbnail_width 		= $message['admin_style']['thumbnail_width'];
 							$thumbnail_height 		= $message['admin_style']['thumbnail_height'];
@@ -218,7 +217,6 @@ if ( !class_exists( 'Icegram_Message_Admin' ) ) {
 					<p class="form_layouts message_row <?php echo "ig_".implode( ' ig_', $settings['embed_form'] )?>">
 						<label for="message_form_layouts" class="message_label">&nbsp;</label>
 						<div class="form_radio_group" >
-							<!-- <span class="message_label message_row <?php //echo "ig_".implode( ' ig_', $settings['embed_form'] )?>"> <?php// _e('Position', 'icegram' ); ?></span> -->
 							<span class="location <?php if( !empty( $form_layouts['left'] ) ) { echo "ig_".implode( ' ig_', $form_layouts['left'] ); } ?>" >
 								<label style="background-position:0px 23px;" for="form_layout_left_<?php echo $message_id;?>" title="<?php _e('Left', 'icegram' ); ?>"> 
 								<input class="message_form_layout" type="radio" id="form_layout_left_<?php echo $message_id;?>" name="message_data[<?php echo $message_id; ?>][form_layout]" value="left" <?php echo ( !empty($message_data['form_layout']) && "left" == $message_data['form_layout'] ) ? 'checked' : ( empty($message_data['form_layout']) && "left" == $default_form_layout ? 'checked' : '') ; ?> />
@@ -275,10 +273,19 @@ if ( !class_exists( 'Icegram_Message_Admin' ) ) {
 					<p class="message_row <?php echo "ig_".implode( ' ig_', $settings['embed_form'] )?>">
 						<label class="message_label">&nbsp;</label>
 						<?php
+						$form_embed_html = '';
+						$force_use_rm =  false;	
+						if( in_array('email-subscribers/email-subscribers.php', $active_plugins) ){
+							$es_plugin_meta_data = get_plugin_data( WP_PLUGIN_DIR . '/email-subscribers/email-subscribers.php' );
+							$es_current_version  = ! empty( $es_plugin_meta_data['Version'] ) ? $es_plugin_meta_data['Version'] : '';
+
+							$force_use_rm = ( version_compare( $es_current_version, '4.0', '<' )) ? true : false;
+						}
 						//Add Rainmaker form 
 						$rm_html = __("Add form embed code") .'<strong>'. __(" or easily embed using ", "icegram" ). '<a style="font-style:normal;" href="' . admin_url("plugin-install.php?tab=search&type=term&s=icegram-rainmaker") .'" target="_blank" alt="Rainmaker - Forms, Leads and CRM">Icegram\'s Rainmaker' . '</a> plugin </strong>';
+						$rm_html = (true === $force_use_rm ) ? $rm_html : '';
 						$hide_embed = '';
-						if(in_array('icegram-rainmaker/icegram-rainmaker.php', $active_plugins)){
+						if(in_array('icegram-rainmaker/icegram-rainmaker.php', $active_plugins) && ( !empty($message_data["rainmaker_form_code"]) || $force_use_rm )){
 							$rainmaker_form_list = Rainmaker::get_rm_form_id_name_map();
 							$rm_html = __("Use Rainmaker form ", "icegram" );
 							$rm_html .= '<select class="rainmaker_form_list" style="max-width:30%" name="message_data['. $message_id .'][rainmaker_form_code]">
@@ -288,10 +295,26 @@ if ( !class_exists( 'Icegram_Message_Admin' ) ) {
 										}
 							$rm_html .= '</select><span style="font-style:italic">'. __(' or add ', 'icegram') . '<a class="embed_form_code_toggle" style="cursor: pointer;">'. __('form embed code', 'icegram' ) .'</a></span>';
 							$hide_embed = (empty($message_data["rainmaker_form_code"]) && !empty($form_html_original)) ? '' : 'style="display:none"';
+							$form_embed_html = $rm_html;
 						}
+
+						//Add Email Subscribers form
+						$es_html = __("Add form embed code") .'<strong>'. __(" or easily embed using ", "icegram" ). '<a style="font-style:normal;" href="' . admin_url("plugin-install.php?tab=search&type=term&s=email-subscribers") .'" target="_blank" alt="Email Subscribers & Newsletters">Email Subscribers & Newsletters' . '</a> plugin </strong>';
+						if( in_array('email-subscribers/email-subscribers.php', $active_plugins) && !$force_use_rm ){
+							$es_form_list = ES_DB_Forms::get_forms_id_name_map();
+							$es_html = __("Use Email Subscribers form ", "icegram" );
+							$es_html .= '<select class="es_form_list" style="max-width:30%" name="message_data['. $message_id .'][es_form_code]">
+										<option value="" selected>'. __("Select form ", "icegram" ) .'</option>' ;
+										foreach ( $es_form_list as $id => $name ){
+											$es_html .= '<option '. ( (!empty( $message_data["es_form_code"] ) && $id == $message_data["es_form_code"] ) ? 'selected' : '' ) .' value="' . $id .'">' . $name .'</option>';
+										}
+							$es_html .= '</select><span style="font-style:italic">'. __(' or add ', 'icegram') . '<a class="embed_form_code_toggle" style="cursor: pointer;">'. __('form embed code', 'icegram' ) .'</a></span>';
+							$hide_embed = (empty($message_data["es_form_code"]) && !empty($form_html_original)) ? '' : 'style="display:none"';
+						}
+						$form_embed_html = !empty($rm_html) ? $rm_html : $es_html ;
 						?>
 						<label class="message_label">&nbsp;</label>
-						<span class="message_label" style="padding-bottom:.3em"> <?php echo $rm_html; ?></span>
+						<span class="message_label" style="padding-bottom:.3em"> <?php echo $form_embed_html; ?></span>
 						<label class="message_label">&nbsp;</label>
 		                <textarea class="message_field message_form_html_original" <?php echo $hide_embed ?> rows="6" autocomplete="off" cols="65" name="message_data[<?php echo $message_id; ?>][form_html_original]" id="message_form_html_original_<?php echo $message_id; ?>" value="" placeholder="<?php _e('Paste HTML / shortcode of your form here...', 'icegram' ); ?>"><?php if( isset( $form_html_original ) ) echo esc_attr( $form_html_original ); ?></textarea>
 						<br>	

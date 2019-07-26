@@ -4,6 +4,7 @@
  * This is a LoginPress Compatibility to make it compatible for older versions.
  *
  * @since 1.0.22
+ * @version 1.2.2
  */
 
 
@@ -50,6 +51,7 @@ if ( ! class_exists( 'LoginPress_Compatibility' ) ) :
    * Remove conflictions.
    * Add CSS Support.
    * @since 1.0.3
+   * @version 1.2.3
    */
   class LoginPress_Compatibility {
 
@@ -61,7 +63,90 @@ if ( ! class_exists( 'LoginPress_Compatibility' ) ) :
 
       add_action( 'wp_print_scripts', array( $this, 'dequeue_conflicted_script' ), 100 );
       add_action( 'login_headerurl',  array( $this, 'remove_conflicted_action' ) );
-      add_action( 'init', array( $this, 'enqueue_loginpress_compatibility_script') );
+      add_action( 'init',             array( $this, 'enqueue_loginpress_compatibility_script') );
+
+      /*************************************
+        WebArx Compatibility Fix // v1.2.3
+      *************************************/
+
+      // add_filter( 'wp_redirect',      array( $this, 'wp_redirect_remove_filter' ), 9 );
+      // add_filter( 'site_url',         array( $this, 'site_url_remove_filter' ) , 9 );
+      // add_filter( 'network_site_url', array( $this, 'network_site_url_remove_filter' ), 9 );
+      // add_action( 'plugins_loaded',   array( $this, 'plugins_loaded_remove_action' ), 10 );
+      // add_action( 'wp_loaded',        array( $this, 'wp_loaded_remove_action' ), 9 );
+      // add_action( 'init',             array( $this, 'init_remove_action' ), 9 );
+    }
+
+    public function wp_redirect_remove_filter( $location ) {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login  = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) && $_GET['action'] != 'logout' ) {
+          remove_filter( 'wp_redirect', array(  webarx()->hide_login, 'wp_redirect' ) );
+        }
+
+        return $location;
+      }
+    }
+
+    public function site_url_remove_filter( $url ) {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) ) {
+          remove_filter('site_url',  array(  webarx()->hide_login, 'site_url' )  ) ;
+        }
+
+        return $url;
+      }
+    }
+
+    public function network_site_url_remove_filter( $url ) {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) ) {
+          remove_filter('network_site_url',  array(  webarx()->hide_login, 'network_site_url' )  ) ;
+        }
+
+        return $url;
+      }
+    }
+
+    public function plugins_loaded_remove_action() {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) ) {
+          remove_action( 'plugins_loaded', array(  webarx()->hide_login, 'plugins_loaded' ), 9999 ) ;
+        }
+      }
+    }
+
+    public function wp_loaded_remove_action() {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) ) {
+          remove_action( 'wp_loaded', array(  webarx()->hide_login, 'wp_loaded' ) );
+        }
+      }
+    }
+
+    public function init_remove_action() {
+      if ( class_exists( 'Webarx' ) ) {
+        $webarx_login = get_option( 'webarx_mv_wp_login' );
+        $user_loged_in = is_user_logged_in();
+
+        if ( ( isset( $user_loged_in ) && true === $user_loged_in ) && ( isset( $webarx_login ) && '1' === $webarx_login ) ) {
+          remove_action( 'init', array(  webarx()->hide_login, 'denyRequestsToWpLogin' ) ) ;
+        }
+      }
     }
 
     public function enqueue_loginpress_compatibility_script() {
@@ -124,9 +209,9 @@ if ( ! class_exists( 'LoginPress_Compatibility' ) ) :
       include( LOGINPRESS_DIR_PATH . 'css/style-presets.php' );
     	include( LOGINPRESS_DIR_PATH . 'css/style-login.php' );
     }
-  }
+
+}
 
 endif;
 
 new LoginPress_Compatibility;
-?>
