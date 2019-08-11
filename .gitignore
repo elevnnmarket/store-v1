@@ -2,3 +2,4 @@
 !/wordpress/wp-content/mu-plugins
 !/wordpress/wp-content/plugins
 !/wordpress/wp-content/themes
+/wordpress/wp-content/**/.git
