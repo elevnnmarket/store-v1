@@ -23,5 +23,9 @@ cp -a . "$STAGING_DIR"
 echo "Copying private files"
 cp "$ENV_FILE" "$SECRET_FILE_DOCKER_LOCATION"
 
+
 echo "Starting up docker at $STAGING_DOCKER_PATH"
 docker-compose -f $STAGING_DOCKER_PATH up -d
+
+echo "Update permissions for installing plugins"
+docker exec -d elevnn-staging-wp chmod 777 .
