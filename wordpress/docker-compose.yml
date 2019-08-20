@@ -1,35 +1,35 @@
 version: '3.3'
 
 services:
-   db:
-     container_name: elevnn-staging-db
-     image: mysql:5.7
-     env_file: wordpress.env
-     volumes:
-       - db_data:/var/lib/mysql
-     restart: unless-stopped
-     networks:
-       - webproxy
+  db:
+    container_name: elevnn-staging-db
+    image: mysql:5.7
+    env_file: wordpress.env
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - webproxy
 
-   wordpress:
-     container_name: elevnn-staging-wp
-     depends_on:
-       - db
-     image: wordpress:latest
-     env_file: wordpress.env
-     ports:
-       - "8080:80"
-     expose:
-        - "8080"
-     restart: unless-stopped
-     volumes:
-       - ./wp-content/themes:/var/www/html/wp-content/themes/
-       - ./wp-content/plugins:/var/www/html/wp-content/plugins/
-       - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins/
-     environment:
-       - VIRTUAL_HOST=staging.elevnn.com
-     networks:
-       - webproxy
+  wordpress:
+    container_name: elevnn-staging-wp
+    depends_on:
+      - db
+    image: wordpress:latest
+    env_file: wordpress.env
+    ports:
+      - "8080:80"
+    expose:
+      - "8080"
+    restart: unless-stopped
+    volumes:
+      - ./wp-content/themes:/var/www/html/wp-content/themes/
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins/
+      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins/
+    environment:
+      - VIRTUAL_HOST=staging.elevnn.com
+    networks:
+      - webproxy
 
 volumes:
     db_data: {}

@@ -28,4 +28,6 @@ echo "Starting up docker at $STAGING_DOCKER_PATH"
 docker-compose -f $STAGING_DOCKER_PATH up -d
 
 echo "Update permissions for installing plugins"
-docker exec -d elevnn-staging-wp chmod 777 .
+docker exec -d elevnn-staging-wp chown -R www-data:www-data /var/www
+docker exec -d elevnn-staging-wp find /var/www/ -type d -exec chmod 0755 {} \;
+docker exec -d elevnn-staging-wp find /var/www/ -type f -exec chmod 644 {} \;

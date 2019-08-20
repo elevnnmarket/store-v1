@@ -5,7 +5,10 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docker-compose -f wordpress/docker-compose.yml up"
+    "start": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml up",
+    "dev": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml up",
+    "dev:destroy-volumes": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml down -v",
+    "prod:destroy-volumes": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml down -v"
   },
   "repository": {
     "type": "git",
