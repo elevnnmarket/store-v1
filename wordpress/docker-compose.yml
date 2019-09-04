@@ -13,6 +13,9 @@ services:
 
   wordpress:
     container_name: elevnn-staging-wp
+    build:
+      context: ./config/images/
+      dockerfile: Dockerfile-wp-git
     depends_on:
       - db
     image: wordpress:latest
@@ -23,11 +26,26 @@ services:
       - "8080"
     restart: unless-stopped
     volumes:
-      - ./wp-content/themes:/var/www/html/wp-content/themes/
-      - ./wp-content/plugins:/var/www/html/wp-content/plugins/
-      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins/
+      - ./public:/var/www/html
     environment:
       - VIRTUAL_HOST=staging.elevnn.com
+    networks:
+      - webproxy
+
+  wordmove:
+    env_file: 
+      - wordpress.env
+      - movefile.secrets.env
+    tty: true
+    depends_on:
+      - db
+      - wordpress
+    image: welaika/wordmove
+    restart: unless-stopped
+    container_name: elevnn_wordmove
+    volumes:
+      - ./movefile.yml:/home/movefile.yml
+      - ./public:/var/www/html/
     networks:
       - webproxy
 

@@ -5,10 +5,18 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml up",
+    "build": "docker-compose -f wordpress/docker-compose.yml build",
+    "prod": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml up",
+    "prod:detached": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml up -d",
+    "prod:down": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml down",
+    "prod:destroy-volumes": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml down -v",
     "dev": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml up",
+    "dev:detached": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml up -d",
+    "dev:down": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml down",
     "dev:destroy-volumes": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.dev.yml down -v",
-    "prod:destroy-volumes": "docker-compose -f wordpress/docker-compose.yml -f wordpress/docker-compose.prod.yml down -v"
+    "wordmove:bash": "docker exec -it elevnn_wordmove bash",
+    "wordmove:pull-staging:database": "docker exec -it elevnn_wordmove wordmove pull -e staging -d",
+    "wordmove:push-staging:database": "docker exec -it elevnn_wordmove wordmove push -e staging -d"
   },
   "repository": {
     "type": "git",
